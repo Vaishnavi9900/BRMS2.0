@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="ModeofPackingCreation" enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.ModeofPackingTestRunner"/>
+      <methods>
+       <include name = "mopcreation"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="ExistedModeofPackingCreation" enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.ModeofPackingTestRunner"/>
+      <methods>
+       <include name = "existedmopcreation"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="existedmopcreation1">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.ModeofPackingTestRunner"/>
+      <methods>
+       <include name = "existedmopcreation1"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="ModeofPackingUpdate" enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.ModeofPackingTestRunner"/>
+      <methods>
+       <include name = "mopupdate"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="addmopinedit">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.ModeofPackingTestRunner"/>
+      <methods>
+       <include name = "addmopinedit"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="DisableModeofPacking" enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.ModeofPackingTestRunner"/>
+      <methods>
+       <include name = "mopdisableenable"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="EnableModeofPacking" enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.ModeofPackingTestRunner"/>
+      <methods>
+       <include name = "mopdisableenable"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
