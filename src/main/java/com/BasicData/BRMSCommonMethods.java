@@ -1,6 +1,8 @@
 package com.BasicData;
 
 import java.awt.Desktop;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -161,8 +163,7 @@ public class BRMSCommonMethods {
 			}
 		}
 	}
-	public void getimageprint(String webelementname) {
-		WebElement img = driver.findElement(By.xpath(""));
+	public void getimageprint(WebElement img) {
 		System.out.println("target img " + img.getAttribute("src"));
 	}
 	public void javascript(WebElement element) {
@@ -230,6 +231,15 @@ public class BRMSCommonMethods {
 	public void enterkey() {
 		Actions action = new Actions(driver);
 		action.sendKeys(Keys.ENTER).perform();
+	}
+	
+	public void eneterkey1() {
+		Robot robot = (Robot) driver;
+		robot.keyPress(KeyEvent.VK_ENTER);
+	}
+	public void tab() {
+		Robot robot = (Robot) driver;
+		robot.keyPress(KeyEvent.VK_TAB);
 	}
 	public void pageup() {
 		Actions action = new Actions(driver);
