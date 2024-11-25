@@ -207,6 +207,94 @@ public class ConfigurationReader extends BRMSCommonMethods {
 		else 
 			throw new RuntimeException("the QAIncharge is not found in configured file ");	
 	}
+   public static String getproductionincharge() {
+		
+		String productionincharge = properties.getProperty("productionincharge");
+		if(productionincharge!=null)
+		return productionincharge;
+		else 
+			throw new RuntimeException("the productionincharge is not found in configured file ");	
+	}
+   public static String getproductionhod() {
+		
+		String productionhod = properties.getProperty("productionhod");
+		if(productionhod!=null)
+		return productionhod;
+		else 
+			throw new RuntimeException("the productionhod is not found in configured file ");	
+	}
+   public static String getTechtransfer() {
+		
+		String Techtransfer = properties.getProperty("Techtransfer");
+		if(Techtransfer!=null)
+		return Techtransfer;
+		else 
+			throw new RuntimeException("the Techtransfer is not found in configured file ");	
+	}
+   public static String getRA() {
+		
+		String RA = properties.getProperty("RA");
+		if(RA!=null)
+		return RA;
+		else 
+			throw new RuntimeException("the RA is not found in configured file ");	
+	}
+   public static String getQAOfficer() {
+		
+		String QAOfficer = properties.getProperty("QAOfficer");
+		if(QAOfficer!=null)
+		return QAOfficer;
+		else 
+			throw new RuntimeException("the QAOfficer is not found in configured file ");	
+	}
+   public static String getvalidationincharge() {
+		
+		String validationincharge = properties.getProperty("validationincharge");
+		if(validationincharge!=null)
+		return validationincharge;
+		else 
+			throw new RuntimeException("the validationincharge is not found in configured file ");	
+	}
+   public static String getprodexe() {
+		
+		String prodexe = properties.getProperty("prodexe");
+		if(prodexe!=null)
+		return prodexe;
+		else 
+			throw new RuntimeException("the prodexe is not found in configured file ");	
+	}
+   public static String getIPQA() {
+		
+		String IPQA = properties.getProperty("IPQA");
+		if(IPQA!=null)
+		return IPQA;
+		else 
+			throw new RuntimeException("the IPQA is not found in configured file ");	
+	}
+   public static String getinitiatorcomments() {
+		
+		String initiatorcomments = properties.getProperty("initiatorcomments");
+		if(initiatorcomments!=null)
+		return initiatorcomments;
+		else 
+			throw new RuntimeException("the initiatorcomments is not found in configured file ");	
+	}
+   public static String getissuedcomments() {
+		
+ 		String issuedcomments = properties.getProperty("issuedcomments");
+ 		if(issuedcomments!=null)
+ 		return issuedcomments;
+ 		else 
+ 			throw new RuntimeException("the issuedcomments is not found in configured file ");	
+ 	}
+   public static String getprintcomments() {
+		
+ 		String printcomments = properties.getProperty("printcomments");
+ 		if(printcomments!=null)
+ 		return printcomments;
+ 		else 
+ 			throw new RuntimeException("the printcomments is not found in configured file ");	
+ 	}
    
     
 }

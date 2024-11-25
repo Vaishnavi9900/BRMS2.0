@@ -20,11 +20,11 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 		bc = new BlockandLocation(driver);
 		
 		
-			as.userlogin(getadmin(), getpassword());	
+			as.userlogin(getinitiator(), getpassword());	
 
 			bc.blocklocationcreate();
 		
-			bc.createactivity();
+			bc.createactivity(getpassword());
 		
 	}
 	
@@ -32,7 +32,7 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 	public void existedblocklocationcreation() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bc = new BlockandLocation(driver);
-		as.userlogin(getadmin(), getpassword());	
+		as.userlogin(getinitiator(), getpassword());	
 		bc.existedblockloactioncreation();
 		
 	}
@@ -40,7 +40,7 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 	public void existedblocklocationcreation1() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bc = new BlockandLocation(driver);
-		as.userlogin(getadmin(), getpassword());	
+		as.userlogin(getinitiator(), getpassword());	
 		bc.existedconditionforblockcreation();
 		
 	}
@@ -49,17 +49,17 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 	public void blocklocationedit() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bc = new BlockandLocation(driver);
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		bc.blocklocationedit(getcomments());
-		bc.updateactivity();
+		bc.updateactivity(getpassword());
 	}
 	@Test
 	public void addblocklocationinedit() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bc = new BlockandLocation(driver);
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		bc.addanotherblockinedit(getcomments());
-		bc.updateactivity();
+		bc.updateactivity(getpassword());
 	}
 	
 	
@@ -67,9 +67,9 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 	public void blocklocationdisableenable() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bc = new BlockandLocation(driver);
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		bc.blocklocationdisableenable(getcomments());
-		bc.updateactivity();
+		bc.updateactivity(getpassword());
 	}
 
 }

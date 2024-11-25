@@ -15,7 +15,7 @@ public class BMRProductDetailsApprovalorReturn extends ConfigurationReader {
 	public HODBMRProductDetails hod;
 	
 	@Test
-	public void HODapproval() throws InterruptedException, IOException {
+	public void hodApproval() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bmr = new BMRProductDetails(driver);
 		hod = new HODBMRProductDetails(driver);
@@ -25,10 +25,10 @@ public class BMRProductDetailsApprovalorReturn extends ConfigurationReader {
 		hod.commentsvalidate();
 		hod.priority();
 		hod.HODSubmit(getapprovalcomments());
-		hod.submitactivity();	
+		hod.submitactivity(getpassword());	
 	}
 	@Test
-	public void HODReturn() throws InterruptedException, IOException {
+	public void hodReturn() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bmr = new BMRProductDetails(driver);
 		hod = new HODBMRProductDetails(driver);
@@ -38,7 +38,7 @@ public class BMRProductDetailsApprovalorReturn extends ConfigurationReader {
 		hod.commentsvalidate();
 		hod.priority();
 		hod.HODReturn(getreturncomments());
-		hod.submitactivity2();	
+		hod.submitactivity2(getpassword());	
 	}
 	
 

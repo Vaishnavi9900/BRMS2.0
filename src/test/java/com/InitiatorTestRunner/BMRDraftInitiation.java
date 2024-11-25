@@ -17,13 +17,24 @@ public class BMRDraftInitiation extends ConfigurationReader {
 		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
 		
 		//as.userlogin(getinitiator(), getpassword());
-		as.userlogin("110006", "123");
+		as.userlogin(getinitiator(), getpassword());
 		df.masterapprovaltab();
 		df.wordtemplates();
 		//df.finalapproval();
 		df.cftreview();
 		df.draftsubmit(getdepartment(), getrole(), getcomments());
-		df.submitactivity();
+		df.submitactivity(getpassword());
+	}
+	@Test
+	public void draftinitiationwithoutcft() throws InterruptedException, IOException {
+		as = new Assignmenu(driver);
+		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
+		
+		as.userlogin(getinitiator(), getpassword());
+		df.masterapprovaltab();
+		df.finalapproval();
+		df.draftsubmit(getdepartment(), getrole(), getcomments());
+		df.submitactivity(getpassword());
 	}
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-  <test name="BMRDraftInitiation">
+  <test name="BMRDraftInitiation"  enabled="false">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -10,7 +10,7 @@
        </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="BMRDraftInitiationwithcft">
+  <test name="BMRDraftInitiationwithcft" enabled="false">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
        </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRCFTDraftReview">
+   <test name="BMRCFTDraftReview" enabled="false">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -30,13 +30,23 @@
        </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRCFTDraftReturn">
+   <test name="BMRCFTDraftReturn" enabled="false">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.QAHODorInchargeTestRunner.CFTRevieworReturn"/>
       <methods>
-       <include name = "CFTreturn"></include>
+       <include name = "cftreturn"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="WithoutCFTBMRDraftInitiation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRDraftInitiation"/>
+      <methods>
+       <include name = "draftinitiationwithoutcft"></include>
        </methods>
     </classes>
   </test> <!-- Test -->

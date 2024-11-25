@@ -15,7 +15,7 @@ public class AssignMenuTestRunner extends ConfigurationReader {
 		 as = new Assignmenu(driver);
 		
 	    try {
-			as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -37,13 +37,12 @@ public class AssignMenuTestRunner extends ConfigurationReader {
 		}
 	    
 	    try {
-			as.updateactivity();
+			as.updateactivity(getpassword());
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		
 	}
 	
 

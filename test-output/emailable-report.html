@@ -9,59 +9,22 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">bulkReinitiation</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">78,011</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">ProductDetailsApproval2</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">77,637</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">155,648</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">BMRBeforePrintCancelInitiation</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">104,214</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">BMRBeforePrintCancelRejection</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">95,804</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">200,018</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">bulkReinitiation &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.InitiatorTestRunner.BMRProductDetailsInitiation</td><td><a href="#m0">bulkReinitiation</a></td><td rowspan="1">1728623444327</td><td rowspan="1">69096</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">ProductDetailsApproval2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn</td><td><a href="#m1">HODapproval</a></td><td rowspan="1">1728623519566</td><td rowspan="1">71670</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BMRBeforePrintCancelInitiation &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation</td><td><a href="#m0">beforeprintcancelinitiation</a></td><td rowspan="1">1732519197352</td><td rowspan="1">94926</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">BMRBeforePrintCancelRejection &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection</td><td><a href="#m1">beforePrintCancelRejection</a></td><td rowspan="1">1732519301712</td><td rowspan="1">87265</td></tr></tbody>
 </table>
-<h2>bulkReinitiation</h2><h3 id="m0">com.InitiatorTestRunner.BMRProductDetailsInitiation#bulkReinitiation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@formcontrolname=&apos;productName&apos;]&quot;}
-  (Session info: chrome=129.0.6668.101)
+<h2>BMRBeforePrintCancelInitiation</h2><h3 id="m0">com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation#beforeprintcancelinitiation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Ok&apos;]&quot;}
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d0072ae2ba9154246b02b5f3b3d68e06, findElement {using=xpath, value=//input[@formcontrolname=&apos;productName&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53898/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d0072ae2ba9154246b02b5f3b3d68e06
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
-	at com.BasicData.BRMSCommonMethods.javascript(BRMSCommonMethods.java:170)
-	at com.InitiatorPageObjects.BMRProductDetails.bulkReinitiation(BMRProductDetails.java:495)
-	at com.InitiatorTestRunner.BMRProductDetailsInitiation.bulkReinitiation(BMRProductDetailsInitiation.java:96)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ProductDetailsApproval2</h2><h3 id="m1">com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn#HODapproval</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//tr[@role=&apos;row&apos;])[2]&quot;}
-  (Session info: chrome=129.0.6668.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3d9ff47c24fe93ffe7aec08eea364c5e, findElement {using=xpath, value=(//tr[@role=&apos;row&apos;])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54015}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54015/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3d9ff47c24fe93ffe7aec08eea364c5e
+Command: [11abd99ba22d4a77659b96409b7d7338, findElement {using=xpath, value=//button[text()=&apos;Ok&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53938}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53938/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11abd99ba22d4a77659b96409b7d7338
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -76,10 +39,35 @@ Session ID: 3d9ff47c24fe93ffe7aec08eea364c5e
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:143)
-	at com.QAHODorInChargePageObjects.HODBMRProductDetails.commentsvalidate(HODBMRProductDetails.java:54)
-	at com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn.HODapproval(BMRProductDetailsApprovalorReturn.java:25)
+	at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:145)
+	at com.ProductionInchargePageObjects.BMRProductionInchargePrintReviewOrCancel.cancelsubmitactivity(BMRProductionInchargePrintReviewOrCancel.java:177)
+	at com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation.beforeprintcancelinitiation(BMRBeforePrintCancelInitiation.java:27)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BMRBeforePrintCancelRejection</h2><h3 id="m1">com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection#beforePrintCancelRejection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7858702233bd33c2b458be77f0b05d4c, clickElement {id=f.B8FB870D51B0311FF2724DA04B4982B2.d.3F88A5E7093B0C524FE9DAB39BBB73FC.e.29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54113/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7858702233bd33c2b458be77f0b05d4c)] -&gt; xpath: (//input[@type=&apos;password&apos;])[1]]
+Session ID: 7858702233bd33c2b458be77f0b05d4c
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy19.click(Unknown Source)
+	at com.BasicData.BRMSCommonMethods.textbox(BRMSCommonMethods.java:186)
+	at com.QAHODorInChargePageObjects.BMRQAHODPrintApprovalorReject.beforeprintsubmitactivity(BMRQAHODPrintApprovalorReject.java:156)
+	at com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection.beforePrintCancelRejection(BMRBeforePrintCancelApprovalorRejection.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

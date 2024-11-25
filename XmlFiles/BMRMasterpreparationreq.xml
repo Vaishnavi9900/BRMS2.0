@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="Suite">
+<suite name="Suite" parallel="true" thread-count="10">
 <test name="BMRMasterpreparation">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.InitiatorTestRunner.BMRMasterPreparationRequest"/>
       <methods>
-       <include name = "BMRMasterpreparation"></include>
+       <include name = "bmrMasterpreparation"></include>
        </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="BMRMasterprepreqRejection">
+  <test name="BMRMasterprepreqRejection" enabled="false">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

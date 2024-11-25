@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-<test name="PelletsInitiation" enabled = "false">
+<test name="PelletsInitiation">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -10,17 +10,17 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-    <test name="ProductDetailsApproval" enabled = "false">
+    <test name="ProductDetailsApproval">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
        <methods>
-      <include name = "HODapproval"></include>
+      <include name = "hodApproval"></include>
       </methods>
     </classes>
   </test> <!-- Test -->
-    <test name="bulkinitiation" enabled = "false">
+    <test name="bulkinitiation">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -30,13 +30,13 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="ProductDetailsReturn" enabled = "false">
+   <test name="ProductDetailsReturn">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
        <methods>
-      <include name = "HODReturn"></include>
+      <include name = "hodReturn"></include>
       </methods>
     </classes>
   </test> <!-- Test -->
@@ -56,7 +56,7 @@
     <classes>
       <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
        <methods>
-      <include name = "HODapproval"></include>
+      <include name = "hodApproval"></include>
       </methods>
     </classes>
   </test> <!-- Test -->

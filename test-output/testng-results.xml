@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-11T10:40:37 IST" name="Suite" finished-at="2024-10-11T10:43:12 IST" duration-ms="155695">
+  <suite started-at="2024-11-25T12:49:50 IST" name="Suite" finished-at="2024-11-25T12:53:10 IST" duration-ms="200072">
     <groups>
     </groups>
-    <test started-at="2024-10-11T10:40:37 IST" name="bulkReinitiation" finished-at="2024-10-11T10:41:55 IST" duration-ms="78011">
-      <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.InitiatorTestRunner.BMRProductDetailsInitiation@757277dc]" started-at="2024-10-11T10:40:37 IST" name="setup" finished-at="2024-10-11T10:40:44 IST" duration-ms="7041" status="PASS">
+    <test started-at="2024-11-25T12:49:50 IST" name="BMRBeforePrintCancelInitiation" finished-at="2024-11-25T12:51:34 IST" duration-ms="104214">
+      <class name="com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation@c86b9e3]" started-at="2024-11-25T12:49:50 IST" name="setup" finished-at="2024-11-25T12:49:57 IST" duration-ms="6925" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2443135]]>
+                <![CDATA[org.testng.TestRunner@6b162ecc]]>
               </value>
             </param>
             <param index="1">
@@ -23,161 +23,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="bulkReinitiation()[pri:0, instance:com.InitiatorTestRunner.BMRProductDetailsInitiation@757277dc]" started-at="2024-10-11T10:40:44 IST" name="bulkReinitiation" finished-at="2024-10-11T10:41:53 IST" duration-ms="69096" status="FAIL">
+        <test-method signature="beforeprintcancelinitiation()[pri:0, instance:com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation@c86b9e3]" started-at="2024-11-25T12:49:57 IST" name="beforeprintcancelinitiation" finished-at="2024-11-25T12:51:32 IST" duration-ms="94926" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@formcontrolname='productName']"}
-  (Session info: chrome=129.0.6668.101)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Ok']"}
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d0072ae2ba9154246b02b5f3b3d68e06, findElement {using=xpath, value=//input[@formcontrolname='productName']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53898/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d0072ae2ba9154246b02b5f3b3d68e06]]>
+Command: [11abd99ba22d4a77659b96409b7d7338, findElement {using=xpath, value=//button[text()='Ok']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53938}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53938/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11abd99ba22d4a77659b96409b7d7338]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@formcontrolname='productName']"}
-  (Session info: chrome=129.0.6668.101)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Ok']"}
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d0072ae2ba9154246b02b5f3b3d68e06, findElement {using=xpath, value=//input[@formcontrolname='productName']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53898/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d0072ae2ba9154246b02b5f3b3d68e06
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy19.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
-at com.BasicData.BRMSCommonMethods.javascript(BRMSCommonMethods.java:170)
-at com.InitiatorPageObjects.BMRProductDetails.bulkReinitiation(BMRProductDetails.java:495)
-at com.InitiatorTestRunner.BMRProductDetailsInitiation.bulkReinitiation(BMRProductDetailsInitiation.java:96)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bulkReinitiation -->
-        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.InitiatorTestRunner.BMRProductDetailsInitiation@757277dc]" started-at="2024-10-11T10:41:53 IST" name="checkstatus" finished-at="2024-10-11T10:41:53 IST" duration-ms="153" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.InitiatorTestRunner.BMRProductDetailsInitiation.bulkReinitiation() throws java.lang.InterruptedException,java.io.IOException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=bulkReinitiation status=FAILURE method=BMRProductDetailsInitiation.bulkReinitiation()[pri:0, instance:com.InitiatorTestRunner.BMRProductDetailsInitiation@757277dc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkstatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.InitiatorTestRunner.BMRProductDetailsInitiation@757277dc]" started-at="2024-10-11T10:41:53 IST" name="teardown" finished-at="2024-10-11T10:41:55 IST" duration-ms="1663" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.InitiatorTestRunner.BMRProductDetailsInitiation -->
-    </test> <!-- bulkReinitiation -->
-    <test started-at="2024-10-11T10:41:55 IST" name="ProductDetailsApproval2" finished-at="2024-10-11T10:43:12 IST" duration-ms="77637">
-      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn">
-        <test-method is-config="true" signature="initiatlizeExtentReports()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@50caa560]" started-at="2024-10-11T10:40:36 IST" name="initiatlizeExtentReports" finished-at="2024-10-11T10:40:37 IST" duration-ms="345" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initiatlizeExtentReports -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@50caa560]" started-at="2024-10-11T10:41:55 IST" name="setup" finished-at="2024-10-11T10:41:59 IST" duration-ms="4263" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@184823ed]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="HODapproval()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@50caa560]" started-at="2024-10-11T10:41:59 IST" name="HODapproval" finished-at="2024-10-11T10:43:11 IST" duration-ms="71670" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//tr[@role='row'])[2]"}
-  (Session info: chrome=129.0.6668.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3d9ff47c24fe93ffe7aec08eea364c5e, findElement {using=xpath, value=(//tr[@role='row'])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54015}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54015/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3d9ff47c24fe93ffe7aec08eea364c5e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//tr[@role='row'])[2]"}
-  (Session info: chrome=129.0.6668.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3d9ff47c24fe93ffe7aec08eea364c5e, findElement {using=xpath, value=(//tr[@role='row'])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54015}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54015/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3d9ff47c24fe93ffe7aec08eea364c5e
+Command: [11abd99ba22d4a77659b96409b7d7338, findElement {using=xpath, value=//button[text()='Ok']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53938}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53938/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11abd99ba22d4a77659b96409b7d7338
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -197,9 +65,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy19.click(Unknown Source)
-at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:143)
-at com.QAHODorInChargePageObjects.HODBMRProductDetails.commentsvalidate(HODBMRProductDetails.java:54)
-at com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn.HODapproval(BMRProductDetailsApprovalorReturn.java:25)
+at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:145)
+at com.ProductionInchargePageObjects.BMRProductionInchargePrintReviewOrCancel.cancelsubmitactivity(BMRProductionInchargePrintReviewOrCancel.java:177)
+at com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation.beforeprintcancelinitiation(BMRBeforePrintCancelInitiation.java:27)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -233,32 +101,155 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HODapproval -->
-        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@50caa560]" started-at="2024-10-11T10:43:11 IST" name="checkstatus" finished-at="2024-10-11T10:43:11 IST" duration-ms="115" status="PASS">
+        </test-method> <!-- beforeprintcancelinitiation -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation@c86b9e3]" started-at="2024-11-25T12:51:32 IST" name="checkstatus" finished-at="2024-11-25T12:51:32 IST" duration-ms="219" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn.HODapproval() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation.beforeprintcancelinitiation() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=HODapproval status=FAILURE method=BMRProductDetailsApprovalorReturn.HODapproval()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@50caa560] output={null}]]]>
+                <![CDATA[[TestResult name=beforeprintcancelinitiation status=FAILURE method=BMRBeforePrintCancelInitiation.beforeprintcancelinitiation()[pri:0, instance:com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation@c86b9e3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkstatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@50caa560]" started-at="2024-10-11T10:43:11 IST" name="teardown" finished-at="2024-10-11T10:43:12 IST" duration-ms="1588" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation@c86b9e3]" started-at="2024-11-25T12:51:32 IST" name="teardown" finished-at="2024-11-25T12:51:34 IST" duration-ms="2042" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateExtentReports()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@50caa560]" started-at="2024-10-11T10:43:12 IST" name="generateExtentReports" finished-at="2024-10-11T10:43:14 IST" duration-ms="1286" status="PASS">
+      </class> <!-- com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation -->
+    </test> <!-- BMRBeforePrintCancelInitiation -->
+    <test started-at="2024-11-25T12:51:34 IST" name="BMRBeforePrintCancelRejection" finished-at="2024-11-25T12:53:10 IST" duration-ms="95804">
+      <class name="com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection">
+        <test-method is-config="true" signature="initiatlizeExtentReports()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection@568ff82]" started-at="2024-11-25T12:49:49 IST" name="initiatlizeExtentReports" finished-at="2024-11-25T12:49:50 IST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatlizeExtentReports -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection@568ff82]" started-at="2024-11-25T12:51:34 IST" name="setup" finished-at="2024-11-25T12:51:41 IST" duration-ms="7107" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b4086c1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="beforePrintCancelRejection()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection@568ff82]" started-at="2024-11-25T12:51:41 IST" name="beforePrintCancelRejection" finished-at="2024-11-25T12:53:08 IST" duration-ms="87265" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=131.0.6778.86)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7858702233bd33c2b458be77f0b05d4c, clickElement {id=f.B8FB870D51B0311FF2724DA04B4982B2.d.3F88A5E7093B0C524FE9DAB39BBB73FC.e.29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54113/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7858702233bd33c2b458be77f0b05d4c)] -> xpath: (//input[@type='password'])[1]]
+Session ID: 7858702233bd33c2b458be77f0b05d4c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=131.0.6778.86)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7858702233bd33c2b458be77f0b05d4c, clickElement {id=f.B8FB870D51B0311FF2724DA04B4982B2.d.3F88A5E7093B0C524FE9DAB39BBB73FC.e.29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54113/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7858702233bd33c2b458be77f0b05d4c)] -> xpath: (//input[@type='password'])[1]]
+Session ID: 7858702233bd33c2b458be77f0b05d4c
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy19.click(Unknown Source)
+at com.BasicData.BRMSCommonMethods.textbox(BRMSCommonMethods.java:186)
+at com.QAHODorInChargePageObjects.BMRQAHODPrintApprovalorReject.beforeprintsubmitactivity(BMRQAHODPrintApprovalorReject.java:156)
+at com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection.beforePrintCancelRejection(BMRBeforePrintCancelApprovalorRejection.java:53)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforePrintCancelRejection -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection@568ff82]" started-at="2024-11-25T12:53:08 IST" name="checkstatus" finished-at="2024-11-25T12:53:09 IST" duration-ms="109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection.beforePrintCancelRejection() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=beforePrintCancelRejection status=FAILURE method=BMRBeforePrintCancelApprovalorRejection.beforePrintCancelRejection()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection@568ff82] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkstatus -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection@568ff82]" started-at="2024-11-25T12:53:09 IST" name="teardown" finished-at="2024-11-25T12:53:10 IST" duration-ms="1320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="generateExtentReports()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection@568ff82]" started-at="2024-11-25T12:53:10 IST" name="generateExtentReports" finished-at="2024-11-25T12:53:11 IST" duration-ms="1254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateExtentReports -->
-      </class> <!-- com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn -->
-    </test> <!-- ProductDetailsApproval2 -->
+      </class> <!-- com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection -->
+    </test> <!-- BMRBeforePrintCancelRejection -->
   </suite> <!-- Suite -->
 </testng-results>

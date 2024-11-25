@@ -35,6 +35,10 @@ public class CFTActivity extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//a[text()='Review']") WebElement reviewtab;
 	@FindBy(how = How.XPATH, using = "//a[text()='Product Details']") WebElement productdetails;
 	@FindBy(how =How.XPATH, using ="//a[text()='Comments']") WebElement commentstab;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
+	WebElement password;
+	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	WebElement submit2;
 
 	public CFTActivity(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -92,7 +96,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	}
 	}
 	
-	public void submitactivity() throws InterruptedException {
+	public void submitactivity(String pass) throws InterruptedException {
  		
  		clickElement(No);
  		javawait();
@@ -100,10 +104,13 @@ public class CFTActivity extends BRMSCommonMethods {
  		javawait();
  		clickElement(Yes);
  		javawait();
+		textbox(password, pass);
+		javawait();
+		clickElement(submit2);
  		clickElement(ok);
  	}
 	
-	public void returnactivity() throws InterruptedException {
+	public void returnactivity(String pass) throws InterruptedException {
  		
  		clickElement(No);
  		javawait();
@@ -111,13 +118,19 @@ public class CFTActivity extends BRMSCommonMethods {
  		javawait();
  		clickElement(Yes);
  		javawait();
+		textbox(password, pass);
+		javawait();
+		clickElement(submit2);
  		clickElement(ok);
  	}
 
-	 public void submitactivity2() throws InterruptedException {
+	 public void submitactivity2(String pass) throws InterruptedException {
 
 		 	clickElement(Yes);
 		 	javawait();
+			textbox(password, pass);
+			javawait();
+			clickElement(submit2);
 		 	clickElement(ok);
 		  }
 }

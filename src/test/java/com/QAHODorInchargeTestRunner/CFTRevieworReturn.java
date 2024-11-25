@@ -19,7 +19,7 @@ public class CFTRevieworReturn extends ConfigurationReader {
 		
 		as.userlogin(getQAIncharge(), getpassword());
 		cft.CFTreview(getapprovalcomments());
-		cft.submitactivity();
+		cft.submitactivity(getpassword());
 	}
 	@Test
 	public void CFTreturn() throws InterruptedException, IOException {
@@ -28,7 +28,7 @@ public class CFTRevieworReturn extends ConfigurationReader {
 		
 		as.userlogin(getQAIncharge(), getpassword());
 		cft.CFTreturn(getreturncomments());
-		cft.returnactivity();
+		cft.returnactivity(getpassword());
 	}
 
 }

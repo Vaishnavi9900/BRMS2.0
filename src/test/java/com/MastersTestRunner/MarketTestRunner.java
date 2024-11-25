@@ -14,7 +14,7 @@ public class MarketTestRunner extends ConfigurationReader {
 	public Market mt;
 	
 	@Test
-	public void Marketcreatewithspace() throws InterruptedException {
+	public void marketcreatewithspace() throws InterruptedException {
 		
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
@@ -24,7 +24,7 @@ public class MarketTestRunner extends ConfigurationReader {
 	}
 	
 	@Test
-	public void Marketcreation() throws InterruptedException, IOException {
+	public void marketcreation() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
 		

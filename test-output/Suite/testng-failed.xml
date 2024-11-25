@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <test thread-count="5" name="bulkReinitiation(failed)">
-    <parameter name="author" value="vaishnavi"/>
+  <test thread-count="5" name="BMRBeforePrintCancelInitiation(failed)">
+    <parameter name="author" value="Vaishnavi"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation">
+      <class name="com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation">
         <methods>
+          <include name="beforeprintcancelinitiation"/>
           <include name="generateExtentReports"/>
           <include name="setup"/>
-          <include name="bulkReinitiation"/>
-          <include name="checkstatus"/>
-          <include name="teardown"/>
-          <include name="initiatlizeExtentReports"/>
-        </methods>
-      </class> <!-- com.InitiatorTestRunner.BMRProductDetailsInitiation -->
-    </classes>
-  </test> <!-- bulkReinitiation(failed) -->
-  <test thread-count="5" name="ProductDetailsApproval2(failed)">
-    <parameter name="author" value="vaishnavi"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn">
-        <methods>
-          <include name="generateExtentReports"/>
-          <include name="setup"/>
-          <include name="HODapproval"/>
           <include name="teardown"/>
           <include name="checkstatus"/>
           <include name="initiatlizeExtentReports"/>
         </methods>
-      </class> <!-- com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn -->
+      </class> <!-- com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation -->
     </classes>
-  </test> <!-- ProductDetailsApproval2(failed) -->
+  </test> <!-- BMRBeforePrintCancelInitiation(failed) -->
+  <test thread-count="5" name="BMRBeforePrintCancelRejection(failed)">
+    <parameter name="author" value="Vaishnavi"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection">
+        <methods>
+          <include name="beforePrintCancelRejection"/>
+          <include name="generateExtentReports"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="checkstatus"/>
+          <include name="initiatlizeExtentReports"/>
+        </methods>
+      </class> <!-- com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection -->
+    </classes>
+  </test> <!-- BMRBeforePrintCancelRejection(failed) -->
 </suite> <!-- Failed suite [Suite] -->

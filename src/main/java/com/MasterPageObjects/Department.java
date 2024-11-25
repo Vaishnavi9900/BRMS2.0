@@ -27,6 +27,10 @@ public class Department extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']") WebElement ok;
 	@FindBy(how = How.XPATH, using = "//button[text()='OK']") WebElement alreadyexistok;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
+	@FindBy(xpath = "//li[@class='navLink']")
+	WebElement menu;
+	@FindBy(how =How.XPATH, using ="//a[text()='Masters ']")
+	WebElement masters;
 	
 	public Department(WebDriver driver) {
 		
@@ -35,6 +39,9 @@ public class Department extends BRMSCommonMethods {
 	
 	public void departmentcreatewithspace() throws InterruptedException {
 		
+	   mouseover(menu);
+   	   javawait();
+   	   mouseover(masters);
 		clickElement(department);
 		javawait();
 		clickElement(create);

@@ -53,6 +53,14 @@ public class BlockandLocation extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//a[text()=' Logout']") WebElement logout;
 	@FindBy(how = How.XPATH, using = "//a[text()='Yes']") WebElement profileyes;
 	@FindBy(how = How.XPATH, using = "//button[text()=' No ']") WebElement profileno;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
+	WebElement password;
+	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	WebElement submit2;
+	@FindBy(xpath = "//li[@class='navLink']")
+	WebElement menu;
+	@FindBy(how =How.XPATH, using ="//a[text()='Masters ']")
+	WebElement masters;
 	
        public BlockandLocation(WebDriver driver) {
     	    driver = driver;
@@ -67,7 +75,10 @@ public class BlockandLocation extends BRMSCommonMethods {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	   javascript(blockandlocation);
+    	   mouseover(menu);
+    	   javawait();
+    	   mouseover(masters);
+    	   clickElement(blockandlocation);
     	   javawait();
     	   clickElement(create);
     	   javawait();
@@ -212,7 +223,7 @@ public class BlockandLocation extends BRMSCommonMethods {
     	   clickElement(update);
     	   }
        }
-       public void createactivity() throws InterruptedException {
+       public void createactivity(String pass) throws InterruptedException {
 			
 			clickElement(No);
 			javawait();
@@ -220,16 +231,22 @@ public class BlockandLocation extends BRMSCommonMethods {
 			javawait();
 			clickElement(Yes);
 			javawait();
+			textbox(password, pass);
+			javawait();
+			clickElement(submit2);
 			clickElement(ok);
 		}
-	    public void createactivity2() throws InterruptedException {
+	    public void createactivity2(String pass) throws InterruptedException {
 
 		clickElement(Yes);
 		javawait();
+		textbox(password, pass);
+		javawait();
+		clickElement(submit2);
 		clickElement(ok);
 	     }
 	    
-	    public void updateactivity() throws InterruptedException {
+	    public void updateactivity(String pass) throws InterruptedException {
 			
 			javascript(No);
 			javawait();
@@ -237,6 +254,9 @@ public class BlockandLocation extends BRMSCommonMethods {
 			javawait();
 			clickElement(Yes);
 			javawait();
+			textbox(password, pass);
+			javawait();
+			clickElement(submit2);
 			clickElement(ok);
 		}
 	    

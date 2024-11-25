@@ -14,14 +14,14 @@ public class BMRMasterPreparationRequest extends ConfigurationReader {
 	public BMRMasterPreparation mp;
 	
 	@Test
-	public void BMRMasterpreparation() throws InterruptedException, IOException {
+	public void bmrMasterpreparation() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		mp = new BMRMasterPreparation(driver);
 		
 		as.userlogin(getinitiator(), getpassword());
 		mp.masterprepreq();
-		mp.bmrmasterreqinitation(getapprovalcomments());
-		mp.submitactivity();
+		mp.bmrmasterreqinitation1(getinitiatorcomments());
+		mp.submitactivity(getpassword());
 	}
 	
 	

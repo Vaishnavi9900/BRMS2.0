@@ -34,6 +34,10 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']") WebElement ok;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
 	@FindBy(how = How.XPATH, using = "(//tr[@role='row'])[2]") WebElement createdrecord;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
+	WebElement password;
+	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	WebElement submit2;
 	
 	
 	public BMRMasterPreparationapprovals(WebDriver driver) {
@@ -91,20 +95,26 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	    	 clickElement(priority);
 	     }
 	  
-	  public void submitactivity() throws InterruptedException {
+	  public void submitactivity(String pass) throws InterruptedException {
 	 		
 	 		clickElement(No);
 	 		javawait();
 	 		clickElement(submit);
 	 		javawait();
 	 		clickElement(Yes);
-	 		javawait();
+	 	//	javawait();
+//			textbox(password, pass);
+//			javawait();
+//			clickElement(submit2);
 	 		clickElement(ok);
 	 	}
-	     public void submitactivity2() throws InterruptedException {
+	   public void submitactivity2(String pass) throws InterruptedException {
 
 	 	clickElement(Yes);
 	 	javawait();
+		textbox(password, pass);
+		javawait();
+		clickElement(submit2);
 	 	clickElement(ok);
 	      }
 		

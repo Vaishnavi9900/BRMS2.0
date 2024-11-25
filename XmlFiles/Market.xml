@@ -6,7 +6,7 @@
     <classes>
       <class name="com.MastersTestRunner.MarketTestRunner"/>
       <methods>
-      <include name = "Marketcreatewithspace"></include>
+      <include name = "marketcreatewithspace"></include>
       </methods>
     </classes>
   </test> <!-- Test -->
@@ -16,7 +16,7 @@
     <classes>
       <class name="com.MastersTestRunner.MarketTestRunner"/>
       <methods>
-      <include name = "Marketcreation"></include>
+      <include name = "marketcreation"></include>
       </methods>
     </classes>
   </test> <!-- Test -->

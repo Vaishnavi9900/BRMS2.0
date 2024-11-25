@@ -37,7 +37,7 @@ public class PasswordPolicyTestRunner extends ConfigurationReader {
 		javawait();
 		ps.enforcepasshistory(getenforcepasswordhistory());
 		javawait();
-		ps.updateactivity();
+		ps.updateactivity(getpassword());
 		
 	}
 	
