@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="BMRPrintRequestInitiation">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation"/>
+      <methods>
+      <include name ="printRequestInitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BMRPrintRequestInitiation2">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation"/>
+      <methods>
+      <include name ="printRequestInitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="BMRPrintRequestReInitiation" enabled ="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation"/>
+      <methods>
+      <include name ="printRequestInitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BMRPrintReturnByProductionIncharge" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReturn"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BMRPrintReviewByProductionIncharge">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReview"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintReturntoExeByValidationIncharge" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReturntoExecutive"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintReturntoinchargeByValidationIncharge" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReturntoIncharge"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintApprovalByValidationIncharge">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReview"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintReturntoExebyQAHOD" enabled ="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printReturntoExe"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintReturntoInchargebyQAHOD" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printReturntoProductionIncharge"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintReturntoValidationInchargebyQAHOD"  enabled ="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printReturntoValidationIncharge"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+ <test name="BMRPrintReApprovalByValidationIncharge" enabled ="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReReview"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintApprovalbyQAHOD">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printApproval"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BMRPrintRejectedyQAHOD" enabled ="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printReject"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintandIssuebyQAOfficer">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BMRPrintIssuance"/>
+      <methods>
+      <include name ="issueandPrint"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
