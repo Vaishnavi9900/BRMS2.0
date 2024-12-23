@@ -27,6 +27,8 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Preparation Request Initiation']")
 	WebElement masterprepreq;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//textarea[@trim='blur']")
 	WebElement comments;
 	@FindBy(how = How.XPATH, using = "//p[text()='Comments is required']")
@@ -41,18 +43,19 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	WebElement Get;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
 	WebElement mprno;
-	@FindBy(how = How.XPATH, using = "(//tr[@class='ng-star-inserted'])[1]")
+	@FindBy(how = How.XPATH, using = "(//tr[@class='ng-star-inserted odd'])[1]")
 	WebElement createdrecord;
-	@FindBy(how = How.XPATH, using = "//button[text()='Yes']")
+	@FindBy(how = How.XPATH, using = "//button[text()=' Yes ']")
 	WebElement Yes;
-	@FindBy(how = How.XPATH, using = "(//button[text()='No'])[2]")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]")
 	WebElement No;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
+	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
 
 	public BMRMasterPreparation(WebDriver driver) {
 
@@ -68,15 +71,20 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	public void bmrmasterreqinitation1(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-//		javawait();
-//		clickElement(mprno);
-//		for (int i = 1; i < 2; i++) {
-//			mprno.sendKeys(excelUtils.getCellData(i, 1), Keys.ENTER);
-//			javawait();
+		clickElement(tab);
+		javawait();
+		clickElement(mprno);
+		for (int i = 1; i < 2; i++) {
+			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 		clickElement(Get);
-		List<WebElement> allElement=driver.findElements(By.xpath("(//tr[@class='ng-star-inserted'])"));
-		int count=allElement.size();
-		allElement.get(count-1).click();
+		javawait();
+		clickElement(search);
+		search.sendKeys(excelUtils.getCellData(i, 14));
+		javawait();
+		clickElement(createdrecord);
+//		List<WebElement> allElement=driver.findElements(By.xpath("(//tr[@class='ng-star-inserted'])"));
+//		int count=allElement.size();
+//		allElement.get(count-1).click();
 			clickElement(submit);
 			javawait();
 			softassert.assertEquals(commalert.getText(), "Comments is required");
@@ -84,14 +92,16 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 			textbox(comments, comm);
 			javawait();
 			clickElement(submit);
+		}
 	}
 	public void bmrmasterreqinitation(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		clickElement(tab);
 		javawait();
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
-			mprno.sendKeys(excelUtils.getCellData(i, 1), Keys.ENTER);
+			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 			javawait();
 		    clickElement(Get);
 			clickElement(createdrecord);
@@ -105,7 +115,6 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 		}
 	}
 	
-
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
@@ -113,11 +122,11 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 		clickElement(submit);
 		javawait();
 		clickElement(Yes);
-//		javawait();
-//		textbox(password, pass);
-//		javawait();
-//		clickElement(submit2);
-        clickElement(ok);
+		javawait();
+		textbox(password, pass);
+		javawait();
+		clickElement(submit2);
+		javawait();
 	}
 
 	public void submitactivity2(String pass) throws InterruptedException {
@@ -127,7 +136,7 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
-		clickElement(ok);
+		javawait();
 	}
 
 }

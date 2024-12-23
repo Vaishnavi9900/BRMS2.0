@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+<test name="afterPrintCancelInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRAfterPrintCancellation"/>
+      <methods>
+      <include name = "afterPrintCancelInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintCancelReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BMRAfterPrintCancellationReview"/>
+      <methods>
+      <include name = "afterPrintCancelReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintCancelReInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRAfterPrintCancellation"/>
+      <methods>
+      <include name = "afterPrintCancelReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintCancelReview">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BMRAfterPrintCancellationReview"/>
+      <methods>
+      <include name = "afterPrintCancelReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintcancelReturn1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRAfterPrintCancelApprovalRejection"/>
+      <methods>
+      <include name = "afterPrintcancelReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintCancelReInitiation1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRAfterPrintCancellation"/>
+      <methods>
+      <include name = "afterPrintCancelReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintCancelReview1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BMRAfterPrintCancellationReview"/>
+      <methods>
+      <include name = "afterPrintCancelReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintcancelReject" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRAfterPrintCancelApprovalRejection"/>
+      <methods>
+      <include name = "afterPrintcancelReject"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="afterPrintcancelApproval" enabled="false">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRAfterPrintCancelApprovalRejection"/>
+      <methods>
+      <include name = "afterPrintcancelApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

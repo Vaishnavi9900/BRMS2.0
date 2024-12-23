@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <test thread-count="5" name="BMRBeforePrintCancelInitiation(failed)">
-    <parameter name="author" value="Vaishnavi"/>
+  <test thread-count="5" name="bprdraftinitiation(failed)">
+    <parameter name="author" value="vaishnavi"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation">
+      <class name="com.InitiatorTestRunner.BPRDraftInitiation">
         <methods>
-          <include name="beforeprintcancelinitiation"/>
+          <include name="bprdraftinitiation"/>
           <include name="generateExtentReports"/>
           <include name="setup"/>
           <include name="teardown"/>
           <include name="checkstatus"/>
           <include name="initiatlizeExtentReports"/>
         </methods>
-      </class> <!-- com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation -->
+      </class> <!-- com.InitiatorTestRunner.BPRDraftInitiation -->
     </classes>
-  </test> <!-- BMRBeforePrintCancelInitiation(failed) -->
-  <test thread-count="5" name="BMRBeforePrintCancelRejection(failed)">
-    <parameter name="author" value="Vaishnavi"/>
+  </test> <!-- bprdraftinitiation(failed) -->
+  <test thread-count="5" name="bprcftReturn(failed)">
+    <parameter name="author" value="vaishnavi"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection">
+      <class name="com.QAHODorInchargeTestRunner.CFTRevieworReturn">
         <methods>
-          <include name="beforePrintCancelRejection"/>
+          <include name="bprcftReturn"/>
           <include name="generateExtentReports"/>
           <include name="setup"/>
-          <include name="teardown"/>
           <include name="checkstatus"/>
+          <include name="teardown"/>
           <include name="initiatlizeExtentReports"/>
         </methods>
-      </class> <!-- com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection -->
+      </class> <!-- com.QAHODorInchargeTestRunner.CFTRevieworReturn -->
     </classes>
-  </test> <!-- BMRBeforePrintCancelRejection(failed) -->
+  </test> <!-- bprcftReturn(failed) -->
 </suite> <!-- Failed suite [Suite] -->

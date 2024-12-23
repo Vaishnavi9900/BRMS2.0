@@ -6,23 +6,23 @@ import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
-import com.InitiatorPageObjects.BMRMasterApprovalInitiation;
-import com.ProductionHODPageObjects.BMRProductionHODTechTransferRAQAIncharge;
-import com.ProductionInchargePageObjects.BMRProductionInchargeReview;
+import com.InitiatorPageObjects.BMRBPRMasterApprovalInitiation;
+import com.ProductionHODPageObjects.BMRBPRProductionHODTechTransferRAQAIncharge;
+import com.ProductionInchargePageObjects.BMRBPRProductionInchargeReview;
 
 public class MasterApprovalByProductionHOD extends ConfigurationReader{
 
 	public Assignmenu as;
-	public BMRProductionHODTechTransferRAQAIncharge hod;
-	public BMRMasterApprovalInitiation app;
-	public BMRProductionInchargeReview review;
+	public BMRBPRProductionHODTechTransferRAQAIncharge hod;
+	public BMRBPRMasterApprovalInitiation app;
+	public BMRBPRProductionInchargeReview review;
 	
 	@Test
 	public void productionhodapproval() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		hod = new BMRProductionHODTechTransferRAQAIncharge(driver);
-		app = new BMRMasterApprovalInitiation(driver);
+		hod = new BMRBPRProductionHODTechTransferRAQAIncharge(driver);
+		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		as.userlogin(getproductionhod(), getpassword());
 		hod.masterapprovaltab();
@@ -35,15 +35,15 @@ public class MasterApprovalByProductionHOD extends ConfigurationReader{
     public void productionhodreturn() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		hod = new BMRProductionHODTechTransferRAQAIncharge(driver);
-		app = new BMRMasterApprovalInitiation(driver);
-		review = new BMRProductionInchargeReview(driver);
+		hod = new BMRBPRProductionHODTechTransferRAQAIncharge(driver);
+		app = new BMRBPRMasterApprovalInitiation(driver);
+		review = new BMRBPRProductionInchargeReview(driver);
 		
 		as.userlogin(getproductionhod(), getpassword());
 		hod.masterapprovaltab();
 		review.returnbutton();
 		hod.comments(getreturncomments());
 		review.returnbutton();
-		app.submitactivity(getpassword());
+		app.submitactivity2(getpassword());
 	}
 }

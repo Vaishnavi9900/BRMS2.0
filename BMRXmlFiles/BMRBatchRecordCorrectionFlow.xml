@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="BMRBatchCorrectionInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BMRBatchCorrectionInitiation"/>
+      <methods>
+      <include name = "BatchCorrectionInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BatchCorrectionReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRbatchClosureApproval"/>
+      <methods>
+      <include name = "BatchCorrectionReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BatchCorrectionReInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BMRBatchCorrectionInitiation"/>
+      <methods>
+      <include name = "BatchCorrectionReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BatchCorrectionApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRbatchClosureApproval"/>
+      <methods>
+      <include name = "BatchCorrectionApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

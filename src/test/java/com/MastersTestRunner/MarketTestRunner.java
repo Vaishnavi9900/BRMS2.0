@@ -19,7 +19,7 @@ public class MarketTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		mt.marketcreatewithspace();
 	}
 	
@@ -28,9 +28,9 @@ public class MarketTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		mt.marketcreate();
-		mt.createactivity();
+		mt.createactivity(getpassword());
 	}
 	
 	@Test
@@ -38,7 +38,7 @@ public class MarketTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		mt.existedmarketcreation();
 	
 	}
@@ -47,7 +47,7 @@ public class MarketTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		mt.marketupdatewithspace();
 	}
 	
@@ -56,9 +56,9 @@ public class MarketTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		mt.marketupdate(getcomments());
-		mt.updateactivity();
+		mt.updateactivity(getpassword());
 	}
 	
 	@Test
@@ -66,9 +66,9 @@ public class MarketTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		mt = new Market(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		mt.marketdisableenable(getcomments());
-		mt.updateactivity();
+		mt.updateactivity(getpassword());
 		
 	}
 

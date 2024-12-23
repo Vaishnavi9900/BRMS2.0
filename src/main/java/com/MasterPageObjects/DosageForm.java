@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -37,8 +38,12 @@ public class DosageForm extends BRMSCommonMethods {
 	@FindBy(xpath = "//button[text()=' Upload ']") WebElement upload;
 	@FindBy(xpath = "//button[text()='Yes']") WebElement Yes;
 	@FindBy(xpath = "(//button[text()='No'])[2]") WebElement No;
-	@FindBy(xpath = "//button[text()='OK']") WebElement updateok;
+	@FindBy(xpath = "//button[text()='Ok']") WebElement updateok;
 	@FindBy(xpath = "(//button[@type='button'])[2]") WebElement update;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
+	WebElement password;
+	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
+	WebElement submit2;
 
 	public DosageForm(WebDriver driver) {
 		
@@ -47,24 +52,18 @@ public class DosageForm extends BRMSCommonMethods {
 	}
 	public void dosageformcreatewithspace() throws InterruptedException {
 		javascript(dosageform);
-		javawait();
 		clickElement(create);
-		javawait();
 		clickElement(close);
-		javawait();
 		clickElement(create);
 		javawait();
 		clickElement(create1);
-		javawait();
 		softassert.assertEquals(dosageformalert.getText(), "Dosage Form Name is required");
 		javawait();
 		textbox(dosagename, " ");
-		javawait();
 		clickElement(create1);
 		if(Yes.isDisplayed() || dosageformalert.isDisplayed()) {
 			 extenttest.log(Status.FAIL, "validation is not working fine with space");
 			clickElement(No);
-			javawait();
 			clickElement(close);
 		}
 		else {
@@ -75,50 +74,36 @@ public class DosageForm extends BRMSCommonMethods {
 	public void dosageformcreate() throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Dosageform");
 		javascript(dosageform);
-		javawait();
 		clickElement(create);
-		javawait();
 		clickElement(close);
-		javawait();
 		clickElement(create);
-		javawait();
 		clickElement(create1);
-		javawait();
 		softassert.assertEquals(dosageformalert.getText(), "Dosage Form Name is required");
 		clickElement(dosagename);
 		for (int i = 1; i <2; i++) {
 			dosagename.sendKeys(excelUtils.getCellData(i, 0));
-		javawait();
 		clickElement(create1);
 		}
 	}
     public void updateactivity() throws InterruptedException {
 		
 		clickElement(No);
-		javawait();
 		clickElement(update);
-		javawait();
 		clickElement(Yes);
-		javawait();
 		clickElement(updateok);
 	}
     public void updateactivity2() throws InterruptedException {
 
 	clickElement(Yes);
-	javawait();
 	clickElement(updateok);
      }
 	
 	public void existeddosageform() throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Dosageform");
 		javascript(dosageform);
-		javawait();
 		clickElement(create);
-		javawait();
 		clickElement(create1);
-		javawait();
 		softassert.assertEquals(dosageformalert.getText(), "Dosage Form Name is required");
-		javawait();
 		clickElement(dosagename);
 		for (int i = 1; i <2; i++) {
 			dosagename.sendKeys(excelUtils.getCellData(i, 0));
@@ -128,7 +113,6 @@ public class DosageForm extends BRMSCommonMethods {
     		 System.out.println("this record is already exist, already existed condition has been failed");
     		extenttest.log(Status.FAIL,"this test is failed, validation is not showing" );
     		 clickElement(No);
-    		 javawait();
     		 clickElement(close);
     	  }else {
     		  extenttest.log(Status.PASS,"this test is passed, validation is showing" );
@@ -142,23 +126,17 @@ public class DosageForm extends BRMSCommonMethods {
 		clickElement(search);
 		for (int i = 1; i <2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 0));
-		javawait();
     	clickElement(createdrecord);
-    	javawait();
     	clickElement(update);
-    	javawait();
     	softassert.assertEquals(commentalert.getText(), "Comments are required");
     	textboxc(dosagename, " ");
-    	javawait();
     	textbox(comments, " ");
-    	javawait();
     	clickElement(update);
     	javawait();
     	if(No.isDisplayed() || dosageformalert.isDisplayed() || commentalert.isDisplayed()) {
     		System.out.println("validations are not working fine with comments space(market & comments)");
     		extenttest.log(Status.FAIL,"this test is failed, validation is not showing" );
     		clickElement(No);
-    		javawait();
     		clickElement(close);
     	}
     	else {
@@ -175,19 +153,14 @@ public class DosageForm extends BRMSCommonMethods {
 		clickElement(search);
 		for (int i = 1; i <2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 0));
-		javawait();
     	clickElement(createdrecord);
-    	javawait();
     	clickElement(update);
-    	javawait();
     	softassert.assertEquals(commentalert.getText(), "Comments are required");
     	javawait();
     	clickElement(dosagename);
     	dosagename.clear();
     	dosagename.sendKeys(excelUtils.getCellData(i, 1));
-    	javawait();
     	textbox(comments, comm);
-    	javawait();
     	clickElement(update);
 		}
 	}
@@ -198,33 +171,31 @@ public class DosageForm extends BRMSCommonMethods {
 		clickElement(search);
 		for (int i = 1; i <2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 1));
-		javawait();
     	clickElement(createdrecord);
     	javawait();
     	clickElement(update);
-    	javawait();
     	softassert.assertEquals(commentalert.getText(), "Comments are required");
-    	javawait();
     	textbox(comments, comm);
-    	javawait();
     	clickElement(enable);
     	clickElement(update);	
 		}
 	}
-public void createactivity() throws InterruptedException {
+public void createactivity(String pass) throws InterruptedException {
 		
 		clickElement(No);
-		javawait();
 		clickElement(create1);
-		javawait();
 		clickElement(Yes);
+		textbox(password, pass);
 		javawait();
-		clickElement(updateok);
+		clickElement(submit2);
+		javawait();
 	}
-    public void createactivity2() throws InterruptedException {
+    public void createactivity2(String pass) throws InterruptedException {
 
 	clickElement(Yes);
+	textbox(password, pass);
 	javawait();
-	clickElement(updateok);
+	clickElement(submit2);
+	javawait();
      }
 }

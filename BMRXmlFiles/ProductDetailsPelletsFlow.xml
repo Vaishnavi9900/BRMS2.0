@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+   <test name="Pelletsinitiation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation"/>
+      <methods>
+      <include name = "pelletsinitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="ProductDetailsReturn">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
+       <methods>
+      <include name = "hodReturn"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="pelletsReinitiation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation"/>
+      <methods>
+      <include name = "pelletsReinitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="ProductDetailsApproval">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
+       <methods>
+      <include name = "hodApproval"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

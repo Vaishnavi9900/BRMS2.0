@@ -19,7 +19,7 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		ds = new DosageForm(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		ds.dosageformcreatewithspace();
 		
 	}
@@ -29,18 +29,18 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		ds = new DosageForm(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		ds.dosageformcreate();
-		ds.createactivity();
+		ds.createactivity(getpassword());
 	}
 	@Test
 	public void existeddosagecreation() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		ds = new DosageForm(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		ds.existeddosageform();
-		ds.createactivity();
+		ds.createactivity(getpassword());
 	}
 	
 	@Test
@@ -48,7 +48,7 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		ds = new DosageForm(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		ds.dosageupdatewithspace();
 	}
 	@Test
@@ -56,7 +56,7 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		ds = new DosageForm(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		ds.dosageupdate(getcomments());
 		ds.updateactivity();
 	}
@@ -65,7 +65,7 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		ds = new DosageForm(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		ds.dosageenabledisable(getcomments());
 		ds.updateactivity();
 	}

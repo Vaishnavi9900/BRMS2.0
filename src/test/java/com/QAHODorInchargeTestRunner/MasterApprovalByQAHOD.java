@@ -4,21 +4,21 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
-import com.ProductionInchargePageObjects.BMRProductionInchargeReview;
-import com.QAHODorInChargePageObjects.BMRQAHODMasterauthorization;
+import com.ProductionInchargePageObjects.BMRBPRProductionInchargeReview;
+import com.QAHODorInChargePageObjects.BMRBPRQAHODMasterauthorization;
 
 public class MasterApprovalByQAHOD extends ConfigurationReader{
 	
 	public Assignmenu as;
-	public BMRQAHODMasterauthorization auth;
-	public BMRProductionInchargeReview review;
+	public BMRBPRQAHODMasterauthorization auth;
+	public BMRBPRProductionInchargeReview review;
 	
 	@Test
 	public void masterApprovalReturnbyQAHOD() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		auth = new BMRQAHODMasterauthorization(driver);
-		review = new BMRProductionInchargeReview(driver);
+		auth = new BMRBPRQAHODMasterauthorization(driver);
+		review = new BMRBPRProductionInchargeReview(driver);
 		
 		as.userlogin(getQAHOD(), getpassword());
 		auth.masterauthorizationtab();
@@ -32,8 +32,8 @@ public class MasterApprovalByQAHOD extends ConfigurationReader{
     public void qaHODMasterApproval() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		auth = new BMRQAHODMasterauthorization(driver);
-		review = new BMRProductionInchargeReview(driver);
+		auth = new BMRBPRQAHODMasterauthorization(driver);
+		review = new BMRBPRProductionInchargeReview(driver);
 		
 		as.userlogin(getQAHOD(), getpassword());
 		auth.masterauthorizationtab();

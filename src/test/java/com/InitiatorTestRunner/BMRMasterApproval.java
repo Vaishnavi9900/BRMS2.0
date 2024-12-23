@@ -6,18 +6,18 @@ import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
-import com.InitiatorPageObjects.BMRMasterApprovalInitiation;
+import com.InitiatorPageObjects.BMRBPRMasterApprovalInitiation;
 
 public class BMRMasterApproval extends ConfigurationReader {
 	
 	public Assignmenu as;
-	public BMRMasterApprovalInitiation app;
+	public BMRBPRMasterApprovalInitiation app;
 	
 	@Test
 	public void masterApprovalInitiation() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		app = new BMRMasterApprovalInitiation(driver);
+		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		as.userlogin(getinitiator(), getpassword());
 		app.masterinitiationtab();
@@ -31,14 +31,14 @@ public class BMRMasterApproval extends ConfigurationReader {
     public void masterApprovalReInitiation() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		app = new BMRMasterApprovalInitiation(driver);
+		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		as.userlogin(getinitiator(), getpassword());
 		app.masterreinitiation();
-		app.submit();
-		app.comments();
-		app.submit();
-		app.submitactivity2(getpassword());
+		app.resubmit();
+		app.reinitiationcomments();
+		app.resubmit();
+		app.resubmitactivity2(getpassword());
 		
 	}
 

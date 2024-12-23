@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  ]<test name="beforeprintcancelinitiation">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRBeforePrintCancellation"/>
+      <methods>
+      <include name ="beforeprintcancelinitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  ]<test name="beforePrintCancelReturn" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRBeforePrintCancelApprovalorRejection"/>
+      <methods>
+      <include name ="beforePrintCancelReturn"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="beforeprintcancelReinitiation" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRBeforePrintCancellation"/>
+      <methods>
+      <include name ="beforeprintcancelReinitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  ]<test name="beforePrintCancelRejection">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRBeforePrintCancelApprovalorRejection"/>
+      <methods>
+      <include name ="beforePrintCancelRejection"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  ]<test name="beforePrintCancelApproval" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRBeforePrintCancelApprovalorRejection"/>
+      <methods>
+      <include name ="beforePrintCancelApproval"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

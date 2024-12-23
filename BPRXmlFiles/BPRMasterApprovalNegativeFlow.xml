@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="bprmasterApprovalInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalInachargeReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRMasterReview"/>
+      <methods>
+      <include name = "bprmasterApprovalReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalReInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalInachargeReview">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRMasterReview"/>
+      <methods>
+      <include name = "bprmasterReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalProdHODReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprproductionhodreturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalReInitiation1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalInachargeReview1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRMasterReview"/>
+      <methods>
+      <include name = "bprmasterReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalProdHODApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprproductionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovaltechtransferReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterReturnbyTechtransferOrRandD"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalReInitiation2">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalInachargeReview2">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRMasterReview"/>
+      <methods>
+      <include name = "bprmasterReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalProdHODApproval2">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprproductionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovaltechtransferApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyTechtransfer"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalRAReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterReturnbyRA"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalReInitiation3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalInachargeReview3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRMasterReview"/>
+      <methods>
+      <include name = "bprmasterReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalProdHODApproval3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprproductionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovaltechtransferApproval3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyTechtransfer"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalbyRA">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyRA"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterReturnbyQAIncharge">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterReturnbyQAIncharge"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalReInitiation4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalInachargeReview4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRMasterReview"/>
+      <methods>
+      <include name = "bprmasterReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalProdHODApproval4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprproductionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovaltechtransferApproval4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyTechtransfer"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalbyRA4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyRA"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalbyQAIncharge">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyQAIncharge"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalReturnbyQAHOD">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRMasterApprovalbyQAHOD"/>
+      <methods>
+      <include name = "bprmasterApprovalReturnbyQAHOD"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalReInitiation5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalInachargeReview5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRMasterReview"/>
+      <methods>
+      <include name = "bprmasterReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalProdHODApproval5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprproductionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovaltechtransferApproval5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyTechtransfer"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalbyRA5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyRA"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprmasterApprovalbyQAIncharge5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRMasterApproval"/>
+      <methods>
+      <include name = "bprmasterApprovalbyQAIncharge"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprqaHODMasterApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRMasterApprovalbyQAHOD"/>
+      <methods>
+      <include name = "bprqaHODMasterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprmasterApprovalEffectivebyQADocCell" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QADocCellTestRunner.BPRMasterEffective"/>
+      <methods>
+      <include name = "bprmasterApprovalEffectivebyQADocCell"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

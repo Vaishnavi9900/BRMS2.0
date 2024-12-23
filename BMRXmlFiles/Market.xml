@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="=MarketCreationwithspace" enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.MarketTestRunner"/>
+      <methods>
+      <include name = "marketcreatewithspace"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=MarketCreation"  enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.MarketTestRunner"/>
+      <methods>
+      <include name = "marketcreation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=ExistedMarketCreation"  enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.MarketTestRunner"/>
+       <methods>
+      <include name = "existedmarketcreation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=MarketUpdatewithspace"  enabled="false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.MarketTestRunner"/>
+       <methods>
+      <include name = "updatemarketwithspace"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="=MarketUpdate">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.MarketTestRunner"/>
+       <methods>
+     <include name = "marketupdate"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=DisableMarket">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.MarketTestRunner"/>
+       <methods>
+      <include name = "marketdisableenable"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=EnableMarket">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.MarketTestRunner"/>
+       <methods>
+      <include name = "marketdisableenable"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

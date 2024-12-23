@@ -21,7 +21,7 @@ public class BMRMasterPreparationRequest extends ConfigurationReader {
 		as.userlogin(getinitiator(), getpassword());
 		mp.masterprepreq();
 		mp.bmrmasterreqinitation1(getinitiatorcomments());
-		mp.submitactivity(getpassword());
+		mp.submitactivity2(getpassword());
 	}
 	
 	

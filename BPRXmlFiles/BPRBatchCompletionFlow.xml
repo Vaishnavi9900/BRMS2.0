@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="bprbatchinitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRBatchCompletionInitiation"/>
+      <methods>
+      <include name = "bprbatchinitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="batchCompletionReview">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRBatchClosureReview"/>
+      <methods>
+      <include name = "batchCompletionReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="batchcoompletionApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRBatchCompletionApproval"/>
+      <methods>
+      <include name = "batchcoompletionApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

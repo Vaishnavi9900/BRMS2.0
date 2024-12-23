@@ -21,6 +21,8 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	    //using the Constants class values for excel file path 
 	    static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
 	
+	    @FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+		WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Preparation Request Approval']") WebElement masterprepapprovaltab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Comments1-tab']") WebElement commentstab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Product1-tab']") WebElement productdetailstab;
@@ -29,15 +31,21 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//button[text()=' Reject ']") WebElement reject;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']") WebElement submit;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Priority ']") WebElement priority;
-	@FindBy(how = How.XPATH, using = "//button[text()='Yes']") WebElement Yes;
-	@FindBy(how = How.XPATH, using = "(//button[text()='No'])[2]") WebElement No;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Yes ']")
+	WebElement Yes;
+	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]")
+	WebElement No;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']") WebElement ok;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
 	@FindBy(how = How.XPATH, using = "(//tr[@role='row'])[2]") WebElement createdrecord;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
+	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
+	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "//span[text()='Master Preparation Request Approval']")
+	WebElement masterprereqapprovaltab;
 	
 	
 	public BMRMasterPreparationapprovals(WebDriver driver) {
@@ -51,33 +59,31 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	
 	public void masterprerejection(String comm) throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
+		clickElement(tab);
+		clickElement(masterprepapprovaltab);
 		 clickElement(search);
-			for (int i = 1; i <2; i++) {
-				search.sendKeys(excelUtils.getCellData(i, 1));
+		 for (int i = 1; i < 2; i++) {
+				search.sendKeys(excelUtils.getCellData(i, 14));
 		    	clickElement(createdrecord);
 		clickElement(commentstab);
-    	javawait();
     	clickElement(productdetailstab);
-    	javawait();
     	clickElement(reject);
-    	javawait();
     	textbox(comments, " ");
     	clickElement(reject);
     	softassert.assertEquals(commalert.getText(), "Comments is required");
     	textbox(comments, comm);
-    	javawait();
     	assert reject.isDisplayed();
     	reject.click();
 	}
 	}
 	public void masterpreapproval(String comm) throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
+		clickElement(tab);
 		 clickElement(search);
-			for (int i = 1; i <2; i++) {
-				search.sendKeys(excelUtils.getCellData(i, 1));
+		 for (int i = 1; i < 2; i++) {
+				search.sendKeys(excelUtils.getCellData(i, 14));
 		    	clickElement(createdrecord);
 		clickElement(commentstab);
-    	javawait();
     	clickElement(productdetailstab);
     	javawait();
     	clickElement(submit);
@@ -90,6 +96,49 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
     	clickElement(submit);
 			}
 	}
+	public void bprmasterprerejection(String comm) throws InterruptedException, IOException {
+		clickElement(tab);
+		clickElement(bpr);
+		javawait();
+		clickElement(masterprereqapprovaltab);
+		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
+		 clickElement(search);
+		 for (int i = 1; i < 2; i++) {
+				search.sendKeys(excelUtils.getCellData(i, 14));
+		    	clickElement(createdrecord);
+		clickElement(commentstab);
+    	clickElement(productdetailstab);
+    	clickElement(reject);
+    	textbox(comments, " ");
+    	clickElement(reject);
+    	softassert.assertEquals(commalert.getText(), "Comments is required");
+    	textbox(comments, comm);
+    	assert reject.isDisplayed();
+    	reject.click();
+	}
+	}
+	public void bprmasterpreapproval(String comm) throws InterruptedException, IOException {
+		clickElement(tab);
+		clickElement(bpr);
+		javawait();
+		clickElement(masterprereqapprovaltab);
+		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
+		 clickElement(search);
+		 for (int i = 1; i < 2; i++) {
+				search.sendKeys(excelUtils.getCellData(i, 14));
+		    	clickElement(createdrecord);
+		clickElement(commentstab);
+    	clickElement(productdetailstab);
+    	clickElement(submit);
+    	textbox(comments, " ");
+    	clickElement(submit);
+    	softassert.assertEquals(commalert.getText(), "Comments is required");
+    	textbox(comments, comm);
+    	clickElement(submit);
+			}
+	}
+	
+	
 	
 	  public void priority() {
 	    	 clickElement(priority);
@@ -98,24 +147,20 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	  public void submitactivity(String pass) throws InterruptedException {
 	 		
 	 		clickElement(No);
-	 		javawait();
 	 		clickElement(submit);
-	 		javawait();
 	 		clickElement(Yes);
-	 	//	javawait();
-//			textbox(password, pass);
-//			javawait();
-//			clickElement(submit2);
-	 		clickElement(ok);
-	 	}
+	 		javawait();
+			textbox(password, pass);
+			clickElement(submit2);
+			javawait();
+		 	}
 	   public void submitactivity2(String pass) throws InterruptedException {
 
 	 	clickElement(Yes);
 	 	javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
-	 	clickElement(ok);
+		javawait();
 	      }
 		
 	

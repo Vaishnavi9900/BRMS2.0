@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="true" thread-count="10">
+<test name="BMRMasterpreparation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterPreparationRequest"/>
+      <methods>
+       <include name = "bmrMasterpreparation"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BMRMasterprepreqRejection" >
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QADocCellTestRunner.BMRMasterPreparationRequestApprovalorRejection"/>
+       <methods>
+       <include name = "bmrmasterreqrejection"></include>
+        </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BMRMasterpreparation1">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterPreparationRequest"/>
+      <methods>
+       <include name = "bmrMasterpreparation"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRMasterprepreqApproval">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QADocCellTestRunner.BMRMasterPreparationRequestApprovalorRejection"/>
+       <methods>
+       <include name = "bmrmasterreqapproval"></include>
+        </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

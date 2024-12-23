@@ -1,15 +1,23 @@
 package com.InitiatorPageObjects;
 
 import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
-
 import com.BasicData.BRMSCommonMethods;
 import com.BasicData.ExcelUtils;
 import com.aventstack.extentreports.Status;
@@ -28,9 +36,9 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement productdetails;
 	@FindBy(how = How.XPATH, using = "//a[text()='Blend']")
 	WebElement blend;
-	@FindBy(how = How.XPATH, using = "//button[text()='Create']")
+	@FindBy(how = How.XPATH, using = "//button[text()='Create ']")
 	WebElement create;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Submit']")
+	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
 	WebElement submit;
 	@FindBy(how = How.XPATH, using = "//div[text()=' Product Name is required ']")
 	WebElement prodnamealert;
@@ -38,7 +46,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement prodcodealert;
 	@FindBy(how = How.XPATH, using = "//div[text()=' Market is required ']")
 	WebElement marketalert;
-	@FindBy(how = How.XPATH, using = "//div[text()=' Dosage Form is required ']")
+	@FindBy(how = How.XPATH, using = "//div[text()=' Dosage Form is required ']") 
 	WebElement dosageformalert;
 	@FindBy(how = How.XPATH, using = "//div[text()=' Strength is required ']")
 	WebElement stregnthalert;
@@ -82,9 +90,9 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement batchsizeuom;
 	@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[1]")
 	WebElement block;
-	@FindBy(how = How.XPATH, using = "//div[text()='Block-VA']")
+	@FindBy(how = How.XPATH, using = "//div[text()='Blister Packing Line']")
 	WebElement blocksel;
-	@FindBy(how = How.XPATH, using = "//div[text()='block-AB']")
+	@FindBy(how = How.XPATH, using = "//div[text()='Bottle packing Line']")
 	WebElement blocksel2;
 	@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[2]")
 	WebElement location;
@@ -100,6 +108,8 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement comments;
 	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='productName_PM']")
 	WebElement productnamepm;
+	@FindBy(how = How.XPATH, using = "(//option[text()=' Common blend for Acetaminophen Suppositories Tablet 750 mg and 950 mg '])[2]")
+	WebElement productnamepmsel;
 	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='productCode_PM']")
 	WebElement productcodepm;
 	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='mprNumber_PM']")
@@ -112,15 +122,15 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement locationpm;
 	@FindBy(how = How.XPATH, using = "//button[@class='btn outLineBtn']")
 	WebElement refresh;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Get']")
+	@FindBy(how = How.XPATH, using = "//button[text()=' Get ']") 
 	WebElement Get;
 	@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[3]")
 	WebElement blendpmselect;
 	@FindBy(how = How.XPATH, using = "//button[@class='btn xsBtn']")
 	WebElement delete;
-	@FindBy(how = How.XPATH, using = "//button[text()='Yes']")
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
 	WebElement Yes;
-	@FindBy(how = How.XPATH, using = "(//button[text()='No'])[2]")
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[3]")
 	WebElement No;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
@@ -140,9 +150,9 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement close;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Add ']")
 	WebElement add;
-	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
+	@FindBy(how = How.XPATH, using = "(//input[@placeholder='Password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	WebElement submit2;
 
 	// Product Details: Pellets
@@ -169,6 +179,8 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement bulkpmselect1;
 	@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[2]")
 	WebElement bulkpmselect2;
+	@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[3]")
+	WebElement bulkpmselect3;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"DataTables_Table_9\"]/tbody/tr[1]/td[1]/span")
 	WebElement mprpath;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div[1]/div/div[1]/div[1]/table/tbody/tr/td[1]/ul/li[2]")
@@ -181,13 +193,9 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	public void pelletsproductdetailsalertsvalidate() throws InterruptedException {
 		javascript(productdetails);
-		javawait();
 		clickElement(create);
-		javawait();
 		clickElement(pellets);
-		javawait();
 		clickElement(submit);
-		javawait();
 		softassert.assertEquals(prodnamealert.getText(), "Product Name is required");
 		softassert.assertEquals(prodcodealert.getText(), "Product Code is required");
 		softassert.assertEquals(marketalert.getText(), "Market is required");
@@ -205,7 +213,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	public void pelletsinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		for (int i = 1; i < 2; i++) {
+		for (int i = 3; i < 4; i++) {
 			productname(excelUtils.getCellData(i, 0));
 			productcode(excelUtils.getCellData(i, 1));
 			market(excelUtils.getCellData(i, 2));
@@ -214,8 +222,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
-			location();
+			//location();
 			comments(excelUtils.getCellData(i, 10));
 			clickElement(submit);
 		}
@@ -226,13 +233,12 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javascript(productdetails);
 		for (int i = 1; i < 2; i++) {
-			textbox(search, excelUtils.getCellData(i, 1));
+			textbox(search, excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
 			clickElement(resubmit);
 			softassert.assertEquals(commentsalert.getText(), "Comments is required");
-			javawait();
 		}
-		for (int i = 2; i < 3; i++) {
+		for (int i = 3; i < 4; i++) {
 			javascript(productname);
 			productname.clear();
 			productname.sendKeys(excelUtils.getCellData(i, 0));
@@ -242,8 +248,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block1();
-			javawait();
-			location1();
+			//location1();
 			comments(excelUtils.getCellData(i, 10));
 			clickElement(resubmit);
 		}
@@ -253,10 +258,8 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		javascript(productdetails);
 		javawait();
 		clickElement(create);
-		javawait();
 		scrolldown(submit);
 		clickElement(submit);
-		javawait();
 		softassert.assertEquals(prodnamealert.getText(), "Product Name is required");
 		softassert.assertEquals(prodcodealert.getText(), "Product Code is required");
 		softassert.assertEquals(marketalert.getText(), "Market is required");
@@ -288,7 +291,6 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
 //			location();
 //			javawait();
 			clickElement(ispelletsNo);
@@ -301,15 +303,13 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javascript(productdetails);
 		for (int i = 1; i < 2; i++) {
-			textbox(search, excelUtils.getCellData(i, 1));
+			textbox(search, excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
 			clickElement(resubmit);
 			softassert.assertEquals(commentsalert.getText(), "Comments is required");
 		}
 		for (int i = 2; i < 3; i++) {
-			javawait();
 			if (ispelletsNo.isSelected()) {
-				javascript(productname);
 				productname.clear();
 				productname.sendKeys(excelUtils.getCellData(i, 0));
 				market(excelUtils.getCellData(i, 2));
@@ -318,12 +318,34 @@ public class BMRProductDetails extends BRMSCommonMethods {
 				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 				block1();
+				//javawait();
+				//location1();
+				clickElement(ispelletsYes);
+				//clickElement(Get);
+				//clickElement(refresh);
 				javawait();
-				location1();
+			for (int j = 1; j < 2; j++) {
+				textbox(mprno, excelUtils.getCellData(j, 15));
+				clickElement(Get);
+				clickElement(delete);
 				javawait();
+				textbox(mprno, excelUtils.getCellData(j, 15));
+				clickElement(Get);
+//				clickElement(delete);
+//				textbox(mprno, excelUtils.getCellData(i, 15));
+//				clickElement(Get);
+				//clickElement(productnamepmsel);
+			   clickElement(blendpmselect);
+				javawait();
+//				List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));
+//				int count=blendselect1.size();
+//				blendselect1.get(count-1).click();
 				comments(excelUtils.getCellData(i, 10));
 				clickElement(resubmit);
-			} else if(ispelletsYes.isSelected()) {
+		}
+			}
+			else if(ispelletsYes.isSelected()) {
+				clickElement(No);
 				javascript(productname);
 				productname.sendKeys(excelUtils.getCellData(i, 0));
 				market(excelUtils.getCellData(i, 2));
@@ -332,16 +354,9 @@ public class BMRProductDetails extends BRMSCommonMethods {
 				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 				block1();
-				javawait();
-				location1();
-				javawait();
-				textbox(productnamepm, excelUtils.getCellData(i, 0));
-				clickElement(Get);
-				javawait();
-				clickElement(blendpmselect);
-				javawait();
+				//javawait();
+				//location1();
 				comments(excelUtils.getCellData(i, 10));
-				javawait();
 				clickElement(resubmit);
 			}
 		}
@@ -361,26 +376,27 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
-			location();
-			javawait();
+			//javawait();
+			//location();
 			clickElement(ispelletsYes);
+//			clickElement(Get);
+//			clickElement(refresh);
+			javawait();
+			textbox(mprno, excelUtils.getCellData(i, 15));
 			clickElement(Get);
-			javawait();
-			clickElement(refresh);
-			javawait();
-			clickElement(Get);
-			javawait();
 			clickElement(delete);
 			javawait();
+			textbox(mprno, excelUtils.getCellData(i, 15));
 			clickElement(Get);
-			javawait();
-			clickElement(blendpmselect);
-			javawait();
+			//clickElement(blendpmselect);
+//			List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));
+//			int count=blendselect1.size();
+//			blendselect1.get(count-1).click();
+			clickElement(bulkpmselect3);
 			comments(excelUtils.getCellData(i, 10));
-			javawait();
 			clickElement(submit);
 		}
+		
 	}
 
 	public void productdetails() {
@@ -483,46 +499,71 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	}
 
 	public void comments(String comm) {
-		textboxc(comments, comm);
+	
+		clickElement(comments);
+		comments.sendKeys(comm);
 	}
 
-	public void submit() {
+	public void submit() throws InterruptedException {
+		javawait();
 		clickElement(submit);
 	}
 
 	public void submitactivity(String pass) throws InterruptedException {
 
-		clickElement(No);
 		javawait();
+		javascript(No);
 		clickElement(submit);
+		clickElement(Yes);
+		javawait();
+//		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
+//				.pollingEvery(Duration.ofSeconds(5));
+//		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("(//input[@placeholder='Password'])[1]"), 5));
+//		password.sendKeys(pass);
+		textbox(password, pass);
+		clickElement(submit2);
+		javawait();
+	}
+	public void resubmitactivity(String pass) throws InterruptedException {
+
+		javascript(No);
+		javawait();
+		clickElement(resubmit);
 		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
-		clickElement(ok);
+		javawait();
+	}
+	public void resubmitactivity2(String pass) throws InterruptedException {
+
+		clickElement(Yes);
+		javawait();
+		textbox(password, pass);
+		javawait();
+		clickElement(submit2);
+		javawait();
 	}
 
 	public void submitactivity2(String pass) throws InterruptedException {
 
+		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
-		clickElement(ok);
+		javawait();
 	}
 
 	public void bulkproductdetailsalertsvalidate() throws InterruptedException {
 		javascript(productdetails);
 		javawait();
 		clickElement(create);
-		javawait();
 		clickElement(bulk);
-		javawait();
 		clickElement(submit);
-		javawait();
 		softassert.assertEquals(producttype.getText(), "Product Type is required");
 		softassert.assertEquals(prodnamealert.getText(), "Product Name is required");
 		softassert.assertEquals(prodcodealert.getText(), "Product Code is required");
@@ -544,7 +585,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	public void bulkproductinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		for (int i = 1; i < 2; i++) {
+		for (int i = 4; i < 5; i++) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 			javascript(productname);
@@ -559,25 +600,65 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
-			location();
-			javawait();
+			//javawait();
+			//location();
 			refbatchsize(excelUtils.getCellData(i, 12), excelUtils.getCellData(i, 13));
-			javawait();
-			javascript(Get);
-			javawait();
-			clickElement(refresh);
-			javawait();
-			clickElement(Get);
-			javawait();
-			clickElement(delete);
-			javawait();
-			clickElement(Get);
-			javawait();
-			clickElement(bulkpmselect1);
-			javawait();
+//			javascript(Get);
+//			clickElement(refresh);
+//			clickElement(Get);
+//			clickElement(delete);
+			//clickElement(bulkpmselect1);
+//			List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));
+//			int count=blendselect1.size();
+//			blendselect1.get(count-1).click();
+		}
+		javawait();
+		clickElement(mprno);
+			for (int i = 1; i < 2; i++) {
+				mprno.sendKeys(excelUtils.getCellData(i, 15));
+				javawait();
+				clickElement(Get);
+				clickElement(bulkpmselect1);
 			comments(excelUtils.getCellData(i, 10));
+			clickElement(submit);
+		}
+	}
+	public void bulkproductinitiationcommon() throws IOException, InterruptedException {
+		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		for (int i = 5; i < 6; i++) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+			javascript(productname);
+			productname.sendKeys(excelUtils.getCellData(i, 0));
+			clickElement(producttype);
+			producttype.sendKeys("Common");
+			productcode(excelUtils.getCellData(i, 1));
+			inputblendcode(excelUtils.getCellData(i, 11));
+			market(excelUtils.getCellData(i, 2));
+			dosageform(excelUtils.getCellData(i, 3));
+			strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
+			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
+			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
+			block();
+			//javawait();
+			//location();
+			refbatchsize(excelUtils.getCellData(i, 12), excelUtils.getCellData(i, 13));
+			//javascript(Get);
+//			clickElement(refresh);
+//			clickElement(Get);
+//			clickElement(delete);
+//			List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));
+//			int count=blendselect1.size();
+//			blendselect1.get(count-1).click();
 			javawait();
+			clickElement(mprno);
+		}
+		for (int i = 1; i < 2; i++) {
+			mprno.sendKeys(excelUtils.getCellData(i, 15));
+			javawait();
+			clickElement(Get);
+			clickElement(bulkpmselect1);
+			comments(excelUtils.getCellData(i, 10));
 			clickElement(submit);
 		}
 	}
@@ -586,7 +667,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javascript(productdetails);
 		for (int i = 1; i < 2; i++) {
-			textbox(search, excelUtils.getCellData(i, 1));
+			textbox(search, excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
 			clickElement(resubmit);
 			softassert.assertEquals(commentsalert.getText(), "Comments is required");
@@ -599,14 +680,13 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			if (producttype.getText().equalsIgnoreCase("BiLayer")) {
 				inputblendcode(excelUtils.getCellData(i, 11));
 				market(excelUtils.getCellData(i, 2));
-				dosageform(excelUtils.getCellData(i, 3));
-				strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
-				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
-				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
-				block1();
-				javawait();
-				location1();
-				javawait();
+//				dosageform(excelUtils.getCellData(i, 3));
+//				strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
+//				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
+//				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
+//				block1();
+				//javawait();
+				//location1();
 				clickElement(refbatchsize);
 				refbatchsize.clear();
 				refbatchsize.sendKeys((excelUtils.getCellData(i, 12)));
@@ -614,38 +694,32 @@ public class BMRProductDetails extends BRMSCommonMethods {
 //			clickElement(refbatchsizeuom);
 //			refbatchsizeuom.clear();
 //			refbatchsizeuom.sendKeys((excelUtils.getCellData(i, 13)));
-				javawait();
-				javascript(productnamepm);
-				productnamepm.sendKeys(excelUtils.getCellData(i, 0));
-				clickElement(Get);
-				javawait();
-				clickElement(bulkpmselect1);
-				clickElement(add);
-				javawait();
-				scrollup(bulkpmselect2);
-				if (bulkpmselect2.isDisplayed())
-					javascript(bulkpmselect2);
-				else
-					throw new RuntimeException("expected webelement is not displyed");
-				clickElement(add);
-				javawait();
+//				javascript(productnamepm);
+//				productcodepm.sendKeys(excelUtils.getCellData(i, 1));
+//				clickElement(Get);
+//				clickElement(bulkpmselect1);
+//				clickElement(add);
+//				scrollup(bulkpmselect2);
+//				if (bulkpmselect2.isDisplayed())
+//					javascript(bulkpmselect2);
+//				else
+//					throw new RuntimeException("expected webelement is not displyed");
+//				clickElement(add);
 				comments(excelUtils.getCellData(i, 10));
-				javawait();
 				clickElement(resubmit);
 			} else {
 				javascript(productname);
 				productname.clear();
 				productname.sendKeys(excelUtils.getCellData(i, 0));
 				inputblendcode(excelUtils.getCellData(i, 11));
-				market(excelUtils.getCellData(i, 2));
-				dosageform(excelUtils.getCellData(i, 3));
-				strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
-				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
-				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
-				block1();
+//				market(excelUtils.getCellData(i, 2));
+//				dosageform(excelUtils.getCellData(i, 3));
+//				strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
+//				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
+//				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
+//				block1();
 //				javawait();
 //				location1();
-				javawait();
 				clickElement(refbatchsize);
 				refbatchsize.clear();
 				refbatchsize.sendKeys((excelUtils.getCellData(i, 12)));
@@ -653,14 +727,10 @@ public class BMRProductDetails extends BRMSCommonMethods {
 //				clickElement(refbatchsizeuom);
 //				refbatchsizeuom.clear();
 //				refbatchsizeuom.sendKeys((excelUtils.getCellData(i, 13)));
-				javawait();
-				scrolldown(Get);
-				clickElement(Get);
-				javawait();
-				clickElement(bulkpmselect1);
-				javawait();
+//				scrolldown(Get);
+//				clickElement(Get);
+//				clickElement(bulkpmselect1);
 				comments(excelUtils.getCellData(i, 10));
-				javawait();
 				clickElement(resubmit);
 			}
 
@@ -669,7 +739,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	public void bulkbilayerproductinitiation() throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		for (int i = 1; i < 2; i++) {
+		for (int i = 6; i < 7; i++) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 			javascript(productname);
@@ -683,26 +753,41 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
-			location();
-			javawait();
+			//javawait();
+			//location();
 			refbatchsize(excelUtils.getCellData(i, 12), excelUtils.getCellData(i, 13));
-			javawait();
-			scrolldown(Get);
+		}
+		for (int i = 1; i < 2; i++) {
+			clickElement(mprno);
+			mprno.sendKeys(excelUtils.getCellData(i, 15), Keys.ENTER);
 			clickElement(Get);
-			javawait();
 			clickElement(bulkpmselect1);
 			clickElement(add);
 			javawait();
-			scrollup(bulkpmselect2);
-			if (bulkpmselect2.isDisplayed())
-				javascript(bulkpmselect2);
-			else
-				throw new RuntimeException("expected webelement is not displyed");
+//			clickElement(refresh);
+			clickElement(refresh);
+			clickElement(mprno);
+			mprno.sendKeys(excelUtils.getCellData(i, 16), Keys.ENTER);
+			javawait();
+			clickElement(Get);
+			javawait();
+			clickElement(bulkpmselect1);
+			javawait();
 			clickElement(add);
-			javawait();
+			//clickElement(bulkpmselect2);	
+//			List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));
+//			int count=blendselect1.size();
+//			blendselect1.get(count-1).click();
+//			clickElement(add);
+//			scrolldown(Get);
+//			clickElement(Get);
+//			clickElement(bulkpmselect2);
+//			clickElement(add);
+//			if (bulkpmselect2.isDisplayed())
+//				javascript(bulkpmselect2);
+//			else
+//				throw new RuntimeException("expected webelement is not displyed");
 			comments(excelUtils.getCellData(i, 10));
-			javawait();
 			clickElement(submit);
 		}
 	}
@@ -731,25 +816,15 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		if (ispelletsYes.isSelected()) {
 
 			textbox(productcodepm, namep);
-			javawait();
 			clickElement(Get);
-			javawait();
 			clickElement(refresh);
-			javawait();
 			textbox(productcodepm, namep);
-			javawait();
 			clickElement(Get);
-			javawait();
 			clickElement(delete);
-			javawait();
 			textbox(productcodepm, namep);
-			javawait();
 			clickElement(Get);
-			javawait();
 			clickElement(blendpmselect);
-			javawait();
 			textbox(comments, comm);
-			javawait();
 			clickElement(submit);
 
 		} else {
@@ -762,6 +837,9 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	public void producttype(String prodtype) {
 		textbox(producttype, prodtype);
+	}
+	public void productcodepm(String prodcode) {
+		textbox(productcodepm, prodcode);
 	}
 
 	public void inputblendcode(String blendcode) {
@@ -787,42 +865,25 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 		if (producttype.getText().equals("Bilayer")) {
 			textbox(productcodepm, namep);
-			javawait();
 			clickElement(Get);
-			javawait();
 			clickElement(refresh);
-			javawait();
 			textbox(productcodepm, namep);
-			javawait();
 			clickElement(Get);
-			javawait();
 			clickElement(delete);
-			javawait();
 			textbox(productcodepm, namep);
-			javawait();
 			clickElement(Get);
-			javawait();
 			clickElement(bulkpmselect1);
-			javawait();
 			clickElement(add);
-			javawait();
 			clickElement(bulkpmselect2);
-			javawait();
 			clickElement(add);
-			javawait();
 			textbox(comments, comm);
-			javawait();
 			clickElement(submit);
 
 		} else {
 			textbox(productcodepm, namep);
-			javawait();
 			clickElement(Get);
-			javawait();
 			clickElement(blendpmselect);
-			javawait();
 			textbox(comments, comm);
-			javawait();
 			clickElement(submit);
 		}
 	}

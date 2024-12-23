@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="bprbatchinitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRBatchCompletionInitiation"/>
+      <methods>
+      <include name = "bprbatchinitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="batchCompletionReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRBatchClosureReview"/>
+      <methods>
+      <include name = "batchCompletionReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprbatchReinitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRBatchCompletionInitiation"/>
+      <methods>
+      <include name = "bprbatchReinitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="batchCompletionReview">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRBatchClosureReview"/>
+      <methods>
+      <include name = "batchCompletionReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="batchcoompletionReturntoexe" enabled="false">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRBatchCompletionApproval"/>
+      <methods>
+      <include name = "batchcoompletionReturntoexe"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="batchcoompletionReturntoipqa">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRBatchCompletionApproval"/>
+      <methods>
+      <include name = "batchcoompletionReturntoipqa"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="batchCompletionReReview">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRBatchClosureReview"/>
+      <methods>
+      <include name = "batchCompletionReReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="batchcoompletionApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRBatchCompletionApproval"/>
+      <methods>
+      <include name = "batchcoompletionApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

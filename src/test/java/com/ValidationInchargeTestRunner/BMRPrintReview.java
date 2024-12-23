@@ -6,17 +6,17 @@ import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
-import com.ValidationInchargePageObjects.BMRValidationInchargePrintReview;
+import com.ValidationInchargePageObjects.BMRBPRValidationInchargePrintReview;
 
 public class BMRPrintReview extends ConfigurationReader{
 	
 	public Assignmenu as;
-	public BMRValidationInchargePrintReview val;
+	public BMRBPRValidationInchargePrintReview val;
 	
 	@Test
 	public void printReturntoExecutive() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
-		val = new BMRValidationInchargePrintReview(driver);
+		val = new BMRBPRValidationInchargePrintReview(driver);
 		
 		as.userlogin(getvalidationincharge(), getpassword());
 		val.printreqreviewtab();
@@ -29,7 +29,7 @@ public class BMRPrintReview extends ConfigurationReader{
 	@Test
 	public void printReturntoIncharge() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
-		val = new BMRValidationInchargePrintReview(driver);
+		val = new BMRBPRValidationInchargePrintReview(driver);
 		
 		as.userlogin(getvalidationincharge(), getpassword());
 		val.printreqreviewtab();
@@ -42,7 +42,7 @@ public class BMRPrintReview extends ConfigurationReader{
 	@Test
 	public void printReview() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
-		val = new BMRValidationInchargePrintReview(driver);
+		val = new BMRBPRValidationInchargePrintReview(driver);
 		
 		as.userlogin(getvalidationincharge(), getpassword());
 		val.printreqreviewtab();
@@ -54,7 +54,7 @@ public class BMRPrintReview extends ConfigurationReader{
 	@Test
 	public void printReReview() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
-		val = new BMRValidationInchargePrintReview(driver);
+		val = new BMRBPRValidationInchargePrintReview(driver);
 		
 		as.userlogin(getvalidationincharge(), getpassword());
 		val.reReview();

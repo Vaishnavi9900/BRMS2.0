@@ -17,7 +17,7 @@ public class StrengthTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		st = new Strength(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		st.strengthcreatewithspace();
 		
 	}
@@ -26,16 +26,16 @@ public class StrengthTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		st = new Strength(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		st.strengthcreate();
-		st.createactivity();
+		st.createactivity(getpassword());
 	}
 	@Test
 	public void existedstrengthcreation() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		st = new Strength(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		st.existedstrengthcreate();
 	}
 	@Test
@@ -43,7 +43,7 @@ public class StrengthTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		st = new Strength(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		st.strengthupdatewithspace();
 	}
 	@Test
@@ -51,18 +51,18 @@ public class StrengthTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		st = new Strength(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		st.strengthupdate(getcomments());
-		st.updateactivity();
+		st.updateactivity(getpassword());
 	}
 	@Test
 	public void strengthdisableenable() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		st = new Strength(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		st.stregnthdisableenable(getcomments());
-		st.updateactivity();
+		st.updateactivity(getpassword());
 	}
 
 }

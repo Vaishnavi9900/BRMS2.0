@@ -9,22 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">BMRBeforePrintCancelInitiation</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">104,214</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">BMRBeforePrintCancelRejection</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">95,804</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">200,018</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">bprdraftinitiation</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">4,516</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">bprcftReturn</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">7,037</td><td></td><td></td></tr>
+<tr><td><a href="#t2">bprdraftReinitiation</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">64,393</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">bprcftReview</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">78,767</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num attn">2</th><th class="num">0</th><th class="num">0</th><th class="num">154,713</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BMRBeforePrintCancelInitiation &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation</td><td><a href="#m0">beforeprintcancelinitiation</a></td><td rowspan="1">1732519197352</td><td rowspan="1">94926</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">BMRBeforePrintCancelRejection &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection</td><td><a href="#m1">beforePrintCancelRejection</a></td><td rowspan="1">1732519301712</td><td rowspan="1">87265</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">bprdraftinitiation &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.InitiatorTestRunner.BPRDraftInitiation</td><td><a href="#m0">setup</a></td><td rowspan="1">1734781158425</td><td rowspan="1">4334</td></tr><tr><th colspan="4">bprdraftinitiation &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.InitiatorTestRunner.BPRDraftInitiation</td><td><a href="#m1">checkstatus</a></td><td rowspan="1">1734781162882</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">teardown</a></td><td rowspan="1">1734781162903</td><td rowspan="1">0</td></tr><tr><th colspan="4">bprdraftinitiation &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.InitiatorTestRunner.BPRDraftInitiation</td><td><a href="#m3">bprdraftinitiation</a></td><td rowspan="1">1734781162863</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">bprcftReturn &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.CFTRevieworReturn</td><td><a href="#m4">setup</a></td><td rowspan="1">1734781163085</td><td rowspan="1">7023</td></tr><tr><th colspan="4">bprcftReturn &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.QAHODorInchargeTestRunner.CFTRevieworReturn</td><td><a href="#m5">checkstatus</a></td><td rowspan="1">1734781170116</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m6">teardown</a></td><td rowspan="1">1734781170118</td><td rowspan="1">0</td></tr><tr><th colspan="4">bprcftReturn &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.CFTRevieworReturn</td><td><a href="#m7">bprcftReturn</a></td><td rowspan="1">1734781170112</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">bprdraftReinitiation &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.InitiatorTestRunner.BPRDraftInitiation</td><td><a href="#m8">bprdraftReinitiation</a></td><td rowspan="1">1734781175478</td><td rowspan="1">57362</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">bprcftReview &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.CFTRevieworReturn</td><td><a href="#m9">bprcftReview</a></td><td rowspan="1">1734781239161</td><td rowspan="1">72269</td></tr></tbody>
 </table>
-<h2>BMRBeforePrintCancelInitiation</h2><h3 id="m0">com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation#beforeprintcancelinitiation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Ok&apos;]&quot;}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<h2>bprdraftinitiation</h2><h3 id="m0">com.InitiatorTestRunner.BPRDraftInitiation#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>org.testng.TestRunner@1be59f28</td><td>chrome</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.205)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [11abd99ba22d4a77659b96409b7d7338, findElement {using=xpath, value=//button[text()=&apos;Ok&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53938}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53938/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 11abd99ba22d4a77659b96409b7d7338
+Command: [8185e75ea1d33a14be4a6d67e92b9d14, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51909/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8185e75ea1d33a14be4a6d67e92b9d14
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -32,27 +36,22 @@ Session ID: 11abd99ba22d4a77659b96409b7d7338
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:145)
-	at com.ProductionInchargePageObjects.BMRProductionInchargePrintReviewOrCancel.cancelsubmitactivity(BMRProductionInchargePrintReviewOrCancel.java:177)
-	at com.ProductionInchargeTestRunner.BMRBeforePrintCancelInitiation.beforeprintcancelinitiation(BMRBeforePrintCancelInitiation.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>BMRBeforePrintCancelRejection</h2><h3 id="m1">com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection#beforePrintCancelRejection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=131.0.6778.86)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1035)
+	at com.BasicData.BRMSCommonMethods.setup(BRMSCommonMethods.java:77)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.InitiatorTestRunner.BPRDraftInitiation#checkstatus</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.InitiatorTestRunner.BPRDraftInitiation#teardown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.InitiatorTestRunner.BPRDraftInitiation#bprdraftinitiation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.205)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7858702233bd33c2b458be77f0b05d4c, clickElement {id=f.B8FB870D51B0311FF2724DA04B4982B2.d.3F88A5E7093B0C524FE9DAB39BBB73FC.e.29}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54113/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7858702233bd33c2b458be77f0b05d4c)] -&gt; xpath: (//input[@type=&apos;password&apos;])[1]]
-Session ID: 7858702233bd33c2b458be77f0b05d4c
+Command: [8185e75ea1d33a14be4a6d67e92b9d14, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51909/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8185e75ea1d33a14be4a6d67e92b9d14
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -60,14 +59,56 @@ Session ID: 7858702233bd33c2b458be77f0b05d4c
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at com.BasicData.BRMSCommonMethods.textbox(BRMSCommonMethods.java:186)
-	at com.QAHODorInChargePageObjects.BMRQAHODPrintApprovalorReject.beforeprintsubmitactivity(BMRQAHODPrintApprovalorReject.java:156)
-	at com.QAHODorInchargeTestRunner.BMRBeforePrintCancelApprovalorRejection.beforePrintCancelRejection(BMRBeforePrintCancelApprovalorRejection.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1035)
+	at com.BasicData.BRMSCommonMethods.setup(BRMSCommonMethods.java:77)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>bprcftReturn</h2><h3 id="m4">com.QAHODorInchargeTestRunner.CFTRevieworReturn#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>org.testng.TestRunner@2babf189</td><td>chrome</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.205)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [17bc12fb0e91a23a32de184d5c0902b0, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17bc12fb0e91a23a32de184d5c0902b0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1035)
+	at com.BasicData.BRMSCommonMethods.setup(BRMSCommonMethods.java:77)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.QAHODorInchargeTestRunner.CFTRevieworReturn#checkstatus</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.QAHODorInchargeTestRunner.CFTRevieworReturn#teardown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.QAHODorInchargeTestRunner.CFTRevieworReturn#bprcftReturn</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.205)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [17bc12fb0e91a23a32de184d5c0902b0, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17bc12fb0e91a23a32de184d5c0902b0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1035)
+	at com.BasicData.BRMSCommonMethods.setup(BRMSCommonMethods.java:77)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>bprdraftReinitiation</h2><h3 id="m8">com.InitiatorTestRunner.BPRDraftInitiation#bprdraftReinitiation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>bprcftReview</h2><h3 id="m9">com.QAHODorInchargeTestRunner.CFTRevieworReturn#bprcftReview</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

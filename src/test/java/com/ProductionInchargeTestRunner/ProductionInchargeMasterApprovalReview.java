@@ -5,20 +5,20 @@ import org.testng.annotations.Test;
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.BRMSCommonMethods;
 import com.BasicData.ConfigurationReader;
-import com.InitiatorPageObjects.BMRMasterApprovalInitiation;
-import com.ProductionInchargePageObjects.BMRProductionInchargeReview;
+import com.InitiatorPageObjects.BMRBPRMasterApprovalInitiation;
+import com.ProductionInchargePageObjects.BMRBPRProductionInchargeReview;
 
 
 public class ProductionInchargeMasterApprovalReview extends ConfigurationReader{
 	public Assignmenu as;
-	public BMRProductionInchargeReview review;
-	public BMRMasterApprovalInitiation app;
+	public BMRBPRProductionInchargeReview review;
+	public BMRBPRMasterApprovalInitiation app;
 	
 	@Test
 	public void masterApprovalReturn() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		review = new BMRProductionInchargeReview(driver);
+		review = new BMRBPRProductionInchargeReview(driver);
 		
 		as.userlogin(getproductionincharge(), getpassword());
 		review.masterreviewtab();
@@ -33,8 +33,8 @@ public class ProductionInchargeMasterApprovalReview extends ConfigurationReader{
      public void masterApproval() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		review = new BMRProductionInchargeReview(driver);
-		app = new BMRMasterApprovalInitiation(driver);
+		review = new BMRBPRProductionInchargeReview(driver);
+		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		as.userlogin(getproductionincharge(), getpassword());
 		review.masterreviewtab();

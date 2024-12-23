@@ -1,16 +1,12 @@
 package com.InitiatorTestRunner;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
-import com.BasicData.ExcelUtils;
 import com.InitiatorPageObjects.BMRProductDetails;
 
 public class BMRProductDetailsInitiation extends ConfigurationReader {
@@ -26,7 +22,7 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		as.userlogin(getinitiator(), getpassword());
 		bmr.pelletsproductdetailsalertsvalidate();
 	    bmr.pelletsinitiation();
-	    bmr.submitactivity(getpassword());	
+	    bmr.submitactivity2(getpassword());	
 	}
 	
 	@Test
@@ -37,7 +33,7 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		as.userlogin(getinitiator(), getpassword());
 		bmr.blendproductdetailsalertsvalidate();
 		bmr.blendinitiationwithoutpellets();
-		bmr.submitactivity(getpassword());
+		bmr.submitactivity2(getpassword());
 	}
 	@Test
 	public void blendinitiationwithpellets() throws InterruptedException, IOException {
@@ -47,17 +43,27 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		as.userlogin(getinitiator(), getpassword());
 		bmr.blendproductdetailsalertsvalidate();
 		bmr.blendinitiationwithpellets();
-		bmr.submitactivity(getpassword());
+		bmr.submitactivity2(getpassword());
 	}
 	@Test
-	public void bulkinitiation() throws InterruptedException, IOException {
+	public void standardbulkinitiation() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bmr = new BMRProductDetails(driver);
 		
 		as.userlogin(getinitiator(), getpassword());
 		bmr.bulkproductdetailsalertsvalidate();
 		bmr.bulkproductinitiation();
-		bmr.submitactivity(getpassword());
+		bmr.submitactivity2(getpassword());
+	}
+	@Test
+	public void commonbulkinitiation() throws InterruptedException, IOException {
+		as = new Assignmenu(driver);
+		bmr = new BMRProductDetails(driver);
+		
+		as.userlogin(getinitiator(), getpassword());
+		bmr.bulkproductdetailsalertsvalidate();
+		bmr.bulkproductinitiationcommon();
+		bmr.submitactivity2(getpassword());
 	}
 	@Test
 	public void bulkbilayerinitiation() throws InterruptedException, IOException {
@@ -76,7 +82,7 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		
 		as.userlogin(getinitiator(), getpassword());
 		bmr.pelletsReinitiation();
-		bmr.submitactivity2(getpassword());
+		bmr.resubmitactivity2(getpassword());
 	}
 	@Test
 	public void blendReinitiation() throws InterruptedException, IOException {
@@ -85,7 +91,7 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		
 		as.userlogin(getinitiator(), getpassword());
 		bmr.blendReinitiation();
-		bmr.submitactivity2(getpassword());
+		bmr.resubmitactivity2(getpassword());
 	}
 	@Test
 	public void bulkReinitiation() throws InterruptedException, IOException {
@@ -94,7 +100,7 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		
 		as.userlogin(getinitiator(), getpassword());
 		bmr.bulkReinitiation();
-		bmr.submitactivity2(getpassword());
+		bmr.resubmitactivity2(getpassword());
 	}
 
 }

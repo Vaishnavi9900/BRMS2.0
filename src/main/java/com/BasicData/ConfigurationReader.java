@@ -1,10 +1,9 @@
 package com.BasicData;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
+
+import org.apache.commons.io.input.BoundedReader;
 
 public class ConfigurationReader extends BRMSCommonMethods {
 	
@@ -295,6 +294,29 @@ public class ConfigurationReader extends BRMSCommonMethods {
  		else 
  			throw new RuntimeException("the printcomments is not found in configured file ");	
  	}
-   
+   public static String getdepartment1() {
+		
+		String department1 = properties.getProperty("department1");
+		if(department1!=null)
+		return department1;
+		else 
+			throw new RuntimeException("the department1 is not found in configured file ");	
+	}
+   public static String getrole1() {
+		
+		String role1 = properties.getProperty("role1");
+		if(role1!=null)
+		return role1;
+		else 
+			throw new RuntimeException("the role1 is not found in configured file ");	
+	}
+   public static String getrole2() {
+		
+		String role2 = properties.getProperty("role2");
+		if(role2!=null)
+		return role2;
+		else 
+			throw new RuntimeException("the role2 is not found in configured file ");	
+	}
     
 }

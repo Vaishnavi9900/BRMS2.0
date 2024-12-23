@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="bprbatchclosureInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRBatchClosureInitiation"/>
+      <methods>
+      <include name = "bprbatchclosureInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprbatchclosureReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRBatchClosureApproval"/>
+      <methods>
+      <include name = "bprbatchclosureReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprbatchclosureReInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRBatchClosureInitiation"/>
+      <methods>
+      <include name = "bprbatchclosureReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprbatchclosureApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRBatchClosureApproval"/>
+      <methods>
+      <include name = "bprbatchclosureApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

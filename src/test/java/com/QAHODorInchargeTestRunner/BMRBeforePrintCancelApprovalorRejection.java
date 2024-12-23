@@ -6,18 +6,18 @@ import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
-import com.QAHODorInChargePageObjects.BMRQAHODPrintApprovalorReject;
+import com.QAHODorInChargePageObjects.BMRBPRQAHODAfterPrintApprovalorReject;
 
 public class BMRBeforePrintCancelApprovalorRejection extends ConfigurationReader{
 	
 	public Assignmenu as;
-	public BMRQAHODPrintApprovalorReject hod;
+	public BMRBPRQAHODAfterPrintApprovalorReject hod;
 	
 	
 	@Test
 	public void beforePrintCancelReturn() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
-		hod = new BMRQAHODPrintApprovalorReject(driver);
+		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		as.userlogin(getQAHOD(), getpassword());
 		hod.beforeprintapprovalrejecttab();
@@ -30,7 +30,7 @@ public class BMRBeforePrintCancelApprovalorRejection extends ConfigurationReader
 	public void beforePrintCancelApproval() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		hod = new BMRQAHODPrintApprovalorReject(driver);
+		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		as.userlogin(getQAHOD(), getpassword());
 		hod.beforeprintapprovalrejecttab();
@@ -43,14 +43,14 @@ public class BMRBeforePrintCancelApprovalorRejection extends ConfigurationReader
 	public void beforePrintCancelRejection() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
-		hod = new BMRQAHODPrintApprovalorReject(driver);
+		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		as.userlogin(getQAHOD(), getpassword());
 		hod.beforeprintapprovalrejecttab();
 		hod.beforeprintreject();
-		hod.beforeprintcomments(getapprovalcomments());
+		hod.beforeprintcomments(getrejectedcomments());
 		hod.beforeprintreject();
-		hod.beforeprintsubmitactivity(getpassword());		
+		hod.beforeprintrejectactivity(getpassword());		
 	}
 	
 

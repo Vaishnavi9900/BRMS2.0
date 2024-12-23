@@ -27,8 +27,8 @@ public class CFTActivity extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//span[text()='Comments is required']") WebElement commalert;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Return ']") WebElement returnbutton;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']") WebElement submit;
-	@FindBy(how = How.XPATH, using = "//button[text()='Yes']") WebElement Yes;
-	@FindBy(how = How.XPATH, using = "(//button[text()='No'])[2]") WebElement No;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Yes ']") WebElement Yes;
+	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]") WebElement No;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']") WebElement ok;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
 	@FindBy(how = How.XPATH, using = "(//tr[@role='row'])[2]") WebElement createdrecord;
@@ -37,8 +37,10 @@ public class CFTActivity extends BRMSCommonMethods {
 	@FindBy(how =How.XPATH, using ="//a[text()='Comments']") WebElement commentstab;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
+	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
+	WebElement bpr;
 
 	public CFTActivity(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -48,8 +50,35 @@ public class CFTActivity extends BRMSCommonMethods {
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
-		for (int i = 1; i <2; i++) {
-			search.sendKeys(excelUtils.getCellData(i, 1));
+		for (int i = 1; i < 2; i++) {
+			search.sendKeys(excelUtils.getCellData(i, 14));
+			clickElement(createdrecord);
+			javawait();
+			clickElement(reviewtab);
+			javawait();
+			clickElement(commentstab);
+			javawait();
+			clickElement(productdetails);
+			javawait();
+			clickElement(submit);
+			softassert.assertEquals(commalert.getText(), "Comments is required");
+			textbox(comments, " ");
+			javawait();
+			clickElement(submit);
+			softassert.assertEquals(commalert.getText(), "Comments is required");
+			textbox(comments, comm);
+			javawait();
+			clickElement(submit);
+		}
+	}
+	public void bprCFTreview(String comm) throws IOException, InterruptedException {
+		clickElement(bpr);
+		javawait();
+		javascript(masterdraftrevtab);
+		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
+		clickElement(search);
+		for (int i = 1; i < 2; i++) {
+			search.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
 			javawait();
 			clickElement(reviewtab);
@@ -74,8 +103,8 @@ public class CFTActivity extends BRMSCommonMethods {
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
-		for (int i = 1; i <2; i++) {
-			search.sendKeys(excelUtils.getCellData(i, 1));
+		for (int i = 1; i < 2; i++) {
+			search.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
 			javawait();
 			clickElement(reviewtab);
@@ -88,8 +117,31 @@ public class CFTActivity extends BRMSCommonMethods {
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");
 			javawait();
+			textbox(comments, comm);
+			javawait();
+			clickElement(returnbutton);
+	}
+	}
+	public void bprCFTreturn(String comm) throws IOException, InterruptedException {
+		clickElement(bpr);
+		javawait();
+		javascript(masterdraftrevtab);
+		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
+		clickElement(search);
+		for (int i = 1; i < 2; i++) {
+			search.sendKeys(excelUtils.getCellData(i, 14));
+			clickElement(createdrecord);
+			javawait();
+			clickElement(reviewtab);
+			javawait();
+			clickElement(commentstab);
+			javawait();
+			clickElement(productdetails);
+			javawait();
 			clickElement(returnbutton);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
+			textbox(comments, " ");
+			javawait();
 			textbox(comments, comm);
 			javawait();
 			clickElement(returnbutton);
@@ -98,7 +150,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	
 	public void submitactivity(String pass) throws InterruptedException {
  		
- 		clickElement(No);
+ 		javascript(No);
  		javawait();
  		clickElement(submit);
  		javawait();
@@ -107,7 +159,7 @@ public class CFTActivity extends BRMSCommonMethods {
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
- 		clickElement(ok);
+		javawait();
  	}
 	
 	public void returnactivity(String pass) throws InterruptedException {
@@ -121,7 +173,7 @@ public class CFTActivity extends BRMSCommonMethods {
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
- 		clickElement(ok);
+		javawait();
  	}
 
 	 public void submitactivity2(String pass) throws InterruptedException {
@@ -131,6 +183,6 @@ public class CFTActivity extends BRMSCommonMethods {
 			textbox(password, pass);
 			javawait();
 			clickElement(submit2);
-		 	clickElement(ok);
+			javawait();
 		  }
 }

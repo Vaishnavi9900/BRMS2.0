@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+   <test name="bprdraftinitiation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRDraftInitiation"/>
+      <methods>
+       <include name = "bprdraftinitiation"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="bprcftReturn">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.CFTRevieworReturn"/>
+      <methods>
+       <include name = "bprcftReturn"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bprdraftReinitiation" >
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BPRDraftInitiation"/>
+      <methods>
+       <include name = "bprdraftReinitiation"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprcftReview">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.CFTRevieworReturn"/>
+      <methods>
+       <include name = "bprcftReview"></include>
+       </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="BMRMasterCancelinitiation">
+   <parameter name ="browser" value = "chrome"/>
+     <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterCancellation"/>
+      <methods>
+      <include name ="bmrMasterCancelinitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRMasterCancelApproval"  enabled="false">
+   <parameter name ="browser" value = "chrome"/>
+     <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRMasterCancelApprovalOrRejection"/>
+      <methods>
+      <include name ="masterCancelApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRMasterCancelRejection">
+   <parameter name ="browser" value = "chrome"/>
+     <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRMasterCancelApprovalOrRejection"/>
+      <methods>
+      <include name ="masterCancelRejection"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

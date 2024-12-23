@@ -3,6 +3,7 @@ package com.MasterPageObjects;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -55,7 +56,7 @@ public class BlockandLocation extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//button[text()=' No ']") WebElement profileno;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	WebElement submit2;
 	@FindBy(xpath = "//li[@class='navLink']")
 	WebElement menu;
@@ -63,7 +64,7 @@ public class BlockandLocation extends BRMSCommonMethods {
 	WebElement masters;
 	
        public BlockandLocation(WebDriver driver) {
-    	    driver = driver;
+    	  
 	    PageFactory.initElements(driver, this);
 	
        }
@@ -78,30 +79,22 @@ public class BlockandLocation extends BRMSCommonMethods {
     	   mouseover(menu);
     	   javawait();
     	   mouseover(masters);
-    	   clickElement(blockandlocation);
-    	   javawait();
+    	   javascript(blockandlocation);
     	   clickElement(create);
-    	   javawait();
     	   clickElement(close);
-    	   javawait();
     	   clickElement(create);
     	   javawait();
     	   clickElement(block);
     	   for(int i=1;i<2;i++) {
     	   block.sendKeys(excelUtils.getCellData(i, 0));
-    	   javawait();
     	   clickElement(location);
     	   location.sendKeys(excelUtils.getCellData(i, 1));
-    	   javawait();
     	   clickElement(add);
     	   javawait();
     	   clickElement(delete);
-    	   javawait();
     	   clickElement(location);
     	   location.sendKeys(excelUtils.getCellData(i, 1));
-    	   javawait();
     	   clickElement(add);
-    	   javawait();
     	   clickElement(create1);
        }
        }
@@ -113,12 +106,9 @@ public class BlockandLocation extends BRMSCommonMethods {
     	   for(int i=1;i<2;i++) {
     	    	  
         	   block.sendKeys(excelUtils.getCellData(i, 0));
-        	   javawait();
         	   clickElement(location);
         	   location.sendKeys(excelUtils.getCellData(i, 1));
-        	   javawait();
         	   clickElement(add);
-        	   javawait();
         	   clickElement(create1);
     	       javawait();
     	  if(nochangealreadyexistsok.isDisplayed()) {
@@ -126,7 +116,6 @@ public class BlockandLocation extends BRMSCommonMethods {
     		  extenttest.log(Status.PASS, "this record is already existed, so already exist condition is working fine");
     		 System.out.println("this record is already existed");
     		 clickElement(nochangealreadyexistsok);
-    		 javawait();
     		 clickElement(close);
     	  }else throw new RuntimeException("already existed condition has been failed");
        }
@@ -135,11 +124,9 @@ public class BlockandLocation extends BRMSCommonMethods {
        public void existedconditionforblockcreation() throws IOException, InterruptedException {
     	   excelUtils.setExcelFile(excelFilePath,"BlockorLocation");
     	   javascript(blockandlocation);
-    	   javawait();
     	   clickElement(create);
     	   for (int i = 1; i <2; i++) {
 			textbox(block, excelUtils.getCellData(i, 0));
-			javawait();
 			textbox(location, excelUtils.getCellData(i, 3));
 			clickElement(add);
 			clickElement(create1);
@@ -153,22 +140,17 @@ public class BlockandLocation extends BRMSCommonMethods {
        public void addanotherblockinedit(String comm) throws IOException, InterruptedException {
     	   excelUtils.setExcelFile(excelFilePath,"BlockorLocation");
     	   javascript(blockandlocation);
-    	   javawait();
     	   clickElement(search);
     	   for (int i = 1; i <2; i++) {
 			textbox(search, excelUtils.getCellData(i, 0));
-			javawait();
 			clickElement(createdrecord);
 			textbox(comments, comm);
 			clickElement(update);
-			javawait();
 			clickElement(nochangealreadyexistsok);
-			javawait();
             javascript(editlocation);
-			editlocation.sendKeys(excelUtils.getCellData(i, 3));
+			editlocation.sendKeys(excelUtils.getCellData(i, 4));
 			javawait();
 			clickElement(add);
-			javawait();
 			clickElement(update);
 		}
     	   
@@ -177,27 +159,21 @@ public class BlockandLocation extends BRMSCommonMethods {
        public void blocklocationedit(String comm) throws InterruptedException, IOException {
     	   excelUtils.setExcelFile(excelFilePath,"BlockorLocation");
     	   javascript(blockandlocation);
-    	   javawait();
     	   clickElement(search);
     	   for(int i=1;i<4;i=i+3) {
     	   search.sendKeys(excelUtils.getCellData(i, 0));
     	   javawait();
     	   clickElement(createdrecord);
-    	   javawait();
     	   clickElement(update);
-    	   javawait();
     	   softassert.assertEquals(commentsalert.getText(), "Comments is required");
     	   javawait();
     	   clickElement(edit);
-    	   javawait();
     	   clickElement(location);
     	   location.clear();
     	   location.sendKeys(excelUtils.getCellData(i, 3));
-    	   javawait();
     	   clickElement(add);
     	   javawait();
     	   textbox(comments, comm);
-    	   javawait();
     	   clickElement(update);
     	   }	   
        }
@@ -205,21 +181,15 @@ public class BlockandLocation extends BRMSCommonMethods {
        public void blocklocationdisableenable(String comm) throws InterruptedException, IOException {
     	   excelUtils.setExcelFile(excelFilePath,"BlockorLocation");
     	   javascript(blockandlocation);
-    	   javawait();
     	   clickElement(search);
     	   for(int i=1;i<2;i++) {
     	   search.sendKeys(excelUtils.getCellData(i, 0));
-    	   javawait();
     	   clickElement(createdrecord);
     	   javawait();
     	   clickElement(update);
-    	   javawait();
     	   softassert.assertEquals(commentsalert.getText(), "Comments is required");
-    	   javawait();
     	   textbox(comments, comm);
-    	   javawait();
     	   clickElement(enable);
-    	   javawait();
     	   clickElement(update);
     	   }
        }
@@ -228,22 +198,18 @@ public class BlockandLocation extends BRMSCommonMethods {
 			clickElement(No);
 			javawait();
 			clickElement(create1);
-			javawait();
 			clickElement(Yes);
-			javawait();
 			textbox(password, pass);
+			clickElement2(submit2,Keys.ENTER);
 			javawait();
-			clickElement(submit2);
-			clickElement(ok);
 		}
 	    public void createactivity2(String pass) throws InterruptedException {
 
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
+		clickElement2(submit2,Keys.ENTER);
 		javawait();
-		clickElement(submit2);
-		clickElement(ok);
 	     }
 	    
 	    public void updateactivity(String pass) throws InterruptedException {
@@ -251,26 +217,21 @@ public class BlockandLocation extends BRMSCommonMethods {
 			javascript(No);
 			javawait();
 			javascript(update);
-			javawait();
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
-			clickElement(submit2);
+			clickElement2(submit2, Keys.ENTER);
 			clickElement(ok);
 		}
 	    
 	    public void logout() throws InterruptedException {
 	    	clickElement(profile);
-	    	javawait();
 	    	clickElement(logout);
 	    	javawait();
 	    	clickElement(profileno);
-	    	javawait();
 	    	clickElement(profile);
 	    	javawait();
 	    	clickElement(logout);
-	    	javawait();
 	    	clickElement(profileyes);
 	    }
        

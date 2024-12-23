@@ -20,7 +20,7 @@ public class BMRMasterPreparationRequestApprovalorRejection extends Configuratio
 		as.userlogin(getQADoccell(), getpassword());
 		mp.masterprepapprovaltab();
 		mp.masterprerejection(getrejectedcomments());
-		mp.submitactivity(getpassword());
+		mp.submitactivity2(getpassword());
 	}
 	@Test
 	public void bmrmasterreqapproval() throws InterruptedException, IOException {
@@ -30,7 +30,7 @@ public class BMRMasterPreparationRequestApprovalorRejection extends Configuratio
 		as.userlogin(getQADoccell(), getpassword());
 		mp.masterprepapprovaltab();
 		mp.masterpreapproval(getapprovalcomments());
-		mp.submitactivity(getpassword());
+		mp.submitactivity2(getpassword());
 	}
 
 }

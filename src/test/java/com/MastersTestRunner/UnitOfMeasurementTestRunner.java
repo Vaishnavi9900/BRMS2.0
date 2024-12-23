@@ -18,7 +18,7 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		uom = new UnitOfMeasurement(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		uom.uomcreatewithspace();
 	}
 	@Test
@@ -26,7 +26,7 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		uom = new UnitOfMeasurement(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		uom.uomcreate();
 		uom.createactivity();
 	}
@@ -35,7 +35,7 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		uom = new UnitOfMeasurement(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		uom.existeduomcreate();
 	}
 	@Test
@@ -43,7 +43,7 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		uom = new UnitOfMeasurement(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		uom.uomupdatewithspace();
 	}
 	@Test
@@ -51,7 +51,7 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		uom = new UnitOfMeasurement(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		uom.uomupdate(getcomments());
 		uom.updateactivity();
 	}
@@ -60,7 +60,7 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		uom = new UnitOfMeasurement(driver);
 		
-		as.userlogin(getadmin(), getpassword());
+		as.userlogin(getinitiator(), getpassword());
 		uom.uomdisableenable(getcomments());
 		uom.updateactivity();
 	}

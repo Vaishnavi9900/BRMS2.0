@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="StrengthCreationwithspace">
+   <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.StrengthTestRunner"/>
+      <methods>
+      <include name = "strengthcreatewithspace"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="StrengthCreation">
+   <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.StrengthTestRunner"/>
+      <methods>
+     <include name = "strengthcreation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="ExistedStrengthcreation">
+   <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.StrengthTestRunner"/>
+       <methods>
+      <include name = "existedstrengthcreation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="StrengthUpdatewithspace" enabled="false">
+   <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.StrengthTestRunner"/>
+       <methods>
+      <include name = "strengthupdatewithspace"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="StrengthUpdate">
+   <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.StrengthTestRunner"/>
+        <methods>
+      <include name = "strengthupdate"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="DisableStrength">
+   <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.StrengthTestRunner"/>
+       <methods>
+      <include name = "strengthdisableenable"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="EnableStrength">
+   <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.StrengthTestRunner"/>
+       <methods>
+      <include name = "strengthdisableenable"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

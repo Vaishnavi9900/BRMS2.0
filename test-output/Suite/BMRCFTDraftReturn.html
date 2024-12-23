@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 18 12:39:13 IST 2024</td>
+<td>Started on:</td><td>Sat Dec 21 11:46:12 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>41 seconds (41312 ms)</td>
+<tr><td>Total time:</td><td>66 seconds (66364 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.QAHODorInchargeTestRunner.CFTRevieworReturn.checkstatus()'><b>checkstatus</b><br>Test class: com.QAHODorInchargeTestRunner.CFTRevieworReturn<br>Parameters: public void com.QAHODorInchargeTestRunner.CFTRevieworReturn.CFTreturn() throws java.lang.InterruptedException,java.io.IOException, [TestResult name=CFTreturn status=FAILURE method=CFTRevieworReturn.CFTreturn()[pri:0, instance:com.QAHODorInchargeTestRunner.CFTRevieworReturn@186f8716] output={null}]</td>
+<td title='com.QAHODorInchargeTestRunner.CFTRevieworReturn.checkstatus()'><b>checkstatus</b><br>Test class: com.QAHODorInchargeTestRunner.CFTRevieworReturn<br>Parameters: public void com.QAHODorInchargeTestRunner.CFTRevieworReturn.cftReturn() throws java.lang.InterruptedException,java.io.IOException, [TestResult name=cftReturn status=FAILURE method=CFTRevieworReturn.cftReturn()[pri:0, instance:com.QAHODorInchargeTestRunner.CFTRevieworReturn@1e04fa0a] output={null}]</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [644cacd9b1ca7d820e6800f0e8a05e88, screenshot []]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56347/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 644cacd9b1ca7d820e6800f0e8a05e88
+Command: [d11b23c3937d5a62e569c118f1ee11d4, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55331/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d11b23c3937d5a62e569c118f1ee11d4
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:546)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:322)
-	at com.BasicData.BRMSCommonMethods.CaptureScreenshot(BRMSCommonMethods.java:127)
-	at com.BasicData.BRMSCommonMethods.checkstatus(BRMSCommonMethods.java:110)
+	at com.BasicData.BRMSCommonMethods.CaptureScreenshot(BRMSCommonMethods.java:131)
+	at com.BasicData.BRMSCommonMethods.checkstatus(BRMSCommonMethods.java:114)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information
 	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)
@@ -110,20 +110,20 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:923)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:923)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace516885190", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace516885190'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1806640599", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1806640599'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [644cacd9b1ca7d820e6800f0e8a05e88, screenshot []]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56347/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 644cacd9b1ca7d820e6800f0e8a05e88
+Command: [d11b23c3937d5a62e569c118f1ee11d4, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55331/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d11b23c3937d5a62e569c118f1ee11d4
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:546)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:322)
-	at com.BasicData.BRMSCommonMethods.CaptureScreenshot(BRMSCommonMethods.java:127)
-	at com.BasicData.BRMSCommonMethods.checkstatus(BRMSCommonMethods.java:110)
+	at com.BasicData.BRMSCommonMethods.CaptureScreenshot(BRMSCommonMethods.java:131)
+	at com.BasicData.BRMSCommonMethods.checkstatus(BRMSCommonMethods.java:114)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -178,7 +178,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:923)
 </pre></div></td>
 <td>4</td>
-<td>com.QAHODorInchargeTestRunner.CFTRevieworReturn@186f8716</td></tr>
+<td>com.QAHODorInchargeTestRunner.CFTRevieworReturn@1e04fa0a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
@@ -189,14 +189,14 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.QAHODorInchargeTestRunner.CFTRevieworReturn.CFTreturn()'><b>CFTreturn</b><br>Test class: com.QAHODorInchargeTestRunner.CFTRevieworReturn</td>
+<td title='com.QAHODorInchargeTestRunner.CFTRevieworReturn.cftReturn()'><b>cftReturn</b><br>Test class: com.QAHODorInchargeTestRunner.CFTRevieworReturn</td>
 <td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [644cacd9b1ca7d820e6800f0e8a05e88, findElement [value, using]]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56347/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 644cacd9b1ca7d820e6800f0e8a05e88
+Command: [d11b23c3937d5a62e569c118f1ee11d4, findElement [using, value]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55331/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d11b23c3937d5a62e569c118f1ee11d4
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:546)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
@@ -205,9 +205,9 @@ Session ID: 644cacd9b1ca7d820e6800f0e8a05e88
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:145)
-	at com.QAHODorInChargePageObjects.CFTActivity.CFTreturn(CFTActivity.java:79)
-	at com.QAHODorInchargeTestRunner.CFTRevieworReturn.CFTreturn(CFTRevieworReturn.java:30)
+	at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:149)
+	at com.QAHODorInChargePageObjects.CFTActivity.CFTreturn(CFTActivity.java:108)
+	at com.QAHODorInchargeTestRunner.CFTRevieworReturn.cftReturn(CFTRevieworReturn.java:30)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
 	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)
@@ -246,14 +246,14 @@ Caused by: java.net.SocketException: Connection reset
 	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:923)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:923)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace803116137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace803116137'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace116650158", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace116650158'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [644cacd9b1ca7d820e6800f0e8a05e88, findElement [value, using]]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.69 (77e2244bbcda..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56347/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 644cacd9b1ca7d820e6800f0e8a05e88
+Command: [d11b23c3937d5a62e569c118f1ee11d4, findElement [using, value]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55331/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d11b23c3937d5a62e569c118f1ee11d4
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:546)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
@@ -262,9 +262,9 @@ Session ID: 644cacd9b1ca7d820e6800f0e8a05e88
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:145)
-	at com.QAHODorInChargePageObjects.CFTActivity.CFTreturn(CFTActivity.java:79)
-	at com.QAHODorInchargeTestRunner.CFTRevieworReturn.CFTreturn(CFTRevieworReturn.java:30)
+	at com.BasicData.BRMSCommonMethods.clickElement(BRMSCommonMethods.java:149)
+	at com.QAHODorInChargePageObjects.CFTActivity.CFTreturn(CFTActivity.java:108)
+	at com.QAHODorInchargeTestRunner.CFTRevieworReturn.cftReturn(CFTRevieworReturn.java:30)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -331,8 +331,8 @@ Caused by: java.net.SocketException: Connection reset
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:923)
 </pre></div></td>
-<td>27</td>
-<td>com.QAHODorInchargeTestRunner.CFTRevieworReturn@186f8716</td></tr>
+<td>50</td>
+<td>com.QAHODorInchargeTestRunner.CFTRevieworReturn@1e04fa0a</td></tr>
 </table><p>
 </body>
 </html>

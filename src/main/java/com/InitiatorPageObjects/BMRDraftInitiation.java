@@ -22,7 +22,9 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Draft Initiation']")
-	WebElement masterprepapprovaltab;
+	WebElement masterdrfatinitiationtab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[1]/span/img")
 	WebElement templateprep;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[2]/span/img")
@@ -57,19 +59,72 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	WebElement createdrecord;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
+	@FindBy(how = How.XPATH, using = "//a[text()=' Status']")
+	WebElement status;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[1]/span/img")
+	WebElement bprtemplateprep;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[2]/span/img")
+	WebElement bprchangehostorytemplate;
+	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
+	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[4]")
+	WebElement returned;
+	
 
 	public BMRDraftInitiation(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 	}
 
-	public void masterapprovaltab() throws IOException {
+	
+	public void bmrmasterdraftinitiationtab() throws IOException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		javascript(masterprepapprovaltab);
+		clickElement(tab);
+		javascript(masterdrfatinitiationtab);
 		for (int i = 1; i < 2; i++) {
-			search.sendKeys(excelUtils.getCellData(i, 1));
+			search.sendKeys(excelUtils.getCellData(i, 14));
+			clickElement(createdrecord);
+		}
+	}
+	public void bprmasterdraftinitiationtab() throws IOException, InterruptedException {
+		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		clickElement(tab);
+		clickElement(bpr);
+		javawait();
+		javascript(masterdrfatinitiationtab);
+		for (int i = 1; i < 2; i++) {
+			search.sendKeys(excelUtils.getCellData(i, 14));
+			clickElement(createdrecord);
+		}
+	}
+	public void draftReinitiation() throws IOException, InterruptedException {
+		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		clickElement(tab);
+		javascript(masterdrfatinitiationtab);
+		javawait();
+		clickElement(status);
+		clickElement(returned);
+		clickElement(search);
+		for (int i = 1; i < 2; i++) {
+			search.sendKeys(excelUtils.getCellData(i, 14));
+			clickElement(createdrecord);
+		}
+	}
+
+	public void bprdraftReinitiation() throws IOException, InterruptedException {
+		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		clickElement(tab);
+		clickElement(bpr);
+		javawait();
+		javascript(masterdrfatinitiationtab);
+		javawait();
+		clickElement(status);
+		javawait();
+		clickElement(search);
+		for (int i = 1; i < 2; i++) {
+			search.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
 		}
 	}
@@ -77,20 +132,42 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void wordtemplates() {
 		clickElement(templateprep);
 		try {
-			Thread.sleep(30000);
+			Thread.sleep(40000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		clickElement(changehostorytemplate);
 		try {
-			Thread.sleep(30000);
+			Thread.sleep(40000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void bprwordtemplates() {
+		clickElement(bprtemplateprep);
+		try {
+			Thread.sleep(40000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		clickElement(bprchangehostorytemplate);
+		try {
+			Thread.sleep(40000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
+	public void comments(String comm) throws InterruptedException {
+		
+		clickElement(comments);
+		javawait();
+		comments.sendKeys(comm);
+	}
 	public void finalapproval() {
 
 		clickElement(finalapproval);
@@ -99,8 +176,13 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void cftreview() {
 		clickElement(cftreview);
 	}
+	
+	public void submit() throws InterruptedException {
+		javawait();
+		clickElement(submit);
+	}
 
-	public void draftsubmit(String dept, String rol, String comm) throws InterruptedException {
+	public void draftsubmit(String dept, String rol, String dept1, String rol2, String comm) throws InterruptedException {
 
 		if (finalapproval.isSelected()) {
 
@@ -126,7 +208,47 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 			javawait();
 			clickElement(remove);
 			textbox(department, dept);
+			textbox(role, rol);
+			clickElement(addcft);
 			javawait();
+			textbox(department,dept1);
+			textbox(role, rol2);
+			clickElement(addcft);
+			javawait();
+			clickElement(comments);
+			comments.sendKeys(comm);
+			javawait();
+			clickElement(submit);
+
+		}
+
+	}
+	public void draftsubmit1(String dept, String rol,String comm) throws InterruptedException {
+
+		if (finalapproval.isSelected()) {
+
+			textbox(comments, "");
+			clickElement(submit);
+			try {
+				javawait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			softassert.assertEquals(commalert.getText(), "Comments is required");
+			textbox(comments, comm);
+			javawait();
+			clickElement(submit);
+
+		} else {
+			textbox(department, dept);
+			javawait();
+			textbox(role, rol);
+			javawait();
+			clickElement(addcft);
+			javawait();
+			clickElement(remove);
+			textbox(department, dept);
 			textbox(role, rol);
 			clickElement(addcft);
 			javawait();
@@ -137,19 +259,50 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 		}
 
 	}
+	public void reinitiationdraftsubmit(String dept, String rol2, String comm) throws InterruptedException {
 
+		if (finalapproval.isSelected()) {
+
+			textbox(comments, "");
+			clickElement(submit);
+			try {
+				javawait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			softassert.assertEquals(commalert.getText(), "Comments is required");
+			textbox(comments, comm);
+			javawait();
+			clickElement(submit);
+
+		} else {
+			clickElement(remove);
+			clickElement(remove);
+			textbox(department, dept);
+			textbox(role, rol2);
+			clickElement(addcft);
+			javawait();
+			textbox(comments, comm);
+			javawait();
+			clickElement(submit);
+			javawait();
+		}
+
+	}
+
+	
 	public void submitactivity(String pass) throws InterruptedException {
 
+		javawait();
 		clickElement(No);
 		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
-//		textbox(password, pass);
-//		javawait();
-//		clickElement(submit2);
-		clickElement(ok);
+		textbox(password, pass);
+		clickElement(submit2);
+		javawait();
 	}
 
 	public void submitactivity2(String pass) throws InterruptedException {
@@ -157,9 +310,8 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
-		clickElement(ok);
+		javawait();
 	}
 
 }

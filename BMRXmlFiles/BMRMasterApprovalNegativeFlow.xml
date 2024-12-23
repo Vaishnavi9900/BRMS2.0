@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="MasterApprovalInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterApproval"/>
+      <methods>
+      <include name = "masterApprovalInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MasterApprovalReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview"/>
+      <methods>
+      <include name = "masterApprovalReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MasterApprovalReInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterApproval"/>
+      <methods>
+      <include name = "masterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyProductionIncharge">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview"/>
+      <methods>
+      <include name = "masterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReturnbyProductionHOD">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.MasterApprovalByProductionHOD"/>
+      <methods>
+      <include name = "productionhodreturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReInitiation1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterApproval"/>
+      <methods>
+      <include name = "masterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyProductionIncharge1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview"/>
+      <methods>
+      <include name = "masterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MasterApprovalbyProductionHOD">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.MasterApprovalByProductionHOD"/>
+      <methods>
+      <include name = "productionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReturnbyTechTransfer">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer"/>
+      <methods>
+      <include name = "masterApprovalReturnbyTechtransfer"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReInitiation2">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterApproval"/>
+      <methods>
+      <include name = "masterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyProductionIncharge2">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview"/>
+      <methods>
+      <include name = "masterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MasterApprovalbyProductionHOD2">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.MasterApprovalByProductionHOD"/>
+      <methods>
+      <include name = "productionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="MasterApprovalbyTechTransfer">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer"/>
+      <methods>
+      <include name = "masterApprovalnbyTechtransferOrRandD"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReturnbyRA">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BMRMasterApprovalbyRA"/>
+      <methods>
+      <include name = "masterApprovalReturnbyRA"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReInitiation3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterApproval"/>
+      <methods>
+      <include name = "masterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyProductionIncharge3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview"/>
+      <methods>
+      <include name = "masterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MasterApprovalbyProductionHOD3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.MasterApprovalByProductionHOD"/>
+      <methods>
+      <include name = "productionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="MasterApprovalbyTechTransfer3">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer"/>
+      <methods>
+      <include name = "masterApprovalnbyTechtransferOrRandD"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyRA">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BMRMasterApprovalbyRA"/>
+      <methods>
+      <include name = "rAMasterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReturnbyQAIncharge">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge"/>
+      <methods>
+      <include name = "masterApprovalReturnbyQAIncharge"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReInitiation4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterApproval"/>
+      <methods>
+      <include name = "masterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyProductionIncharge4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview"/>
+      <methods>
+      <include name = "masterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MasterApprovalbyProductionHOD4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.MasterApprovalByProductionHOD"/>
+      <methods>
+      <include name = "productionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="MasterApprovalbyTechTransfer4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer"/>
+      <methods>
+      <include name = "masterApprovalnbyTechtransferOrRandD"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyRA4">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BMRMasterApprovalbyRA"/>
+      <methods>
+      <include name = "rAMasterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyQAIncharge">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge"/>
+      <methods>
+      <include name = "qaInchargeMasterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReturnbyQAHOD">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD"/>
+      <methods>
+      <include name = "masterApprovalReturnbyQAHOD"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalReInitiation5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRMasterApproval"/>
+      <methods>
+      <include name = "masterApprovalReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyProductionIncharge5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview"/>
+      <methods>
+      <include name = "masterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="MasterApprovalbyProductionHOD5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionHODTestRunner.MasterApprovalByProductionHOD"/>
+      <methods>
+      <include name = "productionhodapproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="MasterApprovalbyTechTransfer5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer"/>
+      <methods>
+      <include name = "masterApprovalnbyTechtransferOrRandD"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="rAMasterApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.RATestRunner.BMRMasterApprovalbyRA"/>
+      <methods>
+      <include name = "rAMasterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyQAIncharge5">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge"/>
+      <methods>
+      <include name = "qaInchargeMasterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="MasterApprovalbyQAHOD">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD"/>
+      <methods>
+      <include name = "qaHODMasterApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="MasterApprovalEffectiveByDocCell">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QADocCellTestRunner.BMRMasterEffectivebyDocCell"/>
+      <methods>
+      <include name = "masterApprovalEffectivebyQADocCell"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
+

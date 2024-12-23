@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="bpradditionalPageInitiation" enabled="false">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRAdditionalPagePrintReqInitiation"/>
+      <methods>
+      <include name = "bpradditionalPageInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bpradditionalPageReturn" enabled="false">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRAdditionalPageReview"/>
+      <methods>
+      <include name = "bpradditionalPageReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bpradditionalPageReInitiation" enabled="false">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRAdditionalPagePrintReqInitiation"/>
+      <methods>
+      <include name = "bpradditionalPageReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="bpradditionalPageReject" enabled="false" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRAdditionalPageReview"/>
+      <methods>
+      <include name = "bpradditionalPageReject"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bpradditionalPageReview" enabled="false"  >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRAdditionalPageReview"/>
+      <methods>
+      <include name = "bpradditionalPageReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bpradditionalPageReturnbyIPQA" enabled="false"  >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRAdditioanlPageApproval"/>
+      <methods>
+      <include name = "bpradditionalPageReturnbyIPQA"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bpradditionalPageRejection"  enabled="false" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRAdditioanlPageApproval"/>
+      <methods>
+      <include name = "bpradditionalPageRejection"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="bpradditionalPageApproval"  enabled="false"  >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRAdditioanlPageApproval"/>
+      <methods>
+      <include name = "bpradditionalPageApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="additionalPageIssue" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRAdditionalPagePrintIssuanceandPrint"/>
+      <methods>
+      <include name = "additionalPageIssue"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="additionalPagePrint" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRAdditionalPagePrintIssuanceandPrint"/>
+      <methods>
+      <include name = "additionalPagePrint"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="additionalPagePrintReject" enabled="false" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRAdditionalPagePrintIssuanceandPrint"/>
+      <methods>
+      <include name = "additionalPagePrintReject"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="additionalPageAcknowledgment" enabled="false">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRAdditionalPagePrintReqInitiation"/>
+      <methods>
+      <include name = "additionalPageAcknowledgment"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

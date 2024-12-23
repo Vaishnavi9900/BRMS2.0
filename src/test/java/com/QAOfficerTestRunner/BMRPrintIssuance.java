@@ -14,23 +14,41 @@ public class BMRPrintIssuance extends ConfigurationReader{
 	public BMRQAOfficerIssuanceandPrint issuance;
 	
 	@Test
-	public void issueandPrint() throws InterruptedException, IOException {
+	public void issue() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		issuance = new BMRQAOfficerIssuanceandPrint(driver);
 		
 		as.userlogin(getQAOfficer(), getpassword());
 		issuance.printissuancetab();
-		issuance.comments2(getissuedcomments());
 		issuance.issue();
-		//issuance.comments();
-		//issuance.issue();
+		issuance.printcopydetails();
+		issuance.comments(getissuedcomments());
+		issuance.issue();
 		issuance.issueactivity2(getpassword());
+	}
+	@Test
+	public void bulkissue() throws InterruptedException, IOException {
+		as = new Assignmenu(driver);
+		issuance = new BMRQAOfficerIssuanceandPrint(driver);
 		
+		as.userlogin(getQAOfficer(), getpassword());
 		issuance.printissuancetab();
-		issuance.comments2(getprintcomments());
+		issuance.issue();
+		issuance.bulkprintcopydetails();
+		issuance.comments(getissuedcomments());
+		issuance.issue();
+		issuance.issueactivity2(getpassword());
+	}
+	@Test
+	public void print() throws InterruptedException, IOException {
+		as = new Assignmenu(driver);
+		issuance = new BMRQAOfficerIssuanceandPrint(driver);
+		
+		as.userlogin(getQAOfficer(), getpassword());
+		issuance.printissuancetab();
 		issuance.print();
-		//issuance.comments();
-		//.print();
+		issuance.comments(getprintcomments());
+		issuance.print();
 		issuance.printactivity(getpassword());
 	}
 	

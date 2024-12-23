@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+<test name="batchclosureInitiation" enabled="false">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BMRBatchClosureInitiationbyQAOfficer"/>
+      <methods>
+      <include name = "batchclosureInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="batchclosureApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRbatchClosureApproval"/>
+      <methods>
+      <include name = "batchclosureApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

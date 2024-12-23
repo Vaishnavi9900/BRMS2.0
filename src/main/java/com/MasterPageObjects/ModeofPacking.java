@@ -23,7 +23,7 @@ public class ModeofPacking extends BRMSCommonMethods {
 	    static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
 
 	
-	@FindBy(how = How.XPATH, using = "//a[text()=' Mode Of Packing ']") WebElement mop;
+	@FindBy(how = How.XPATH, using = "//a[text()=' Mode Of Pack ']") WebElement mop;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Create ']") WebElement create;
 	@FindBy(how = How.XPATH, using = "//img[@class='close']") WebElement close;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]") WebElement mop1;
@@ -45,7 +45,10 @@ public class ModeofPacking extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//button[text()=' Upload ']") WebElement upload;
 	@FindBy(how = How.XPATH, using = "//button[text()='Yes']") WebElement Yes;
 	@FindBy(how = How.XPATH, using = "(//button[text()='No'])[2]") WebElement No;
-	@FindBy(how = How.XPATH, using = "//button[text()='Ok']") WebElement ok;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
+	WebElement password;
+	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
+	WebElement submit2;
 	
 	 public ModeofPacking(WebDriver driver) {
 		    
@@ -56,29 +59,19 @@ public class ModeofPacking extends BRMSCommonMethods {
 	       public void mopcreate() throws InterruptedException, IOException {
 	    	   excelUtils.setExcelFile(excelFilePath,"Modeofpacking");
 	    	   javascript(mop);
-	    	   javawait();
 	    	   clickElement(create);
-	    	   javawait();
 	    	   clickElement(close);
-	    	   javawait();
 	    	   clickElement(create);
-	    	   javawait();
 	    	   clickElement(mop1);
 	    	   for(int i=1;i<2;i++) {
 	        	   mop1.sendKeys(excelUtils.getCellData(i, 0));
-	    	   javawait();
 	    	   clickElement(packstyle);
 	    	   packstyle.sendKeys(excelUtils.getCellData(i, 1));
-	    	   javawait();
 	    	   clickElement(add);
-	    	   javawait();
 	    	   clickElement(delete);
-	    	   javawait();
 	    	   clickElement(packstyle);
 	    	   packstyle.sendKeys(excelUtils.getCellData(i, 1));
-	    	   javawait();
 	    	   clickElement(add);
-	    	   javawait();
 	    	   clickElement(create1);
 	    	   }
 	       }
@@ -86,25 +79,18 @@ public class ModeofPacking extends BRMSCommonMethods {
 	       public void existedmopcreation() throws InterruptedException, IOException {
 	    	   excelUtils.setExcelFile(excelFilePath,"Modeofpacking");
 	    	   javascript(mop);
-	    	   javawait();
 	    	   clickElement(create);
-	    	   javawait();
 	    	   clickElement(mop1);
 	    	   for(int i=1;i<2;i++) {
 	        	   mop1.sendKeys(excelUtils.getCellData(i, 0));
-	    	   javawait();
 	    	   clickElement(packstyle);
 	    	   packstyle.sendKeys(excelUtils.getCellData(i, 1));
-	    	   javawait();
 	    	   clickElement(add);
-	    	   javawait();
 	    	   clickElement(create1);
-	    	   javawait();
 	    		  if(nochangealreadyexistsok.isDisplayed()) {
 	    	    		 System.out.println("this record is already existed");
 	    	    		 extenttest.log(Status.PASS, "Already exist condition is working fine");
 	    	    		 clickElement(nochangealreadyexistsok);
-	    	    		 javawait();
 	    	    		 clickElement(close);
 	    	    	  }else {
 	    	    		extenttest.log(Status.FAIL,"Already exist condition is not working fine");
@@ -115,13 +101,10 @@ public class ModeofPacking extends BRMSCommonMethods {
 	       public void existedconditionformopcreation() throws IOException, InterruptedException {
 	    	   excelUtils.setExcelFile(excelFilePath,"Modeofpacking");
 	    	   javascript(mop);
-	    	   javawait();
 	    	   clickElement(create);
 	    	   for (int i = 1; i <2; i++) {
 				textbox(mop1, excelUtils.getCellData(i, 0));
-				javawait();
 				textbox(packstyle, excelUtils.getCellData(i, 3));
-				javawait();
 				clickElement(add);
 				clickElement(create1);
 				if(nochangealreadyexistsok.isDisplayed())
@@ -134,22 +117,15 @@ public class ModeofPacking extends BRMSCommonMethods {
 	       public void addanothermopinedit(String comm) throws IOException, InterruptedException {
 	    	   excelUtils.setExcelFile(excelFilePath,"Modeofpacking");
 	    	   javascript(mop);
-	    	   javawait();
 	    	   clickElement(search);
 	    	   for (int i = 1; i <2; i++) {
 				textbox(search, excelUtils.getCellData(i, 0));
-				javawait();
 				clickElement(createdrecord);
-				javawait();
 				textbox(comments, comm);
-				javawait();
 				clickElement(update);
-				javawait();
 				clickElement(nochangealreadyexistsok);
-				javawait();
 				javascript(editpackstyle);
-				editpackstyle.sendKeys(excelUtils.getCellData(i, 3));
-				javawait();
+				editpackstyle.sendKeys(excelUtils.getCellData(i, 4));
 				clickElement(add);
 				javawait();
 				clickElement(update);
@@ -161,28 +137,20 @@ public class ModeofPacking extends BRMSCommonMethods {
 	       public void mopupdate(String comm) throws InterruptedException, IOException {
 	    	   excelUtils.setExcelFile(excelFilePath,"Modeofpacking");
 	    	   javascript(mop);
-	    	   javawait();
 	    	   clickElement(search);
 	    	   for(int i=1;i<2;i++) {
-	    		   search.sendKeys(excelUtils.getCellData(i, 0));
-	    	   javawait();
+	    		   search.sendKeys(excelUtils.getCellData(i, 2));
 	    	   clickElement(createdrecord);
-	    	   javawait();
 	    	   clickElement(update);
-	    	   javawait();
 	    	  softassert.assertEquals(commentsalert.getText(), "Comments is required");
 	    	   clickElement(edit);
-	    	   javawait();
 	    	   clickElement(mop1);
 	    	   mop1.clear();
 	    	   mop1.sendKeys(excelUtils.getCellData(i, 2));
-	    	   javawait();
 	    	   clickElement(packstyle);
 	    	   packstyle.clear();
 	    	   packstyle.sendKeys(excelUtils.getCellData(i, 3));
-	    	   javawait();
 	    	   clickElement(add);
-	    	   javawait();
 	    	   textbox(comments, comm);
 	    	   javawait();
 	    	   clickElement(update);
@@ -192,49 +160,45 @@ public class ModeofPacking extends BRMSCommonMethods {
 	       public void mopdisableenableZ(String comm) throws InterruptedException, IOException {
 	    	   excelUtils.setExcelFile(excelFilePath,"Modeofpacking");
 	    	   javascript(mop);
-	    	   javawait();
 	    	   clickElement(search);
 	    	   for(int i=1;i<2;i++) {
 	    		   search.sendKeys(excelUtils.getCellData(i, 2));
-	    	   javawait();
 	    	   clickElement(createdrecord);
-	    	   javawait();
 	    	   clickElement(update);
-	    	   javawait();
 	    	   softassert.assertEquals(commentsalert.getText(), "Comments is required");
 	    	   textbox(comments, comm);
-	    	   javawait();
 	    	   clickElement(enable);
 	    	   javawait();
 	    	   clickElement(update);
 	    	   }
 	       }
-	       public void createactivity() throws InterruptedException {
+	       public void createactivity(String pass) throws InterruptedException {
 				
 				clickElement(No);
-				javawait();
 				clickElement(create1);
-				javawait();
 				clickElement(Yes);
 				javawait();
-				clickElement(ok);
+				textbox(password, pass);
+				clickElement(submit2);
+				javawait();
 			}
-		    public void createactivity2() throws InterruptedException {
+		    public void createactivity2(String pass) throws InterruptedException {
 
 			clickElement(Yes);
+			textbox(password, pass);
+			clickElement(submit2);
 			javawait();
-			clickElement(ok);
 		     }
 		    
-		    public void updateactivity() throws InterruptedException {
+		    public void updateactivity(String pass) throws InterruptedException {
 				
 				clickElement(No);
-				javawait();
 				clickElement(update);
-				javawait();
 				clickElement(Yes);
 				javawait();
-				clickElement(ok);
+				textbox(password, pass);
+				clickElement(submit2);
+				javawait();
 			}
 	       
 

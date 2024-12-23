@@ -24,7 +24,7 @@ public class BMRPrintReview extends ConfigurationReader {
 		incharge.submit();
 		incharge.comments(getapprovalcomments());
 		incharge.submit();
-		incharge.submitactivity(getpassword());	
+		incharge.printsubmitactivity(getpassword());	
 	}
 	@Test
 	public void printReReview() throws InterruptedException, IOException {
@@ -36,7 +36,7 @@ public class BMRPrintReview extends ConfigurationReader {
 		incharge.submit();
 		incharge.comments(getapprovalcomments());
 		incharge.submit();
-		incharge.submitactivity(getpassword());	
+		incharge.resubmitactivity(getpassword());	
 	}
 	@Test
 	public void printReturn() throws InterruptedException, IOException {
@@ -48,7 +48,7 @@ public class BMRPrintReview extends ConfigurationReader {
 		incharge.returnbutton();
 		incharge.comments(getreturncomments());
 		incharge.returnbutton();
-		incharge.returnactivity(getpassword());	
+		incharge.returnactivity2(getpassword());	
 	}
 	
 

@@ -3,6 +3,7 @@
 	<name>BRMS2.0</name>
 	<comment></comment>
 	<projects>
+		<project>VendorRegistration</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
