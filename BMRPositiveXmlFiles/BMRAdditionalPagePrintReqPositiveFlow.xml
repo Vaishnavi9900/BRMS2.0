@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="additionalPageInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRAdditionalPagePrintReqInitiation"/>
+      <methods>
+      <include name = "additionalPageInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="additionalPageReview">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BMRAdditionalPageReview"/>
+      <methods>
+      <include name = "additionalPageReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="additionalPageApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BMRAdditionalPageApproval"/>
+      <methods>
+      <include name = "additionalPageApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="additionalPageIssue">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BMRAdditionalPagePrintIssueandPrint"/>
+      <methods>
+      <include name = "additionalPageIssue"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="additionalPagePrint">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BMRAdditionalPagePrintIssueandPrint"/>
+      <methods>
+      <include name = "additionalPagePrint"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="additionalPageAcknowledgment">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRAdditionalPagePrintReqInitiation"/>
+      <methods>
+      <include name = "additionalPageAcknowledgment"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

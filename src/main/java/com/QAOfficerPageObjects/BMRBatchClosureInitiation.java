@@ -19,10 +19,12 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Batch Closure Initiation']")
 	WebElement batchclosureinitiation;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
@@ -69,6 +71,8 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	}
 	
 	public void batchclosureinitiation() throws IOException, InterruptedException {
+		javawait();
+		//clickElement(tab);
 		javascript(batchclosureinitiation);
 		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -80,6 +84,8 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	    clickElement(createdrecord);
 	}
 	public void bprbatchclosureinitiation() throws IOException, InterruptedException {
+		javawait();
+		//clickElement(tab);
 		clickElement(bpr);
 		javascript(batchclosureinitiation);
 		javawait();
@@ -92,6 +98,8 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	    clickElement(createdrecord);
 	}
 	public void batchclosureReinitiation() throws IOException, InterruptedException {
+		javawait();
+		//clickElement(tab);
 		javascript(batchclosureinitiation);
 		javawait();
 		clickElement(status);
@@ -103,6 +111,8 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	    clickElement(createdrecord);
 	}
 	public void bprbatchclosureReinitiation() throws IOException, InterruptedException {
+		javawait();
+		//clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(batchclosureinitiation);

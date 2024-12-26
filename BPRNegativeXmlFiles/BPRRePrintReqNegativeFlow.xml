@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+   <test name="bprrePrintInitiation">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRReprintReqInitiation"/>
+      <methods>
+      <include name ="bprrePrintInitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="rePrintReturn">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRRePrintApproval"/>
+      <methods>
+      <include name ="rePrintReturn"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprrePrintReInitiation">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRReprintReqInitiation"/>
+      <methods>
+      <include name ="bprrePrintReInitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+     <test name="rePrintReject" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRRePrintApproval"/>
+      <methods>
+      <include name ="rePrintReject"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="rePrintApproval">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRRePrintApproval"/>
+      <methods>
+      <include name ="rePrintApproval"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="ReprintIssue" >
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRReprintIssueandPrint"/>
+      <methods>
+      <include name ="ReprintIssue"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="RePrintPrint">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRReprintIssueandPrint"/>
+      <methods>
+      <include name ="RePrintPrint"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprprintRecievedAcknowledgment">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRPrintRequestInitiation"/>
+      <methods>
+      <include name ="bprprintRecievedAcknowledgment"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

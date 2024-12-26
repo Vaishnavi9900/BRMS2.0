@@ -18,10 +18,12 @@ public class BPRReprintIssuanceandPrint extends ConfigurationReader{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Issuance']")
 	WebElement printissuance;
 	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Issuance']")
@@ -81,8 +83,10 @@ public class BPRReprintIssuanceandPrint extends ConfigurationReader{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void printissuancetab() throws IOException {
+	public void printissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(printissuance);
 		for (int i = 1; i < 2; i++) {
@@ -91,8 +95,10 @@ public class BPRReprintIssuanceandPrint extends ConfigurationReader{
 			
 		}
 	}
-	public void additionalpageprintissuancetab() throws IOException {
+	public void additionalpageprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(addtionalpageissuance);
 		for (int i = 1; i < 2; i++) {
@@ -103,6 +109,8 @@ public class BPRReprintIssuanceandPrint extends ConfigurationReader{
 	}
 	public void reprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+//		clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		clickElement(status);
@@ -115,6 +123,8 @@ public class BPRReprintIssuanceandPrint extends ConfigurationReader{
 	}
 	public void reprinttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		clickElement(status);

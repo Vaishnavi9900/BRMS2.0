@@ -1,36 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <test thread-count="5" name="bprdraftinitiation(failed)">
-    <parameter name="author" value="vaishnavi"/>
+  <test thread-count="5" name="BMRPrintRequestInitiation(failed)">
+    <parameter name="author" value="Vaishnavi"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.InitiatorTestRunner.BPRDraftInitiation">
+      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation">
         <methods>
-          <include name="bprdraftinitiation"/>
           <include name="generateExtentReports"/>
+          <include name="printRequestInitiation"/>
           <include name="setup"/>
           <include name="teardown"/>
           <include name="checkstatus"/>
           <include name="initiatlizeExtentReports"/>
         </methods>
-      </class> <!-- com.InitiatorTestRunner.BPRDraftInitiation -->
+      </class> <!-- com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation -->
     </classes>
-  </test> <!-- bprdraftinitiation(failed) -->
-  <test thread-count="5" name="bprcftReturn(failed)">
-    <parameter name="author" value="vaishnavi"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.QAHODorInchargeTestRunner.CFTRevieworReturn">
-        <methods>
-          <include name="bprcftReturn"/>
-          <include name="generateExtentReports"/>
-          <include name="setup"/>
-          <include name="checkstatus"/>
-          <include name="teardown"/>
-          <include name="initiatlizeExtentReports"/>
-        </methods>
-      </class> <!-- com.QAHODorInchargeTestRunner.CFTRevieworReturn -->
-    </classes>
-  </test> <!-- bprcftReturn(failed) -->
+  </test> <!-- BMRPrintRequestInitiation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

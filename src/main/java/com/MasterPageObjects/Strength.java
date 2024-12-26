@@ -20,7 +20,7 @@ public class Strength extends BRMSCommonMethods{
 	   static ExcelUtils excelUtils = new ExcelUtils();
 	    
 	    //using the Constants class values for excel file path 
-	    static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	    static String excelFilePath =file;
 	
 	@FindBy(xpath = "//a[text()=' Strength ']") WebElement strength;
 	@FindBy(xpath = "//button[text()=' Create ']") WebElement create;

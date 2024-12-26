@@ -18,7 +18,7 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -68,9 +68,10 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void repackingapproval() throws IOException {
+	public void repackingapproval() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
-		clickElement(tab);
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(repackingreqapproval);
 		clickElement(search);

@@ -18,10 +18,12 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	
 	static ExcelUtils excelutils = new ExcelUtils();
 	
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 	
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Obsolete Approval']")
 	WebElement obsoleteapproval;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -54,6 +56,8 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	
 	public void obsoleteApproval() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+		clickElement(tab);
 		javascript(obsoleteapproval);
 		javawait();
 		clickElement(search);
@@ -63,6 +67,8 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 		}
 	}
 	public void bprobsoleteApproval() throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(obsoleteapproval);

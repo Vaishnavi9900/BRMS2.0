@@ -18,10 +18,12 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Batch Completion Approve']")
 	WebElement batchcompletionapprove;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
@@ -62,6 +64,8 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 
 	public void batchcompletionapprovaltab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+	//	clickElement(tab);
 		javascript(batchcompletionapprove);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -70,6 +74,8 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 
 	}
 	public void bprbatchcompletionapprovaltab() throws InterruptedException, IOException {
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionapprove);
@@ -107,6 +113,7 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 		javawait();
 		clickElement(No);
 		javawait();
+		clickElement(submit);
 		javascript(Yes);
 		javawait();
 		textbox(password, pass);

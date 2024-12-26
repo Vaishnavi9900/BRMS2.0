@@ -19,7 +19,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	   static ExcelUtils excelUtils = new ExcelUtils();
 	    
 	    //using the Constants class values for excel file path 
-	    static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	    static String excelFilePath = file;
 	
 	    @FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 		WebElement tab;
@@ -59,7 +59,9 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	
 	public void masterprerejection(String comm) throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
+		javawait();
 		clickElement(tab);
+		masterprepapprovaltab();
 		clickElement(masterprepapprovaltab);
 		 clickElement(search);
 		 for (int i = 1; i < 2; i++) {
@@ -78,7 +80,9 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	}
 	public void masterpreapproval(String comm) throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
+		javawait();
 		clickElement(tab);
+		masterprepapprovaltab();
 		 clickElement(search);
 		 for (int i = 1; i < 2; i++) {
 				search.sendKeys(excelUtils.getCellData(i, 14));
@@ -97,6 +101,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 			}
 	}
 	public void bprmasterprerejection(String comm) throws InterruptedException, IOException {
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javawait();
@@ -118,6 +123,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	}
 	}
 	public void bprmasterpreapproval(String comm) throws InterruptedException, IOException {
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javawait();

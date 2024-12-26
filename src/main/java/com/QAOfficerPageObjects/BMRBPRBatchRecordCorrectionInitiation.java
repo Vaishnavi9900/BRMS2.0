@@ -20,10 +20,12 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Executed Document Correction Initiation']")
 	WebElement executebatchcorrectiontab;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -70,6 +72,8 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 	}
 	
 	public void batchCorrectionInitiation() throws InterruptedException, IOException {
+		javawait();
+		//clickElement(tab);
 		javascript(executebatchcorrectiontab);
 		javawait();
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
@@ -84,6 +88,8 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 	    clickElement(createdrecord);	
 	}
 	public void batchCorrectionReInitiation() throws InterruptedException, IOException {
+		javawait();
+		//clickElement(tab);
 		javascript(executebatchcorrectiontab);
 		javawait();
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
@@ -96,6 +102,8 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 	}
 	
 	public void bprbatchCorrectionInitiation() throws InterruptedException, IOException {
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
 		javawait();
@@ -109,6 +117,8 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 	    clickElement(createdrecord);	
 	}
 	public void bprbatchCorrectionReInitiation() throws InterruptedException, IOException {
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
 		javawait();

@@ -18,10 +18,12 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Approval']")
 	WebElement printreqapproval;
 	@FindBy(how = How.XPATH, using = "//span[text()='Before Print Received Cancel Approval']")
@@ -91,8 +93,10 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void printapprovalrejecttab() throws IOException {
+	public void printapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+		clickElement(tab);
 		javascript(printreqapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -100,8 +104,10 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 			
 		}
 	}
-	public void beforeprintapprovalrejecttab() throws IOException {
+	public void beforeprintapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+		clickElement(tab);
 		javascript(beforeprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -109,8 +115,10 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 			
 		}
 	}
-	public void afterprintapprovaltab() throws IOException {
+	public void afterprintapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+		clickElement(tab);
 		javascript(afterprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -118,7 +126,9 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 			
 		}
 	}
-	public void bprafterprintapprovaltab() throws IOException {
+	public void bprafterprintapprovaltab() throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(afterprintcancelapproval);

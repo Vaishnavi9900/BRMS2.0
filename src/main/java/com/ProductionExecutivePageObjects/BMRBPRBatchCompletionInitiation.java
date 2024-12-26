@@ -19,7 +19,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 	
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 	
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -74,7 +74,8 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	}
 	
 	public void batchcompletiontab() throws InterruptedException, IOException {
-		clickElement(tab);
+		javawait();
+		//clickElement(tab);
 		javascript(batchcompletiontab);
 		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -87,7 +88,8 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 		
 	}
 	public void bprbatchcompletiontab() throws InterruptedException, IOException {
-		clickElement(tab);
+		javawait();
+		//clickElement(tab);
 		clickElement(bpr);
 		javascript(batchcompletiontab);
 		javawait();
@@ -105,9 +107,10 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 		clickElement(submit);
 	}
 	
-	public void reinitiation() throws IOException {
+	public void reinitiation() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
-		clickElement(tab);
+		javawait();
+		//clickElement(tab);
 		javascript(batchcompletiontab);
 		clickElement(status);
 		for (int i = 1; i < 2; i++) {
@@ -115,8 +118,9 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 			clickElement(createdrecord);
 		}
 	}
-	public void bprreinitiation() throws IOException {
-		clickElement(tab);
+	public void bprreinitiation() throws IOException, InterruptedException {
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletiontab);

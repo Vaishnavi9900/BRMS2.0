@@ -55,7 +55,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BRMSCommonMethods {
 	
 	public static WebDriver driver;
-	public String file = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	public static String file = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
 	public String screenshotsubfoldername;
 	public static ExtentReports extentreports;
 	public static ExtentTest extenttest;

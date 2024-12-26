@@ -18,7 +18,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -54,6 +54,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	}
 	
 	public void afterPrintcanelReviewtab() throws InterruptedException, IOException {
+		javawait();
 		clickElement(tab);
 		javascript(afterprintcancelreview);
 		javawait();
@@ -65,6 +66,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	    clickElement(createdrecord);
 	}
 	public void bprafterPrintcanelReviewtab() throws InterruptedException, IOException {
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(afterprintcancelreview);

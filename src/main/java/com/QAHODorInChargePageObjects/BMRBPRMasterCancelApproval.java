@@ -18,10 +18,12 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 	static ExcelUtils excelUtils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Cancel Approval']")
 	WebElement mastercancelapprovaltab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -63,6 +65,8 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 	}
 
 	public void mastercancelapprovaltab() throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		javascript(mastercancelapprovaltab);
 		javawait();
 		clickElement(search);
@@ -73,6 +77,8 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 	    clickElement(createdrecord);
 	}
 	public void bprmastercancelapprovaltab() throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(mastercancelapprovaltab);
 		javawait();

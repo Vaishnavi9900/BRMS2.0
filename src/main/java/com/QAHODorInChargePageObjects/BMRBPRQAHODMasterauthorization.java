@@ -18,10 +18,12 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Authorization']")
 	WebElement masterauthorizationtab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -51,8 +53,10 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void masterauthorizationtab() throws IOException {
+	public void masterauthorizationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+		clickElement(tab);
 		javascript(masterauthorizationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -60,8 +64,10 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 		}
 	}
 
-	public void bprmasterauthorizationtab() throws IOException {
+	public void bprmasterauthorizationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(masterauthorizationtab);
 		for (int i = 1; i < 2; i++) {

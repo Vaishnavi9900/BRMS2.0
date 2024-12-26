@@ -19,7 +19,7 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 	
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 	
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -105,7 +105,8 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	}
 	
 	public void bprprintreqinitiationtab() throws InterruptedException, IOException {
-		clickElement(tab);
+		javawait();
+		//clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(printinitiation);
@@ -122,7 +123,8 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 		
 	}
 	public void bprprintreqReinitiation() throws InterruptedException, IOException {
-		clickElement(tab);
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(printinitiation);
 		javawait();
@@ -211,7 +213,8 @@ public void resubmitactivity(String pass) throws InterruptedException {
  		clickElement(ok);
  	}
 public void printreceivedtab() throws InterruptedException, IOException {
-	clickElement(tab);
+	javawait();
+//	clickElement(tab);
 	clickElement(bpr);
 	 javascript(printinitiation);
 	excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -229,7 +232,8 @@ public void printreceivedtab() throws InterruptedException, IOException {
    clickElement(createdrecord);
 }
 public void additioanlpageprintreceivedtab() throws InterruptedException, IOException {
-	clickElement(tab);
+	javawait();
+//	clickElement(tab);
 	javascript(additionalpageprintinitiation);
 	javawait();
 	excelutils.setExcelFile(excelFilePath, "productdetails");

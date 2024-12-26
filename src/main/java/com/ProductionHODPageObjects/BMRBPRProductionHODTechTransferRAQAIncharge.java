@@ -18,7 +18,7 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 	
 	static ExcelUtils excelutils = new ExcelUtils();
 	
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 	
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Approval']")
 	WebElement masterapprovaltab;
@@ -52,8 +52,9 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void masterapprovaltab() throws IOException {
+	public void masterapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(masterapprovaltab);
 		for (int i = 1; i < 2; i++) {
@@ -61,8 +62,9 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 			clickElement(createdrecord);
 		}
 	}
-	public void bprmasterapprovaltab() throws IOException {
+	public void bprmasterapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(masterapprovaltab);

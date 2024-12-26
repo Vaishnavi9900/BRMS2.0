@@ -19,7 +19,7 @@ public class BMRMasterPreparationRequest extends ConfigurationReader {
 		mp = new BMRMasterPreparation(driver);
 		
 		as.userlogin(getinitiator(), getpassword());
-		mp.masterprepreq();
+		//mp.masterprepreq();
 		mp.bmrmasterreqinitation1(getinitiatorcomments());
 		mp.submitactivity2(getpassword());
 	}

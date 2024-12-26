@@ -19,7 +19,7 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	static ExcelUtils excelUtils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Cancel Initiation']")
 	WebElement mastercancelinitiationtab;
@@ -66,6 +66,7 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	}
 
 	public void mastercancellationtab() throws IOException, InterruptedException {
+		javawait();
 		clickElement(tab);
 		javascript(mastercancelinitiationtab);
 		javawait();
@@ -78,6 +79,7 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	    clickElement(createdrecord);
 	}
 	public void bprmastercancellationtab() throws IOException, InterruptedException {
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(bprmastercancelinitiationtab);

@@ -18,7 +18,7 @@ public class BMRMasterPreparationRequestApprovalorRejection extends Configuratio
 		mp = new BMRMasterPreparationapprovals(driver);
 		
 		as.userlogin(getQADoccell(), getpassword());
-		mp.masterprepapprovaltab();
+		//mp.masterprepapprovaltab();
 		mp.masterprerejection(getrejectedcomments());
 		mp.submitactivity2(getpassword());
 	}
@@ -28,7 +28,7 @@ public class BMRMasterPreparationRequestApprovalorRejection extends Configuratio
 		mp = new BMRMasterPreparationapprovals(driver);
 		
 		as.userlogin(getQADoccell(), getpassword());
-		mp.masterprepapprovaltab();
+		//mp.masterprepapprovaltab();
 		mp.masterpreapproval(getapprovalcomments());
 		mp.submitactivity2(getpassword());
 	}

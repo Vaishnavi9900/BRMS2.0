@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="bprBatchCorrectionInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRBatchCorrectionInitiation"/>
+      <methods>
+      <include name = "bprBatchCorrectionInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprBatchCorrectionApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRBatchRecordCorrectionApproval"/>
+      <methods>
+      <include name = "bprBatchCorrectionApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

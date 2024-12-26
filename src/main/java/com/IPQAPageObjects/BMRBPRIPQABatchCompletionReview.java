@@ -18,7 +18,7 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -62,7 +62,8 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 
 	public void batchcompletionreviewtab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
-		clickElement(tab);
+		javawait();
+		//clickElement(tab);
 		javascript(batchcompletionreview);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -71,7 +72,8 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 
 	}
 	public void bprbatchcompletionreviewtab() throws InterruptedException, IOException {
-		clickElement(tab);
+		javawait();
+		//clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionreview);
@@ -82,12 +84,15 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 
 	}
 	
-	public void bprbatchcompletionRereview() throws IOException {
-		clickElement(tab);
+	public void bprbatchcompletionRereview() throws IOException, InterruptedException {
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionreview);
 		clickElement(returntab);
+		javawait();
+		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
 			clickElement(createdrecord);
@@ -95,10 +100,11 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	}
 	public void batchcompletionRereview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
-		clickElement(tab);
-		javascript(batchcompletionreview);
 		javawait();
+	//	clickElement(tab);
+		javascript(batchcompletionreview);
 		clickElement(returntab);
+		javawait();
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));

@@ -44,7 +44,7 @@ public class CFTRevieworReturn extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		cft = new CFTActivity(driver);
 		
-		as.userlogin(getQAHOD(), getpassword());
+		as.userlogin(getproductionincharge(), getpassword());
 		cft.CFTreturn(getreturncomments());
 		cft.returnactivity(getpassword());
 	}

@@ -22,7 +22,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 	static ExcelUtils excelutils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 	
 
 		@FindBy(how = How.XPATH, using = "//a[text()=' Product Details ']")

@@ -17,7 +17,7 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 		
 		static ExcelUtils excelutils = new ExcelUtils();
 		
-		static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+		static String excelFilePath =file;
 		
 		@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 		WebElement bpr;
@@ -55,6 +55,7 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 		
 		public void obsoleteReview() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
+			javawait();
 			clickElement(tab);
 			javascript(obsoletereview);
 			javawait();
@@ -65,6 +66,7 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 			}
 		}
 		public void bprobsoleteReview() throws IOException, InterruptedException {
+			javawait();
 			clickElement(tab);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

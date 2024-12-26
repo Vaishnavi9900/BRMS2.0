@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+ <test name="bprRePackingreqInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRRepackingInitiation"/>
+      <methods>
+      <include name = "bprRePackingreqInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="repackingReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRRepackingRequestApproval"/>
+      <methods>
+      <include name = "repackingReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprRePackingreqReInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRRepackingInitiation"/>
+      <methods>
+      <include name = "bprRePackingreqReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="repackingApproval" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.IPQATestRunner.BPRRepackingRequestApproval"/>
+      <methods>
+      <include name = "repackingApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="issue" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRPrintIssuanceandPrint"/>
+      <methods>
+      <include name = "issue"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="print" >
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.BPRPrintIssuanceandPrint"/>
+      <methods>
+      <include name = "print"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bprprintRecievedAcknowledgment">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BPRPrintRequestInitiation"/>
+      <methods>
+      <include name = "bprprintRecievedAcknowledgment"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

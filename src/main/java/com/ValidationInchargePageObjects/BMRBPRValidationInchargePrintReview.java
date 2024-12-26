@@ -18,10 +18,12 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Review']")
 	WebElement printreqreview;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -77,8 +79,10 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 		PageFactory.initElements(driver, this);
 	}
 
-	public void printreqreviewtab() throws IOException {
+	public void printreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+	//	clickElement(tab);
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -88,6 +92,8 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 	}
 	public void bprprintreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(printreqreview);
@@ -126,8 +132,10 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 		clickElement(close);
 	}
 	
-	public void reReview() throws IOException {
+	public void reReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+	//	clickElement(tab);
 		javascript(printreqreview);
 		clickElement(returned);
 		for (int i = 1; i < 2; i++) {
@@ -135,8 +143,10 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 			clickElement(createdrecord);			
 		}
 	}
-	public void bprreReview() throws IOException {
+	public void bprreReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqreview);
 		clickElement(returned);

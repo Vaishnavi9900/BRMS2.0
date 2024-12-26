@@ -18,7 +18,7 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 	static ExcelUtils excelUtils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -59,6 +59,7 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 	public void bprMasterPrereqInitiation(String comm) throws IOException, InterruptedException {
 		
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		javawait();
 		clickElement(bpr);

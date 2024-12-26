@@ -20,7 +20,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -89,8 +89,9 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void bprprintreqreviewtab() throws IOException {
+	public void bprprintreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqreview);
@@ -121,6 +122,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	
 	public void reReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqreview);
@@ -209,6 +211,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	}
 	public void cancelprintinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(printcancelinitiation);
@@ -224,6 +227,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	}
 	public void cancelprintReinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(printcancelinitiation);

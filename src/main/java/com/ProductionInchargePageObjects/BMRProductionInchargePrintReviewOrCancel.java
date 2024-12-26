@@ -19,7 +19,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Review']")
 	WebElement printreqreview;
@@ -77,7 +77,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	WebElement cancelYes;
 	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]")
 	WebElement cancelNo;
-	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[4]")
 	WebElement returned;
 	@FindBy(how = How.XPATH, using = "//a[text()=' Status']")
 	WebElement status;
@@ -90,8 +90,9 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 		PageFactory.initElements(driver, this);
 	}
 
-	public void printreqreviewtab() throws IOException {
+	public void printreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
@@ -121,6 +122,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	
 	public void reReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(printreqreview);
 		clickElement(returned);
@@ -221,6 +223,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	}
 	public void cancelprintinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(printcancelinitiation);
 		javawait();
@@ -235,6 +238,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	}
 	public void cancelprintReinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(printcancelinitiation);
 		javawait();

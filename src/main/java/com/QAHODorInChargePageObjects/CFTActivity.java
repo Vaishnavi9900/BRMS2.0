@@ -18,9 +18,11 @@ public class CFTActivity extends BRMSCommonMethods {
 	   static ExcelUtils excelUtils = new ExcelUtils();
 	    
 	    //using the Constants class values for excel file path 
-	    static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	    static String excelFilePath = file;
 	
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Draft Review']") WebElement masterdraftrevtab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[1]/span/img") WebElement templateprep;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[2]/span/img") WebElement changehostorytemplate;
 	@FindBy(how = How.XPATH, using = "//textarea[@trim='blur']") WebElement comments;
@@ -47,6 +49,8 @@ public class CFTActivity extends BRMSCommonMethods {
 	}
 	
 	public void CFTreview(String comm) throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
@@ -72,6 +76,8 @@ public class CFTActivity extends BRMSCommonMethods {
 		}
 	}
 	public void bprCFTreview(String comm) throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(masterdraftrevtab);
@@ -100,6 +106,8 @@ public class CFTActivity extends BRMSCommonMethods {
 	}
 	
 	public void CFTreturn(String comm) throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
@@ -123,6 +131,8 @@ public class CFTActivity extends BRMSCommonMethods {
 	}
 	}
 	public void bprCFTreturn(String comm) throws IOException, InterruptedException {
+		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(masterdraftrevtab);

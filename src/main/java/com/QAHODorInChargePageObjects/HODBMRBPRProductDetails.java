@@ -19,10 +19,12 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	static ExcelUtils excelUtils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()=' Product Details ']")
 	WebElement productdetails;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Comments-tab']")
 	WebElement commentstab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Product-tab']")
@@ -58,8 +60,10 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void commentsvalidate() throws IOException {
+	public void commentsvalidate() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+		clickElement(tab);
 		javascript(productdetails);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {

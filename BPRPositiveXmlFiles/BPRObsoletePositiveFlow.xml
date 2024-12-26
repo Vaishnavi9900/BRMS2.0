@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="obsoleteInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QADocCellTestRunner.BPRObsoleteInitiation"/>
+      <methods>
+      <include name = "obsoleteInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="obsoleteReview">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BPRObsoleteReview"/>
+      <methods>
+      <include name = "obsoleteReview"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="obsoleteApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRObsoleteApproval"/>
+      <methods>
+      <include name = "obsoleteApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="finalobsolete">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QADocCellTestRunner.BPRObsoleteInitiation"/>
+      <methods>
+      <include name = "finalobsolete"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

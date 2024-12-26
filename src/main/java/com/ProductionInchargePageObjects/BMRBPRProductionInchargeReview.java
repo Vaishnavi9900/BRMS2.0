@@ -18,7 +18,7 @@ public class BMRBPRProductionInchargeReview extends BRMSCommonMethods {
 	static ExcelUtils excelUtils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Review']")
 	WebElement masterreviewtab;
@@ -58,8 +58,9 @@ public class BMRBPRProductionInchargeReview extends BRMSCommonMethods {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void masterreviewtab() throws IOException {
+	public void masterreviewtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(masterreviewtab);
 		for (int i = 1; i < 2; i++) {
@@ -67,8 +68,9 @@ public class BMRBPRProductionInchargeReview extends BRMSCommonMethods {
 			clickElement(createdrecord);
 		}
 	}
-	public void bprmasterreviewtab() throws IOException {
+	public void bprmasterreviewtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(masterreviewtab);

@@ -19,10 +19,12 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re Print Request Initiation']")
 	WebElement reprintreqinitiation;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -106,6 +108,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	}
 
 	public void reprintreqinitiationtab() throws IOException, InterruptedException {
+		javawait();
+	//	clickElement(tab);
 		javascript(reprintreqinitiation);
 		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -117,6 +121,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	    clickElement(createdrecord);
 	}
 	public void bprreprintreqinitiationtab() throws IOException, InterruptedException {
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		javawait();
@@ -129,6 +135,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	    clickElement(createdrecord);
 	}
 	public void reprintreqReinitiationtab() throws IOException, InterruptedException {
+		javawait();
+	//	clickElement(tab);
 		javascript(reprintreqinitiation);
 		javawait();
 		clickElement(status);
@@ -141,6 +149,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	    clickElement(createdrecord);
 	}
 	public void bprreprintreqReinitiationtab() throws IOException, InterruptedException {
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		javawait();
@@ -198,7 +208,7 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 		clickElement(add1);
 		softassert.assertEquals(lesspagealert.getText(),"Page number must be greater than zero.");
 		javawait();
-		textboxc(pagenumber1, "7");
+		textboxc(pagenumber1, "6");
 		clickElement(add1);
 		softassert.assertEquals(morepagealert.getText(),"Page number must be equal or less than document pages");
 		textboxc(pagenumber1, "1");

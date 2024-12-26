@@ -18,10 +18,12 @@ public class BMRBPRQAHODRePrintApproval extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 	
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 	
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re-Print Request Approval']")
 	WebElement reprintapprovaltab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re Print Request Approval']")
@@ -58,6 +60,8 @@ public class BMRBPRQAHODRePrintApproval extends BRMSCommonMethods{
 	
 	public void reprintapprovaltab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+		clickElement(tab);
 		javascript(reprintapprovaltab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -67,6 +71,8 @@ public class BMRBPRQAHODRePrintApproval extends BRMSCommonMethods{
 	}
 	public void bprreprintapprovaltab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(bprreprintapprovaltab);
 		for (int i = 1; i < 2; i++) {

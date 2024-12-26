@@ -19,7 +19,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	static ExcelUtils excelUtils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Draft Initiation']")
 	WebElement masterdrfatinitiationtab;
@@ -79,8 +79,9 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	}
 
 	
-	public void bmrmasterdraftinitiationtab() throws IOException {
+	public void bmrmasterdraftinitiationtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(masterdrfatinitiationtab);
 		for (int i = 1; i < 2; i++) {
@@ -90,6 +91,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	}
 	public void bprmasterdraftinitiationtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javawait();
@@ -101,6 +103,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	}
 	public void draftReinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(masterdrfatinitiationtab);
 		javawait();
@@ -115,6 +118,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 
 	public void bprdraftReinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javawait();

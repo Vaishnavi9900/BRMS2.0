@@ -23,7 +23,7 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	static ExcelUtils excelUtils = new ExcelUtils();
 
 	// using the Constants class values for excel file path
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Preparation Request Initiation']")
 	WebElement masterprepreq;
@@ -71,7 +71,10 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	public void bmrmasterreqinitation1(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
+		javawait();
+		clickElement(masterprepreq);
 		javawait();
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -97,8 +100,10 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	public void bmrmasterreqinitation(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javawait();
+		clickElement(masterprepreq);
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);

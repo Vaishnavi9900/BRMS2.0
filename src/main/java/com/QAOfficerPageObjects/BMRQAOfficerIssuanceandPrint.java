@@ -18,10 +18,12 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Issuance']")
 	WebElement printissuance;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
 	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Issuance']")
 	WebElement addtionalpageissuance;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re Print Request Initiation']")
@@ -79,8 +81,10 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void printissuancetab() throws IOException {
+	public void printissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+	//	clickElement(tab);
 		javascript(printissuance);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -88,8 +92,10 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 			
 		}
 	}
-	public void additionalpageprintissuancetab() throws IOException {
+	public void additionalpageprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+	//	clickElement(tab);
 		javascript(addtionalpageissuance);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -99,6 +105,8 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	}
 	public void reprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+	//	clickElement(tab);
 		javascript(reprintreqinitiation);
 		clickElement(status);
 		javawait();
@@ -111,6 +119,8 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	}
 	public void reprinttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
+	//	clickElement(tab);
 		javascript(reprintreqinitiation);
 		clickElement(status);
 		clickElement(approved);

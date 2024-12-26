@@ -19,7 +19,7 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -69,7 +69,8 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 
 	public void repcakingqtyinitiation() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
-		clickElement(tab);
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(repackingreqinitiation);
 //		clickElement(mprno);
@@ -82,7 +83,8 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 	}
 	public void repcakingqtyReinitiation() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
-		clickElement(tab);
+		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(repackingreqinitiation);
 		clickElement(status);

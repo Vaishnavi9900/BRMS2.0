@@ -18,7 +18,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		
 		static ExcelUtils excelutils = new ExcelUtils();
 		
-		static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+		static String excelFilePath = file;
 		
 		@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 		WebElement bpr;
@@ -68,6 +68,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		
 		public void obsoleteInitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
+			javawait();
 			clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
@@ -82,6 +83,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		//	}
 		}
 		public void bprobsoleteInitiation() throws IOException, InterruptedException {
+			javawait();
 			clickElement(tab);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -99,6 +101,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		}
 		public void obsoleteReInitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
+			javawait();
 			clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
@@ -111,6 +114,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		}
 		}
 		public void bprobsoleteReInitiation() throws IOException, InterruptedException {
+			javawait();
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			clickElement(tab);
@@ -127,6 +131,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		
 		public void finalobsolete() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
+			javawait();
 			clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
@@ -141,6 +146,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void bprfinalobsolete() throws IOException, InterruptedException {
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+			javawait();
 			clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();

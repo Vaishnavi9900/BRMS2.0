@@ -18,7 +18,7 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -54,8 +54,8 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	}
 	
 	public void additionalPageReturn() throws IOException, InterruptedException {
-		clickElement(tab);
 		javawait();
+	//	clickElement(tab);
 		javascript(additionalpageprintreqapproval);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(search);
@@ -65,8 +65,8 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	    clickElement(createdrecord);
 	}
 	public void bpradditionalPageReturn() throws IOException, InterruptedException {
-		clickElement(tab);
 		javawait();
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(additionalpageprintreqapproval);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

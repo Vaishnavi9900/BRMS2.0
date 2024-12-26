@@ -17,7 +17,7 @@ public class BMRBPRQADoccellMasterEffective extends BRMSCommonMethods {
 	
 	static ExcelUtils excelutils = new ExcelUtils();
 	
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath =file;
 	
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Effective']")
 	WebElement mastereffectivetab;
@@ -51,8 +51,9 @@ public class BMRBPRQADoccellMasterEffective extends BRMSCommonMethods {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void mastereffectivetab() throws IOException {
+	public void mastereffectivetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		javawait();
 		clickElement(tab);
 		javascript(mastereffectivetab);
 		for (int i = 1; i < 2; i++) {
@@ -60,8 +61,9 @@ public class BMRBPRQADoccellMasterEffective extends BRMSCommonMethods {
 			clickElement(createdrecord);
 		}
 	}
-	public void bprmastereffectivetab() throws IOException {
+	public void bprmastereffectivetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
 		clickElement(tab);
 		clickElement(bpr);
 		javascript(mastereffectivetab);

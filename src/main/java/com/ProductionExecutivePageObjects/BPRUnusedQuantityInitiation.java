@@ -18,7 +18,7 @@ public class BPRUnusedQuantityInitiation extends BRMSCommonMethods{
 
 	static ExcelUtils excelutils = new ExcelUtils();
 	
-	static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
+	static String excelFilePath = file;
 	
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
@@ -59,7 +59,8 @@ public class BPRUnusedQuantityInitiation extends BRMSCommonMethods{
 	}
 	
 	public void unusedqtyInitiation() throws InterruptedException, IOException {
-		clickElement(tab);
+		javawait();
+		//clickElement(tab);
 		clickElement(bpr);
 		javascript(unusedqtyinitiation);
 		javawait();
