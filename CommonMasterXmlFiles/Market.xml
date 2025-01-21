@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="=MarketCreation"  enabled="false">
+  <test name="=MarketCreation">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -50,7 +50,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="=DisableMarket">
+  <test name="=DisableMarket" enabled="false">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -60,7 +60,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="=EnableMarket">
+  <test name="=EnableMarket" enabled="false">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

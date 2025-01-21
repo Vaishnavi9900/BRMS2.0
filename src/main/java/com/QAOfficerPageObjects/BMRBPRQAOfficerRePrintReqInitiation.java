@@ -104,7 +104,7 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 
 
 	public BMRBPRQAOfficerRePrintReqInitiation(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void reprintreqinitiationtab() throws IOException, InterruptedException {

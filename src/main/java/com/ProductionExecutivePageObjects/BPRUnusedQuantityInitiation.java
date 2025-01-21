@@ -55,7 +55,7 @@ public class BPRUnusedQuantityInitiation extends BRMSCommonMethods{
 	
 	public BPRUnusedQuantityInitiation(WebDriver driver) {
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void unusedqtyInitiation() throws InterruptedException, IOException {

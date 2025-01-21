@@ -24,6 +24,7 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 
 	// using the Constants class values for excel file path
 	static String excelFilePath = file;
+	static String newmprnumber;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Preparation Request Initiation']")
 	WebElement masterprepreq;
@@ -33,7 +34,7 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	WebElement comments;
 	@FindBy(how = How.XPATH, using = "//p[text()='Comments is required']")
 	WebElement commalert;
-	@FindBy(how = How.XPATH, using = "//button[text()='Block Previous']")
+	@FindBy(how = How.XPATH, using = "//ul[@class='product-details d-flex align-items-center']/button")
 	WebElement blockprevious;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
 	WebElement submit;
@@ -56,10 +57,17 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
+	@FindBy(how = How.XPATH, using = "//a[@class='nav-link active']")
+	WebElement status;
+	@FindBy(how = How.XPATH, using = "//table[@class='table dateTable no-footer dataTable']/tbody/tr[2]/td[1]")
+	WebElement newmprno;
+	@FindBy(how = How.XPATH, using = "//modal-container[@class='modal fade show']")
+	WebElement popupok;
+	
 
 	public BMRMasterPreparation(WebDriver driver) {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void masterprepreq() {
@@ -67,13 +75,29 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 		javascript(masterprepreq);
 
 	}
-
+	public void blockpreviousversion() {
+		
+		clickElement(blockprevious);
+	}
+	public void popupok() {
+		clickElement(popupok);
+	}
+	
+	public void getmprno() throws IOException {
+		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		for (int i = 1; i < 2; i++) {
+		clickElement(status);
+		clickElement(search);
+		search.sendKeys(excelUtils.getCellData(i, 1));
+		newmprnumber = newmprno.getText();
+		excelUtils.writecellvalue2(excelFilePath,"Productdetails", newmprnumber);
+		}
+	}
 	public void bmrmasterreqinitation1(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
-		javawait();
+		//clickElement(tab);
 		clickElement(masterprepreq);
 		javawait();
 		clickElement(mprno);
@@ -101,9 +125,10 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javawait();
 		clickElement(masterprepreq);
+		javawait();
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
@@ -116,10 +141,12 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 			javawait();
 			textbox(comments, comm);
 			javawait();
-			clickElement(submit);
+		//	clickElement(submit);
 		}
 	}
-	
+	public void submit() {
+		clickElement(submit);
+	}
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);

@@ -90,13 +90,13 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	WebElement close;
 
 	public BMRBPRQAHODAfterPrintApprovalorReject(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void printapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(printreqapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -107,7 +107,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	public void beforeprintapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+		//clickElement(tab);
 		javascript(beforeprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -118,7 +118,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	public void afterprintapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(afterprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -128,7 +128,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	}
 	public void bprafterprintapprovaltab() throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(afterprintcancelapproval);
@@ -305,7 +305,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 		javawait();
 		textbox(password, pass);
 		javawait();
-		clickElement(submit2);
+		clickElement(submit22);
 		javawait();
 	}
 	
@@ -315,7 +315,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 		javawait();
 		textbox(password, pass);
 		javawait();
-		clickElement(submit2);
+		clickElement(submit22);
 		javawait();
 	}
 	public void returntoinchargeactivity(String pass) throws InterruptedException {
@@ -325,7 +325,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 		javawait();
 		textbox(password, pass);
 		javawait();
-		clickElement(submit2);
+		clickElement(submit22);
 		javawait();
 	}
 	public void returntovalidationactivity(String pass) throws InterruptedException {
@@ -335,7 +335,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 		javawait();
 		textbox(password, pass);
 		javawait();
-		clickElement(submit2);
+		clickElement(submit22);
 		javawait();
 	}
 

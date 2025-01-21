@@ -52,9 +52,7 @@ public class Passwordpolicy extends BRMSCommonMethods {
 
 	public Passwordpolicy(WebDriver driver) {
 
-		driver = driver;
-
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 
 	}
 

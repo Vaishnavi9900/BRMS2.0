@@ -65,7 +65,7 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 	
 
 	public BPRRepackingApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void repackingapproval() throws IOException, InterruptedException {

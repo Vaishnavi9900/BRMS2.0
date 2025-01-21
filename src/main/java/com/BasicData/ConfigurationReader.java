@@ -1,9 +1,10 @@
 package com.BasicData;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Properties;
-
-import org.apache.commons.io.input.BoundedReader;
 
 public class ConfigurationReader extends BRMSCommonMethods {
 	

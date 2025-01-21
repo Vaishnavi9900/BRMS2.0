@@ -49,14 +49,14 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 		
 		
 		public BMRBPRObsoleteReview(WebDriver driver) {
-			PageFactory.initElements(driver, this);
+			PageFactory.initElements(driver, this);	
 		}
 		
 		
 		public void obsoleteReview() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
-			clickElement(tab);
+		//	clickElement(tab);
 			javascript(obsoletereview);
 			javawait();
 			clickElement(search);
@@ -67,7 +67,7 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 		}
 		public void bprobsoleteReview() throws IOException, InterruptedException {
 			javawait();
-			clickElement(tab);
+		//	clickElement(tab);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javascript(obsoletereview);

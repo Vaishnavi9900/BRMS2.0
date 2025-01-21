@@ -1,9 +1,22 @@
 package com.InitiatorPageObjects;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -75,14 +88,14 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 
 	public BMRDraftInitiation(WebDriver driver) {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	
 	public void bmrmasterdraftinitiationtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+		//clickElement(tab);
 		javascript(masterdrfatinitiationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -92,7 +105,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void bprmasterdraftinitiationtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(masterdrfatinitiationtab);
@@ -104,7 +117,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void draftReinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(masterdrfatinitiationtab);
 		javawait();
 		clickElement(status);
@@ -119,7 +132,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void bprdraftReinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(masterdrfatinitiationtab);
@@ -133,10 +146,11 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 		}
 	}
 
-	public void wordtemplates() {
+	public void wordtemplates() throws InterruptedException, AWTException {
 		clickElement(templateprep);
+	
 		try {
-			Thread.sleep(40000);
+           Thread.sleep(40000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -148,7 +162,8 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
+	        }
+		
 	public void bprwordtemplates() {
 		clickElement(bprtemplateprep);
 		try {

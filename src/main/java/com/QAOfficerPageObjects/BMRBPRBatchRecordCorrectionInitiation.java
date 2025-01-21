@@ -1,5 +1,8 @@
 package com.QAOfficerPageObjects;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 import org.openqa.selenium.Keys;
@@ -10,10 +13,11 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
+import com.BasicData.BRMSCommonMethods;
 import com.BasicData.ConfigurationReader;
 import com.BasicData.ExcelUtils;
 
-public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
+public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	
 
 	SoftAssert softassert = new SoftAssert();
@@ -68,7 +72,7 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 	WebElement viewfile;
 	
 	public BMRBPRBatchRecordCorrectionInitiation(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void batchCorrectionInitiation() throws InterruptedException, IOException {
@@ -135,6 +139,10 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 		javawait();
 		clickElement(submit);
 	}
+	public void resubmit() throws InterruptedException {
+		javawait();
+		clickElement(resubmit);
+	}
 	
 	public void comments() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
@@ -145,10 +153,22 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 			Thread.sleep(10000);
 		}
 	}
-	public void fileupload() throws InterruptedException {
+	public void fileupload() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
+         uploadfile.click();
 		Thread.sleep(10000);
-		uploadfile.sendKeys("C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\VGC-T-029-02 7.docx");
+		 String filePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMS v2.0 flow 4.pdf";
+		 // Press 'Ctrl' + 'V' to paste the file path
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        
+        // Press 'Enter' to confirm the file selection
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
 	}
+	
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
@@ -160,6 +180,19 @@ public class BMRBPRBatchRecordCorrectionInitiation extends ConfigurationReader {
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
+		javawait();
+	}
+	public void resubmitactivity(String pass) throws InterruptedException {
+
+		clickElement(No);
+		javawait();
+		clickElement(resubmit);
+		javawait();
+		clickElement(Yes);
+		javawait();
+		textbox(password, pass);
+		javawait();
+		clickElement(resubmit2);
 		javawait();
 	}
 

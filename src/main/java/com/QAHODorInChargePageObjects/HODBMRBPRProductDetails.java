@@ -12,6 +12,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.BasicData.BRMSCommonMethods;
 import com.BasicData.ExcelUtils;
+import com.InitiatorPageObjects.BMRProductDetails;
 
 public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 
@@ -20,6 +21,8 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 
 	// using the Constants class values for excel file path
 	static String excelFilePath =file;
+	
+	BMRProductDetails bmr = new BMRProductDetails(driver);
 
 	@FindBy(how = How.XPATH, using = "//a[text()=' Product Details ']")
 	WebElement productdetails;
@@ -57,13 +60,14 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	WebElement bprdetails;
 
 	public HODBMRBPRProductDetails(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
-
+	
 	public void commentsvalidate() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
+		
 		javawait();
-		clickElement(tab);
+		//clickElement(tab);
 		javascript(productdetails);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {

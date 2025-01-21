@@ -9,10 +9,11 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
+import com.BasicData.BRMSCommonMethods;
 import com.BasicData.ConfigurationReader;
 import com.BasicData.ExcelUtils;
 
-public class BPRReprintIssuanceandPrint extends ConfigurationReader{
+public class BPRReprintIssuanceandPrint extends BRMSCommonMethods{
 	
 	SoftAssert softassert = new SoftAssert();
 
@@ -80,7 +81,7 @@ public class BPRReprintIssuanceandPrint extends ConfigurationReader{
 	WebElement issued;
 
 	public BPRReprintIssuanceandPrint(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void printissuancetab() throws IOException, InterruptedException {

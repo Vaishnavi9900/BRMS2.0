@@ -1,6 +1,7 @@
 package com.BasicData;
 
-import java.awt.*;
+import java.awt.Desktop;
+import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,6 +13,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -49,21 +52,23 @@ import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BRMSCommonMethods {
 	
 	public static WebDriver driver;
+	public static Logger logger;
 	public static String file = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
 	public String screenshotsubfoldername;
 	public static ExtentReports extentreports;
 	public static ExtentTest extenttest;
 	protected String cell0val,cell1val,cell2val,cell3val,cell4val,cell5val,cell6val,cell7val,cell8val,cell9val;
-	
 	@Parameters("browser")
 	@BeforeTest
 	public void setup(ITestContext context, @Optional("chrome")String browser) {
+		logger = LogManager.getLogger(this.getClass());
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -76,7 +81,7 @@ public class BRMSCommonMethods {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("http://172.16.5.167:9095/BRMS/");
+		driver.get("http://172.16.5.167:9095/brms2.0_enhancement/client/");
 		Capabilities capabilities = ((RemoteWebDriver)driver).getCapabilities();
 		String device = capabilities.getBrowserName();
 		String author = context.getCurrentXmlTest().getParameter("author");
@@ -93,6 +98,8 @@ public class BRMSCommonMethods {
 		extentreports.attachReporter(sparkReporter_all,failurereport);
 		extentreports.setSystemInfo("OS", System.getProperty("os.name"));
 		extentreports.setSystemInfo("Java Version", System.getProperty("java.version"));
+		sparkReporter_all.config().setTheme(Theme.DARK);
+
 	}
 	@AfterSuite
 	public void generateExtentReports() throws IOException {
@@ -337,7 +344,9 @@ public class BRMSCommonMethods {
 	}
 	public void alertgettext() {
 		Alert alert = driver.switchTo().alert();
-		alert.getText();
+		String al = alert.getText();
+		System.out.println(al);
+		alert.accept();
 	}
 	public void alertsend() {
 		Alert alert = driver.switchTo().alert();

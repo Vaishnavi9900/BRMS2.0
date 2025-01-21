@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,12 +50,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\vaishnavi.t\eclipse-workspace\BRMS2.0\BMRXmlFiles\BMRMasterApprovalPositiveFlow.xml</span>
+                    <span>C:\Users\vaishnavi.t\eclipse-workspace\BRMS2.0\BMRPositiveXmlFiles\BMRDrafFlowwithoutCFT.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">8 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,56 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview" class="method navigator-link" hash-for-method="masterApproval">masterApproval</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.InitiatorTestRunner.BMRDraftInitiation" class="method navigator-link" hash-for-method="draftinitiationwithoutcft">draftinitiationwithoutcft</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.QADocCellTestRunner.BMRMasterEffectivebyDocCell" class="method navigator-link" hash-for-method="masterApprovalEffectivebyQADocCell">masterApprovalEffectivebyQADocCell</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.InitiatorTestRunner.BMRMasterApproval" class="method navigator-link" hash-for-method="masterApprovalInitiation">masterApprovalInitiation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer" class="method navigator-link" hash-for-method="masterApprovalnbyTechtransferOrRandD">masterApprovalnbyTechtransferOrRandD</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ProductionHODTestRunner.MasterApprovalByProductionHOD" class="method navigator-link" hash-for-method="productionhodapproval">productionhodapproval</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD" class="method navigator-link" hash-for-method="qaHODMasterApproval">qaHODMasterApproval</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge" class="method navigator-link" hash-for-method="qaInchargeMasterApproval">qaInchargeMasterApproval</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.RATestRunner.BMRMasterApprovalbyRA" class="method navigator-link" hash-for-method="rAMasterApproval">rAMasterApproval</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -153,224 +118,47 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.InitiatorTestRunner.BMRDraftInitiation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="qaHODMasterApproval">
-                  </a> <!-- qaHODMasterApproval -->
-                  <span class="method-name">qaHODMasterApproval</span>
+                  <a name="draftinitiationwithoutcft">
+                  </a> <!-- draftinitiationwithoutcft -->
+                  <span class="method-name">draftinitiationwithoutcft</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at com.InitiatorTestRunner.BMRDraftInitiation.draftinitiationwithoutcft(BMRDraftInitiation.java:111)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.InitiatorTestRunner.BMRMasterApproval</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="masterApprovalInitiation">
-                  </a> <!-- masterApprovalInitiation -->
-                  <span class="method-name">masterApprovalInitiation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.QADocCellTestRunner.BMRMasterEffectivebyDocCell</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="masterApprovalEffectivebyQADocCell">
-                  </a> <!-- masterApprovalEffectivebyQADocCell -->
-                  <span class="method-name">masterApprovalEffectivebyQADocCell</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="qaInchargeMasterApproval">
-                  </a> <!-- qaInchargeMasterApproval -->
-                  <span class="method-name">qaInchargeMasterApproval</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.ProductionHODTestRunner.MasterApprovalByProductionHOD</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="productionhodapproval">
-                  </a> <!-- productionhodapproval -->
-                  <span class="method-name">productionhodapproval</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.RATestRunner.BMRMasterApprovalbyRA</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="rAMasterApproval">
-                  </a> <!-- rAMasterApproval -->
-                  <span class="method-name">rAMasterApproval</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="masterApproval">
-                  </a> <!-- masterApproval -->
-                  <span class="method-name">masterApproval</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="masterApprovalnbyTechtransferOrRandD">
-                  </a> <!-- masterApprovalnbyTechtransferOrRandD -->
-                  <span class="method-name">masterApprovalnbyTechtransferOrRandD</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vaishnavi.t\eclipse-workspace\BRMS2.0\BMRXmlFiles\BMRMasterApprovalPositiveFlow.xml</span>
+            <span class="header-content">C:\Users\vaishnavi.t\eclipse-workspace\BRMS2.0\BMRPositiveXmlFiles\BMRDrafFlowwithoutCFT.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalInitiation&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;WithoutCFTBMRDraftInitiation&quot;&gt;
     &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.InitiatorTestRunner.BMRMasterApproval&quot;&gt;
+      &lt;class name=&quot;com.InitiatorTestRunner.BMRDraftInitiation&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;masterApprovalInitiation&quot;/&gt;
+          &lt;include name=&quot;draftinitiationwithoutcft&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.InitiatorTestRunner.BMRMasterApproval --&gt;
+      &lt;/class&gt; &lt;!-- com.InitiatorTestRunner.BMRDraftInitiation --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalInitiation --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalbyProductionIncharge&quot;&gt;
-    &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;masterApproval&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalbyProductionIncharge --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalbyProductionHOD&quot;&gt;
-    &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.ProductionHODTestRunner.MasterApprovalByProductionHOD&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;productionhodapproval&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.ProductionHODTestRunner.MasterApprovalByProductionHOD --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalbyProductionHOD --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalbyTechTransfer&quot;&gt;
-    &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;masterApprovalnbyTechtransferOrRandD&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalbyTechTransfer --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalbyRA&quot;&gt;
-    &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.RATestRunner.BMRMasterApprovalbyRA&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;rAMasterApproval&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.RATestRunner.BMRMasterApprovalbyRA --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalbyRA --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalbyQAIncharge&quot;&gt;
-    &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;qaInchargeMasterApproval&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalbyQAIncharge --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalbyQAHOD&quot;&gt;
-    &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;qaHODMasterApproval&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalbyQAHOD --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;MasterApprovalEffectiveByDocCell&quot;&gt;
-    &lt;parameter name=&quot;author&quot; value=&quot;vaishnavi&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.QADocCellTestRunner.BMRMasterEffectivebyDocCell&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;masterApprovalEffectivebyQADocCell&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.QADocCellTestRunner.BMRMasterEffectivebyDocCell --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MasterApprovalEffectiveByDocCell --&gt;
+  &lt;/test&gt; &lt;!-- WithoutCFTBMRDraftInitiation --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -382,28 +170,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">MasterApprovalInitiation (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MasterApprovalbyProductionIncharge (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MasterApprovalbyProductionHOD (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MasterApprovalbyTechTransfer (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MasterApprovalbyRA (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MasterApprovalbyQAIncharge (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MasterApprovalbyQAHOD (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MasterApprovalEffectiveByDocCell (1 class)</span>
+                <span class="test-name">WithoutCFTBMRDraftInitiation (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -429,44 +196,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'qaHODMasterApproval')
-data.setCell(0, 2, 'com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD')
-data.setCell(0, 3, 37613);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'masterApprovalnbyTechtransferOrRandD')
-data.setCell(1, 2, 'com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer')
-data.setCell(1, 3, 37267);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'masterApproval')
-data.setCell(2, 2, 'com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview')
-data.setCell(2, 3, 35241);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'qaInchargeMasterApproval')
-data.setCell(3, 2, 'com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge')
-data.setCell(3, 3, 35224);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'productionhodapproval')
-data.setCell(4, 2, 'com.ProductionHODTestRunner.MasterApprovalByProductionHOD')
-data.setCell(4, 3, 34837);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'rAMasterApproval')
-data.setCell(5, 2, 'com.RATestRunner.BMRMasterApprovalbyRA')
-data.setCell(5, 3, 34494);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'masterApprovalEffectivebyQADocCell')
-data.setCell(6, 2, 'com.QADocCellTestRunner.BMRMasterEffectivebyDocCell')
-data.setCell(6, 3, 34302);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'masterApprovalInitiation')
-data.setCell(7, 2, 'com.InitiatorTestRunner.BMRMasterApproval')
-data.setCell(7, 3, 33446);
+data.setCell(0, 1, 'draftinitiationwithoutcft')
+data.setCell(0, 2, 'com.InitiatorTestRunner.BMRDraftInitiation')
+data.setCell(0, 3, 15357);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -481,55 +220,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD</span>
+              <span class="ignored-class-name">com.InitiatorTestRunner.BMRDraftInitiation</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">masterApprovalReturnbyQAHOD</span>
+                <span class="ignored-method-name">draftReinitiation</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.InitiatorTestRunner.BMRMasterApproval</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">masterApprovalReInitiation</span>
+                <span class="ignored-method-name">draftinitiation</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">masterApprovalReturnbyQAIncharge</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.ProductionHODTestRunner.MasterApprovalByProductionHOD</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">productionhodreturn</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.RATestRunner.BMRMasterApprovalbyRA</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">masterApprovalReturnbyRA</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">masterApprovalReturn</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">masterApprovalReturnbyTechtransfer</span>
+                <span class="ignored-method-name">draftinitiation1</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -541,166 +242,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.QADocCellTestRunner.BMRMasterEffectivebyDocCell</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.InitiatorTestRunner.BMRDraftInitiation</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">initiatlizeExtentReports</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.InitiatorTestRunner.BMRMasterApproval</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@1be52113, chrome)</span>
-                <span class="method-start">519 ms</span>
+                <span class="method-name">setup(org.testng.TestRunner@d969452, chrome)</span>
+                <span class="method-start">470 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">masterApprovalInitiation</span>
-                <span class="method-start">7455 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">draftinitiationwithoutcft</span>
+                <span class="method-start">7205 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.InitiatorTestRunner.BMRMasterApproval.masterApprovalInitiation() throws java.lang.In...)</span>
-                <span class="method-start">40908 ms</span>
+                <span class="method-name">checkstatus(public void com.InitiatorTestRunner.BMRDraftInitiation.draftinitiationwithoutcft() throws java.lang....)</span>
+                <span class="method-start">22637 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">40918 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@5badeda0, chrome)</span>
-                <span class="method-start">42733 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">masterApproval</span>
-                <span class="method-start">47669 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.ProductionInchargeTestRunner.ProductionInchargeMasterApprovalReview.masterApproval()...)</span>
-                <span class="method-start">82914 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">82915 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.ProductionHODTestRunner.MasterApprovalByProductionHOD</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@56a9a7b5, chrome)</span>
-                <span class="method-start">84836 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">productionhodapproval</span>
-                <span class="method-start">89548 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.ProductionHODTestRunner.MasterApprovalByProductionHOD.productionhodapproval() throws...)</span>
-                <span class="method-start">124385 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">124388 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@1dd247b, chrome)</span>
-                <span class="method-start">126424 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">masterApprovalnbyTechtransferOrRandD</span>
-                <span class="method-start">133483 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.TechTransferTestRunner.BMRMasterApprovalByTechTransfer.masterApprovalnbyTechtransfer...)</span>
-                <span class="method-start">170754 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">170756 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.RATestRunner.BMRMasterApprovalbyRA</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@338270ea, chrome)</span>
-                <span class="method-start">172193 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">rAMasterApproval</span>
-                <span class="method-start">177155 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.RATestRunner.BMRMasterApprovalbyRA.rAMasterApproval() throws java.lang.InterruptedEx...)</span>
-                <span class="method-start">211675 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">211683 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@7f64bd7, chrome)</span>
-                <span class="method-start">213394 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">qaInchargeMasterApproval</span>
-                <span class="method-start">217969 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.QAHODorInchargeTestRunner.MasterApprovalByQAIncharge.qaInchargeMasterApproval() thro...)</span>
-                <span class="method-start">253215 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">253219 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@1c79d093, chrome)</span>
-                <span class="method-start">254886 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">qaHODMasterApproval</span>
-                <span class="method-start">258253 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.QAHODorInchargeTestRunner.MasterApprovalByQAHOD.qaHODMasterApproval() throws java.la...)</span>
-                <span class="method-start">295871 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">295874 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.QADocCellTestRunner.BMRMasterEffectivebyDocCell</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@746fd19b, chrome)</span>
-                <span class="method-start">297281 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">masterApprovalEffectivebyQADocCell</span>
-                <span class="method-start">301807 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">checkstatus(public void com.QADocCellTestRunner.BMRMasterEffectivebyDocCell.masterApprovalEffectivebyQADocCell()...)</span>
-                <span class="method-start">336112 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">336114 ms</span>
+                <span class="method-start">23304 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateExtentReports</span>
-                <span class="method-start">337595 ms</span>
+                <span class="method-start">25513 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -43,7 +43,7 @@ public class UnitOfMeasurement extends BRMSCommonMethods{
 	
 	public UnitOfMeasurement(WebDriver driver) {
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void uomcreatewithspace() throws InterruptedException {

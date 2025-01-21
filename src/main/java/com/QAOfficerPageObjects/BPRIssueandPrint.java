@@ -78,8 +78,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	WebElement approved;
 
 	public BPRIssueandPrint(WebDriver driver) {
-		PageFactory.initElements(driver, this);
-	}
+		PageFactory.initElements(driver, this);		}
 	
 	public void printissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -136,11 +135,11 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	
 	
 	public void printcopydetails() throws InterruptedException {
-		textbox(formatnumber, "QA/0390390");
+		textbox(formatnumber, "Blend-01-00");
 		javawait();
-		textbox(formattitle, "Material Checklist");
+		textbox(formattitle, "Blend Format");
 		javawait();
-		textbox(version, "01");
+		textbox(version, "00");
 		javawait();
 		textbox(noofcopies, "2");
 	}

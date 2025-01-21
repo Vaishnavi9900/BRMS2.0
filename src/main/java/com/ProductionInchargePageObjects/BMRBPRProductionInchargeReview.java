@@ -55,13 +55,13 @@ public class BMRBPRProductionInchargeReview extends BRMSCommonMethods {
 
 	public BMRBPRProductionInchargeReview(WebDriver driver) {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void masterreviewtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(masterreviewtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -71,7 +71,7 @@ public class BMRBPRProductionInchargeReview extends BRMSCommonMethods {
 	public void bprmasterreviewtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(masterreviewtab);
 		for (int i = 1; i < 2; i++) {

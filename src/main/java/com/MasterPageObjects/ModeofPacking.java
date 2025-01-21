@@ -52,7 +52,7 @@ public class ModeofPacking extends BRMSCommonMethods {
 	
 	 public ModeofPacking(WebDriver driver) {
 		    
-		PageFactory.initElements(driver, this);
+		 PageFactory.initElements(driver, this);	
 		
 	       }
 	       

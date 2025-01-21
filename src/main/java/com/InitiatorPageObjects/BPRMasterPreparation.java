@@ -53,14 +53,14 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 	
 	public BPRMasterPreparation(WebDriver driver) {
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void bprMasterPrereqInitiation(String comm) throws IOException, InterruptedException {
 		
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javawait();
 		clickElement(bpr);
 		clickElement(masterpreparation);

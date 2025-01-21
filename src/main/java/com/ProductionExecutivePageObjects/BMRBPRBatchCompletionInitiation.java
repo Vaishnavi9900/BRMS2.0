@@ -70,7 +70,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	
 	
 	public BMRBPRBatchCompletionInitiation(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void batchcompletiontab() throws InterruptedException, IOException {
@@ -149,8 +149,8 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 		dropdown(dateformat);
 		javawait();
 		textbox(manufacturingdate,mandate);
-		javawait();
-		textbox(expirydate, expdate);
+//		javawait();
+//		textbox(expirydate, expdate);
 		
 	}
 	

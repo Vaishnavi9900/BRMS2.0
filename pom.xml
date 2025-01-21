@@ -1,19 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>BRMS2.0</groupId>
-  <artifactId>BRMS2.0</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
- <build>
-  <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <release>14</release>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>BRMS2.0</groupId>
+	<artifactId>BRMS2.0</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>17</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 		<!--
@@ -35,6 +37,26 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.27.0</version>
 		</dependency>
+			<!-- Log4j2 API -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>2.20.0</version> <!-- Use latest version -->
+			</dependency>
+
+			<!-- Log4j2 Core -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>2.20.0</version> <!-- Use latest version -->
+			</dependency>
+
+			<!-- Log4j2 SLF4J Binding (Optional) -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>2.20.0</version>
+			</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 		<dependency>
@@ -71,11 +93,11 @@
 			<version>5.2.3</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.imgscalr/imgscalr-lib -->
-	<dependency>
-		<groupId>org.imgscalr</groupId>
-		<artifactId>imgscalr-lib</artifactId>
-		<version>4.2</version>
-	</dependency>
+		<dependency>
+			<groupId>org.imgscalr</groupId>
+			<artifactId>imgscalr-lib</artifactId>
+			<version>4.2</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -89,5 +111,5 @@
 		</dependency>
 	</dependencies>
 
-  <name>BRMS2.0</name>
+	<name>BRMS2.0</name>
 </project>

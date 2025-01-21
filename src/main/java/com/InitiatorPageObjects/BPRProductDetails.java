@@ -105,7 +105,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement blocksel;
 		@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[2]")
 		WebElement location;
-		@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[10]")
+		@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[9]")
 		WebElement locsel;
 		@FindBy(how = How.XPATH, using = "//select[@formcontrolname='customerBatchId']")
 		WebElement customerbatch;
@@ -143,7 +143,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement resubmit;
 		
 		public BPRProductDetails(WebDriver driver) {
-			PageFactory.initElements(driver, this);
+			PageFactory.initElements(driver, this);	
 		}
 		
 		public void validatealerts() throws InterruptedException, IOException {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-  <test name="BMRPrintRequestInitiation">
+ <test name="BMRPrintRequestInitiation">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>

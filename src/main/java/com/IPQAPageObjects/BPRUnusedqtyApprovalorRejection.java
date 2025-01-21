@@ -49,7 +49,7 @@ public class BPRUnusedqtyApprovalorRejection extends BRMSCommonMethods{
 	
 public BPRUnusedqtyApprovalorRejection(WebDriver driver) {
 		
-		PageFactory.initElements(driver, this);
+	PageFactory.initElements(driver, this);	
 	}
 	
 	public void unusedqtyApproval() throws InterruptedException, IOException {

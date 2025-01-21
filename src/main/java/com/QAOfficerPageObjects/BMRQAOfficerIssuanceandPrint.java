@@ -78,7 +78,7 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	WebElement issued;
 
 	public BMRQAOfficerIssuanceandPrint(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void printissuancetab() throws IOException, InterruptedException {
@@ -133,20 +133,20 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	
 	
 	public void printcopydetails() throws InterruptedException {
-		textbox(formatnumber, "1111");
+		textbox(formatnumber, "Blend-01-00");
 		javawait();
-		textbox(formattitle, "BLEND");
+		textbox(formattitle, "Blend Format");
 		javawait();
-		textbox(version, "05");
+		textbox(version, "00");
 		javawait();
 		textbox(noofcopies, "2");
 	}
 	public void bulkprintcopydetails() throws InterruptedException {
-		textbox(formatnumber, "2222");
+		textbox(formatnumber, "Bulk-001-00");
 		javawait();
-		textbox(formattitle, "BULK");
+		textbox(formattitle, "bulk Format");
 		javawait();
-		textbox(version, "06");
+		textbox(version, "00");
 		javawait();
 		textbox(noofcopies, "2");
 	}

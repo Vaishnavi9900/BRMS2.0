@@ -49,10 +49,14 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	WebElement commalert;
 	@FindBy(how = How.XPATH, using = "//span[text()='Comments is required']")
 	WebElement addcommalert;
-	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
 	WebElement Yes;
-	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[3]")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[5]")
 	WebElement No;
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
+	WebElement ackYes;
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[3]")
+	WebElement ackNo;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
@@ -101,7 +105,7 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	
 	
 	public BPRPrintIssuanceInitiationReceived(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void bprprintreqinitiationtab() throws InterruptedException, IOException {
@@ -270,21 +274,19 @@ public void additionalprintreceivedsubmit(String pass) throws InterruptedExcepti
 		javawait();
 		clickElement(additionalsubmit);
 		javawait();
-		clickElement(ok);
 	 
  }
 
 public void printreceivedsubmit(String pass) throws InterruptedException {
-	    clickElement(No);
+	    clickElement(ackNo);
 		javawait();
 		clickElement(printreceived);
 		javawait();
-		clickElement(Yes);
+		clickElement(ackYes);
 		javawait();
 		textbox(password, pass);
 		javawait();
 		clickElement(printreceivedsubmit);
 		javawait();
-		clickElement(ok);
 }
 }

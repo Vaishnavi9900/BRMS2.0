@@ -19,6 +19,8 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 
 	// using the Constants class values for excel file path
 	static String excelFilePath = file;
+	
+	
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Initiation']")
 	WebElement masterinitiationtab;
@@ -38,6 +40,10 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 	WebElement commalert;
 	@FindBy(how = How.XPATH, using = "//span[text()='Comments are required']")
 	WebElement commalert1;
+	@FindBy(how = How.XPATH, using = "//div[text()=' QMS Reference No. is required ']")
+	WebElement qmsrefalert;
+	@FindBy(how = How.XPATH, using = "//input[@formcontrolname='qmsReferenceNumber' or @id='qmsReferenceNumber'] ")
+	WebElement qmsrefnumber;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Yes ']") 
 	WebElement Yes;
 	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]")
@@ -60,13 +66,13 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 
 	public BMRBPRMasterApprovalInitiation(WebDriver driver) {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 
 	}
 
 	public void masterinitiationtab() throws IOException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		clickElement(tab);
+		//clickElement(tab);
 		javascript(masterinitiationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -76,7 +82,7 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 	public void bprmasterinitiationtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+		//clickElement(tab);
 		clickElement(bpr);
 		javascript(masterinitiationtab);
 		for (int i = 1; i < 2; i++) {
@@ -88,7 +94,7 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 	public void masterreinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(masterinitiationtab);
 		clickElement(status);
 		clickElement(returned);
@@ -100,7 +106,7 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 	public void bprmasterreinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(masterinitiationtab);
 		clickElement(status);
@@ -118,6 +124,9 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 		for (int i = 1; i < 2; i++) {
 			comments.sendKeys(excelUtils.getCellData(i, 10));
 		}
+		softassert.assertEquals("QMS Reference No. is required", qmsrefalert.getText());
+		clickElement(qmsrefnumber);
+		qmsrefnumber.sendKeys("QMS-2023-001");
 
 	}
 	public void reinitiationcomments() throws IOException {
@@ -126,6 +135,9 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 		clickElement(comments);
 		for (int i = 1; i < 2; i++) {
 			comments.sendKeys(excelUtils.getCellData(i, 10));
+			clickElement(qmsrefnumber);
+			qmsrefnumber.clear();
+			qmsrefnumber.sendKeys("QMS-2024-001");
 		}
 
 	}

@@ -2,10 +2,12 @@ package com.IPQATestRunner;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
+import com.BasicData.LoggerUtil;
 import com.IPQAPageObjects.BMRBPRAdditionalPagePrintApproval;
 
 public class BPRAdditioanlPageApproval extends ConfigurationReader {
@@ -18,35 +20,77 @@ public class BPRAdditioanlPageApproval extends ConfigurationReader {
 		as = new Assignmenu(driver);
 		app = new BMRBPRAdditionalPagePrintApproval(driver);
 		
+		try {
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
+		LoggerUtil.logInfo("click on BPR Additional Page Print req Approval tab and open the record");
 		app.bpradditionalPageReturn();
+		LoggerUtil.logInfo("click on return");
 		app.returnbutton();
+		LoggerUtil.logInfo("Validate the comments and enter the comments");
 		app.comments(getreturncomments());
+		LoggerUtil.logInfo("click on return");
 		app.returnbutton();
+		LoggerUtil.logInfo("Enter the passowrd and return the record");
 		app.returnactivity(getpassword());
+		}
+        catch (Exception e) {
+			
+			LoggerUtil.logError("BPR Additional Page Print Request Return by IPQA Test is failed", e);
+			Assert.fail();
+		}
 	}
 	@Test
 	public void bpradditionalPageApproval() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		app = new BMRBPRAdditionalPagePrintApproval(driver);
 		
+		try {
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
+		LoggerUtil.logInfo("click on BPR Additional Page Print req Approval tab and open the record");
 		app.bpradditionalPageReturn();
+		LoggerUtil.logInfo("click on submit");
 		app.submit();
+		LoggerUtil.logInfo("Validate the comments and enter the comments");
 		app.comments(getapprovalcomments());
+		LoggerUtil.logInfo("click on submit");
 		app.submit();
+		LoggerUtil.logInfo("Enter the password and approve the record");
 		app.submitactivity(getpassword());
+		}
+        catch (Exception e) {
+			
+			LoggerUtil.logError("BPR Additional Page Print Request Approval by IPQA Test is failed", e);
+			Assert.fail();
+		}
+		
 	}
+	@Test
 	public void bpradditionalPageRejection() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		app = new BMRBPRAdditionalPagePrintApproval(driver);
 		
+		
+		try {
+	    LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
+		LoggerUtil.logInfo("click on BPR Additional Page Print req Approval tab and open the record");
 		app.bpradditionalPageReturn();
+		LoggerUtil.logInfo("click on reject");
 		app.reject();
+		LoggerUtil.logInfo("Validate the comments and enter the comments");
 		app.comments(getrejectedcomments());
+		LoggerUtil.logInfo("click on reject");
 		app.reject();
+		LoggerUtil.logInfo("Enter the password and reject the record");
 		app.rejectactivity(getpassword());
+		}
+        catch (Exception e) {
+			
+			LoggerUtil.logError("BPR Additional Page Print Request Rejection by IPQA Test is failed", e);
+			Assert.fail();
+		}
 	}
 
 }

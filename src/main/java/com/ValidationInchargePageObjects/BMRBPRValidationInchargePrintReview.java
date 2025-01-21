@@ -76,7 +76,7 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 	WebElement close;
 
 	public BMRBPRValidationInchargePrintReview(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void printreqreviewtab() throws IOException, InterruptedException {

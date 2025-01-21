@@ -23,8 +23,8 @@ public class CFTActivity extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Draft Review']") WebElement masterdraftrevtab;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
-	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[1]/span/img") WebElement templateprep;
-	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div/div[1]/div[2]/span/img") WebElement changehostorytemplate;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div[2]/div/div[1]/div[1]/span/img") WebElement templateprep;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div[2]/div/div[1]/div[2]/span/img") WebElement changehostorytemplate;
 	@FindBy(how = How.XPATH, using = "//textarea[@trim='blur']") WebElement comments;
 	@FindBy(how = How.XPATH, using = "//span[text()='Comments is required']") WebElement commalert;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Return ']") WebElement returnbutton;
@@ -43,14 +43,13 @@ public class CFTActivity extends BRMSCommonMethods {
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
-
 	public CFTActivity(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void CFTreview(String comm) throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
@@ -63,7 +62,10 @@ public class CFTActivity extends BRMSCommonMethods {
 			clickElement(commentstab);
 			javawait();
 			clickElement(productdetails);
-			javawait();
+			clickElement(templateprep);
+			Thread.sleep(40000);
+			clickElement(changehostorytemplate);
+			Thread.sleep(40000);
 			clickElement(submit);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");
@@ -77,7 +79,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	}
 	public void bprCFTreview(String comm) throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(masterdraftrevtab);
@@ -91,6 +93,11 @@ public class CFTActivity extends BRMSCommonMethods {
 			javawait();
 			clickElement(commentstab);
 			javawait();
+			clickElement(productdetails);
+			clickElement(templateprep);
+			Thread.sleep(40000);
+			clickElement(changehostorytemplate);
+			Thread.sleep(40000);
 			clickElement(productdetails);
 			javawait();
 			clickElement(submit);
@@ -107,7 +114,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	
 	public void CFTreturn(String comm) throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+		//clickElement(tab);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
@@ -120,7 +127,10 @@ public class CFTActivity extends BRMSCommonMethods {
 			clickElement(commentstab);
 			javawait();
 			clickElement(productdetails);
-			javawait();
+			clickElement(templateprep);
+			Thread.sleep(40000);
+			clickElement(changehostorytemplate);
+			Thread.sleep(40000);
 			clickElement(returnbutton);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");
@@ -132,7 +142,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	}
 	public void bprCFTreturn(String comm) throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(masterdraftrevtab);
@@ -147,7 +157,10 @@ public class CFTActivity extends BRMSCommonMethods {
 			clickElement(commentstab);
 			javawait();
 			clickElement(productdetails);
-			javawait();
+			clickElement(templateprep);
+			Thread.sleep(40000);
+			clickElement(changehostorytemplate);
+			Thread.sleep(40000);
 			clickElement(returnbutton);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");

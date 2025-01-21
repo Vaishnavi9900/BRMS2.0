@@ -50,14 +50,14 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	WebElement returnbutton;
 	
 	public BMRBPRObsoleteApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	
 	public void obsoleteApproval() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(obsoleteapproval);
 		javawait();
 		clickElement(search);
@@ -68,7 +68,7 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	}
 	public void bprobsoleteApproval() throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(obsoleteapproval);

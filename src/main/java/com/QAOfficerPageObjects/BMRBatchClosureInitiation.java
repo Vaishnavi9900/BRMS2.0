@@ -1,5 +1,8 @@
 package com.QAOfficerPageObjects;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 import org.openqa.selenium.Keys;
@@ -55,7 +58,7 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
-	@FindBy(how = How.XPATH, using = "(//div[@class='card p-4 bg-gray-100'])[1]")
+	@FindBy(how = How.XPATH, using = "//label[@for='fileInput']")
 	WebElement exebmrattachment;
 	@FindBy(how = How.XPATH, using = "(//div[@class='card p-4 bg-gray-100'])[2]")
 	WebElement otherfiles;
@@ -67,7 +70,7 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	WebElement resubmit;
 
 	public BMRBatchClosureInitiation(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void batchclosureinitiation() throws IOException, InterruptedException {
@@ -146,17 +149,36 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 		javawait();
 		clickElement(bprsubmit);
 	}
-	public void bmrexefileupload() throws InterruptedException {
-		
+	public void bmrexefileupload() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
 		exebmrattachment.click();
 		Thread.sleep(10000);
-		//exebmrattachment.sendKeys("C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMS v2.0 flow 4.pdf");
+		 String filePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMS v2.0 flow 4.pdf";
+		 // Press 'Ctrl' + 'V' to paste the file path
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        
+        // Press 'Enter' to confirm the file selection
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
-	public void otherfiles() throws InterruptedException {
-		
+	public void otherfiles() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
 		otherfiles.click();
 		Thread.sleep(10000);
+		 String filePath = "";
+		 // Press 'Ctrl' + 'V' to paste the file path
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        
+        // Press 'Enter' to confirm the file selection
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
       //  otherfiles.sendKeys("C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMS v2.0 flow 4.pdf");
 	}
 	

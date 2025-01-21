@@ -64,7 +64,7 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 	
 
 	public BPRRePackingReqInitiation(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void repcakingqtyinitiation() throws InterruptedException, IOException {

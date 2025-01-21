@@ -49,12 +49,12 @@ public class BPRBatchCorrectionApproval extends BRMSCommonMethods {
 	WebElement returnbutton;
 	
 	public BPRBatchCorrectionApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void bprbatchCorrectionApproval() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
 		javawait();
@@ -68,7 +68,7 @@ public class BPRBatchCorrectionApproval extends BRMSCommonMethods {
 	}
 	public void batchCorrectionApproval() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(executebatchcorrectiontab);
 		javawait();
 		excelutils.setExcelFile(excelFilePath, "Productdetails");

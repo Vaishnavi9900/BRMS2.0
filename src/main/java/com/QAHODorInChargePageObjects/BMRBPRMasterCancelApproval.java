@@ -61,12 +61,12 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 	
 
 	public BMRBPRMasterCancelApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void mastercancelapprovaltab() throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(mastercancelapprovaltab);
 		javawait();
 		clickElement(search);
@@ -78,7 +78,7 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 	}
 	public void bprmastercancelapprovaltab() throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(mastercancelapprovaltab);
 		javawait();

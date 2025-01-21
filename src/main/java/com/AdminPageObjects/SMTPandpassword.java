@@ -26,7 +26,7 @@ public class SMTPandpassword extends BRMSCommonMethods {
 	
 	public SMTPandpassword(WebDriver driver) {
 		
-		PageFactory.initElements(this.driver, driver);
+		PageFactory.initElements(driver, this);	
 		
 	}
 	

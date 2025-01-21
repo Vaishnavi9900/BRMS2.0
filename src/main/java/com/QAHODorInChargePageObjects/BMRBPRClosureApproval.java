@@ -52,12 +52,12 @@ public class BMRBPRClosureApproval extends BRMSCommonMethods{
 	WebElement ok;
 
 	public BMRBPRClosureApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void batchClosureReturn() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javawait();
 		javascript(batchclosureinitiation);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -69,7 +69,7 @@ public class BMRBPRClosureApproval extends BRMSCommonMethods{
 	}
 	public void bprbatchClosureReturn() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(batchclosureinitiation);
@@ -82,7 +82,7 @@ public class BMRBPRClosureApproval extends BRMSCommonMethods{
 	}
 	public void batchClosureApproval() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javawait();
 		javascript(batchclosureinitiation);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -94,7 +94,7 @@ public class BMRBPRClosureApproval extends BRMSCommonMethods{
 	}
 	public void bprbatchClosureApproval() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		javascript(batchclosureinitiation);

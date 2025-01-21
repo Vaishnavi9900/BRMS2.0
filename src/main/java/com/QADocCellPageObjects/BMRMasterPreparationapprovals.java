@@ -1,6 +1,7 @@
 package com.QADocCellPageObjects;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,17 +51,41 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	
 	public BMRMasterPreparationapprovals(WebDriver driver) {
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void masterprepapprovaltab() {
 		javascript(masterprepapprovaltab);
 	}
 	
+	public void masterprepreqapprovalforblockversion(String comm) throws IOException, InterruptedException {
+		excelUtils.setExcelFile(excelFilePath,"Productdetails");
+		javawait();
+	//	clickElement(tab);
+		masterprepapprovaltab();
+		javawait();
+		 clickElement(search);
+		 for (int i = 2; i < 3; i++) {
+				search.sendKeys(excelUtils.getCellData(i, 15));
+		    	clickElement(createdrecord);
+		clickElement(commentstab);
+    	clickElement(productdetailstab);
+    	javawait();
+    	clickElement(submit);
+    	javawait();
+    	textbox(comments, " ");
+    	clickElement(submit);
+    	softassert.assertEquals(commalert.getText(), "Comments is required");
+    	textbox(comments, comm);
+    	javawait();
+    	clickElement(submit);
+		 }
+	}
+	
 	public void masterprerejection(String comm) throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		masterprepapprovaltab();
 		clickElement(masterprepapprovaltab);
 		 clickElement(search);
@@ -81,7 +106,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	public void masterpreapproval(String comm) throws InterruptedException, IOException {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		javawait();
-		clickElement(tab);
+		//clickElement(tab);
 		masterprepapprovaltab();
 		 clickElement(search);
 		 for (int i = 1; i < 2; i++) {
@@ -102,7 +127,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	}
 	public void bprmasterprerejection(String comm) throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		clickElement(masterprereqapprovaltab);
@@ -124,7 +149,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	}
 	public void bprmasterpreapproval(String comm) throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javawait();
 		clickElement(masterprereqapprovaltab);

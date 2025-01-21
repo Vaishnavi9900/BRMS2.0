@@ -9,24 +9,24 @@
       <include name ="bilayerbulkprintRequestInitiation"></include>
       </methods>
     </classes>
-  </test> <!-- Test -->
-   <test name="printReturntoIncharge">
-  <parameter name ="browser" value ="chrome"></parameter>
-  <parameter name ="author" value ="Vaishnavi"></parameter>
-    <classes>
-      <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
-      <methods>
-      <include name ="printReturntoIncharge"></include>
-      </methods>
-    </classes>
-  </test> <!-- Test -->
-  <test name="BMRPrintReReviewByProductionIncharge1">
+    </test> <!-- Test -->
+  <test name="printReturnbyproductionincharge">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
       <class name="com.ProductionInchargeTestRunner.BMRPrintReview"/>
       <methods>
-      <include name ="printReReview"></include>
+      <include name ="printReturn"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="printRequestReInitiation">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation"/>
+      <methods>
+      <include name ="printRequestReInitiation"></include>
       </methods>
     </classes>
   </test> <!-- Test -->
@@ -40,16 +40,6 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRPrintReturntoExeByValidationIncharge" enabled="false">
-  <parameter name ="browser" value ="chrome"></parameter>
-  <parameter name ="author" value ="Vaishnavi"></parameter>
-    <classes>
-      <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
-      <methods>
-      <include name ="printReturntoExecutive"></include>
-      </methods>
-    </classes>
-  </test> <!-- Test -->
    <test name="BMRPrintReturntoinchargeByValidationIncharge">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
@@ -60,7 +50,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRPrintReReviewByProductionIncharge">
+   <test name="BMRPrintReReviewByProductionIncharge1">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -100,13 +90,23 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRPrintReturntoValidationInchargebyQAHOD" enabled="false">
+   <test name="BMRPrintReturntoValidationInchargebyQAHOD">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
       <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
       <methods>
       <include name ="printReturntoValidationIncharge"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="BMRPrintApprovalByValidationIncharge1">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReview"></include>
       </methods>
     </classes>
   </test> <!-- Test -->

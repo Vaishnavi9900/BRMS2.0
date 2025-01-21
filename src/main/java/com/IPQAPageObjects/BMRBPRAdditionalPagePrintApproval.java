@@ -50,7 +50,7 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	WebElement No;
 	
 	public BMRBPRAdditionalPagePrintApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void additionalPageReturn() throws IOException, InterruptedException {

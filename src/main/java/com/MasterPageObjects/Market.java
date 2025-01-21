@@ -44,9 +44,10 @@ public class Market extends BRMSCommonMethods{
 	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	WebElement submit2;
 	
+	
 	public Market(WebDriver driver) {
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 		
 	}
 	

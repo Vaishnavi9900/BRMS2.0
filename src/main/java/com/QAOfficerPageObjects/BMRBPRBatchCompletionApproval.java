@@ -59,7 +59,7 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 	
 
 	public BMRBPRBatchCompletionApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void batchcompletionapprovaltab() throws InterruptedException, IOException {

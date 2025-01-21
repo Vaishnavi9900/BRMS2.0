@@ -5,10 +5,14 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+
+import com.google.common.collect.Table.Cell;
 
 public class ExcelUtils extends BRMSCommonMethods {
 	
@@ -52,5 +56,39 @@ public class ExcelUtils extends BRMSCommonMethods {
     	FileOutputStream outputStream = new FileOutputStream(excelFilePath);
     	workbook.write(outputStream);
     }
+    
+    public void writecellvalue(String excelFilepath, String sheet, String value) throws IOException {
+    	FileInputStream fs = new FileInputStream(excelFilepath);
+    	XSSFWorkbook wb = new XSSFWorkbook(fs);
+    	XSSFSheet sheet1 = wb.getSheet(sheet);
+    	int lastRow = sheet1.getLastRowNum();
+    	for(int i=1; i<2; i++){
+    	XSSFRow row = sheet1.getRow(i);
+    	XSSFCell cell = row.createCell(14);
+
+    	cell.setCellValue(value);
+    	}
+    	FileOutputStream fos = new FileOutputStream(excelFilepath);
+    	wb.write(fos);
+    	fos.close();
+
+    	}
+    	public void writecellvalue2(String excelFilepath, String sheet, String value) throws IOException {
+        	FileInputStream fs = new FileInputStream(excelFilepath);
+        	XSSFWorkbook wb = new XSSFWorkbook(fs);
+        	XSSFSheet sheet1 = wb.getSheet(sheet);
+        	int lastRow = sheet1.getLastRowNum();
+        	for(int i=2; i<3; i++){
+        	XSSFRow row = sheet1.getRow(i);
+        	XSSFCell cell = row.createCell(14);
+
+        	cell.setCellValue(value);
+
+        	}
+
+    	FileOutputStream fos = new FileOutputStream(excelFilepath);
+    	wb.write(fos);
+    	fos.close();
+    	}
 
 }

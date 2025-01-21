@@ -65,7 +65,7 @@ public class BlockandLocation extends BRMSCommonMethods {
 	
        public BlockandLocation(WebDriver driver) {
     	  
-	    PageFactory.initElements(driver, this);
+    	   PageFactory.initElements(driver, this);	
 	
        }
        

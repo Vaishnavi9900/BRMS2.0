@@ -50,12 +50,12 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	WebElement returnbutton;
 	
 	public BMRBPRAfterPrintCancelReview(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void afterPrintcanelReviewtab() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(afterprintcancelreview);
 		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -67,7 +67,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	}
 	public void bprafterPrintcanelReviewtab() throws InterruptedException, IOException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(afterprintcancelreview);
 		javawait();
@@ -110,6 +110,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
+		javawait();
 	}
 	public void rejectactivity(String pass) throws InterruptedException {
 
@@ -122,6 +123,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
+		javawait();
 	}
 	public void returnactivity(String pass) throws InterruptedException {
 
@@ -134,6 +136,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 		textbox(password, pass);
 		javawait();
 		clickElement(submit2);
+		javawait();
 	}
 	
 	

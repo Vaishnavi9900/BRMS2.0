@@ -34,7 +34,7 @@ public class Department extends BRMSCommonMethods {
 	
 	public Department(WebDriver driver) {
 		
-		this.driver = driver;
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void departmentcreatewithspace() throws InterruptedException {

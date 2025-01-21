@@ -63,13 +63,13 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		
 		
 		public BMRBPRObsoleteInitiation(WebDriver driver) {
-			PageFactory.initElements(driver, this);
+			PageFactory.initElements(driver, this);	
 		}
 		
 		public void obsoleteInitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
-			clickElement(tab);
+		//	clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
 			clickElement(mprno);
@@ -84,7 +84,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		}
 		public void bprobsoleteInitiation() throws IOException, InterruptedException {
 			javawait();
-			clickElement(tab);
+		//	clickElement(tab);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javascript(obsoleteinitiation);
@@ -102,7 +102,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void obsoleteReInitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
-			clickElement(tab);
+		//	clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
 			clickElement(status);
@@ -117,7 +117,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 			javawait();
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
-			clickElement(tab);
+	//		clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
 			clickElement(status);
@@ -132,7 +132,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void finalobsolete() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
-			clickElement(tab);
+		//	clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
 			clickElement(status);
@@ -147,7 +147,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javawait();
-			clickElement(tab);
+		//	clickElement(tab);
 			javascript(obsoleteinitiation);
 			javawait();
 			clickElement(status);

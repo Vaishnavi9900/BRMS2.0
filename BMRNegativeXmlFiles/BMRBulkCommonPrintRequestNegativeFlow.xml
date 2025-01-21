@@ -100,7 +100,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRPrintApprovalByValidationIncharge">
+   <test name="BMRPrintApprovalByValidationIncharge1">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>

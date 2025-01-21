@@ -61,7 +61,7 @@ public class BMRBPRAfterPrintCancelInitiation extends BRMSCommonMethods{
 	WebElement resubmit2;
 	
 	public BMRBPRAfterPrintCancelInitiation(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void afterPrintcanelinitiation() throws InterruptedException, IOException {

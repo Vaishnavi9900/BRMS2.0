@@ -58,11 +58,9 @@ public class Assignmenu extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
 	WebElement submit2;
 
-	public Assignmenu(WebDriver d) {
+	public Assignmenu(WebDriver driver) {
 
-		driver = d;
-
-		PageFactory.initElements(d, this);
+		PageFactory.initElements(driver, this);	
 
 	}
 

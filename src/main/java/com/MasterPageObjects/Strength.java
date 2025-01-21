@@ -47,7 +47,7 @@ public class Strength extends BRMSCommonMethods{
 	
 	
 	public Strength(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void strengthcreatewithspace() throws InterruptedException {

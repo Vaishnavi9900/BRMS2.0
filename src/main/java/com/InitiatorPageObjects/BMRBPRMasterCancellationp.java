@@ -62,12 +62,12 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	
 
 	public BMRBPRMasterCancellationp(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 
 	public void mastercancellationtab() throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+		//clickElement(tab);
 		javascript(mastercancelinitiationtab);
 		javawait();
 		excelUtils.setExcelFile(excelFilePath, "productdetails");
@@ -80,7 +80,7 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	}
 	public void bprmastercancellationtab() throws IOException, InterruptedException {
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(bprmastercancelinitiationtab);
 		javawait();
@@ -105,7 +105,8 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 		}
 	}
 	
-	public void submit() {
+	public void submit() throws InterruptedException {
+		javawait();
 		clickElement(submit);
 	}
 	

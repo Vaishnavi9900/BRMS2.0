@@ -54,14 +54,14 @@ public class BMRBPRQAHODRePrintApproval extends BRMSCommonMethods{
 	WebElement ok;
 	
 	public BMRBPRQAHODRePrintApproval(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	
 	public void reprintapprovaltab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		javascript(reprintapprovaltab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -72,7 +72,7 @@ public class BMRBPRQAHODRePrintApproval extends BRMSCommonMethods{
 	public void bprreprintapprovaltab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+//		clickElement(tab);
 		clickElement(bpr);
 		javascript(bprreprintapprovaltab);
 		for (int i = 1; i < 2; i++) {

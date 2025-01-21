@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-<test name="BMRPrintRequestInitiation" enabled="false">
+<test name="BMRPrintRequestInitiation"   enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -10,7 +10,17 @@
       </methods>
     </classes>
   </test> <!-- Test -->
- <test name="commonbulkprintRequestInitiation">
+  <test name="standardbulkprintRequestInitiation">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation"/>
+      <methods>
+      <include name ="standardbulkprintRequestInitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+ <test name="commonbulkprintRequestInitiation"  enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>

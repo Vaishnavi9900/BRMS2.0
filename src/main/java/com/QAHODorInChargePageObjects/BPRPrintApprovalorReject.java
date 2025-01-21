@@ -88,13 +88,13 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	WebElement close;
 
 	public BPRPrintApprovalorReject(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void printapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqapproval);
 		for (int i = 1; i < 2; i++) {
@@ -106,7 +106,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	public void beforeprintapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-		clickElement(tab);
+	//	clickElement(tab);
 		clickElement(bpr);
 		javascript(beforeprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
@@ -118,7 +118,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	public void afterprintapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		clickElement(tab);
+//		clickElement(tab);
 		clickElement(bpr);
 		javascript(afterprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
