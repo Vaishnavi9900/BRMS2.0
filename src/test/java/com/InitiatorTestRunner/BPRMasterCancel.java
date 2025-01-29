@@ -21,23 +21,26 @@ public class BPRMasterCancel extends ConfigurationReader{
 		
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("BPR Master Cancel Initiation Tab and open the record");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		cancel.bprmastercancellationtab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Clicked on BPR Master Cancel Initiation Tab and opened the record");
 		cancel.submit();
-		LoggerUtil.logInfo("validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on submit");
 		cancel.comments();
-		LoggerUtil.logInfo("again click on submit");
+		LoggerUtil.logInfo("validated the comments and entered the comments");
 		cancel.submit();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("again clicked on submit");
 		cancel.bprsubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Cancel Initiation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 

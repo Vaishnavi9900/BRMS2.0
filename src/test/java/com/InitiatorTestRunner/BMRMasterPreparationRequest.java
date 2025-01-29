@@ -21,18 +21,21 @@ public class BMRMasterPreparationRequest extends ConfigurationReader {
 		mp = new BMRMasterPreparation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		//mp.masterprepreq();
-		LoggerUtil.logInfo("click on submit, verify the validations and also enter the comments");
 		mp.bmrmasterreqinitation1(getinitiatorcomments());
-		LoggerUtil.logInfo("enter the password and submit the record");
+		LoggerUtil.logInfo("clicked on submit, verified the validations and also entered the comments");
 		mp.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("BMR Master Preparation Req. Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR Master Preparation Req Initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -41,26 +44,29 @@ public class BMRMasterPreparationRequest extends ConfigurationReader {
 		mp = new BMRMasterPreparation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		//mp.masterprepreq();
-		LoggerUtil.logInfo("click on submit, verify the validations and also enter the comments");
 		mp.bmrmasterreqinitation(getinitiatorcomments());
-		LoggerUtil.logInfo("clicking the block version");
+		LoggerUtil.logInfo("clicked on submit, verified the validations and also entered the comments");
 		mp.blockpreviousversion();
-		LoggerUtil.logInfo("clicking the submit");
+		LoggerUtil.logInfo("clicked the block version");
 		mp.submit();
-		LoggerUtil.logInfo("Enter the password");
+		LoggerUtil.logInfo("clicked the submit");
 		mp.submitactivity2(getpassword());
-		LoggerUtil.logInfo("clicking popup ok");
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		mp.popupok();
-		LoggerUtil.logInfo("getting mprnpo");
+		LoggerUtil.logInfo("clicked on popup ok");
 		mp.getmprno();
+		LoggerUtil.logInfo("got the mprnpo");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("BMR blocking the previous version Master Preparation test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR block revious version Master Preparation Req Initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	

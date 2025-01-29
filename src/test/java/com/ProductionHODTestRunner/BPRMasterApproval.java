@@ -26,23 +26,28 @@ public class BPRMasterApproval extends ConfigurationReader{
 		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution HOD id and password");
 		as.userlogin(getproductionhod(), getpassword());
-		LoggerUtil.logInfo("Click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution HOD id and password");
 		hod.bprmasterapprovaltab();
-		LoggerUtil.logInfo("Click on submit");
+		LoggerUtil.logInfo("Clicked on Master Approval tab and opened the record");
 		app.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("Clicked on submit");
 		hod.comments(getapprovalcomments());
-		LoggerUtil.logInfo("Click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		app.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("Clicked on submit");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval by Production HOD Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
     public void bprproductionhodreturn() throws InterruptedException, IOException {
@@ -53,23 +58,28 @@ public class BPRMasterApproval extends ConfigurationReader{
 		review = new BMRBPRProductionInchargeReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution HOD id and password");
 		as.userlogin(getproductionhod(), getpassword());
-		LoggerUtil.logInfo("Click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution HOD id and password");
 		hod.bprmasterapprovaltab();
-		LoggerUtil.logInfo("Click on return");
+		LoggerUtil.logInfo("Clicked on Master Approval tab and opened the record");
 		review.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("Clicked on return");
 		hod.comments(getreturncomments());
-		LoggerUtil.logInfo("Click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		review.returnbutton();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("Clicked on return");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval Return by Production HOD Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	
 

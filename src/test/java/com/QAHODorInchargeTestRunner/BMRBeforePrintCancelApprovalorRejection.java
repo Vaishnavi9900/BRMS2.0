@@ -22,23 +22,28 @@ public class BMRBeforePrintCancelApprovalorRejection extends ConfigurationReader
 		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Before Print Cancel Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.beforeprintapprovalrejecttab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Before Print Cancel Approval tab and opened the record");
 		hod.beforeprintreturn();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		hod.beforeprintcomments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.beforeprintreturn();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		hod.beforeprintreturnactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Before Print Cancel Return Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void beforePrintCancelApproval() throws InterruptedException, IOException {
@@ -47,23 +52,28 @@ public class BMRBeforePrintCancelApprovalorRejection extends ConfigurationReader
 		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Before Print Cancel Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.beforeprintapprovalrejecttab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Before Print Cancel Approval tab and opened the record");
 		hod.beforeprintsubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");		
 		hod.beforeprintcomments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.beforeprintsubmit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		hod.beforeprintsubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Before Print Cancel Approval Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void beforePrintCancelRejection() throws InterruptedException, IOException {
@@ -72,23 +82,28 @@ public class BMRBeforePrintCancelApprovalorRejection extends ConfigurationReader
 		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Before Print Cancel Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.beforeprintapprovalrejecttab();
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("clicked on Before Print Cancel Approval tab and opened the record");
 		hod.beforeprintreject();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on reject");
 		hod.beforeprintcomments(getrejectedcomments());
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.beforeprintreject();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on reject");
 		hod.beforeprintrejectactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Before Print Cancel Rejection Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	
 

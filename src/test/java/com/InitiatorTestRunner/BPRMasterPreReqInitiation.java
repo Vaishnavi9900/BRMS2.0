@@ -22,17 +22,20 @@ public class BPRMasterPreReqInitiation extends ConfigurationReader{
 		bpr = new BPRMasterPreparation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("click on master prep. req. tab, validate the comments and enter the comments");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bpr.bprMasterPrereqInitiation(getinitiatorcomments());
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("clicked on master prep. req. tab, validateed the comments and entered the comments");
 		bpr.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Preparation Request Initiation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 

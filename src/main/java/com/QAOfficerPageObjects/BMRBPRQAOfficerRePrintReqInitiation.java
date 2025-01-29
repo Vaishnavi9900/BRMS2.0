@@ -267,13 +267,10 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -282,20 +279,16 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
 	public void resubmitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(resubmit);
-		javawait();
 		clickElement(Yes);
 		javawait();
-		textbox(password, pass);
-		javawait();
+		textbox(password, pass);		
 		clickElement(resubmit2);
 		javawait();
 	}

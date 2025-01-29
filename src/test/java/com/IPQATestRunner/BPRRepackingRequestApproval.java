@@ -21,27 +21,30 @@ public class BPRRepackingRequestApproval extends ConfigurationReader{
 		app = new BPRRepackingApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("click on BPR Repacking request approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		app.repackingapproval();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on BPR Repacking request approval tab and opened the record");
 		app.returnbutton();
-		LoggerUtil.logInfo("validate alerts and select the required batch details");
+		LoggerUtil.logInfo("clicked on return");
 		app.batchseldetails();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("validated alerts and selected the required batch details");
 		app.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		app.returnbutton();
-		LoggerUtil.logInfo("Enter the passowrd and return the record");
+		LoggerUtil.logInfo("clicked on return");
 		app.returnactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and returned the record");
 		}
-		catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Repacking Return by IPQA Test is failed", e);
-			Assert.fail();
-		}
-		
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}	
+			
 	}
 	
 	@Test
@@ -50,26 +53,30 @@ public class BPRRepackingRequestApproval extends ConfigurationReader{
 		app = new BPRRepackingApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("click on BPR Repacking request approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		app.repackingapproval();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on BPR Repacking request approval tab and opened the record");
 		app.submit();
-		LoggerUtil.logInfo("validate alerts");
+		LoggerUtil.logInfo("clicked on submit");
 		app.batchseldetails();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("validated the batch alerts");
 		app.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		app.submit();
-		LoggerUtil.logInfo("Enter the passowrd and approve the record");
+		LoggerUtil.logInfo("clicked on submit");
 		app.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and approved the record");
 		}
-		catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Repacking approve by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}	
+	
 	}
 
 }

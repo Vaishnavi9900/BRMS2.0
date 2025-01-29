@@ -1,6 +1,7 @@
 package com.InitiatorPageObjects;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import com.BasicData.BRMSCommonMethods;
@@ -23,6 +26,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 
 	// using the Constants class values for excel file path
 	static String excelFilePath =file;
+	static String mpr1=null;
 	
 
 		@FindBy(how = How.XPATH, using = "//a[text()=' Product Details ']")
@@ -51,7 +55,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement shelflifealert;
 		@FindBy(how = How.XPATH, using = "//div[text()=' ShelfLifeUOM is required ']")
 		WebElement shelflifeuomalert;
-		@FindBy(how = How.XPATH, using = "//p[text()='Batch Size is required']")
+		@FindBy(how = How.XPATH, using = "//div[text()=' Batch Size is required ']")
 		WebElement batchsizealert;
 		@FindBy(how = How.XPATH, using = "//div[text()=' BatchSizeUOM is required ']")
 		WebElement batchsizeuomalert;
@@ -101,11 +105,11 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement batchsizeuom;
 		@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[1]")
 		WebElement block;
-		@FindBy(how = How.XPATH, using = "//div[text()='Blister Packing Line']")
+		@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[2]")
 		WebElement blocksel;
 		@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[2]")
 		WebElement location;
-		@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[9]")
+		@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[7]")
 		WebElement locsel;
 		@FindBy(how = How.XPATH, using = "//select[@formcontrolname='customerBatchId']")
 		WebElement customerbatch;
@@ -115,13 +119,15 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement prodnamemap;
 		@FindBy(how = How.XPATH, using = "(//input[@type='text'])[7]")
 		WebElement prodcodemap;
-		@FindBy(how = How.XPATH, using = "(//input[@type='text'])[8]")
+		@FindBy(how = How.XPATH, using = "//ng-select[@formcontrolname='MappingMPRNumber' and @placeholder='MPR Number']")
 		WebElement mprnomap;
+		@FindBy(how = How.XPATH, using = "(//input[@type='text'])[9]")
+		WebElement mprnosel;
 		@FindBy(how = How.XPATH, using = "//button[text()=' Get ']")
 		WebElement get;
 		@FindBy(how = How.XPATH, using = "//input[@type='search']")
 		WebElement search;
-		@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[1]")
+		@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[6]")
 		WebElement checkbox;
 		@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Enter your comments']")
 		WebElement comments;
@@ -133,6 +139,8 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement blisterpacking;
 		@FindBy(how = How.XPATH, using = "//a[text()=' Bottle Packing ']")
 		WebElement bottlepacking;
+		@FindBy(how = How.XPATH, using = "//a[text()=' Pouch Packing ']")
+		WebElement pouchpacking;
 		@FindBy(how = How.XPATH, using = "//modal-container[@class='modal fade show']")
 		WebElement popupclick;
 		@FindBy(how = How.XPATH, using = "(//tr[@role='row'])[2]")
@@ -141,6 +149,8 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement prodcodesel;
 		@FindBy(how = How.XPATH, using = "//button[@data-target='#confirmationBattlP']")
 		WebElement resubmit;
+		@FindBy(how = How.XPATH, using = "(//p[@class='submit-sub-text'])[1]")
+		WebElement bprmprno;
 		
 		public BPRProductDetails(WebDriver driver) {
 			PageFactory.initElements(driver, this);	
@@ -157,33 +167,17 @@ public class BPRProductDetails extends BRMSCommonMethods{
 			javawait();
 			scrolldown(productmapping);
 			clickElement(productmapping);
+			clickElement(mprnomap);
 			javawait();
-			mprnomap.click();
-			mprnomap(excelutils.getCellData(i, 15));
-		    clickElement(mprnomap);
+			mprnosel.sendKeys(excelutils.getCellData(i, 15),Keys.ENTER);
+		   // clickElement(mprnomap);
+			javawait();
 			clickElement(get);
 			javawait();
-			List<WebElement> checkbox=driver.findElements(By.xpath("//input[@type='checkbox']"));
-			int count=checkbox.size();
-			checkbox.get(count-1).click();
-			javawait();
+			scrolldown(checkbox);
+			clickElement(checkbox);
 			clickElement(add);
-			javawait();
-			javascript(delete);
-			clickElement(get);
-			javawait();
-			mprnomap.click();
-			mprnomap(excelutils.getCellData(i, 15));
-		    clickElement(mprnomap);
-			clickElement(get);
-			javawait();
-			List<WebElement> checkbox1=driver.findElements(By.xpath("//input[@type='checkbox']"));
-			int count1=checkbox1.size();
-			checkbox1.get(count1-1).click();
-			javawait();
-			clickElement(add);
-			javawait();
-			clickElement(submit);
+			javascript(submit);
 			javawait();
 			//clickElement(popupclick);
 			softassert.assertEquals(commentsalert.getText(), "Comments is required");
@@ -217,42 +211,28 @@ public class BPRProductDetails extends BRMSCommonMethods{
 			javawait();
 			clickElement(create);
 			javawait();
-			clickElement(bottlepacking);
+			clickElement(blisterpacking);
 			javawait();
 			scrolldown(productmapping);
 			clickElement(productmapping);
 			javawait();
-			mprnomap.click();
-			mprnomap(excelutils.getCellData(i, 15));
-		    clickElement(mprnomap);
+			clickElement(mprnomap);
+			javawait();
+			mprnosel.sendKeys(excelutils.getCellData(i, 15),Keys.ENTER);
+		   // clickElement(mprnomap);
+			javawait();
 			clickElement(get);
 			javawait();
-			List<WebElement> checkbox=driver.findElements(By.xpath("//input[@type='checkbox']"));
-			int count=checkbox.size();
-			checkbox.get(count-1).click();
-			javawait();
+			scrolldown(checkbox);
+			clickElement(checkbox);
 			clickElement(add);
-			javawait();
-			javascript(delete);
-			clickElement(get);
-			javawait();
-			mprnomap.click();
-			mprnomap(excelutils.getCellData(i, 15));
-		    clickElement(mprnomap);
-			clickElement(get);
-			javawait();
-			List<WebElement> checkbox1=driver.findElements(By.xpath("//input[@type='checkbox']"));
-			int count1=checkbox1.size();
-			checkbox1.get(count1-1).click();
-			javawait();
-			clickElement(add);
-			javawait();
-			clickElement(submit);
+			javascript(submit);
 			javawait();
 			//clickElement(popupclick);
 			softassert.assertEquals(commentsalert.getText(), "Comments is required");
 			javawait();
 			JavascriptExecutor js = ((JavascriptExecutor) driver);
+			js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
 			js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
 			softassert.assertEquals(packstylealert.getText(), "PackStyle is required");
 			softassert.assertEquals(prodnamealert.getText(), "Product Name is required");
@@ -270,6 +250,62 @@ public class BPRProductDetails extends BRMSCommonMethods{
 			softassert.assertEquals(locationalert.getText(), "Location is required");
 			softassert.assertEquals(customeralert.getText(), "CustomerBatch is required");
 			}
+		}
+		public void validatealerts2() throws InterruptedException, IOException {
+			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+			for (int i = 1; i < 2; i++) {
+			javascript(productdetails);
+			javawait();
+			clickElement(bprdetails);
+			javawait();
+			clickElement(create);
+			javawait();
+			clickElement(pouchpacking);
+			javawait();
+			scrolldown(productmapping);
+			clickElement(productmapping);
+			javawait();
+			clickElement(mprnomap);
+			javawait();
+			mprnosel.sendKeys(excelutils.getCellData(i, 15),Keys.ENTER);
+		   // clickElement(mprnomap);
+			javawait();
+			clickElement(get);
+			javawait();
+			scrolldown(checkbox);
+			clickElement(checkbox);
+			clickElement(add);
+			javascript(submit);
+			javawait();
+			//clickElement(popupclick);
+			softassert.assertEquals(commentsalert.getText(), "Comments is required");
+			javawait();
+			JavascriptExecutor js = ((JavascriptExecutor) driver);
+			js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
+			js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
+			softassert.assertEquals(packstylealert.getText(), "PackStyle is required");
+			softassert.assertEquals(prodnamealert.getText(), "Product Name is required");
+			softassert.assertEquals(prodcodealert.getText(), "Product Code is required");
+			softassert.assertEquals(sfgalert.getText(), "SFG Code is required");
+			softassert.assertEquals(marketalert.getText(), "Market Code is required");
+			softassert.assertEquals(dosagealert.getText(), "Dosage Form is required");
+			softassert.assertEquals(strengthalert.getText(), "Strength is required");
+			softassert.assertEquals(strengthuomalert.getText(), "StrengthUOM is required");
+			softassert.assertEquals(shelflifealert.getText(), "ShelfLife is required");
+			softassert.assertEquals(shelflifeuomalert.getText(), "ShelfLifeUOM is required");
+			softassert.assertEquals(batchsizealert.getText(), "Batch Size is required");
+			softassert.assertEquals(batchsizeuomalert.getText(), "BatchSizeUOM is required");
+			softassert.assertEquals(blockalert.getText(), "Block is required");
+			softassert.assertEquals(locationalert.getText(), "Location is required");
+			softassert.assertEquals(customeralert.getText(), "CustomerBatch is required");
+			}
+		}
+		
+		public void setmpr() throws IOException {
+				 String mpr2 = bprmprno.getText();
+				 mpr1= mpr2.substring(58,75);
+				 System.out.println(mpr1);
+			excelutils.writecellvalue(excelFilePath,"BPRproductdetails", mpr1);
 		}
 		public void bottlepackinginitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -319,7 +355,30 @@ public class BPRProductDetails extends BRMSCommonMethods{
 
 			}
 		}
-		
+		public void pouchpackinginitiation() throws IOException, InterruptedException {
+			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+			for (int i = 4; i < 5; i++) {
+				javawait();
+				javascript(packstyle);
+				packstyle.sendKeys(excelutils.getCellData(i, 0));
+				productname(excelutils.getCellData(i, 1));
+				productcode(excelutils.getCellData(i, 2));
+				sfgcode(excelutils.getCellData(i, 3));
+				market(excelutils.getCellData(i, 4));
+				dosageform(excelutils.getCellData(i, 5));
+				strength(excelutils.getCellData(i, 6), excelutils.getCellData(i, 7));
+				shelflife(excelutils.getCellData(i, 8), excelutils.getCellData(i, 9));
+				batchsize(excelutils.getCellData(i, 10),excelutils.getCellData(i, 11) );
+				block();
+				javawait();
+				location();
+				javawait();
+				customerbatch(excelutils.getCellData(i, 12));
+				javawait();
+				comments(excelutils.getCellData(i, 13));
+
+			}
+		}
 		public void blisterpackingReinitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			for (int i = 1; i <2 ; i++) {
@@ -335,7 +394,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 			}
 			for (int i = 2; i < 3; i++) {
 				javawait();
-				clickElement(blisterpacking);
+//				clickElement(blisterpacking);
 				javawait();
 				batchsize(excelutils.getCellData(i, 10),excelutils.getCellData(i, 11) );
 				comments(excelutils.getCellData(i, 13));
@@ -365,10 +424,6 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		public void packstyle(String style) throws InterruptedException {
 			textboxc(packstyle, style);
 		}
-		public void mprnomap(String no) throws InterruptedException {
-			textboxc(mprnomap, no);
-		}
-
 		public void productname(String name) throws InterruptedException {
 			textboxc(productname, name);
 		}
@@ -396,55 +451,25 @@ public class BPRProductDetails extends BRMSCommonMethods{
 
 		public void strength(String str, String struom) throws InterruptedException {
 			textbox(strength, str);
-			try {
-				javawait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			textbox(strengthuom, struom);
 		}
 
 		public void shelflife(String shelf, String uom) throws InterruptedException {
 			textbox(shelflife, shelf);
-			try {
-				javawait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			textbox(shelflifeuom, uom);
 		}
 
 		public void batchsize(String size, String uom) throws InterruptedException {
 			textboxc(batchsize, size);
-			try {
-				javawait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			textbox(batchsizeuom, uom);
 		}
 
 		public void block() throws InterruptedException {
 			clickElement(block);
-			try {
-				javawait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			clickElement(blocksel);
 		}
 		public void location() throws InterruptedException {
 			clickElement(location);
-			try {
-				javawait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			clickElement(locsel);
 		}
 		public void comments(String comm) throws InterruptedException {
@@ -460,30 +485,27 @@ public class BPRProductDetails extends BRMSCommonMethods{
 			clickElement(resubmit);
 		}
 
-		public void submitactivity(String pass) throws InterruptedException {
+		public void submitactivity(String pass) throws InterruptedException, IOException {
 
 			clickElement(no);
-			javawait();
 			clickElement(submit);
-			javawait();
 			clickElement(yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
+			javawait();
+			setmpr();
+			System.out.println(mpr1);
 			javawait();
 		}
 		public void resubmitactivity(String pass) throws InterruptedException {
 
 			javawait();
 			clickElement(no);
-			javawait();
 			clickElement(resubmit);
-			javawait();
 			clickElement(yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
 			javawait();
 		}

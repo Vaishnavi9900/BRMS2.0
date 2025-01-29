@@ -25,10 +25,15 @@ public class StrengthTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Strenth creation with space and validate");
 		st.strengthcreatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Strength Cration with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 		
 	}
 	@Test
@@ -44,10 +49,15 @@ public class StrengthTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter the password and create the record");
 		st.createactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Strength creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void existedstrengthcreation() throws InterruptedException, IOException {
@@ -60,10 +70,15 @@ public class StrengthTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Existed Strength creation and validate");
 		st.existedstrengthcreate();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed Strength Creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void strengthupdatewithspace() throws InterruptedException, IOException {
@@ -76,10 +91,15 @@ public class StrengthTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Strength update with space");
 		st.strengthupdatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Strength with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void strengthupdate() throws InterruptedException, IOException {
@@ -94,10 +114,15 @@ public class StrengthTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter the password and create the record");
 		st.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update the Strength record Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void strengthdisableenable() throws InterruptedException, IOException {
@@ -112,10 +137,15 @@ public class StrengthTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter the password and create the record");
 		st.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Disable/Enable the Strength record Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 
 }

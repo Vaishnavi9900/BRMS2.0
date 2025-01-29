@@ -190,26 +190,20 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	public void additionalissueactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(additionalissue);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
 	public void printactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(print);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 		javawait();
@@ -217,13 +211,10 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	public void additionalprintactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(additionalprint);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -232,26 +223,20 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	public void issueactivity2(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(issue);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
 	public void rejectactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(reject);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}

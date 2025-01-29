@@ -22,24 +22,27 @@ public class BPRBatchClosureReview extends ConfigurationReader{
 		review = new BMRBPRIPQABatchCompletionReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("Click on BPR Batch completion Review tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		review.bprbatchcompletionreviewtab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("Clicked on BPR Batch completion Review tab and opened the record");
 		review.returnbutton();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on return");
 		review.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		review.returnbutton();
-		LoggerUtil.logInfo("Enter the passowrd and return the record");
+		LoggerUtil.logInfo("clicked on return");
 		review.returnactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and returned the record");
 		}
-		catch (Exception e) {
-		
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion Return by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}			
 	}
 	@Test
 	public void batchCompletionReview() throws InterruptedException, IOException {
@@ -47,24 +50,28 @@ public class BPRBatchClosureReview extends ConfigurationReader{
 		review = new BMRBPRIPQABatchCompletionReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("Click on BPR Batch completion Review tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		review.bprbatchcompletionreviewtab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Clicked on BPR Batch completion Review tab and opened the record");
 		review.submit();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on submit");
 		review.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		review.submit();
-		LoggerUtil.logInfo("Enter the passowrd and return the record");
+		LoggerUtil.logInfo("clicked on submit");
 		review.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and returned the record");
 		}
-		catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion Review by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}	
+			
 	}
 	@Test
 	public void batchCompletionReReview() throws InterruptedException, IOException {
@@ -72,24 +79,28 @@ public class BPRBatchClosureReview extends ConfigurationReader{
 		review = new BMRBPRIPQABatchCompletionReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("Click on BPR Batch completion Review tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		review.bprbatchcompletionRereview();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Clicked on BPR Batch completion Review tab and opened the record");
 		review.submit();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on submit");
 		review.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		review.submit();
-		LoggerUtil.logInfo("Enter the passowrd and return the record");
+		LoggerUtil.logInfo("clicked on submit");
 		review.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and returned the record");
 		}
-        catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion Re Review by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}	
+			
 	}
 
 

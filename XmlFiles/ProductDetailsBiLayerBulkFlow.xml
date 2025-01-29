@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+<test name="PelletsInitiation" enabled = "false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation"/>
+      <methods>
+      <include name = "pelletsinitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="ProductDetailsApproval" enabled = "false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
+       <methods>
+      <include name = "HODapproval"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+     <test name="bulkbilayerinitiation" enabled = "false" >
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation"/>
+       <methods>
+      <include name = "bulkbilayerinitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="ProductDetailsReturn" enabled = "false">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
+       <methods>
+      <include name = "HODReturn"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="bulkReinitiation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation"/>
+      <methods>
+      <include name = "bulkReinitiation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="ProductDetailsApproval2">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>
+       <methods>
+      <include name = "HODapproval"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

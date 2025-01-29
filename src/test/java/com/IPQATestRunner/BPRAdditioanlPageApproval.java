@@ -21,24 +21,28 @@ public class BPRAdditioanlPageApproval extends ConfigurationReader {
 		app = new BMRBPRAdditionalPagePrintApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("click on BPR Additional Page Print req Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		app.bpradditionalPageReturn();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on BPR Additional Page Print req Approval tab and opened the record");
 		app.returnbutton();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on return");
 		app.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		app.returnbutton();
-		LoggerUtil.logInfo("Enter the passowrd and return the record");
+		LoggerUtil.logInfo("clicked on return");
 		app.returnactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and returned the record");
 		}
-        catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Additional Page Print Request Return by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}		
+			
 	}
 	@Test
 	public void bpradditionalPageApproval() throws InterruptedException, IOException {
@@ -46,25 +50,27 @@ public class BPRAdditioanlPageApproval extends ConfigurationReader {
 		app = new BMRBPRAdditionalPagePrintApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("click on BPR Additional Page Print req Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		app.bpradditionalPageReturn();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on BPR Additional Page Print req Approval tab and opened the record");
 		app.submit();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on submit");
 		app.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		app.submit();
-		LoggerUtil.logInfo("Enter the password and approve the record");
+		LoggerUtil.logInfo("clicked on submit");
 		app.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and approved the record");
 		}
-        catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Additional Page Print Request Approval by IPQA Test is failed", e);
-			Assert.fail();
-		}
-		
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}	
 	}
 	@Test
 	public void bpradditionalPageRejection() throws InterruptedException, IOException {
@@ -73,24 +79,27 @@ public class BPRAdditioanlPageApproval extends ConfigurationReader {
 		
 		
 		try {
-	    LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("click on BPR Additional Page Print req Approval tab and open the record");
+	    LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		app.bpradditionalPageReturn();
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("clicked on BPR Additional Page Print req Approval tab and opened the record");
 		app.reject();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on reject");
 		app.comments(getrejectedcomments());
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		app.reject();
-		LoggerUtil.logInfo("Enter the password and reject the record");
+		LoggerUtil.logInfo("clicked on reject");
 		app.rejectactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and rejected the record");
 		}
-        catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Additional Page Print Request Rejection by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}		
 	}
 
 }

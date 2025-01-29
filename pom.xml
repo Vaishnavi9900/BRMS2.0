@@ -104,11 +104,6 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.1.2</version>
 		</dependency>
-		<dependency>
-			<groupId>javaproject1</groupId>
-			<artifactId>javaproject1</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 
 	<name>BRMS2.0</name>

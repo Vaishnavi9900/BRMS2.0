@@ -315,7 +315,6 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 
 		javawait();
 		clickElement(No);
-		javawait();
 		clickElement(submit);
 		clickElement(Yes);
 		javawait();

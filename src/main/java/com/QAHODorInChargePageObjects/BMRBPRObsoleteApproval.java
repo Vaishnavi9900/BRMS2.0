@@ -101,37 +101,31 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
-		textbox(password, pass);
-		javawait();
+		textbox(password, pass);		
 		clickElement(submit2);
+		javawait();
 	}
 	public void rejectactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(reject);
-		javawait();
 		clickElement(Yes);
 		javawait();
-		textbox(password, pass);
-		javawait();
+		textbox(password, pass);		
 		clickElement(submit2);
+		javawait();
 	}
 	public void returnactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(returnbutton);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
+		javawait();
 	}
 }

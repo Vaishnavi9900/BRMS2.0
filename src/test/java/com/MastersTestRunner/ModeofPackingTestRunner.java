@@ -28,10 +28,15 @@ public class ModeofPackingTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter Password and create the record");
 		mp.createactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Mode of Packing creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void existedmopcreation() throws InterruptedException, IOException {
@@ -44,10 +49,15 @@ public class ModeofPackingTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Existed Mode of Packing Creation and validate");
 		mp.existedmopcreation();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed Mode of Packing creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void existedmopcreation1() throws InterruptedException, IOException {
@@ -60,10 +70,15 @@ public class ModeofPackingTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Existed Mode of Packing Creation and validate");
 		mp.existedconditionformopcreation();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed Mode of Packing creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void mopupdate() throws InterruptedException, IOException {
@@ -78,10 +93,15 @@ public class ModeofPackingTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter the password and update the record");
 		mp.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Mode of Packing Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void addmopinedit() throws InterruptedException, IOException {
@@ -96,10 +116,15 @@ public class ModeofPackingTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter the password and update the record");
 		mp.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Adding another Mode of Packing in update Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void mopdisableenable() throws InterruptedException, IOException {
@@ -114,10 +139,15 @@ public class ModeofPackingTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter the password and update the record");
 		mp.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Disable/Enable the Mode of Packing record Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 
 }

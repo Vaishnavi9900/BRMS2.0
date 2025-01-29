@@ -24,23 +24,28 @@ public class BMRPrintreqApproval extends ConfigurationReader{
 		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Print Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.printapprovalrejecttab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Print Approval tab and opened the record");
 		hod.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		hod.comments(getreturncomments());
+		LoggerUtil.logInfo("validated comments and entered comments");
 		//hod.close();
-		LoggerUtil.logInfo("click on return");
 		hod.returnbutton();
-		LoggerUtil.logInfo("Select the return to Production Exe");
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		hod.returntoexeactivity(getpassword());
+		LoggerUtil.logInfo("Selected the return to Production Exe");
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Approval Return to Production Exe Test is failed", e);
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
 	}
 	
@@ -50,23 +55,28 @@ public class BMRPrintreqApproval extends ConfigurationReader{
 		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Print Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.printapprovalrejecttab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Print Approval tab and opened the record");
 		hod.returnbutton();
+		LoggerUtil.logInfo("clicked on return");
 		//hod.comments(getreturncomments());
 		//hod.close();
 		//hod.returnbutton();
-		LoggerUtil.logInfo("Select the return to Production Incharge");
-		LoggerUtil.logInfo("Enter password and submit the record");
 		hod.returntoinchargeactivity(getpassword());
+		LoggerUtil.logInfo("Selected the return to Production Incharge");
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Approval Return to Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	
 	public void printReturntoValidationIncharge() throws InterruptedException, IOException {
@@ -75,27 +85,33 @@ public class BMRPrintreqApproval extends ConfigurationReader{
 		hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Print Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.printapprovalrejecttab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Print Approval tab and opened the record");
 		hod.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		hod.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.returnbutton();
+		LoggerUtil.logInfo("clicked on return");
 		hod.close();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on close");
 		hod.returnbutton();
-		LoggerUtil.logInfo("Select the return to Validation Incharge");
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		hod.returntovalidationactivity(getpassword());
+		LoggerUtil.logInfo("Selected the return to Validation Incharge");
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Approval Return to Validation Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	  public void printReject() throws InterruptedException, IOException {
 			
@@ -103,23 +119,28 @@ public class BMRPrintreqApproval extends ConfigurationReader{
 			hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 			
 			try {
-			LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 			as.userlogin(getQAHOD(), getpassword());
-			LoggerUtil.logInfo("click on Print Approval tab and open the record");
+			LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 			hod.printapprovalrejecttab();
-			LoggerUtil.logInfo("click on reject");
+			LoggerUtil.logInfo("clicked on Print Approval tab and opened the record");
 			hod.reject();
-			LoggerUtil.logInfo("validate comments and enter comments");
+			LoggerUtil.logInfo("clicked on reject");
 			hod.comments(getrejectedcomments());
-			LoggerUtil.logInfo("click on reject");
+			LoggerUtil.logInfo("validated comments and entered comments");
 			hod.reject();
-			LoggerUtil.logInfo("Enter password and submit the record");
+			LoggerUtil.logInfo("clicked on reject");
 			hod.submitactivity2(getpassword());
+			LoggerUtil.logInfo("Entered password and submitted the record");
 			}
-			catch (Exception e) {
+			catch (AssertionError e) {
 				LoggerUtil.logError("BMR Print Approval Rejection Test is failed", e);
-				Assert.fail();
+		            // Log the failure to ExtentReports
+		            extenttest.fail("Test failed: " + e.getMessage());
+		            // Optionally, you can log the stack trace if needed
+		            extenttest.fail(e);
+		        	throw e;		
 			}
+				
 		}
 	  
 	  public void printApproval() throws InterruptedException, IOException {
@@ -128,24 +149,29 @@ public class BMRPrintreqApproval extends ConfigurationReader{
 			hod = new BMRBPRQAHODAfterPrintApprovalorReject(driver);
 			
 			try {
-			LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 			as.userlogin(getQAHOD(), getpassword());
-			LoggerUtil.logInfo("click on Print Approval tab and open the record");
+			LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 			hod.printapprovalrejecttab();
-			LoggerUtil.logInfo("click on submit");
+			LoggerUtil.logInfo("clicked on Print Approval tab and opened the record");
 			hod.submit();
+			LoggerUtil.logInfo("clicked on submit");
 			//hod.comments(getapprovalcomments());
-			LoggerUtil.logInfo("validate comments and enter comments");
 			hod.comments1(getapprovalcomments());
-			LoggerUtil.logInfo("click on submit");
+			LoggerUtil.logInfo("validated comments and entered comments");
 			hod.submit();
-			LoggerUtil.logInfo("Enter password and submit the record");
+			LoggerUtil.logInfo("clicked on submit");
 			hod.submitactivity(getpassword());
+			LoggerUtil.logInfo("Entered password and submitted the record");
 			}
-			catch (Exception e) {
+			catch (AssertionError e) {
 				LoggerUtil.logError("BMR Print Approval Test is failed", e);
-				Assert.fail();
+		            // Log the failure to ExtentReports
+		            extenttest.fail("Test failed: " + e.getMessage());
+		            // Optionally, you can log the stack trace if needed
+		            extenttest.fail(e);
+		        	throw e;		
 			}
+				
 		}
 
 }

@@ -21,31 +21,36 @@ public class BMRReprintReqInitiation extends ConfigurationReader {
 		reprint = new BMRBPRQAOfficerRePrintReqInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on RePrint Req. Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		reprint.reprintreqinitiationtab();
-		LoggerUtil.logInfo("select select all pages");
+		LoggerUtil.logInfo("clicked on RePrint Req. Initiation tab and opened the record");
 		reprint.selectallpages();
-		LoggerUtil.logInfo("select select specific pages");
+		LoggerUtil.logInfo("selected the select all pages");
 		reprint.selectspecificpages1();
-		LoggerUtil.logInfo("select select specific pages for format log and validate");
+		LoggerUtil.logInfo("selected the select specific pages");
 		reprint.selectspecificpages2();
-		LoggerUtil.logInfo("select select specific range and validate");
+		LoggerUtil.logInfo("selected the  select specific pages for format log and validate");
 		reprint.selectspecificrange1();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("selected the select specific range and validate");
 		reprint.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		reprint.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		reprint.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		reprint.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR RePrint Req. Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void rePrintReInitiation() throws InterruptedException, IOException {
@@ -53,25 +58,31 @@ public class BMRReprintReqInitiation extends ConfigurationReader {
 		reprint = new BMRBPRQAOfficerRePrintReqInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on RePrint Req. Initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		reprint.reprintreqReinitiationtab();
+		LoggerUtil.logInfo("clicked on RePrint Req. Initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		reprint.selectallpages();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("selected the all pages option");
 		reprint.resubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on resubmit");
 		reprint.reinitiationcomments();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		reprint.resubmit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on resubmit");
 		reprint.resubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR RePrint Req. ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

@@ -1,8 +1,10 @@
 package com.InitiatorTestRunner;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
@@ -14,56 +16,63 @@ public class BMRDraftInitiation extends ConfigurationReader {
 	public com.InitiatorPageObjects.BMRDraftInitiation df;
 	
 	@Test
-	public void draftinitiation() throws InterruptedException, IOException {
+	public void draftinitiation() throws InterruptedException, IOException, AWTException {
 		as = new Assignmenu(driver);
 		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
 		
 		//as.userlogin(getinitiator(), getpassword());
 		try {
-		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("click on bmr master draft initiation tab");
+		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		df.bmrmasterdraftinitiationtab();
-		LoggerUtil.logInfo("saving the word templates");
+		LoggerUtil.logInfo("clicked on bmr master draft initiation tab");
 		df.wordtemplates();
-		LoggerUtil.logInfo("selecting the cft radio button");
+		LoggerUtil.logInfo("saved the word templates");
 		//df.finalapproval();
 		df.cftreview();
-		LoggerUtil.logInfo("");
-		LoggerUtil.logInfo("selecting the req. cft's");
+		LoggerUtil.logInfo("selected the cft radio button");
 		df.draftsubmit(getdepartment(), getrole(),getdepartment1(), getrole1(), getinitiatorcomments());
-		LoggerUtil.logInfo("submit the draft initiation record with password");
+		LoggerUtil.logInfo("selected the req. cft's");
 		df.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the draft Reinitiation record");
 		}
-		catch (Exception e) {
-			LoggerUtil.logError("BMR Draft Initiation Test failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR draftinitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
-	public void draftinitiation1() throws InterruptedException, IOException {
+	public void draftinitiation1() throws InterruptedException, IOException, AWTException {
 		as = new Assignmenu(driver);
 		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
 		
 		//as.userlogin(getinitiator(), getpassword());
 		try {
-		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("click on bmr master draft initiation tab");
+		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		df.bmrmasterdraftinitiationtab();
-		LoggerUtil.logInfo("saving the word templates");
+		LoggerUtil.logInfo("clicked on bmr master draft initiation tab");
 		df.wordtemplates();
+		LoggerUtil.logInfo("saved the word templates");
 		//df.finalapproval();
-		LoggerUtil.logInfo("selecting the cft radio button");
 		df.cftreview();
-		LoggerUtil.logInfo("selecting the req. cft's");
+		LoggerUtil.logInfo("selected the cft radio button");
 		df.draftsubmit1(getdepartment(), getrole(), getinitiatorcomments());
-		LoggerUtil.logInfo("submit the draft initiation record with password");
+		LoggerUtil.logInfo("selected the req. cft's");
 		df.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the draft Reinitiation record");
 		}
-		catch(Exception e) {
-			LoggerUtil.logError("BMR Draft Initiation Test failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR draftinitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -73,42 +82,49 @@ public class BMRDraftInitiation extends ConfigurationReader {
 		
 		try {
 		//as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("click on bmr master draft initiation tab and returned status tab");
+		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		df.draftReinitiation();
-		//df.finalapproval();
-		LoggerUtil.logInfo("selct the required cft's ");
-		df.reinitiationdraftsubmit(getdepartment(), getrole2(), getinitiatorcomments());
-		LoggerUtil.logInfo("submit the draft Reinitiation record with password");
+		LoggerUtil.logInfo("clicked on bmr master draft initiation tab and returned status tab");
+		//df.finalapproval()		
+		df.reinitiationdraftsubmit(getdepartment(), getrole2(), getinitiatorcomments());;
+		LoggerUtil.logInfo("selected the required cft's ");
 		df.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the draft Reinitiation record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("BMR Draft Reinitiation Test failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR Draft Reinitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
-	public void draftinitiationwithoutcft() throws InterruptedException, IOException {
+	public void draftinitiationwithoutcft() throws InterruptedException, IOException, AWTException {
 		as = new Assignmenu(driver);
 		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
 		try {
-		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("click on bmr master draft initiation tab");
+		LoggerUtil.logInfo("Login to the application with initiator and password details");
 		df.bmrmasterdraftinitiationtab();
-		LoggerUtil.logInfo("saving the word templates");
+		LoggerUtil.logInfo("clicked on bmr master draft initiation tab");
 		df.wordtemplates();
-		LoggerUtil.logInfo("select the final approval radio button");
+		LoggerUtil.logInfo("saved the word templates");
 		df.finalapproval();
-		LoggerUtil.logInfo("submit the draft initiation record with password");
+		LoggerUtil.logInfo("selected the final approval radio button");
 		df.draftsubmit(getdepartment(), getrole(),getdepartment1(), getrole1(), getinitiatorcomments());
 		df.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the draft Reinitiation record");
 		}
-		catch (Exception e) {
-			LoggerUtil.logError("BMR draftInitiation without cft test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR Draft Initiation without CFT Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 

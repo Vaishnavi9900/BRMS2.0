@@ -21,24 +21,29 @@ public class BMRAdditionalPagePrintIssueandPrint extends ConfigurationReader{
 		issue = new BMRQAOfficerIssuanceandPrint(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Additional Page PrintIssuance tab");
-		LoggerUtil.logInfo("click on Additional Page Issued tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		issue.additionalpageprintissuancetab();
-		LoggerUtil.logInfo("click on Print");
+		LoggerUtil.logInfo("clicked on Additional Page PrintIssuance tab");
+		LoggerUtil.logInfo("clicked on Additional Page Issued tab and opened the record");
 		issue.additionalprint();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on Print");
 		issue.additionalcomments(getprintcomments());
-		LoggerUtil.logInfo("click on Print");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issue.additionalprint();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Print");
 		issue.additionalprintactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void additionalPageIssue() throws InterruptedException, IOException {
@@ -46,24 +51,29 @@ public class BMRAdditionalPagePrintIssueandPrint extends ConfigurationReader{
 		issue = new BMRQAOfficerIssuanceandPrint(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
-		LoggerUtil.logInfo("click on Additional Page PrintIssuance tab");
-		LoggerUtil.logInfo("click on Additional Page Approved tab and open the record");
 		as.userlogin(getQAOfficer(), getpassword());
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		issue.additionalpageprintissuancetab();
-		LoggerUtil.logInfo("click on Issue");
+		LoggerUtil.logInfo("clicked on Additional Page PrintIssuance tab");
+		LoggerUtil.logInfo("clicked on Additional Page Approved tab and opened the record");
 		issue.additionalissue();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on Issue");
 		issue.additionalcomments(getissuedcomments());
-		LoggerUtil.logInfo("click on Issue");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issue.additionalissue();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Issue");
 		issue.additionalissueactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Issue Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void additionalPagePrintReject() throws InterruptedException, IOException {
@@ -71,21 +81,26 @@ public class BMRAdditionalPagePrintIssueandPrint extends ConfigurationReader{
 		issue = new BMRQAOfficerIssuanceandPrint(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Additional Page PrintIssuance tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		issue.additionalpageprintissuancetab();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on Additional Page PrintIssuance tab and opened the record");
 		issue.additionalcomments(getrejectedcomments());
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issue.reject();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on reject");
 		issue.rejectactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Reject Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

@@ -23,23 +23,28 @@ public class BPRBatchCompletionInitiation extends ConfigurationReader {
 		batch = new BMRBPRBatchCompletionInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on Batch Completion Initiation tab");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		batch.bprbatchcompletiontab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Batch Completion Initiation tab");
 		batch.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		batch.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		batch.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		batch.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+		
 	}
 	@Test
     public void bprbatchReinitiation() throws InterruptedException, IOException {
@@ -48,25 +53,30 @@ public class BPRBatchCompletionInitiation extends ConfigurationReader {
 		batch = new BMRBPRBatchCompletionInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on Batch Completion Initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		batch.bprreinitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Batch Completion Initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		batch.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		batch.comments();
-		LoggerUtil.logInfo("select the dates for batch");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		batch.dateformats("12-10-2024", "12-10-2025");
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("selected the dates for batch");
 		batch.submit();
-		LoggerUtil.logInfo("Enter password and resubmit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		batch.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and resubmitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+		
 	}
 }

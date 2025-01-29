@@ -153,8 +153,8 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 		Robot robot = new Robot();
 		exebmrattachment.click();
 		Thread.sleep(10000);
-		 String filePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMS v2.0 flow 4.pdf";
-		 // Press 'Ctrl' + 'V' to paste the file path
+		 String filePath = "C:\\Users\\vaishnavi.t\\Downloads\\VGC-T-029-02 7.pdf";
+		 // Press 'Ctrl' + 'V' to paste the file path;
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_V);
@@ -189,26 +189,20 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	public void submitactivity(String pass) throws InterruptedException {
 		javawait();
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
 	public void bprsubmitactivity(String pass) throws InterruptedException {
 		javawait();
 		clickElement(No);
-		javawait();
 		clickElement(bprsubmit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -217,7 +211,6 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 		javascript(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}

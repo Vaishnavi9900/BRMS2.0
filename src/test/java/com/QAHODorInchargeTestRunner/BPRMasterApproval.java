@@ -26,23 +26,28 @@ public class BPRMasterApproval extends ConfigurationReader {
 		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAIncharge(), getpassword());
-		LoggerUtil.logInfo("click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.bprmasterapprovaltab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Master Approval tab and opened the record");
 		app.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		hod.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		app.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
     public void bprmasterReturnbyQAIncharge() throws InterruptedException, IOException {
@@ -53,22 +58,27 @@ public class BPRMasterApproval extends ConfigurationReader {
 		review = new BMRBPRProductionInchargeReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAIncharge(), getpassword());
-		LoggerUtil.logInfo("click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.bprmasterapprovaltab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Master Approval tab and opened the record");
 		review.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		hod.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		review.returnbutton();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval Return Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 }

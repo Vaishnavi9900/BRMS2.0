@@ -174,13 +174,10 @@ public class CFTActivity extends BRMSCommonMethods {
 	public void submitactivity(String pass) throws InterruptedException {
  		
  		javascript(No);
- 		javawait();
  		clickElement(submit);
- 		javawait();
  		clickElement(Yes);
  		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
  	}
@@ -188,13 +185,10 @@ public class CFTActivity extends BRMSCommonMethods {
 	public void returnactivity(String pass) throws InterruptedException {
  		
  		clickElement(No);
- 		javawait();
  		clickElement(returnbutton);
- 		javawait();
  		clickElement(Yes);
  		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
  	}
@@ -204,7 +198,6 @@ public class CFTActivity extends BRMSCommonMethods {
 		 	clickElement(Yes);
 		 	javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
 			javawait();
 		  }

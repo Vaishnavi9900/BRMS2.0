@@ -1,6 +1,8 @@
 package com.InitiatorPageObjects;
 
 import java.io.IOException;
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import com.BasicData.BRMSCommonMethods;
@@ -88,9 +92,9 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement blocksel2;
 	@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[2]")
 	WebElement location;
-	@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[5]")
+	@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[7]")
 	WebElement locsel;
-	@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[6]")
+	@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[8]")
 	WebElement locsel2;
 	@FindBy(how = How.XPATH, using = "(//input[@type='radio'])[1]")
 	WebElement ispelletsYes;
@@ -104,8 +108,12 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement productnamepmsel;
 	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='productCode_PM']")
 	WebElement productcodepm;
-	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='mprNumber_PM']")
+	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[6]")
 	WebElement mprno;
+	@FindBy(how = How.XPATH, using = "(//div[@class='ng-select-container'])[3]")
+	WebElement bulkmprno;
+	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[8]")
+	WebElement bulkmprnosel;
 	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='marketId_PM']")
 	WebElement marketpm;
 	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='blockId_PM']")
@@ -225,10 +233,8 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	}
 	public void setmpr() throws IOException {
-		for (int i = 1; i < 2; i++) {
 			 mpr1 = mprnumber.getText();
 		excelUtils.writecellvalue(excelFilePath,"Productdetails", mpr1);
-		}
 	}
 
 	
@@ -321,9 +327,8 @@ public class BMRProductDetails extends BRMSCommonMethods {
 				strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
 				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
-				block1();
-				javawait();
-				location1();
+//				block1();
+//				location1();
 				clickElement(ispelletsYes);
 				//clickElement(Get);
 				//clickElement(refresh);
@@ -358,7 +363,6 @@ public class BMRProductDetails extends BRMSCommonMethods {
 				shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 				batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 				block1();
-				javawait();
 				location1();
 				comments(excelUtils.getCellData(i, 10));
 				clickElement(resubmit);
@@ -380,7 +384,6 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
 			location();
 			clickElement(ispelletsYes);
 //			clickElement(Get);
@@ -426,78 +429,36 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	public void strength(String str, String struom) {
 		textbox(strength, str);
-		try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		textbox(strengthuom, struom);
 	}
 
 	public void shelflife(String shelf, String uom) {
 		textbox(shelflife, shelf);
-		try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		textbox(shelflifeuom, uom);
 	}
 
 	public void batchsize(String size, String uom) {
 		textboxc(batchsize, size);
-		try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		textbox(batchsizeuom, uom);
 	}
 
 	public void block() {
 		clickElement(block);
-		try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		clickElement(blocksel);
 	}
 
 	public void block1() {
 		clickElement(block);
-		try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		clickElement(blocksel2);
 	}
 
 	public void location() {
 		clickElement(location);
-		try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		clickElement(locsel);
 	}
 
 	public void location1() {
 		clickElement(location);
-		try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		if (!(locsel2.isSelected()))
 			clickElement(locsel2);
 	}
@@ -534,13 +495,10 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	public void resubmitactivity(String pass) throws InterruptedException {
 
 		javascript(No);
-		javawait();
 		clickElement(resubmit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -549,7 +507,6 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -560,7 +517,6 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 		setmpr();
@@ -610,7 +566,6 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
 			location();
 			refbatchsize(excelUtils.getCellData(i, 12), excelUtils.getCellData(i, 13));
 //			javascript(Get);
@@ -621,18 +576,20 @@ public class BMRProductDetails extends BRMSCommonMethods {
 //			List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));
 //			int count=blendselect1.size();
 //			blendselect1.get(count-1).click();
-			javawait();
-			clickElement(mprno);
 		}
 		for (int i = 1; i < 2; i++) {
-			mprno.sendKeys(excelUtils.getCellData(i, 15));
+			scrolldown(Get);
+			javawait();
+			clickElement(bulkmprno);
+			javawait();
+			bulkmprnosel.sendKeys(excelUtils.getCellData(i, 15),Keys.ENTER);
 			javawait();
 			clickElement(Get);
 			scrolldown(bulkpmselect1);
 			implicitwait();
 			clickElement(bulkpmselect1);
 			clickElement(add);
-			mprno.sendKeys(excelUtils.getCellData(i, 16));
+			bulkmprnosel.sendKeys(excelUtils.getCellData(i, 16),Keys.ENTER);
 			javawait();
 			clickElement(Get);
 			javawait();
@@ -659,7 +616,6 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
 			location();
 			refbatchsize(excelUtils.getCellData(i, 12), excelUtils.getCellData(i, 13));
 			//javascript(Get);
@@ -669,18 +625,21 @@ public class BMRProductDetails extends BRMSCommonMethods {
 //			List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));
 //			int count=blendselect1.size();
 //			blendselect1.get(count-1).click();
-			javawait();
-			clickElement(mprno);
+			Thread.sleep(5000);
 		}
 		for (int i = 1; i < 2; i++) {
-			mprno.sendKeys(excelUtils.getCellData(i, 15));
+			scrolldown(Get);
+			javawait();
+			clickElement(bulkmprno);
+			javawait();
+			bulkmprnosel.sendKeys(excelUtils.getCellData(i, 15),Keys.ENTER);
 			javawait();
 			clickElement(Get);
 			scrolldown(bulkpmselect1);
 			implicitwait();
 			clickElement(bulkpmselect1);
 			clickElement(add);
-			mprno.sendKeys(excelUtils.getCellData(i, 16));
+			bulkmprnosel.sendKeys(excelUtils.getCellData(i, 16),Keys.ENTER);
 			javawait();
 			clickElement(Get);
 			javawait();
@@ -781,26 +740,26 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			shelflife(excelUtils.getCellData(i, 6), excelUtils.getCellData(i, 7));
 			batchsize(excelUtils.getCellData(i, 8), excelUtils.getCellData(i, 9));
 			block();
-			javawait();
 			location();
 			refbatchsize(excelUtils.getCellData(i, 12), excelUtils.getCellData(i, 13));
 		}
 		for (int i = 1; i < 2; i++) {
-			clickElement(mprno);
-			mprno.sendKeys(excelUtils.getCellData(i, 15), Keys.ENTER);
+			scrolldown(Get);
+			javawait();
+			clickElement(bulkmprno);
+			javawait();
+			bulkmprnosel.sendKeys(excelUtils.getCellData(i, 15),Keys.ENTER);
+			javawait();
 			clickElement(Get);
+			scrolldown(bulkpmselect1);
+			implicitwait();
 			clickElement(bulkpmselect1);
 			clickElement(add);
-			javawait();
-//			clickElement(refresh);
-			clickElement(refresh);
-			clickElement(mprno);
-			mprno.sendKeys(excelUtils.getCellData(i, 16), Keys.ENTER);
+			bulkmprnosel.sendKeys(excelUtils.getCellData(i, 16),Keys.ENTER);
 			javawait();
 			clickElement(Get);
 			javawait();
-			clickElement(bulkpmselect1);
-			javawait();
+			javascript(bulkpmselect1);
 			clickElement(add);
 			//clickElement(bulkpmselect2);	
 //			List<WebElement> blendselect1=driver.findElements(By.xpath("//input[@type='radio']"));

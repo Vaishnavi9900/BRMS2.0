@@ -27,23 +27,28 @@ public class BMRMasterApprovalbyRA extends ConfigurationReader {
 		review = new BMRBPRProductionInchargeReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Regulatory Affairs(RA) id and password");
 		as.userlogin(getRA(), getpassword());
-		LoggerUtil.logInfo("Click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Regulatory Affairs(RA) id and password");
 		tech.masterapprovaltab();
-		LoggerUtil.logInfo("Click on return");
+		LoggerUtil.logInfo("Clicked on Master Approval tab and opened the record");
 		review.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("Clicked on return");
 		review.comments(getreturncomments());
-		LoggerUtil.logInfo("Click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		review.returnbutton();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("Clicked on return");
 		review.returnactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Master Approval return by RA Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
     public void rAMasterApproval() throws InterruptedException, IOException {
@@ -54,23 +59,28 @@ public class BMRMasterApprovalbyRA extends ConfigurationReader {
 		app = new BMRBPRMasterApprovalInitiation(driver);
 
 		try {
-		LoggerUtil.logInfo("Login to the application with Regulatory Affairs(RA) id and password");
 		as.userlogin(getRA(), getpassword());
-		LoggerUtil.logInfo("Click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Regulatory Affairs(RA) id and password");
 		tech.masterapprovaltab();
-		LoggerUtil.logInfo("Click on submit");
+		LoggerUtil.logInfo("Clicked on Master Approval tab and opened the record");
 		review.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("Clicked on submit");
 		review.comments(getapprovalcomments());
-		LoggerUtil.logInfo("Click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		review.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("Clicked on submit");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Master Approval by RA Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

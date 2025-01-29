@@ -1,5 +1,6 @@
 package com.QAOfficerTestRunner;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -16,32 +17,37 @@ public class BPRBatchClosureInitiation extends ConfigurationReader{
 	public BMRBatchClosureInitiation closure;
 	
 	@Test
-	public void bprbatchclosureInitiation() throws InterruptedException, IOException {
+	public void bprbatchclosureInitiation() throws InterruptedException, IOException, AWTException {
 		
 		as = new Assignmenu(driver);
 		closure = new BMRBatchClosureInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Batch Closure Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		closure.bprbatchclosureinitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Batch Closure Initiation tab and opened the record");
 		closure.bprsubmit();
-		LoggerUtil.logInfo("BMR Executed file uploads");
+		LoggerUtil.logInfo("clicked on submit");
 		closure.bmrexefileupload();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("BMR Executed file uploads");
 		closure.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		closure.bprsubmit();
+		LoggerUtil.logInfo("clicked on submit");
 		//closure.close();
-		LoggerUtil.logInfo("Enter password and submit the record");
 		closure.bprsubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Closure Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
     public void bprbatchclosureReInitiation() throws InterruptedException, IOException {
@@ -50,27 +56,32 @@ public class BPRBatchClosureInitiation extends ConfigurationReader{
 		closure = new BMRBatchClosureInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Batch Closure Initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		closure.bprbatchclosureReinitiation();
+		LoggerUtil.logInfo("clicked on Batch Closure Initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		//closure.submit();
 		//closure.bmrexefileupload();
-		LoggerUtil.logInfo("click on resubmit");
 		closure.resubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on resubmit");
 		closure.comments();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		closure.resubmit();
+		LoggerUtil.logInfo("clicked on resubmit");
 		//closure.close();
-		LoggerUtil.logInfo("Enter password and submit the record");
 		closure.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Closure ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

@@ -161,16 +161,12 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 public void resubmitactivity(String pass) throws InterruptedException {
  		
  		clickElement(No);
- 		javawait();
  		clickElement(resubmit);
- 		javawait();
  		clickElement(Yes);
  		javawait();
  		textbox(password, pass);
- 		javawait();
  		clickElement(submit22);
  		javawait();
- 		clickElement(ok);
  	}
 	
 	public void batchnumberdateformats(String format, String mandate, String expd, String batchno) throws InterruptedException, IOException {
@@ -205,16 +201,12 @@ public void resubmitactivity(String pass) throws InterruptedException {
       public void submitactivity(String pass) throws InterruptedException {
  		
  		clickElement(No);
- 		javawait();
  		clickElement(submit);
- 		javawait();
  		clickElement(Yes);
  		javawait();
  		textbox(password, pass);
- 		javawait();
  		clickElement(submit2);
  		javawait();
- 		clickElement(ok);
  	}
 public void printreceivedtab() throws InterruptedException, IOException {
 	javawait();
@@ -265,13 +257,10 @@ public void printreceived() throws InterruptedException {
 }
 public void additionalprintreceivedsubmit(String pass) throws InterruptedException {
 	clickElement(No);
-		javawait();
 		clickElement(additionalprintreceived);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(additionalsubmit);
 		javawait();
 	 
@@ -279,13 +268,10 @@ public void additionalprintreceivedsubmit(String pass) throws InterruptedExcepti
 
 public void printreceivedsubmit(String pass) throws InterruptedException {
 	    clickElement(ackNo);
-		javawait();
 		clickElement(printreceived);
-		javawait();
 		clickElement(ackYes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(printreceivedsubmit);
 		javawait();
 }

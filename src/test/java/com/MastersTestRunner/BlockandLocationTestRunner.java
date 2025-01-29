@@ -30,10 +30,15 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 			LoggerUtil.logInfo("Enter password and create the record");
 			bc.createactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Block Location creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 		
 	}
 	
@@ -48,10 +53,15 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("validate the existed block location record with same details");
 		bc.existedblockloactioncreation();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed Block Location creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 		
 	}
 	@Test
@@ -65,11 +75,15 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("validate the existed block location record with some same details");
 		bc.existedconditionforblockcreation();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed Block Location creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
-		
+			
 	}
 	
 	@Test
@@ -85,10 +99,15 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and update the record");
 		bc.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Block Location Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void addblocklocationinedit() throws InterruptedException, IOException {
@@ -103,10 +122,15 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and update the record");
 		bc.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Block Location with additional data Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	
 	
@@ -123,10 +147,15 @@ public class BlockandLocationTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and update the record");
 		bc.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Disale/Enable the Block Location Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 
 }

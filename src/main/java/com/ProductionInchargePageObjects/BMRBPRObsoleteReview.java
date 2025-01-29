@@ -96,25 +96,19 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 		public void submitactivity(String pass) throws InterruptedException {
 
 			clickElement(No);
-			javawait();
 			clickElement(submit);
-			javawait();
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
 		}
 		public void returnactivity(String pass) throws InterruptedException {
 
 			clickElement(No);
-			javawait();
 			clickElement(returnbutton);
-			javawait();
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
 		}
 }

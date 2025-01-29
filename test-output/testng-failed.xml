@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <test thread-count="5" name="WithoutCFTBMRDraftInitiation(failed)">
+  <test thread-count="5" name="bprbottleproductInitiation(failed)">
     <parameter name="author" value="vaishnavi"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.InitiatorTestRunner.BMRDraftInitiation">
+      <class name="com.InitiatorTestRunner.BPRProductDetailsInitiation">
         <methods>
           <include name="generateExtentReports"/>
-          <include name="draftinitiationwithoutcft"/>
           <include name="setup"/>
-          <include name="teardown"/>
+          <include name="bottleproductInitiation"/>
           <include name="checkstatus"/>
+          <include name="teardown"/>
           <include name="initiatlizeExtentReports"/>
         </methods>
-      </class> <!-- com.InitiatorTestRunner.BMRDraftInitiation -->
+      </class> <!-- com.InitiatorTestRunner.BPRProductDetailsInitiation -->
     </classes>
-  </test> <!-- WithoutCFTBMRDraftInitiation(failed) -->
+  </test> <!-- bprbottleproductInitiation(failed) -->
+  <test thread-count="5" name="bprblisterpackApproval(failed)">
+    <parameter name="author" value="vaishnavi"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn">
+        <methods>
+          <include name="bprhodApproval"/>
+          <include name="generateExtentReports"/>
+          <include name="setup"/>
+          <include name="checkstatus"/>
+          <include name="teardown"/>
+          <include name="initiatlizeExtentReports"/>
+        </methods>
+      </class> <!-- com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn -->
+    </classes>
+  </test> <!-- bprblisterpackApproval(failed) -->
 </suite> <!-- Failed suite [Suite] -->

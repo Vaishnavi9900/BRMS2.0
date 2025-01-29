@@ -21,25 +21,30 @@ public class BMRBatchCompletionApprovalbyQAOfficer extends ConfigurationReader{
 		approval = new BMRBPRBatchCompletionApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Batch Completion Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		approval.batchcompletionapprovaltab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Batch Completion Approval tab and opened the record");
 		approval.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		approval.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		approval.returnbutton();
-		LoggerUtil.logInfo("select the return to as IPQA");
+		LoggerUtil.logInfo("clicked on return");
 		approval.selectreturntoipqa();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("selected the return to as IPQA");
 		approval.returntoipqaactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Batch Completion Return to IPQA Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void batchcoompletionReturntoexe() throws InterruptedException, IOException {
@@ -47,25 +52,30 @@ public class BMRBatchCompletionApprovalbyQAOfficer extends ConfigurationReader{
 		approval = new BMRBPRBatchCompletionApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Batch Completion Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		approval.batchcompletionapprovaltab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Batch Completion Approval tab and opened the record");
 		approval.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		approval.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		approval.returnbutton();
-		LoggerUtil.logInfo("select the return to as Production Exe");
+		LoggerUtil.logInfo("clicked on return");
 		approval.selectreturntoexe();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("selected the return to as Production Exe");
 		approval.returntoexeactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Batch Completion Return to Production Exe Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void batchcoompletionApproval() throws InterruptedException, IOException {
@@ -73,23 +83,28 @@ public class BMRBatchCompletionApprovalbyQAOfficer extends ConfigurationReader{
 		approval = new BMRBPRBatchCompletionApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Batch Completion Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		approval.batchcompletionapprovaltab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Batch Completion Approval tab and opened the record");
 		approval.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		approval.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		approval.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		approval.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Batch Completion Approval Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

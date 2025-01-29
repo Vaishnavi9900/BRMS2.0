@@ -26,19 +26,22 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 	
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("validate the pellets validation alerts");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.pelletsproductdetailsalertsvalidate();
-		LoggerUtil.logInfo("initiate the pellets details");
+		LoggerUtil.logInfo("validated the pellets validation alerts");
 	    bmr.pelletsinitiation();
-	    LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("selected the pellets details");
 	    bmr.submitactivity2(getpassword());	
+	    LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("pellets initiation test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("Pellets Initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	
@@ -48,19 +51,22 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("verify the validations");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.blendproductdetailsalertsvalidate();
-		LoggerUtil.logInfo("blend initiation without pellets");
+		LoggerUtil.logInfo("verified the validations");
 		bmr.blendinitiationwithoutpellets();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("selected the blend details and  initiation without pellets");
 		bmr.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("Blend initiation without pellets Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("Blend Initiation without pellets Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -69,19 +75,22 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("verify the validations");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.blendproductdetailsalertsvalidate();
-		LoggerUtil.logInfo("blend initiation with selection of pellets");
+		LoggerUtil.logInfo("verified the validations");
 		bmr.blendinitiationwithpellets();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("selected the blend details and  initiation with pellets");
 		bmr.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("Blend initiation with pellets Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("Blend Initiation with pellets Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -90,19 +99,22 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("verify the validations");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.bulkproductdetailsalertsvalidate();
-		LoggerUtil.logInfo("bulk standard initiation with selection of approved blend");
+		LoggerUtil.logInfo("verified the validations");
 		bmr.bulkproductinitiation();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("selected the bulk standardalone details and  initiation with selection of approved blend");
 		bmr.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("Standard Bulk Initiation Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("Bulk Standalone Initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -111,19 +123,22 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("verify the validations");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.bulkproductdetailsalertsvalidate();
-		LoggerUtil.logInfo("Bulk common initiation with selection of approved blend");
+		LoggerUtil.logInfo("verified the validations");
 		bmr.bulkproductinitiationcommon();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("selected the Bulk common details and  initiation with selection of approved blend");
 		bmr.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("Common Bulk Initiation Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("Bulk Common Initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -132,19 +147,22 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("verify the validations");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.bulkproductdetailsalertsvalidate();
-		LoggerUtil.logInfo("Bulk Bilayer initiation with selection of approved blend");
+		LoggerUtil.logInfo("verified the validations");
 		bmr.bulkbilayerproductinitiation();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("Selected the Bulk Bilayer details and initiation with selection of approved blend");
 		bmr.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("Bulk Bilayer Initiation Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("Bulk BiLayer Initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -153,17 +171,20 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
 		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.pelletsReinitiation();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("Modified the required pellets details");
 		bmr.resubmitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("Pellets ReInitiation Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("Pellets  ReInitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 		
 	}
@@ -173,17 +194,20 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("Reinitiate the blend record");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.blendReinitiation();
-		LoggerUtil.logInfo("Enter the password and resubmit the record");
+		LoggerUtil.logInfo("Modified the required blend details and Reinitiate the blend record");
 		bmr.resubmitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and resubmitted the record");
 		}
-		catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("Blend ReInitiation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -192,17 +216,20 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr = new BMRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("Reinitiate the bulk record");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		bmr.bulkReinitiation();
-		LoggerUtil.logInfo("Enter the password and resubmit the record");
+		LoggerUtil.logInfo("Modified the required details and Reinitiated the bulk record");
 		bmr.resubmitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and resubmitted the record");
 		}
-		catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("Bulk ReInitiation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 

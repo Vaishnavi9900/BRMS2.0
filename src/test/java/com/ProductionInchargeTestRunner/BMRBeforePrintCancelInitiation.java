@@ -23,23 +23,28 @@ public class BMRBeforePrintCancelInitiation extends ConfigurationReader {
 		
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		as.userlogin(getproductionincharge(), getpassword());
-		LoggerUtil.logInfo("click on Before Print Cancel Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		cancel.cancelprintinitiationtab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Before Print Cancel Initiation tab and opened the record");
 		cancel.cancelsubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		cancel.reinitiationcomments(getinitiatorcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		cancel.cancelsubmit();
-		LoggerUtil.logInfo("Enter password and return the record");
+		LoggerUtil.logInfo("clicked on submit");
 		cancel.cancelsubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and returned the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Before Print Cancel Initiation by Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
     public void beforeprintcancelReinitiation() throws InterruptedException, IOException {
@@ -48,22 +53,27 @@ public class BMRBeforePrintCancelInitiation extends ConfigurationReader {
 		cancel = new BMRProductionInchargePrintReviewOrCancel(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		as.userlogin(getproductionincharge(), getpassword());
-		LoggerUtil.logInfo("click on Before Print Cancel Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		cancel.cancelprintReinitiationtab();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("clicked on Before Print Cancel Initiation tab, Returned tab and opened the record");
 		cancel.resubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on resubmit");
 		cancel.cancelreinitiationcomments(getinitiatorcomments());
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		cancel.resubmit();
-		LoggerUtil.logInfo("Enter password and resubmit the record");
+		LoggerUtil.logInfo("clicked on resubmit");
 		cancel.cancelresubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and resubmitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Before Print Cancel ReInitiation by Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 }

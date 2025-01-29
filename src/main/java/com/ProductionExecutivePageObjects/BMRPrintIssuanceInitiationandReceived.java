@@ -128,7 +128,7 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		for (int i = 1; i < 2; i++) {
 			mprnumber.click();
-			mprnumber.sendKeys(excelutils.getCellData(i, 15), Keys.ENTER);
+			mprnumber.sendKeys(excelutils.getCellData(i, 16), Keys.ENTER);
 			javawait();
 			clickElement(batchnumber);
 			batchnumber.sendKeys(batchno, Keys.ENTER);
@@ -147,7 +147,7 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 	public void batchsize() {
 		javascript(batchsize);
 		batchsize.clear();
-		batchsize.sendKeys("10");
+		batchsize.sendKeys("5");
 	}
 
 	public void bulkbilayerbatchnumbersize(String batchno, String batchno2) throws InterruptedException, IOException {
@@ -228,13 +228,10 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 		javawait();
 		clickElement(No);
-		implicitwait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -243,13 +240,10 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 		javawait();
 		clickElement(No);
-		javawait();
 		clickElement(resubmit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit22);
 		javawait();
 	}
@@ -259,7 +253,6 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -324,13 +317,10 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 	public void additionalprintreceivedsubmit(String pass) throws InterruptedException {
 		clickElement(No);
-		javawait();
 		clickElement(additionalprintreceived);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(additionalsubmit);
 		javawait();
 
@@ -338,13 +328,10 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 	public void printreceivedsubmit(String pass) throws InterruptedException {
 		clickElement(No);
-		javawait();
 		clickElement(printreceived);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(printreceivedsubmit);
 		javawait();
 

@@ -95,17 +95,13 @@ public class Designation extends BRMSCommonMethods {
 	public void submitactivity() throws InterruptedException {
 		
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
-		javawait();
 		clickElement(ok);
 	}
     public void submitactivity2() throws InterruptedException {
 
 	clickElement(Yes);
-	javawait();
 	clickElement(ok);
      }
 	

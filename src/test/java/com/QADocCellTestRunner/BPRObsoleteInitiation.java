@@ -21,23 +21,28 @@ public class BPRObsoleteInitiation extends ConfigurationReader{
 		obs = new BMRBPRObsoleteInitiation(driver);
 
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		as.userlogin(getQADoccell(), getpassword());
-		LoggerUtil.logInfo("click on Obsolete Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		obs.bprobsoleteInitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Obsolete Initiation tab and opened the record");
 		obs.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		obs.comments(getinitiatorcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		obs.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		obs.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Obsolete Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void obsoleteReInitiation() throws InterruptedException, IOException {
@@ -45,24 +50,29 @@ public class BPRObsoleteInitiation extends ConfigurationReader{
 		obs = new BMRBPRObsoleteInitiation(driver);
 
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		as.userlogin(getQADoccell(), getpassword());
-		LoggerUtil.logInfo("click on Obsolete Initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		obs.bprobsoleteReInitiation();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("clicked on Obsolete Initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		obs.resubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on resubmit");
 		obs.comments(getinitiatorcomments());
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		obs.resubmit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on resubmit");
 		obs.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Obsolete ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void finalobsolete() throws InterruptedException, IOException {
@@ -70,23 +80,28 @@ public class BPRObsoleteInitiation extends ConfigurationReader{
 		obs = new BMRBPRObsoleteInitiation(driver);
 
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		as.userlogin(getQADoccell(), getpassword());
-		LoggerUtil.logInfo("click on Obsolete Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		obs.bprfinalobsolete();
-		LoggerUtil.logInfo("click on obsolete");
+		LoggerUtil.logInfo("clicked on Obsolete Initiation tab and opened the record");
 		obs.obsolete();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on obsolete");
 		obs.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on obsolete");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		obs.obsolete();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on obsolete");
 		obs.obsoleteactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and obsolete the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Final Obsolete Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 

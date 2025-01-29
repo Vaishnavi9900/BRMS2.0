@@ -22,23 +22,28 @@ public class BPRObsoleteReview extends ConfigurationReader{
 		review = new BMRBPRObsoleteReview(driver);
 
 		try {
-		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		as.userlogin(getproductionincharge(), getpassword());
-		LoggerUtil.logInfo("click on Obsolete Review tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		review.bprobsoleteReview();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Obsolete Review tab and opened the record");
 		review.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		review.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		review.returnbutton();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		review.returnactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and returned the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Obsolete Return by Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void obsoleteReview() throws InterruptedException, IOException {
@@ -46,23 +51,28 @@ public class BPRObsoleteReview extends ConfigurationReader{
 		review = new BMRBPRObsoleteReview(driver);
 
 		try {
-		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		as.userlogin(getproductionincharge(), getpassword());
-		LoggerUtil.logInfo("click on Obsolete Review tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		review.bprobsoleteReview();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Obsolete Review tab and opened the record");
 		review.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		review.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		review.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		review.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Obsolete Review by Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

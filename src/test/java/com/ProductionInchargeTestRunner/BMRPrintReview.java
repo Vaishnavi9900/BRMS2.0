@@ -21,24 +21,29 @@ public class BMRPrintReview extends ConfigurationReader {
 		incharge = new BMRProductionInchargePrintReviewOrCancel(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		as.userlogin(getproductionincharge(), getpassword());
-		LoggerUtil.logInfo("click on Print Req. Review tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		incharge.printreqreviewtab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Print Req. Review tab and opened the record");
 		//incharge.reReview();
 		incharge.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		incharge.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		incharge.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		incharge.printsubmitactivity(getpassword());	
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Req. Review by Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void printReReview() throws InterruptedException, IOException {
@@ -46,23 +51,28 @@ public class BMRPrintReview extends ConfigurationReader {
 		incharge = new BMRProductionInchargePrintReviewOrCancel(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		as.userlogin(getproductionincharge(), getpassword());
-		LoggerUtil.logInfo("click on Print Req. Review tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		incharge.reReview();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Print Req. Review tab and opened the record");
 		incharge.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		incharge.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		incharge.submit();
-		LoggerUtil.logInfo("Enter password and resubmit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		incharge.resubmitactivity(getpassword());	
+		LoggerUtil.logInfo("Entered password and resubmitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Req.Re Review by Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void printReturn() throws InterruptedException, IOException {
@@ -70,24 +80,29 @@ public class BMRPrintReview extends ConfigurationReader {
 		incharge = new BMRProductionInchargePrintReviewOrCancel(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		as.userlogin(getproductionincharge(), getpassword());
-		LoggerUtil.logInfo("click on Print Req. Review tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Production Incharge id and password");
 		incharge.printreqreviewtab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Print Req. Review tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		incharge.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		incharge.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		incharge.returnbutton();
-		LoggerUtil.logInfo("Enter password and return the record");
+		LoggerUtil.logInfo("clicked on return");
 		incharge.returnactivity2(getpassword());	
+		LoggerUtil.logInfo("Entered password and returned the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Req. Return by Production Incharge Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	
 

@@ -80,7 +80,7 @@ public class ExcelUtils extends BRMSCommonMethods {
         	int lastRow = sheet1.getLastRowNum();
         	for(int i=2; i<3; i++){
         	XSSFRow row = sheet1.getRow(i);
-        	XSSFCell cell = row.createCell(14);
+        	XSSFCell cell = row.createCell(13);
 
         	cell.setCellValue(value);
 

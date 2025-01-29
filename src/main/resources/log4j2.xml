@@ -9,7 +9,7 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
 
-        <RollingFile name="File" fileName="${basePath}/automation.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
+        <RollingFile name="File" fileName="${basePath}/automation.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd:HH:mm:ss}.log">
             <SizeBasedTriggeringPolicy size="5000"/>
             <PatternLayout>
                 <Pattern>%d{ISO8601} [%t] %-5level %logger{36} - %msg%n</Pattern>

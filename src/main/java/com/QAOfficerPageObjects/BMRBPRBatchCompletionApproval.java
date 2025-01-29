@@ -112,7 +112,6 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 
 		javawait();
 		clickElement(No);
-		javawait();
 		clickElement(submit);
 		javascript(Yes);
 		javawait();

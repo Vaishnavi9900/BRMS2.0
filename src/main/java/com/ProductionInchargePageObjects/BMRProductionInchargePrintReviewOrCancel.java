@@ -150,39 +150,30 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void printsubmitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(printsubmit);
 	}
 
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
 	public void resubmitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(resubmit22);
 		javawait();
 	}
@@ -192,20 +183,16 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
 	
 	public void returnactivity(String pass) throws InterruptedException {
 		clickElement(No);
-		javawait();
 		clickElement(returnbutton);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(returnsubmit2);
 		javawait();
 	}
@@ -263,13 +250,10 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void cancelsubmitactivity(String pass) throws InterruptedException {
 
 		clickElement(cancelNo);
-		javawait();
 		clickElement(cancelflowsubmit);
-		javawait();
 		clickElement(cancelYes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -277,13 +261,10 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void cancelresubmitactivity(String pass) throws InterruptedException {
 
 		clickElement(cancelNo);
-		javawait();
 		clickElement(resubmit);
-		javawait();
 		clickElement(cancelYes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(resubmit2);
 		javawait();
 	}

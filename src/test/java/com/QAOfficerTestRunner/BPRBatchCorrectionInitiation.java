@@ -21,24 +21,29 @@ public class BPRBatchCorrectionInitiation extends ConfigurationReader{
 		batch = new BMRBPRBatchRecordCorrectionInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Batch Correction Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		batch.bprbatchCorrectionInitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Batch Correction Initiation tab and opened the record");
 		batch.submit();
+		LoggerUtil.logInfo("clicked on submit");
 		//batch.fileupload();
-		LoggerUtil.logInfo("validate comments and enter comments");
 		batch.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		batch.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		batch.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Correction Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void bprBatchCorrectionReInitiation() throws InterruptedException, IOException {
@@ -46,24 +51,29 @@ public class BPRBatchCorrectionInitiation extends ConfigurationReader{
 		batch = new BMRBPRBatchRecordCorrectionInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Batch Correction Initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		batch.bprbatchCorrectionReInitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Batch Correction Initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		batch.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		batch.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		batch.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		batch.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Correction ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

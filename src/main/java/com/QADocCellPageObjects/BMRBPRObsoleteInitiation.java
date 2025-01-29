@@ -180,48 +180,42 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void obsoleteactivity(String pass) throws InterruptedException {
 
 			clickElement(No);
-			javawait();
 			clickElement(obsolete);
-			javawait();
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
+			javawait();
 		}
 		
 		public void submitactivity(String pass) throws InterruptedException {
 
 			clickElement(No);
-			javawait();
 			clickElement(submit);
-			javawait();
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
+			javawait();
 		}
 		public void resubmitactivity(String pass) throws InterruptedException {
 
 			clickElement(No);
-			javawait();
 			clickElement(resubmit);
-			javawait();
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
+			javawait();
 		}
 		public void submitactivity2(String pass) throws InterruptedException {
 
-			javawait();
+			
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);
-			javawait();
 			clickElement(submit2);
+			javawait();
 		}
 
 

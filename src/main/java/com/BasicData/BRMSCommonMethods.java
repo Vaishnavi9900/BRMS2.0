@@ -39,6 +39,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestClass;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -64,6 +65,8 @@ public class BRMSCommonMethods {
 	public String screenshotsubfoldername;
 	public static ExtentReports extentreports;
 	public static ExtentTest extenttest;
+	public static ExtentSparkReporter sparkReporter_all;
+	String reportName;
 	protected String cell0val,cell1val,cell2val,cell3val,cell4val,cell5val,cell6val,cell7val,cell8val,cell9val;
 	@Parameters("browser")
 	@BeforeTest
@@ -89,17 +92,18 @@ public class BRMSCommonMethods {
 		extenttest.assignAuthor(author);
 		extenttest.assignDevice(device);
 	}
-	
 	@BeforeSuite
 	public void initiatlizeExtentReports() {
-		ExtentSparkReporter sparkReporter_all = new ExtentSparkReporter("Alltests.html");
+		sparkReporter_all = new ExtentSparkReporter("Alltests.html");
 		ExtentSparkReporter failurereport = new ExtentSparkReporter("Failuretests.html");
 		extentreports = new ExtentReports();
 		extentreports.attachReporter(sparkReporter_all,failurereport);
 		extentreports.setSystemInfo("OS", System.getProperty("os.name"));
 		extentreports.setSystemInfo("Java Version", System.getProperty("java.version"));
 		sparkReporter_all.config().setTheme(Theme.DARK);
-
+		 // Set the report name (appears on the header section of the HTML report)
+		 // This sets the report name visible in the report
+		sparkReporter_all.config().setReportName(reportName);
 	}
 	@AfterSuite
 	public void generateExtentReports() throws IOException {

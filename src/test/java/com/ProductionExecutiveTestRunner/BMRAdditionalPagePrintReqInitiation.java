@@ -24,29 +24,33 @@ public class BMRAdditionalPagePrintReqInitiation extends ConfigurationReader {
 		
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("Click on BMR Additional Page Print req initiation tab");
-		LoggerUtil.logInfo("and Open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		add.additionalprintreqinitiationtab();
-		LoggerUtil.logInfo("Select the selectall pages");
+		LoggerUtil.logInfo("Clicked on BMR Additional Page Print req initiation tab");
+		LoggerUtil.logInfo("and Opened the record");
 		add.selectallpages();
-		LoggerUtil.logInfo("select the specific pages, validate and enter the pages");
+		LoggerUtil.logInfo("Selected the selectall pages");
 		add.selectspecificpages1();
+		LoggerUtil.logInfo("selected the specific pages, validated and entered the pages");
 		//add.selectspecificpages2();
 		//add.selectspecificrange1();
-		LoggerUtil.logInfo("click on submit");
 		add.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		add.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		add.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		add.submitactivity(getpassword());	
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Req.Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
 	}
 	@Test
@@ -55,28 +59,33 @@ public class BMRAdditionalPagePrintReqInitiation extends ConfigurationReader {
 		add = new BMRBPRAdditionalPageprintreqInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("Click on BMR Additional Page Print req initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and Open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		add.additionalprintreqReinitiationtab();
-		LoggerUtil.logInfo("Select the selectall pages");
+		LoggerUtil.logInfo("Clicked on BMR Additional Page Print req initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and Opened the record");
 		add.selectallpages();
+		LoggerUtil.logInfo("Selected the selectall pages");
 		//add.selectspecificpages2();
 		//add.selectspecificrange1();
-		LoggerUtil.logInfo("click on resubmit");
 		add.resubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on resubmit");
 		add.comments();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		add.resubmit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on resubmit");
 		add.resubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Req. ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void additionalPageAcknowledgment() throws InterruptedException, IOException {
@@ -84,24 +93,29 @@ public class BMRAdditionalPagePrintReqInitiation extends ConfigurationReader {
 		received = new BMRPrintIssuanceInitiationandReceived(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("Click on BMR Additional Page Print req initiation tab");
-		LoggerUtil.logInfo("click on Issued status tab and Open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		received.additioanlpageprintreceivedtab();
-		LoggerUtil.logInfo("click on print received");
+		LoggerUtil.logInfo("Clicked on BMR Additional Page Print req initiation tab");
+		LoggerUtil.logInfo("clicked on Issued status tab and Opened the record");
 		received.additionalprintreceived();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on print received");
 		received.additionalcomments();
-		LoggerUtil.logInfo("click on print received");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		received.additionalprintreceived();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on print received");
 		received.additionalprintreceivedsubmit(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Acknowledgment Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

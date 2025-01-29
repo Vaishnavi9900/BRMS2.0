@@ -48,10 +48,14 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	WebElement No;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
-	@FindBy(how = How.XPATH, using = "//input[@type='search']")
+	@FindBy(how = How.XPATH, using = "(//input[@type='search'])[2]")
 	WebElement search;
-	@FindBy(how = How.XPATH, using = "(//tr[@class='ng-star-inserted odd'])[1]")
+	@FindBy(how = How.XPATH, using = "(//input[@type='search'])[1]")
+	WebElement bprsearch;
+	@FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/div[1]/div[1]/div[1]/div[1]/app-productdetails-dashboard[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]")
 	WebElement createdrecord;
+	@FindBy(how = How.XPATH, using = "(//td[@class='sorting_1'])[1]")
+	WebElement bprcreatedrecord;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
 	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
@@ -84,10 +88,10 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 		javawait();
 		clickElement(bprdetails);
 		javawait();
-		clickElement(search);
+		clickElement(bprsearch);
 		for (int i = 1; i < 2; i++) {
-			search.sendKeys(excelUtils.getCellData(i, 14));
-			clickElement(createdrecord);
+			bprsearch.sendKeys(excelUtils.getCellData(i, 14));
+			clickElement(bprcreatedrecord);
 		}
 	}
 	public void bprcommentsvalidate() throws IOException, InterruptedException {
@@ -96,11 +100,10 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 		javawait();
 		clickElement(bprdetails);
 		javawait();
-		clickElement(search);
+		clickElement(bprsearch);
 		for (int i = 1; i < 2; i++) {
-			javawait();
-			search.sendKeys(excelUtils.getCellData(i, 14));
-			clickElement(createdrecord);
+			bprsearch.sendKeys(excelUtils.getCellData(i, 14));
+			clickElement(bprcreatedrecord);
 			javawait();
 			clickElement(submit);
 			softassert.assertEquals(commalert.getText(), "Comments is required");

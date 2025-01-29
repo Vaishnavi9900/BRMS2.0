@@ -26,23 +26,28 @@ public class BMRMasterEffectivebyDocCell extends ConfigurationReader {
 		review = new BMRBPRProductionInchargeReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		as.userlogin(getQADoccell(), getpassword());
-		LoggerUtil.logInfo("click on Master Effective tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		ef.mastereffectivetab();
-		LoggerUtil.logInfo("click on effective");
+		LoggerUtil.logInfo("clicked on Master Effective tab and opened the record");
 		ef.effective();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on effective");
 		review.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on effective");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		ef.effective();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on effective");
 		ef.effectiveactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and effective the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Master Approval Effective Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	
 }

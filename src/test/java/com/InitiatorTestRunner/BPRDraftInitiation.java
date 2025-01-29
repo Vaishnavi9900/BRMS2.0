@@ -20,24 +20,27 @@ public class BPRDraftInitiation extends ConfigurationReader {
 		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("BPR Draft Initiation");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		df.bprmasterdraftinitiationtab();
-		LoggerUtil.logInfo("saving the word templated");
+		LoggerUtil.logInfo("clicked on BPR Draft Initiation");
 		df.bprwordtemplates();
-		LoggerUtil.logInfo("selection of cft radio button");
+		LoggerUtil.logInfo("saved the word templated");
 		//df.finalapproval();
 		df.cftreview();
-		LoggerUtil.logInfo("selecting the required cft's ");
+		LoggerUtil.logInfo("selected the cft radio button");
 		df.draftsubmit(getdepartment(), getrole(), getdepartment1(), getrole1(),getcomments());
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("selected the required cft's ");
 		df.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("BPR Draft Initiation Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BPR draft initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -46,22 +49,25 @@ public class BPRDraftInitiation extends ConfigurationReader {
 		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("BPR Draft Reinitiation");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		df.bprdraftReinitiation();
-		LoggerUtil.logInfo("verify validations and enter the comments");
+		LoggerUtil.logInfo("clicked on BPR Draft Reinitiation");
 		//df.finalapproval();
 		df.comments(getinitiatorcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("verified validations and entered the comments");
 		df.submit();
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		df.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("BPRDraft ReInitiation Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BPR draft ReInitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -70,23 +76,26 @@ public class BPRDraftInitiation extends ConfigurationReader {
 		df = new com.InitiatorPageObjects.BMRDraftInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("BPR Draft Initiation");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		df.bprmasterdraftinitiationtab();
-		LoggerUtil.logInfo("saving the word templates");
+		LoggerUtil.logInfo("clicked on BPR Draft Initiation");
 		df.bprwordtemplates();
-		LoggerUtil.logInfo("select the final approval radio button");
+		LoggerUtil.logInfo("saved the word templates");
 		df.finalapproval();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("selected the final approval radio button");
 		df.draftsubmit(getdepartment(), getrole(),getdepartment1(), getrole1(), getcomments());
-		LoggerUtil.logInfo("Enter the password and submit the record");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		df.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("BPR Draft Initiation without cft Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BPR draft initiation without CFT Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 

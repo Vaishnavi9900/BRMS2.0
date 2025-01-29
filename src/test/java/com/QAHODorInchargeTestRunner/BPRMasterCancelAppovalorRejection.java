@@ -21,23 +21,28 @@ public class BPRMasterCancelAppovalorRejection extends ConfigurationReader{
 		cancel = new BMRBPRMasterCancelApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Master Cancel Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		cancel.bprmastercancelapprovaltab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Master Cancel Approval tab and opened the record");
 		cancel.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		cancel.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		cancel.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		cancel.bprsubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Cancel Approval Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
     public void bprmasterCancelRejection() throws InterruptedException, IOException {
@@ -46,23 +51,28 @@ public class BPRMasterCancelAppovalorRejection extends ConfigurationReader{
 		cancel = new BMRBPRMasterCancelApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Master Cancel Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		cancel.bprmastercancelapprovaltab();
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("clicked on Master Cancel Approval tab and opened the record");
 		cancel.reject();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on reject");
 		cancel.comments(getrejectedcomments());
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		cancel.reject();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on reject");
 		cancel.bprrejectactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Cancel Rejection Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 
 

@@ -27,10 +27,15 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("validate dosage form creation with space");
 		ds.dosageformcreatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Dosage form creation with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 		
 	}
 	
@@ -47,10 +52,15 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and create the record");
 		ds.createactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Dosage form creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void existeddosagecreation() throws InterruptedException, IOException {
@@ -65,10 +75,15 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and create the record");
 		ds.createactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed Dosage form creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	
 	@Test
@@ -82,10 +97,15 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Validate update record with space");
 		ds.dosageupdatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Dosage form with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void dosageformupdate() throws InterruptedException, IOException {
@@ -100,10 +120,15 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and update the record");
 		ds.updateactivity();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Dosage form record Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void dosagedisableenable() throws InterruptedException, IOException {
@@ -118,10 +143,15 @@ public class DosageFormTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and disable/enable the record");
 		ds.updateactivity();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Disable/Enable the Dosage form record Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 
 }

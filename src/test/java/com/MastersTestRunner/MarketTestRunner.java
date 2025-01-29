@@ -27,10 +27,15 @@ public class MarketTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("creation of market with space and validate");
 		mt.marketcreatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Market creation with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	
 	@Test
@@ -46,11 +51,16 @@ public class MarketTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("enter password and create the market");
 		mt.createactivity(getpassword());
 		}
-		catch(Exception e){
+		catch (AssertionError e) {
 			LoggerUtil.logError("Test failed", e);
 			logger.debug("debug the errors");
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	
 	@Test
@@ -64,10 +74,15 @@ public class MarketTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("validate Existed market creation");
 		mt.existedmarketcreation();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed Market creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+		
 	
 	}
 	@Test
@@ -81,10 +96,15 @@ public class MarketTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Update Market with space and validate");
 		mt.marketupdatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Market with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	
 	@Test
@@ -100,10 +120,15 @@ public class MarketTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter Password and update the record");
 		mt.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update Market Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	
 	@Test
@@ -119,10 +144,15 @@ public class MarketTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter Password and update the record");
 		mt.updateactivity(getpassword());
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Disable/Enable the Market Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 		
 	}
 

@@ -21,23 +21,28 @@ public class BMRbatchClosureApproval extends ConfigurationReader{
 		app = new BMRBPRClosureApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Batch Closure Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		app.batchClosureReturn();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("clicked on Batch Closure Approval tab and opened the record");
 		app.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		app.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		app.returnbutton();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		app.returnactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR BatchClosure Return Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
     public void batchclosureApproval() throws InterruptedException, IOException {
@@ -46,22 +51,27 @@ public class BMRbatchClosureApproval extends ConfigurationReader{
 		app = new BMRBPRClosureApproval(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("click on Batch Closure Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		app.batchClosureApproval();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Batch Closure Approval tab and opened the record");
 		app.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		app.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		app.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		app.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR BatchClosure Approval Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+		
 	}
 }

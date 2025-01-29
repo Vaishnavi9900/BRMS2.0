@@ -22,23 +22,26 @@ public class BMRMasterApproval extends ConfigurationReader {
 		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("clicking the Master Initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		app.masterinitiationtab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked the Master Initiation tab and open the record");
 		app.submit();
-		LoggerUtil.logInfo("Verified the validations");
+		LoggerUtil.logInfo("clicked on submit");
 		app.comments();
-		LoggerUtil.logInfo("Submit the required record");
+		LoggerUtil.logInfo("Verified the validations");
 		app.submit();
-		LoggerUtil.logInfo("Entering the password");
+		LoggerUtil.logInfo("Clicked on submit button");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			
-			LoggerUtil.logError("Master Approval Initiation test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR Master Approval Initiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 		
 	}
@@ -49,23 +52,26 @@ public class BMRMasterApproval extends ConfigurationReader {
 		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		as.userlogin(getinitiator(), getpassword());
-		LoggerUtil.logInfo("clicking the Master Initiation tab,returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with initiatior id and password");
 		app.masterreinitiation();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("clicked the Master Initiation tab,returned status tab and open the record");
 		app.resubmit();
-		LoggerUtil.logInfo("Verified the validations");
+		LoggerUtil.logInfo("clicked on resubmit");
 		app.reinitiationcomments();
-		LoggerUtil.logInfo("Submit the required record");
+		LoggerUtil.logInfo("Verified the validations");
 		app.resubmit();
-		LoggerUtil.logInfo("Entering the password");
+		LoggerUtil.logInfo("clicked on resubmit");
 		app.resubmitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}
-		catch (Exception e) {
-			LoggerUtil.logError("Master Approval Reinitiation test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR Master Approval ReInitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
-	}
-
+		}
 }

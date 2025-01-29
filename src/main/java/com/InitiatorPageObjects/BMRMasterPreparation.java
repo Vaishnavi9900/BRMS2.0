@@ -96,7 +96,6 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	public void bmrmasterreqinitation1(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		javawait();
 		//clickElement(tab);
 		clickElement(masterprepreq);
 		javawait();
@@ -134,6 +133,7 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 			javawait();
 		    clickElement(Get);
+		    javawait();
 			clickElement(createdrecord);
 			clickElement(submit);
 			javawait();
@@ -150,13 +150,10 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -166,7 +163,6 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}

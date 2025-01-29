@@ -21,23 +21,28 @@ public class BPRAfterPrintCancellation extends ConfigurationReader {
 		cancel = new BMRBPRAfterPrintCancelInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on After print Cancel initiation tab");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		cancel.bprafterPrintcanelinitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on After print Cancel initiation tab");
 		cancel.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		cancel.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		cancel.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		cancel.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR After Print Cancel Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void afterPrintCancelReInitiation() throws InterruptedException, IOException {
@@ -45,24 +50,29 @@ public class BPRAfterPrintCancellation extends ConfigurationReader {
 		cancel = new BMRBPRAfterPrintCancelInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on After print Cancel initiation tab");
-		LoggerUtil.logInfo("click on Retuned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		cancel.bprafterPrintcanelReinitiation();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("clicked on After print Cancel initiation tab");
+		LoggerUtil.logInfo("clicked on Retuned status tab and opened the record");
 		cancel.resubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on resubmit");
 		cancel.reinitiationcomments();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		cancel.resubmit();
-		LoggerUtil.logInfo("Enter password and resubmit the record");
+		LoggerUtil.logInfo("clicked on resubmit");
 		cancel.resubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and resubmitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR After Print Cancel ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

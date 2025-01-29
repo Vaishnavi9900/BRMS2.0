@@ -194,7 +194,6 @@ public void createactivity(String pass) throws InterruptedException {
 
 	clickElement(Yes);
 	textbox(password, pass);
-	javawait();
 	clickElement(submit2);
 	javawait();
      }

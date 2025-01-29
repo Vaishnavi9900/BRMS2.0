@@ -22,26 +22,31 @@ public class BPRPrintIssuanceandPrint extends ConfigurationReader{
 		issuance = new BPRIssueandPrint(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Print Issuance tab");
-		LoggerUtil.logInfo("click on Print Issuance Approved tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		issuance.printissuancetab();
-		LoggerUtil.logInfo("click on Issue");
+		LoggerUtil.logInfo("clicked on Print Issuance tab");
+		LoggerUtil.logInfo("clicked on Print Issuance Approved tab and opened the record");
 		issuance.issue();
-		LoggerUtil.logInfo("select the print copy details");
+		LoggerUtil.logInfo("clicked on Issue");
 		issuance.printcopydetails();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("selected the print copy details");
 		issuance.comments(getissuedcomments());
-		LoggerUtil.logInfo("click on Issue");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issuance.issue();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Issue");
 		issuance.issueactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Print Issuance Issue Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void print() throws InterruptedException, IOException {
@@ -49,24 +54,29 @@ public class BPRPrintIssuanceandPrint extends ConfigurationReader{
 		issuance = new BPRIssueandPrint(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on Print Issuance tab");
-		LoggerUtil.logInfo("click on Print Issuance Approved tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		issuance.printissuancetab();
-		LoggerUtil.logInfo("click on Print");
+		LoggerUtil.logInfo("clicked on Print Issuance tab");
+		LoggerUtil.logInfo("clicked on Print Issuance Approved tab and opened the record");
 		issuance.print();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on Print");
 		issuance.comments(getprintcomments());
-		LoggerUtil.logInfo("click on Print");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issuance.print();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Print");
 		issuance.printactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Print Issuance Print Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

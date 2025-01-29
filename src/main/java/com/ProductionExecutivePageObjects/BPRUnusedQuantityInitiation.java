@@ -96,13 +96,10 @@ public class BPRUnusedQuantityInitiation extends BRMSCommonMethods{
 	  public void submitactivity(String pass) throws InterruptedException {
 	 		
 	 		clickElement(No);
-	 		javawait();
 	 		clickElement(submit);
-	 		javawait();
 	 		clickElement(Yes);
 	 		javawait();
 	 		textbox(password, pass);
-	 		javawait();
 	 		clickElement(submit2);
 	 		javawait();
 	 	}

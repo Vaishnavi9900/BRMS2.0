@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+   <test name="=UOMCreationwithspace">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.UnitOfMeasurementTestRunner"/>
+      <methods>
+      <include name = "uomcreationwithspace"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="=UOMCreation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.UnitOfMeasurementTestRunner"/>
+      <methods>
+     <include name = "uomcreation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=ExistedUOMCreation">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+       <class name="com.MastersTestRunner.UnitOfMeasurementTestRunner"/>
+        <methods>
+      <include name = "existeduomcreation"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=UOMUpdatewithspace">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.UnitOfMeasurementTestRunner"/>
+       <methods>
+      <include name = "uomupdatewithspace"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="=UOMUpdate">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.MastersTestRunner.UnitOfMeasurementTestRunner"/>
+       <methods>
+       <include name = "uomupdate"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=DisableUOM">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+       <class name="com.MastersTestRunner.UnitOfMeasurementTestRunner"/>
+        <methods>
+      <include name = "uomdisableenable"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="=EnableUOM">
+  <parameter name ="browser" value = "chrome"></parameter>
+   <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+       <class name="com.MastersTestRunner.UnitOfMeasurementTestRunner"/>
+        <methods>
+      <include name = "uomdisableenable"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

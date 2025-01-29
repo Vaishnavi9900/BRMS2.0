@@ -23,21 +23,27 @@ public class BMRProductDetailsApprovalorReturn extends ConfigurationReader {
 		hod = new HODBMRBPRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		//bmr.createrecord();
 		hod.commentsvalidate();
+		LoggerUtil.logInfo("Clicked on Master--> Product details--> BMR Details and opened the record.");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.priority();
-		LoggerUtil.logInfo("click on submit");
 		hod.HODSubmit(getapprovalcomments());
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		hod.submitactivity(getpassword());	
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR HOD Approval Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void hodReturn() throws InterruptedException, IOException {
@@ -46,21 +52,27 @@ public class BMRProductDetailsApprovalorReturn extends ConfigurationReader {
 		hod = new HODBMRBPRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		//bmr.createrecord();
-		LoggerUtil.logInfo("validate comments and enter comments");
 		hod.commentsvalidate();
+		LoggerUtil.logInfo("Clicked on Master--> Product details--> BMR Details and opened the record.");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.priority();
-		LoggerUtil.logInfo("click on return");
 		hod.HODReturn(getreturncomments());
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		hod.submitactivity2(getpassword());	
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR HOD Return Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void bprhodApproval() throws InterruptedException, IOException {
@@ -69,20 +81,25 @@ public class BMRProductDetailsApprovalorReturn extends ConfigurationReader {
 		hod = new HODBMRBPRProductDetails(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
 		//bmr.createrecord();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		hod.bprcomments();
+		LoggerUtil.logInfo("Clicked on Master--> Product details--> BPR Details and opened the record.");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.priority();
-		LoggerUtil.logInfo("click on submit");
 		hod.bprHODApproval(getapprovalcomments());
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		hod.submitactivity2(getpassword());	
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
-			LoggerUtil.logError("BPR HOD Approval Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR draftinitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	@Test
@@ -92,20 +109,25 @@ public class BMRProductDetailsApprovalorReturn extends ConfigurationReader {
 		hod = new HODBMRBPRProductDetails(driver);
 		
 		try {
-		 LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		as.userlogin(getQAHOD(), getpassword());
+		 LoggerUtil.logInfo("Login to the application with QA HOD id and password");
 		//bmr.createrecord();
-		LoggerUtil.logInfo("validate comments and enter comments");
 		hod.bprcomments();
+		LoggerUtil.logInfo("Clicked on Master--> Product details--> BPR Details and opened the record.");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		hod.priority();
-		LoggerUtil.logInfo("click on return");
 		hod.bprHODReturn(getreturncomments());
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		hod.submitactivity2(getpassword());	
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
-			LoggerUtil.logError("BPR HOD Return Test is failed", e);
-			Assert.fail();
+		catch (AssertionError e) {
+			LoggerUtil.logError("BMR draftinitiation Test is failed", e);
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
 	}
 	

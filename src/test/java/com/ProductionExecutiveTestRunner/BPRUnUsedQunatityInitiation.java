@@ -21,25 +21,30 @@ public class BPRUnUsedQunatityInitiation extends ConfigurationReader{
 		qty = new BPRUnusedQuantityInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on Unused Qty Initiation tab");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		qty.unusedqtyInitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Unused Qty Initiation tab");
 		qty.submit();
-		LoggerUtil.logInfo("validate unused alerts and enter the details");
+		LoggerUtil.logInfo("clicked on submit");
 		qty.unusedqtydetails();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("validated unused alerts and entered the details");
 		qty.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		qty.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		qty.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Unused Qty Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	
 

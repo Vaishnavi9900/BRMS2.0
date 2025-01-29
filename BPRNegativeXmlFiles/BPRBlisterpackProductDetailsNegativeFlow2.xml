@@ -20,13 +20,13 @@
        </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="bottleandblisterproductReInitiation">
+   <test name="blisterproductReInitiation">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.InitiatorTestRunner.BPRProductDetailsInitiation"/>
       <methods>
-       <include name = "bottleandblisterproductReInitiation"></include>
+       <include name = "blisterproductReInitiation"></include>
        </methods>
     </classes>
   </test> <!-- Test -->

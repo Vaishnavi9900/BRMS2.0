@@ -27,23 +27,28 @@ public class BPRMasterApproval extends ConfigurationReader{
 		app = new BMRBPRMasterApprovalInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Tech Transfer id and password");
 		as.userlogin(getTechtransfer(), getpassword());
-		LoggerUtil.logInfo("Click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Tech Transfer id and password");
 		hod.bprmasterapprovaltab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Clicked on Master Approval tab and opened the record");
 		app.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		hod.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		app.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval by Tech Transfer Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
     public void bprmasterReturnbyTechtransferOrRandD() throws InterruptedException, IOException {
@@ -54,23 +59,28 @@ public class BPRMasterApproval extends ConfigurationReader{
 		review = new BMRBPRProductionInchargeReview(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Tech Transfer id and password");
 		as.userlogin(getTechtransfer(), getpassword());
-		LoggerUtil.logInfo("Click on Master Approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Tech Transfer id and password");
 		hod.bprmasterapprovaltab();
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("Clicked on Master Approval tab and opened the record");
 		review.returnbutton();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on return");
 		hod.comments(getreturncomments());
-		LoggerUtil.logInfo("click on return");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		review.returnbutton();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on return");
 		app.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval Return by Tech Transfer Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

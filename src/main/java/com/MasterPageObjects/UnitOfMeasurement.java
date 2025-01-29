@@ -219,11 +219,8 @@ public class UnitOfMeasurement extends BRMSCommonMethods{
     public void updateactivity() throws InterruptedException {
 		
 		clickElement(No);
-		javawait();
 		clickElement(update);
-		javawait();
 		clickElement(Yes);
-		javawait();
 		clickElement(updateok);
 	}
     public void updateactivity2() throws InterruptedException {
@@ -235,17 +232,13 @@ public class UnitOfMeasurement extends BRMSCommonMethods{
 public void createactivity() throws InterruptedException {
 		
 		clickElement(No);
-		javawait();
 		clickElement(create1);
-		javawait();
 		clickElement(Yes);
-		javawait();
 		clickElement(updateok);
 	}
     public void createactivity2() throws InterruptedException {
 
 	clickElement(Yes);
-	javawait();
 	clickElement(updateok);
      }
 

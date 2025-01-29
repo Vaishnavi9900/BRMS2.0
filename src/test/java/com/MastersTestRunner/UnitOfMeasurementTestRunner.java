@@ -26,10 +26,15 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("UOM Creation with space");
 		uom.uomcreatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("UOM Creation with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void uomcreation() throws InterruptedException, IOException {
@@ -44,10 +49,15 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and create the record");
 		uom.createactivity();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("UOM Creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void existeduomcreation() throws InterruptedException, IOException {
@@ -60,10 +70,15 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Existed UOM Creation");
 		uom.existeduomcreate();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Existed UOM Creation Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void uomupdatewithspace() throws InterruptedException, IOException {
@@ -76,10 +91,15 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Update UOM with space");
 		uom.uomupdatewithspace();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update the UOM with space Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+		
 	}
 	@Test
 	public void uomupdate() throws InterruptedException, IOException {
@@ -94,10 +114,15 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and update the record");
 		uom.updateactivity();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Update the UOM record Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 	@Test
 	public void uomdisableenable() throws InterruptedException, IOException {
@@ -112,10 +137,15 @@ public class UnitOfMeasurementTestRunner extends ConfigurationReader {
 		LoggerUtil.logInfo("Enter password and update the record");
 		uom.updateactivity();
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("Disable/Enable the UOM record Test is failed", e);
-			Assert.fail();
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
 		}
+			
 	}
 
 }

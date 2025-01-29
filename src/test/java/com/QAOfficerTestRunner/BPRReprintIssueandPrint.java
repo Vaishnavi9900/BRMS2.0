@@ -22,24 +22,29 @@ public class BPRReprintIssueandPrint extends ConfigurationReader{
 		issue = new BPRReprintIssuanceandPrint(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on RePrint Issuance tab");
-		LoggerUtil.logInfo("click on RePrint Issuance Issued tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		issue.reprinttab();
-		LoggerUtil.logInfo("click on Print");
+		LoggerUtil.logInfo("clicked on RePrint Issuance tab");
+		LoggerUtil.logInfo("clicked on RePrint Issuance Issued tab and opened the record");
 		issue.additionalprint();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on Print");
 		issue.additionalcomments(getprintcomments());
-		LoggerUtil.logInfo("click on Print");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issue.additionalprint();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Print");
 		issue.additionalprintactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR RePrint Issuance print Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void ReprintIssue() throws InterruptedException, IOException {
@@ -47,24 +52,29 @@ public class BPRReprintIssueandPrint extends ConfigurationReader{
 		issue = new BPRReprintIssuanceandPrint(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		as.userlogin(getQAOfficer(), getpassword());
-		LoggerUtil.logInfo("click on RePrint Issuance tab");
-		LoggerUtil.logInfo("click on RePrint Approved Issued tab and open the record");
+		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
 		issue.reprintissuancetab();
-		LoggerUtil.logInfo("click on Issue");
+		LoggerUtil.logInfo("clicked on RePrint Issuance tab");
+		LoggerUtil.logInfo("clicked on RePrint Approved Issued tab and opened the record");
 		issue.additionalissue();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on Issue");
 		issue.additionalcomments(getissuedcomments());
-		LoggerUtil.logInfo("click on Issue");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issue.additionalissue();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Issue");
 		issue.additionalissueactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR RePrint Issuance Issue Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 

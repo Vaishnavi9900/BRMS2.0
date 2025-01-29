@@ -196,7 +196,6 @@ public class BlockandLocation extends BRMSCommonMethods {
        public void createactivity(String pass) throws InterruptedException {
 			
 			clickElement(No);
-			javawait();
 			clickElement(create1);
 			clickElement(Yes);
 			textbox(password, pass);
@@ -215,7 +214,6 @@ public class BlockandLocation extends BRMSCommonMethods {
 	    public void updateactivity(String pass) throws InterruptedException {
 			
 			javascript(No);
-			javawait();
 			javascript(update);
 			clickElement(Yes);
 			javawait();

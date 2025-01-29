@@ -21,24 +21,28 @@ public class BPRUnusedQtyApprovalorRejection extends ConfigurationReader{
 		qty = new BPRUnusedqtyApprovalorRejection(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("click on BPR Unused Qty approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		qty.unusedqtyApproval();
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("clicked on BPR Unused Qty approval tab and opened the record");
 		qty.reject();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on reject");
 		qty.comments(getrejectedcomments());
-		LoggerUtil.logInfo("click on reject");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		qty.reject();
-		LoggerUtil.logInfo("Enter the passowrd and return the record");
+		LoggerUtil.logInfo("clicked on reject");
 		qty.rejectactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and returned the record");
 		}
-        catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Unused Qty Rejection by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}	
+		
 	}
 	@Test
 	public void unusedqtyApproval() throws InterruptedException, IOException {
@@ -46,24 +50,28 @@ public class BPRUnusedQtyApprovalorRejection extends ConfigurationReader{
 		qty = new BPRUnusedqtyApprovalorRejection(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		as.userlogin(getIPQA(), getpassword());
-		LoggerUtil.logInfo("click on BPR Unused Qty approval tab and open the record");
+		LoggerUtil.logInfo("Login to the application with IPQA id and password");
 		qty.unusedqtyApproval();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on BPR Unused Qty approval tab and opened the record");
 		qty.submit();
-		LoggerUtil.logInfo("Validate the comments and enter the comments");
+		LoggerUtil.logInfo("clicked on submit");
 		qty.comments(getapprovalcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Validated the comments and entered the comments");
 		qty.submit();
-		LoggerUtil.logInfo("Enter the passowrd and approve the record");
+		LoggerUtil.logInfo("clicked on submit");
 		qty.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered the passowrd and approved the record");
 		}
-        catch (Exception e) {
-			
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Unused Qty Approval by IPQA Test is failed", e);
-			Assert.fail();
-		}
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	            throw e;
+		}	
+			
 	}
 
 }

@@ -21,19 +21,24 @@ public class BMRMasterPreparationRequestApprovalorRejection extends Configuratio
 		
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		as.userlogin(getQADoccell(), getpassword());
 		//mp.masterprepapprovaltab();
-		LoggerUtil.logInfo("click on Master Preparation Req. Approval tab and open the record");
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		mp.masterprerejection(getrejectedcomments());
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Master Preparation Req. Approval tab and opened the record");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		mp.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and rejeted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Master Preparation Req. Rejection  Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void bmrmasterreqapproval() throws InterruptedException, IOException {
@@ -41,19 +46,24 @@ public class BMRMasterPreparationRequestApprovalorRejection extends Configuratio
 		mp = new BMRMasterPreparationapprovals(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		as.userlogin(getQADoccell(), getpassword());
+		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		//mp.masterprepapprovaltab();
-		LoggerUtil.logInfo("click on Master Preparation Req. Approval tab and open the record");
-		LoggerUtil.logInfo("validate comments and enter comments");
 		mp.masterpreapproval(getapprovalcomments());
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Master Preparation Req. Approval tab and opened the record");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		mp.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Master Preparation Req. Approval Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
 	public void bmrblockversionmasterreqapproval() throws InterruptedException, IOException {
@@ -61,19 +71,24 @@ public class BMRMasterPreparationRequestApprovalorRejection extends Configuratio
 		mp = new BMRMasterPreparationapprovals(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		as.userlogin(getQADoccell(), getpassword());
-		LoggerUtil.logInfo("click on Master Preparation Req. Approval tab and open the record");
-		LoggerUtil.logInfo("validate comments, block the previous version and enter comments");
+		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		//mp.masterprepapprovaltab();
 		mp.masterprepreqapprovalforblockversion(getapprovalcomments());
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on Master Preparation Req. Approval tab and opened the record");
+		LoggerUtil.logInfo("validated comments, blocked the previous version and entered comments");
 		mp.submitactivity2(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Master Preparation Req. Approval with block previous version est is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }

@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="ProductDetailsReturn" enabled="false">
+   <test name="ProductDetailsReturn">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="bulkReinitiation" enabled="false">
+  <test name="bulkReinitiation">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

@@ -22,25 +22,30 @@ public class BPRRepackingInitiation extends ConfigurationReader{
 		repack = new BPRRePackingReqInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on Repacking Qty Initiation tab");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		repack.repcakingqtyinitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Repacking Qty Initiation tab");
 		repack.submit();
-		LoggerUtil.logInfo("validate repacking alerts and enter the details");
+		LoggerUtil.logInfo("clicked on submit");
 		repack.repackingdetails();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("validated repacking alerts and entered the details");
 		repack.comments(getinitiatorcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		repack.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		repack.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Repacking Qty Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
    public void bprRePackingreqReInitiation() throws InterruptedException, IOException {
@@ -49,26 +54,31 @@ public class BPRRepackingInitiation extends ConfigurationReader{
 		repack = new BPRRePackingReqInitiation(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on Repacking Qty Initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		repack.repcakingqtyReinitiation();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on Repacking Qty Initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		repack.submit();
-		LoggerUtil.logInfo("enter the repacking details");
+		LoggerUtil.logInfo("clicked on submit");
 		repack.repackingdetails();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("entered the repacking details");
 		repack.comments(getinitiatorcomments());
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		repack.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		repack.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Repacking Qty ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 
 }
