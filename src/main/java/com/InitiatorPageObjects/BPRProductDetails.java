@@ -160,9 +160,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			for (int i = 1; i < 2; i++) {
 			javascript(productdetails);
-			javawait();
 			clickElement(bprdetails);
-			javawait();
 			clickElement(create);
 			javawait();
 			scrolldown(productmapping);

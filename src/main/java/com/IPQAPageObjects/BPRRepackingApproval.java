@@ -56,7 +56,7 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 	WebElement No;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
@@ -71,7 +71,7 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 	public void repackingapproval() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(repackingreqapproval);
 		clickElement(search);
@@ -106,13 +106,10 @@ public void comments(String comm) throws IOException {
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		javascript(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 
@@ -120,13 +117,10 @@ public void comments(String comm) throws IOException {
 	public void returnactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(returnbutton);
-		javawait();
 		javascript(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 

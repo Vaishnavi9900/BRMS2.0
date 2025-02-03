@@ -29,7 +29,7 @@ public class BPRBatchClosureInitiation extends ConfigurationReader{
 		LoggerUtil.logInfo("clicked on Batch Closure Initiation tab and opened the record");
 		closure.bprsubmit();
 		LoggerUtil.logInfo("clicked on submit");
-		closure.bmrexefileupload();
+		closure.bprexefileupload();
 		LoggerUtil.logInfo("BMR Executed file uploads");
 		closure.comments();
 		LoggerUtil.logInfo("validated comments and entered comments");

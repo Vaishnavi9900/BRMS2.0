@@ -22,50 +22,60 @@ public class BMRPrintRequestInitiation extends ConfigurationReader{
 		issuance = new BMRPrintIssuanceInitiationandReceived(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on print request initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		issuance.printreqinitiationtab();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("clicked on print request initiation tab and opened the record");
 		issuance.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		issuance.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issuance.submit();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		issuance.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Blend record Print Request Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	@Test
-    public void standardbulkprintRequestInitiation() throws InterruptedException, IOException {
+    public void standalonebulkprintRequestInitiation() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);
 		issuance = new BMRPrintIssuanceInitiationandReceived(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on print request initiation tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		issuance.printreqinitiationtab();
-		LoggerUtil.logInfo("Select the blend batchnumber");
+		LoggerUtil.logInfo("clicked on print request initiation tab and opened the record");
 		issuance.batchnumber("FD");
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("Selected the blend batchnumber");
 		issuance.submit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on submit");
 		issuance.comments();
-		LoggerUtil.logInfo("click on submit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issuance.submit();
-		LoggerUtil.logInfo("Enter password and resubmit the record");
+		LoggerUtil.logInfo("clicked on submit");
 		issuance.submitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and resubmitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Bulk-standard record Print Request Initiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	 @Test
 	 public void commonbulkprintRequestInitiation() throws InterruptedException, IOException {
@@ -74,26 +84,32 @@ public class BMRPrintRequestInitiation extends ConfigurationReader{
 			issuance = new BMRPrintIssuanceInitiationandReceived(driver);
 			
 			try {
-			LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 			as.userlogin(getprodexe(), getpassword());
-			LoggerUtil.logInfo("click on print request initiation tab and open the record");
+			LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 			issuance.printreqinitiationtab();
-			LoggerUtil.logInfo("Select the blend batchnumber");
+			LoggerUtil.logInfo("clicked on print request initiation tab and opened the record");
 			issuance.batchnumber("FD");
-			LoggerUtil.logInfo("Enter the blend size");
+			LoggerUtil.logInfo("Selected the blend batchnumber");
 			issuance.batchsize();
-			LoggerUtil.logInfo("click on submit");
+			LoggerUtil.logInfo("Entered the blend size");
 			issuance.submit();
-			LoggerUtil.logInfo("validate comments and enter comments");
+			LoggerUtil.logInfo("clicked on submit");
 			issuance.comments();
-			LoggerUtil.logInfo("click on submit");
+			LoggerUtil.logInfo("validated comments and entered comments");
 			issuance.submit();
-			LoggerUtil.logInfo("Enter password and submit the record");
+			LoggerUtil.logInfo("clicked on submit");
 			issuance.submitactivity(getpassword());
+			LoggerUtil.logInfo("Entered password and submitted the record");
 			}
-			catch (Exception e) {
+			catch (AssertionError e) {
 				LoggerUtil.logError("BMR Bulk-common record Print Request Initiation Test is failed", e);
+		            // Log the failure to ExtentReports
+		            extenttest.fail("Test failed: " + e.getMessage());
+		            // Optionally, you can log the stack trace if needed
+		            extenttest.fail(e);
+		        	throw e;		
 			}
+				
 		}
 	 @Test
 	 public void bilayerbulkprintRequestInitiation() throws InterruptedException, IOException {
@@ -102,27 +118,31 @@ public class BMRPrintRequestInitiation extends ConfigurationReader{
 			issuance = new BMRPrintIssuanceInitiationandReceived(driver);
 			
 			try {
-			LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 			as.userlogin(getprodexe(), getpassword());
-			LoggerUtil.logInfo("click on print request initiation tab and open the record");
+			LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 			issuance.printreqinitiationtab();
+			LoggerUtil.logInfo("clicked on print request initiation tab and opened the record");
 			//issuance.bulkbilayerbatchnumber("FD", "FD");
-			LoggerUtil.logInfo("Select the blend batchnumbers");
 			issuance.bulkbilayerbatchnumbersize("FD", "FD");
-			LoggerUtil.logInfo("click on submit");
+			LoggerUtil.logInfo("Selectd the blend batchnumbers");
 			issuance.submit();
-			LoggerUtil.logInfo("validate comments and enter comments");
+			LoggerUtil.logInfo("clicked on submit");
 			issuance.comments();
-			LoggerUtil.logInfo("click on submit");
-			issuance.submit();
-			LoggerUtil.logInfo("Enter password and submit the record");
+			LoggerUtil.logInfo("validated comments and entered comments");
+		    issuance.submit();
+			LoggerUtil.logInfo("clicked on submit");
 			issuance.submitactivity(getpassword());
+			LoggerUtil.logInfo("Entered password and submitted the record");
 			}
-			catch (Exception e) {
+			catch (AssertionError e) {
 				LoggerUtil.logError("BMR Bulk-bilayer record Print Request Initiation Test is failed", e);
-				Assert.fail();
+		            // Log the failure to ExtentReports
+		            extenttest.fail("Test failed: " + e.getMessage());
+		            // Optionally, you can log the stack trace if needed
+		            extenttest.fail(e);
+		        	throw e;		
 			}
-			
+				
 		}
 	@Test
     public void printRequestReInitiation() throws InterruptedException, IOException {
@@ -131,23 +151,27 @@ public class BMRPrintRequestInitiation extends ConfigurationReader{
 		issuance = new BMRPrintIssuanceInitiationandReceived(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on print request initiation tab");
-		LoggerUtil.logInfo("click on Returned status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		issuance.printreqReinitiation();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("clicked on print request initiation tab");
+		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		issuance.resubmit();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on resubmit");
 		issuance.comments();
-		LoggerUtil.logInfo("click on resubmit");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issuance.resubmit();
-		LoggerUtil.logInfo("Enter password and resubmit the record");
+		LoggerUtil.logInfo("clicked on resubmit");
 		issuance.resubmitactivity(getpassword());
+		LoggerUtil.logInfo("Entered password and resubmitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Request ReInitiation Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
 		
 	}
@@ -158,24 +182,29 @@ public class BMRPrintRequestInitiation extends ConfigurationReader{
 		issuance = new BMRPrintIssuanceInitiationandReceived(driver);
 		
 		try {
-		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		as.userlogin(getprodexe(), getpassword());
-		LoggerUtil.logInfo("click on print request initiation tab");
-		LoggerUtil.logInfo("click on Issued status tab and open the record");
+		LoggerUtil.logInfo("Login to the application with Prodution Exe id and password");
 		issuance.printreceivedtab();
-		LoggerUtil.logInfo("click on print received");
+		LoggerUtil.logInfo("clicked on print request initiation tab");
+		LoggerUtil.logInfo("clicked on Issued status tab and opened the record");
 		issuance.printreceived();
-		LoggerUtil.logInfo("validate comments and enter comments");
+		LoggerUtil.logInfo("clicked on print received");
 		issuance.comments();
-		LoggerUtil.logInfo("click on print received");
+		LoggerUtil.logInfo("validated comments and entered comments");
 		issuance.printreceived();
-		LoggerUtil.logInfo("Enter password and submit the record");
+		LoggerUtil.logInfo("clicked on print received");
 		issuance.printreceivedsubmit(getpassword());
+		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
-		catch (Exception e) {
+		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Acknowledgment Test is failed", e);
-			Assert.fail();
+	            // Log the failure to ExtentReports
+	            extenttest.fail("Test failed: " + e.getMessage());
+	            // Optionally, you can log the stack trace if needed
+	            extenttest.fail(e);
+	        	throw e;		
 		}
+			
 	}
 	
 	

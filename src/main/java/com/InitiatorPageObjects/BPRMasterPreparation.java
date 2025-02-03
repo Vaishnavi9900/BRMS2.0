@@ -2,6 +2,7 @@ package com.InitiatorPageObjects;
 
 import java.io.IOException;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,6 +29,7 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 	WebElement masterpreparation;
 	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='mprNumber']")
 	WebElement mprno;
+	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
 	@FindBy(how = How.XPATH, using = "//textarea[@trim='blur']")
 	WebElement comments;
 	@FindBy(how = How.XPATH, using = "//span[text()='Comments is required']")
@@ -38,7 +40,7 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 	WebElement refresh;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Get ']")
 	WebElement Get;
-	@FindBy(how = How.XPATH, using = "(//tr[@class='ng-star-inserted odd'])[1]")
+	@FindBy(how = How.XPATH, using = "(//td[@class='sorting_1'])[1]")
 	WebElement createdrecord;
 	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
 	WebElement Yes;
@@ -60,19 +62,18 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 		
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
-		javawait();
+		clickElement(tab);
 		clickElement(bpr);
 		clickElement(masterpreparation);
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
-			mprno.sendKeys(excelUtils.getCellData(i, 14));
+			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 		clickElement(Get);
+		search.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 		clickElement(createdrecord);
 		clickElement(submit);
 		softassert.assertEquals(commalert.getText(), "Comments is required");
 		textbox(comments, comm);
-		javawait();
 		clickElement(submit);
 		}
 	}

@@ -67,9 +67,8 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 
 	public void mastercancellationtab() throws IOException, InterruptedException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(mastercancelinitiationtab);
-		javawait();
 		excelUtils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -80,10 +79,9 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	}
 	public void bprmastercancellationtab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(bprmastercancelinitiationtab);
-		javawait();
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -96,10 +94,8 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 
 	public void comments() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		javawait();
 		softassert.assertEquals("Please Enter Comments", commalert.getText());
 		clickElement(comments);
-		javawait();
 		for (int i = 1; i < 2; i++) {
 			comments.sendKeys(excelUtils.getCellData(i, 10));
 		}

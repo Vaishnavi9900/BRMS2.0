@@ -55,7 +55,7 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	
 	public void additionalPageReturn() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(additionalpageprintreqapproval);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(search);
@@ -66,7 +66,7 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	}
 	public void bpradditionalPageReturn() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(additionalpageprintreqapproval);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

@@ -83,7 +83,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	public void printissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printissuance);
 		for (int i = 1; i < 2; i++) {
@@ -107,7 +107,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	public void reprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		clickElement(status);
@@ -121,7 +121,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	public void reprinttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		clickElement(status);
@@ -135,12 +135,9 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	
 	
 	public void printcopydetails() throws InterruptedException {
-		textbox(formatnumber, "Blend-01-00");
-		javawait();
-		textbox(formattitle, "Blend Format");
-		javawait();
-		textbox(version, "00");
-		javawait();
+		textbox(formatnumber, "Blister-890-09-00");
+		textbox(formattitle, "Blister Packing");
+		textbox(version, "09");
 		textbox(noofcopies, "2");
 	}
 

@@ -84,7 +84,7 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	public void printissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printissuance);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -95,7 +95,7 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	public void additionalpageprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(addtionalpageissuance);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -106,11 +106,11 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	public void reprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(reprintreqinitiation);
 		clickElement(status);
-		javawait();
 		clickElement(issued);
+		Thread.sleep(2000);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -120,10 +120,11 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	public void reprinttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(reprintreqinitiation);
 		clickElement(status);
 		clickElement(approved);
+		Thread.sleep(2000);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));

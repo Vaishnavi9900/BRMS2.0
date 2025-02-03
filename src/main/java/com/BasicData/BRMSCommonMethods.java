@@ -66,7 +66,6 @@ public class BRMSCommonMethods {
 	public static ExtentReports extentreports;
 	public static ExtentTest extenttest;
 	public static ExtentSparkReporter sparkReporter_all;
-	String reportName;
 	protected String cell0val,cell1val,cell2val,cell3val,cell4val,cell5val,cell6val,cell7val,cell8val,cell9val;
 	@Parameters("browser")
 	@BeforeTest
@@ -103,7 +102,7 @@ public class BRMSCommonMethods {
 		sparkReporter_all.config().setTheme(Theme.DARK);
 		 // Set the report name (appears on the header section of the HTML report)
 		 // This sets the report name visible in the report
-		sparkReporter_all.config().setReportName(reportName);
+		//sparkReporter_all.config().setReportName(reportName);
 	}
 	@AfterSuite
 	public void generateExtentReports() throws IOException {

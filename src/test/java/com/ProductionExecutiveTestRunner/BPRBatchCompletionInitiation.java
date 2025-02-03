@@ -62,7 +62,7 @@ public class BPRBatchCompletionInitiation extends ConfigurationReader {
 		LoggerUtil.logInfo("clicked on submit");
 		batch.comments();
 		LoggerUtil.logInfo("validated comments and entered comments");
-		batch.dateformats("12-10-2024", "12-10-2025");
+		batch.dateformats("12-10-2024");
 		LoggerUtil.logInfo("selected the dates for batch");
 		batch.submit();
 		LoggerUtil.logInfo("clicked on submit");

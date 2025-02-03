@@ -49,18 +49,15 @@ public class CFTActivity extends BRMSCommonMethods {
 	
 	public void CFTreview(String comm) throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
-			javawait();
 			clickElement(reviewtab);
-			javawait();
 			clickElement(commentstab);
-			javawait();
 			clickElement(productdetails);
 			clickElement(templateprep);
 			Thread.sleep(40000);
@@ -69,63 +66,52 @@ public class CFTActivity extends BRMSCommonMethods {
 			clickElement(submit);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");
-			javawait();
 			clickElement(submit);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, comm);
-			javawait();
 			clickElement(submit);
 		}
 	}
 	public void bprCFTreview(String comm) throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
-		javawait();
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
-			javawait();
 			clickElement(reviewtab);
-			javawait();
 			clickElement(commentstab);
-			javawait();
 			clickElement(productdetails);
 			clickElement(templateprep);
 			Thread.sleep(40000);
 			clickElement(changehostorytemplate);
 			Thread.sleep(40000);
 			clickElement(productdetails);
-			javawait();
 			clickElement(submit);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");
-			javawait();
 			clickElement(submit);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
-			textbox(comments, comm);
-			javawait();
+			comments.click();
+			comments.sendKeys(comm);
 			clickElement(submit);
 		}
 	}
 	
 	public void CFTreturn(String comm) throws IOException, InterruptedException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
-			javawait();
 			clickElement(reviewtab);
-			javawait();
 			clickElement(commentstab);
-			javawait();
 			clickElement(productdetails);
 			clickElement(templateprep);
 			Thread.sleep(40000);
@@ -134,28 +120,23 @@ public class CFTActivity extends BRMSCommonMethods {
 			clickElement(returnbutton);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");
-			javawait();
-			textbox(comments, comm);
-			javawait();
+			comments.click();
+			comments.sendKeys(comm);
 			clickElement(returnbutton);
 	}
 	}
 	public void bprCFTreturn(String comm) throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
-		javawait();
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(createdrecord);
-			javawait();
 			clickElement(reviewtab);
-			javawait();
 			clickElement(commentstab);
-			javawait();
 			clickElement(productdetails);
 			clickElement(templateprep);
 			Thread.sleep(40000);
@@ -164,9 +145,8 @@ public class CFTActivity extends BRMSCommonMethods {
 			clickElement(returnbutton);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 			textbox(comments, " ");
-			javawait();
-			textbox(comments, comm);
-			javawait();
+			comments.click();
+			comments.sendKeys(comm);
 			clickElement(returnbutton);
 	}
 	}

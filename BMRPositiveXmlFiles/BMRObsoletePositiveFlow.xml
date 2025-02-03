@@ -4,7 +4,7 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.QADocCellTestRunner.BMRBPRObsoleteInitiation"/>
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation"/>
       <methods>
       <include name = "obsoleteInitiation"/>
       </methods>
@@ -14,7 +14,7 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.ProductionInchargeTestRunner.ObsoleteReview"/>
+      <class name="com.ProductionInchargeTestRunner.BMRObsoleteReview"/>
       <methods>
       <include name = "obsoleteReview"/>
       </methods>
@@ -34,7 +34,7 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.QADocCellTestRunner.BMRBPRObsoleteInitiation"/>
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation"/>
       <methods>
       <include name = "finalobsolete"/>
       </methods>

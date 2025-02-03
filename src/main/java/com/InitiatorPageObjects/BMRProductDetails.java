@@ -320,8 +320,12 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		}
 		for (int i = 2; i < 3; i++) {
 			if (ispelletsNo.isSelected()) {
+				javawait();
+				JavascriptExecutor js = ((JavascriptExecutor) driver);
+				js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
 				productname.clear();
 				productname.sendKeys(excelUtils.getCellData(i, 0));
+				javawait();
 				market(excelUtils.getCellData(i, 2));
 				dosageform(excelUtils.getCellData(i, 3));
 				strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
@@ -357,6 +361,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 				clickElement(No);
 				javascript(productname);
 				productname.sendKeys(excelUtils.getCellData(i, 0));
+				javawait();
 				market(excelUtils.getCellData(i, 2));
 				dosageform(excelUtils.getCellData(i, 3));
 				strength(excelUtils.getCellData(i, 4), excelUtils.getCellData(i, 5));
@@ -412,34 +417,46 @@ public class BMRProductDetails extends BRMSCommonMethods {
 
 	public void productname(String name) {
 
-		textboxc(productname, name);
+		clickElement(productname);
+		productname.sendKeys(name);
+		
 	}
 
 	public void productcode(String code) {
-		textbox(productcode, code);
+		clickElement(productcode);
+		productcode.sendKeys(code);
 	}
+	
 
 	public void market(String mark) {
-		textbox(market, mark);
+		clickElement(market);
+		market.sendKeys(mark);
 	}
 
 	public void dosageform(String dosage) {
-		textbox(dosageform, dosage);
+		clickElement(dosageform);
+		dosageform.sendKeys(dosage);
 	}
 
 	public void strength(String str, String struom) {
-		textbox(strength, str);
-		textbox(strengthuom, struom);
+		clickElement(strength);
+		strength.sendKeys(str);
+		clickElement(strengthuom);
+		strengthuom.sendKeys(struom);
 	}
 
 	public void shelflife(String shelf, String uom) {
-		textbox(shelflife, shelf);
-		textbox(shelflifeuom, uom);
+		clickElement(shelflife);
+		shelflife.sendKeys(shelf);
+		clickElement(shelflifeuom);
+		shelflifeuom.sendKeys(uom);
 	}
 
 	public void batchsize(String size, String uom) {
-		textboxc(batchsize, size);
-		textbox(batchsizeuom, uom);
+		clickElement(batchsize);
+		batchsize.sendKeys(size);
+		clickElement(batchsizeuom);
+		batchsizeuom.sendKeys(uom);
 	}
 
 	public void block() {
@@ -557,7 +574,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 			javascript(productname);
 			productname.sendKeys(excelUtils.getCellData(i, 0));
 			clickElement(producttype);
-			producttype.sendKeys("Standard");
+			producttype.sendKeys("standalone");
 			productcode(excelUtils.getCellData(i, 1));
 			inputblendcode(excelUtils.getCellData(i, 11));
 			market(excelUtils.getCellData(i, 2));

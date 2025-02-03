@@ -118,7 +118,7 @@ public class BPRPrintReview extends ConfigurationReader{
 		LoggerUtil.logInfo("Clicked on Print Request Review tab and opened the record");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");
-		val.REcommentsbatchtype(getapprovalcomments());
+		val.Recommentsbatchtype(getapprovalcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");

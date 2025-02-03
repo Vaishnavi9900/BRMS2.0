@@ -55,9 +55,8 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	
 	public void afterPrintcanelReviewtab() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(afterprintcancelreview);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
@@ -67,10 +66,9 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	}
 	public void bprafterPrintcanelReviewtab() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(afterprintcancelreview);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {

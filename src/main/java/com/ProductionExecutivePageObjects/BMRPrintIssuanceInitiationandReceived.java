@@ -109,9 +109,8 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 	public void printreqinitiationtab() throws InterruptedException, IOException {
 		javawait();
-		// clickElement(tab);
+		clickElement(tab);
 		javascript(printinitiation);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -128,8 +127,7 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		for (int i = 1; i < 2; i++) {
 			mprnumber.click();
-			mprnumber.sendKeys(excelutils.getCellData(i, 16), Keys.ENTER);
-			javawait();
+			mprnumber.sendKeys(excelutils.getCellData(i, 15), Keys.ENTER);
 			clickElement(batchnumber);
 			batchnumber.sendKeys(batchno, Keys.ENTER);
 		}
@@ -139,7 +137,6 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 		clickElement(batchnumber);
 		clickElement2(option2, Keys.ENTER);
 		// batchnumber.sendKeys(batchno, Keys.ENTER);
-		javawait();
 		clickElement(batchnumber2);
 		batchnumber2.sendKeys(batchno, Keys.ENTER);
 	}
@@ -155,16 +152,13 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 		for (int i = 1; i <2; i++) {
 			mprnumber.click();
 			mprnumber.sendKeys(excelutils.getCellData(i, 15), Keys.ENTER);
-			javawait();
 			clickElement(batchnumber);
 			batchnumber.sendKeys(batchno, Keys.ENTER);
 		javascript(batchsize);
 		batchsize.clear();
 		batchsize.sendKeys("5");
-		javawait();
 		mprnumber2.click();
 		mprnumber2.sendKeys(excelutils.getCellData(i, 16), Keys.ENTER);
-		javawait();
 		clickElement(batchnumber2);
 		batchnumber2.sendKeys(batchno, Keys.ENTER);
 	    javascript(batchsize2);
@@ -176,7 +170,7 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 	public void printreqReinitiation() throws InterruptedException, IOException {
 		javawait();
-		// clickElement(tab);
+		clickElement(tab);
 		javascript(printinitiation);
 		javawait();
 		clickElement(status);
@@ -188,7 +182,6 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 //		for (int i = 1; i <2; i++) {
 //			search.sendKeys(excelutils.getCellData(i, 1));
 //		}
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		for (int i = 1; i <2; i++) {
 //		List<WebElement> allElement=driver.findElements(By.xpath("//span[@class='cBlue font-w-600']"));
@@ -229,6 +222,7 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 		javawait();
 		clickElement(No);
 		clickElement(submit);
+		Thread.sleep(2000);		
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
@@ -241,6 +235,7 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 		javawait();
 		clickElement(No);
 		clickElement(resubmit);
+		Thread.sleep(2000);	
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
@@ -264,18 +259,15 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 	public void printreceivedtab() throws InterruptedException, IOException {
 		javawait();
-		// clickElement(tab);
+		clickElement(tab);
 		javascript(printinitiation);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelutils.getCellData(i, 14));
 
 			clickElement(status);
-			javawait();
 			clickElement(issued);
-			javawait();
 			clickElement(search);
 			search.sendKeys(excelutils.getCellData(i, 14));
 		}
@@ -287,12 +279,10 @@ public class BMRPrintIssuanceInitiationandReceived extends BRMSCommonMethods {
 
 	public void additioanlpageprintreceivedtab() throws InterruptedException, IOException {
 		javawait();
-		// clickElement(tab);
+		clickElement(tab);
 		javascript(additionalpageprintinitiation);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(additionalstatus);
-		javawait();
 		clickElement(addissued);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {

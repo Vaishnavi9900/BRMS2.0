@@ -56,7 +56,7 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 	public void masterauthorizationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(masterauthorizationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -67,7 +67,7 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 	public void bprmasterauthorizationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(masterauthorizationtab);
 		for (int i = 1; i < 2; i++) {

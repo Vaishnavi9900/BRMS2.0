@@ -54,29 +54,25 @@ public class BPRBatchCorrectionApproval extends BRMSCommonMethods {
 	
 	public void bprbatchCorrectionApproval() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 		search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 		}
-		javawait();
 	    clickElement(createdrecord);	
 	}
 	public void batchCorrectionApproval() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(executebatchcorrectiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 		search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 		}
-		javawait();
 	    clickElement(createdrecord);	
 	}
 	

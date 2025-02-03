@@ -96,17 +96,16 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	public void bmrmasterreqinitation1(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		//clickElement(tab);
+		clickElement(tab);
 		clickElement(masterprepreq);
-		javawait();
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 		clickElement(Get);
-		javawait();
+		Thread.sleep(2000);
 		clickElement(search);
+		Thread.sleep(2000);
 		search.sendKeys(excelUtils.getCellData(i, 14));
-		javawait();
 		clickElement(createdrecord);
 //		List<WebElement> allElement=driver.findElements(By.xpath("(//tr[@class='ng-star-inserted'])"));
 //		int count=allElement.size();
@@ -123,22 +122,18 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	public void bmrmasterreqinitation(String comm) throws IOException, InterruptedException {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
-		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javawait();
 		clickElement(masterprepreq);
-		javawait();
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 			javawait();
 		    clickElement(Get);
-		    javawait();
+		    Thread.sleep(2000);
 			clickElement(createdrecord);
 			clickElement(submit);
-			javawait();
 			softassert.assertEquals(commalert.getText(), "Comments is required");
-			javawait();
 			textbox(comments, comm);
 			javawait();
 		//	clickElement(submit);

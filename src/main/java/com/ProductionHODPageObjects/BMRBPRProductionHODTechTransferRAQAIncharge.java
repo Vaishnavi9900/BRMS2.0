@@ -55,7 +55,7 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 	public void masterapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(masterapprovaltab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -65,7 +65,7 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 	public void bprmasterapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(masterapprovaltab);
 		for (int i = 1; i < 2; i++) {

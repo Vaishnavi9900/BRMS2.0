@@ -75,9 +75,8 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	
 	public void batchcompletiontab() throws InterruptedException, IOException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(batchcompletiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -89,10 +88,9 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	}
 	public void bprbatchcompletiontab() throws InterruptedException, IOException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(batchcompletiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -110,7 +108,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	public void reinitiation() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(batchcompletiontab);
 		clickElement(status);
 		for (int i = 1; i < 2; i++) {
@@ -120,7 +118,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	}
 	public void bprreinitiation() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletiontab);
@@ -145,10 +143,13 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 		}
 	}
 	
-	public void dateformats(String mandate, String expdate) throws InterruptedException {
+	public void dateformats(String mandate) throws InterruptedException {
 		dropdown(dateformat);
-		javawait();
-		textbox(manufacturingdate,mandate);
+		clickElement(dateformat);
+		dateformat.sendKeys("DD/MM/YYYY");
+		Thread.sleep(2000);
+		//clickElement(manufacturingdate);
+		manufacturingdate.sendKeys(mandate);
 //		javawait();
 //		textbox(expirydate, expdate);
 		

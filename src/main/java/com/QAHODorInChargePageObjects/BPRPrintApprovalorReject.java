@@ -80,7 +80,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	WebElement No1;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
@@ -94,7 +94,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	public void printapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqapproval);
 		for (int i = 1; i < 2; i++) {
@@ -106,7 +106,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	public void beforeprintapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(beforeprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
@@ -118,7 +118,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	public void afterprintapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-//		clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(afterprintcancelapproval);
 		for (int i = 1; i < 2; i++) {

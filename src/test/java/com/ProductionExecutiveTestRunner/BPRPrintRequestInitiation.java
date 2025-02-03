@@ -29,7 +29,7 @@ public class BPRPrintRequestInitiation extends ConfigurationReader{
 		LoggerUtil.logInfo("clicked on Print Request Initiation tab");
 		issuance.submit();
 		LoggerUtil.logInfo("clicked on submit");
-		issuance.batchnumberdateformats("DD/MM/YYYY", "15-12-2024", "26-10-2025", "FD");
+		issuance.batchnumberdateformats("DD/MM/YYYY", "15-12-2024", "FD");
 		LoggerUtil.logInfo("selected the required dates and format");
 		issuance.batchsize();
 		LoggerUtil.logInfo("Entered the batch size");

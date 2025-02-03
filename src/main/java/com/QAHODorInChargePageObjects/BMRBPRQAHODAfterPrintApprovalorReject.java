@@ -68,7 +68,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	WebElement returntoprodexe;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Return To Production Incharge']")
 	WebElement returntoprodincharge;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Return To Production Incharge']")
+	@FindBy(how = How.XPATH, using = "//button[text()='Return To Validation Incharge']")
 	WebElement returntovalncharge;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Yes ']")
 	WebElement Yes;
@@ -96,7 +96,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	public void printapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printreqapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -107,7 +107,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	public void beforeprintapprovalrejecttab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(beforeprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -118,7 +118,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	public void afterprintapprovaltab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(afterprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -128,7 +128,7 @@ public class BMRBPRQAHODAfterPrintApprovalorReject extends BRMSCommonMethods {
 	}
 	public void bprafterprintapprovaltab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(afterprintcancelapproval);

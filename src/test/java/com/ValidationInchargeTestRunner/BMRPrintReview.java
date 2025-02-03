@@ -119,7 +119,7 @@ public class BMRPrintReview extends ConfigurationReader{
 		LoggerUtil.logInfo("Clicked on Returned status tab and opened the record");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");
-		val.commentsbatchtype(getapprovalcomments());
+		val.Recommentsbatchtype(getapprovalcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");

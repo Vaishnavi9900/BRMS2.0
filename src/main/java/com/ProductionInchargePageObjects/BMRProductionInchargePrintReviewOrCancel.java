@@ -77,8 +77,10 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	WebElement cancelYes;
 	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]")
 	WebElement cancelNo;
-	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[4]")
 	WebElement returned;
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
+	WebElement printreturned;
 	@FindBy(how = How.XPATH, using = "//a[text()=' Status']")
 	WebElement status;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Re-Submit ']")
@@ -93,7 +95,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void printreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -123,11 +125,12 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void reReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printreqreview);
-		clickElement(returned);
-		javawait();
+		Thread.sleep(2000);
+		clickElement(printreturned);
 		for (int i = 1; i < 2; i++) {
+			Thread.sleep(2000);
 			search.sendKeys(excelutils.getCellData(i, 14));
 			clickElement(createdrecord);			
 		}
@@ -155,6 +158,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 		javawait();
 		textbox(password, pass);
 		clickElement(printsubmit);
+		javawait();
 	}
 
 	public void submitactivity(String pass) throws InterruptedException {
@@ -211,16 +215,15 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void cancelprintinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printcancelinitiation);
-		javawait();
+		Thread.sleep(2000);
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			javawait();
 			mprno.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
-			javawait();
 			clickElement(get);
-			javawait();
+			Thread.sleep(2000);
 			search.sendKeys(excelutils.getCellData(i, 14));
 			clickElement(createdrecord);
 		}
@@ -228,16 +231,14 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void cancelprintReinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printcancelinitiation);
-		javawait();
 		clickElement(status);
-		javawait();
 		clickElement(returned);
+		Thread.sleep(2000);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
-			javawait();
 			clickElement(createdrecord);
 		}
 	}

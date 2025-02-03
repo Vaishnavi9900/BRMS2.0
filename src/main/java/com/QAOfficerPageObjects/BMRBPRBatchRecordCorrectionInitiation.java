@@ -77,25 +77,21 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	
 	public void batchCorrectionInitiation() throws InterruptedException, IOException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(executebatchcorrectiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 		clickElement(get);
-		javawait();
 		//search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 		}
-		javawait();
 	    clickElement(createdrecord);	
 	}
 	public void batchCorrectionReInitiation() throws InterruptedException, IOException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(executebatchcorrectiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(status);
 		clickElement(returned);
@@ -107,10 +103,9 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	
 	public void bprbatchCorrectionInitiation() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -122,10 +117,9 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	}
 	public void bprbatchCorrectionReInitiation() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(status);
 		clickElement(returned);

@@ -65,7 +65,7 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 	public void batchcompletionapprovaltab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(batchcompletionapprove);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -75,7 +75,7 @@ public class BMRBPRBatchCompletionApproval extends BRMSCommonMethods{
 	}
 	public void bprbatchcompletionapprovaltab() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionapprove);

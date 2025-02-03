@@ -9,87 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">bprbottleproductInitiation</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">45,248</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">bprblisterpackApproval</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">9,184</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">54,432</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">BMRBatchCorrectionInitiation</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">62,442</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">BatchCorrectionReturn</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">39,085</td><td></td><td></td></tr>
+<tr><td><a href="#t2">BatchCorrectionReInitiation</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">50,500</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">BatchCorrectionApproval</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">39,419</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">191,446</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">bprbottleproductInitiation &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.InitiatorTestRunner.BPRProductDetailsInitiation</td><td><a href="#m0">bottleproductInitiation</a></td><td rowspan="1">1738065974001</td><td rowspan="1">39297</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">bprblisterpackApproval &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn</td><td><a href="#m1">checkstatus</a></td><td rowspan="1">1738066023915</td><td rowspan="1">9</td></tr><tr><th colspan="4">bprblisterpackApproval &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn</td><td><a href="#m2">bprhodApproval</a></td><td rowspan="1">1738066018538</td><td rowspan="1">5373</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BMRBatchCorrectionInitiation &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.QAOfficerTestRunner.BMRBatchCorrectionInitiation</td><td><a href="#m0">BatchCorrectionInitiation</a></td><td rowspan="1">1738411403299</td><td rowspan="1">56919</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">BatchCorrectionReturn &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval</td><td><a href="#m1">BatchCorrectionReturn</a></td><td rowspan="1">1738411464886</td><td rowspan="1">34383</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">BatchCorrectionReInitiation &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.QAOfficerTestRunner.BMRBatchCorrectionInitiation</td><td><a href="#m2">BatchCorrectionReInitiation</a></td><td rowspan="1">1738411504587</td><td rowspan="1">45334</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">BatchCorrectionApproval &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval</td><td><a href="#m3">BatchCorrectionApproval</a></td><td rowspan="1">1738411554442</td><td rowspan="1">34783</td></tr></tbody>
 </table>
-<h2>bprbottleproductInitiation</h2><h3 id="m0">com.InitiatorTestRunner.BPRProductDetailsInitiation#bottleproductInitiation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=132.0.6834.111)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b268e507e50c692b6b71c6b27fffb16e, sendKeysToElement {id=f.25254D241CCC4A659DFB359E0B6B21D4.d.BC9DFAEC2D496CF58C32F1A3999DE4F1.e.236, value=[Ljava.lang.CharSequence;@77724cbe}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.110 (df453a35f09..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49702}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49702/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b268e507e50c692b6b71c6b27fffb16e)] -&gt; xpath: //ng-select[@formcontrolname=&apos;MappingMPRNumber&apos; and @placeholder=&apos;MPR Number&apos;]]
-Session ID: b268e507e50c692b6b71c6b27fffb16e
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy34.sendKeys(Unknown Source)
-	at com.InitiatorPageObjects.BPRProductDetails.validatealerts1(BPRProductDetails.java:219)
-	at com.InitiatorTestRunner.BPRProductDetailsInitiation.bottleproductInitiation(BPRProductDetailsInitiation.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>bprblisterpackApproval</h2><h3 id="m1">com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn#checkstatus</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>public void com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn.bprhodApproval() throws java.lang.InterruptedException,java.io.IOException</td><td>[TestResult name=bprhodApproval status=FAILURE method=BMRProductDetailsApprovalorReturn.bprhodApproval()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn@1b6e1eff] output={null}]</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=132.0.6834.111)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [40540b48291f78275916c0c9b0b800b5, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.110 (df453a35f09..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49754}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49754/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 40540b48291f78275916c0c9b0b800b5
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
-	at com.BasicData.BRMSCommonMethods.CaptureScreenshot(BRMSCommonMethods.java:142)
-	at com.BasicData.BRMSCommonMethods.checkstatus(BRMSCommonMethods.java:125)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn#bprhodApproval</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=132.0.6834.111)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [40540b48291f78275916c0c9b0b800b5, findElement {using=xpath, value=//input[@formcontrolname=&apos;password&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.110 (df453a35f09..., userDataDir: C:\Users\VAISHN~1.T\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49754}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49754/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 40540b48291f78275916c0c9b0b800b5
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy34.click(Unknown Source)
-	at com.BasicData.BRMSCommonMethods.textbox(BRMSCommonMethods.java:204)
-	at com.AdminPageObjects.Assignmenu.userlogin(Assignmenu.java:75)
-	at com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn.bprhodApproval(BMRProductDetailsApprovalorReturn.java:73)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BMRBatchCorrectionInitiation</h2><h3 id="m0">com.QAOfficerTestRunner.BMRBatchCorrectionInitiation#BatchCorrectionInitiation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BatchCorrectionReturn</h2><h3 id="m1">com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval#BatchCorrectionReturn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BatchCorrectionReInitiation</h2><h3 id="m2">com.QAOfficerTestRunner.BMRBatchCorrectionInitiation#BatchCorrectionReInitiation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BatchCorrectionApproval</h2><h3 id="m3">com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval#BatchCorrectionApproval</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

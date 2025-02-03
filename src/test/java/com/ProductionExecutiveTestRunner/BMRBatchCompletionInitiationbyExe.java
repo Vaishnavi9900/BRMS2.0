@@ -30,9 +30,10 @@ public class BMRBatchCompletionInitiationbyExe extends ConfigurationReader {
 		LoggerUtil.logInfo("clicked on submit");
 		batch.comments();
 		LoggerUtil.logInfo("validated comments and entered comments");
-		batch.dateformats("22-10-2024", "12-10-2025");
+		batch.dateformats("22-10-2024");
 		LoggerUtil.logInfo("Selected the dates for batch");
-		//batch.submit();
+		batch.submit();
+		LoggerUtil.logInfo("clicked on submit");
 		batch.submitactivity2(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
 		}

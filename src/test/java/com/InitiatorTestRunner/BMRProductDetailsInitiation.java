@@ -94,7 +94,7 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		}
 	}
 	@Test
-	public void standardbulkinitiation() throws InterruptedException, IOException {
+	public void standalonebulkinitiation() throws InterruptedException, IOException {
 		as = new Assignmenu(driver);
 		bmr = new BMRProductDetails(driver);
 		
@@ -104,7 +104,7 @@ public class BMRProductDetailsInitiation extends ConfigurationReader {
 		bmr.bulkproductdetailsalertsvalidate();
 		LoggerUtil.logInfo("verified the validations");
 		bmr.bulkproductinitiation();
-		LoggerUtil.logInfo("selected the bulk standardalone details and  initiation with selection of approved blend");
+		LoggerUtil.logInfo("selected the bulk standalonealone details and  initiation with selection of approved blend");
 		bmr.submitactivity2(getpassword());
 		LoggerUtil.logInfo("Entered the password and submitted the record");
 		}

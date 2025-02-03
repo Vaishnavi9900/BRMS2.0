@@ -63,7 +63,7 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	public void batchcompletionreviewtab() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(batchcompletionreview);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -73,7 +73,7 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	}
 	public void bprbatchcompletionreviewtab() throws InterruptedException, IOException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionreview);
@@ -86,12 +86,11 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	
 	public void bprbatchcompletionRereview() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionreview);
 		clickElement(returntab);
-		javawait();
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -101,10 +100,10 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	public void batchcompletionRereview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(batchcompletionreview);
 		clickElement(returntab);
-		javawait();
+		Thread.sleep(2000);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -130,13 +129,10 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	public void submitactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(submit);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -145,7 +141,6 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}
@@ -153,13 +148,10 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	public void returnactivity(String pass) throws InterruptedException {
 
 		clickElement(No);
-		javawait();
 		clickElement(returnbutton);
-		javawait();
 		clickElement(Yes);
 		javawait();
 		textbox(password, pass);
-		javawait();
 		clickElement(submit2);
 		javawait();
 	}

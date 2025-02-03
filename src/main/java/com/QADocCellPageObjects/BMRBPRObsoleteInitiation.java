@@ -40,15 +40,15 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		WebElement comments;
 		@FindBy(how = How.XPATH, using = "//p[text()='Comments is required']")
 		WebElement commalert;
-		@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
+		@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
 		WebElement Yes;
-		@FindBy(how = How.XPATH, using = "(//button[@type='button'])[5]")
+		@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[3]")
 		WebElement No;
 		@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 		WebElement password;
 		@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
 		WebElement submit2;
-		@FindBy(how =How.XPATH, using="(//div[@role='option'])[2]")
+		@FindBy(how =How.XPATH, using="(//span[@class='ng-option-label ng-star-inserted'])[1]")
 		WebElement mprnosel;
 		@FindBy(how = How.XPATH, using = "//a[text()='Status']")
 		WebElement status;
@@ -58,8 +58,10 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		WebElement approved;
 		@FindBy(how = How.XPATH, using = "//button[text()='Re-Submit ']")
 		WebElement resubmit;
-		@FindBy(how = How.XPATH, using = "//button[text()='Obsolete ']")
+		@FindBy(how = How.XPATH, using = "//button[text()=' Obsolete ']")
 		WebElement obsolete;
+		@FindBy(how = How.XPATH, using = "//button[text()='Obsolete ']")
+		WebElement bmrobsolete;
 		
 		
 		public BMRBPRObsoleteInitiation(WebDriver driver) {
@@ -69,42 +71,39 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void obsoleteInitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
-		//	clickElement(tab);
+			clickElement(tab);
 			javascript(obsoleteinitiation);
-			javawait();
-			clickElement(mprno);
-		//	for (int i = 1; i < 2; i++) {
-				javawait();
-				clickElement(mprnosel);
-			//	mprno.sendKeys(excelutils.getCellData(i, 1), Keys.ENTER);
+			//clickElement(mprno);
+			for (int i = 1; i < 2; i++) {
+//				clickElement(mprnosel);
+//				mprno.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 				clickElement(get);
-				javawait();
+				Thread.sleep(2000);
+				search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 				clickElement(createdrecord);
-		//	}
+			}
 		}
 		public void bprobsoleteInitiation() throws IOException, InterruptedException {
 			javawait();
-		//	clickElement(tab);
+			clickElement(tab);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javascript(obsoleteinitiation);
-			javawait();
-			clickElement(mprno);
-		//	for (int i = 1; i < 2; i++) {
+			//clickElement(mprno);
+			for (int i = 1; i < 2; i++) {
 				javawait();
-				clickElement(mprnosel);
-			//	mprno.sendKeys(excelutils.getCellData(i, 1), Keys.ENTER);
+//				mprno.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
+//				clickElement(mprnosel);
 				clickElement(get);
-				javawait();
+				search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 				clickElement(createdrecord);
-		//	}
+			}
 		}
 		public void obsoleteReInitiation() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
-		//	clickElement(tab);
+			clickElement(tab);
 			javascript(obsoleteinitiation);
-			javawait();
 			clickElement(status);
 			clickElement(returned);
 			for (int i = 1; i < 2; i++) {
@@ -115,15 +114,15 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		}
 		public void bprobsoleteReInitiation() throws IOException, InterruptedException {
 			javawait();
+			clickElement(tab);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
-	//		clickElement(tab);
 			javascript(obsoleteinitiation);
-			javawait();
 			clickElement(status);
 			clickElement(returned);
 			for (int i = 1; i < 2; i++) {
 				clickElement(search);
+				Thread.sleep(2000);
 				search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 				clickElement(createdrecord);
 		}
@@ -132,28 +131,29 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void finalobsolete() throws IOException, InterruptedException {
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
-		//	clickElement(tab);
+			clickElement(tab);
 			javascript(obsoleteinitiation);
-			javawait();
 			clickElement(status);
 			clickElement(approved);
 			for (int i = 1; i < 2; i++) {
 				clickElement(search);
+				Thread.sleep(2000);
 				search.sendKeys(excelutils.getCellData(i, 14));
 				clickElement(createdrecord);
 		}
 		}
 		public void bprfinalobsolete() throws IOException, InterruptedException {
+			javawait();
+			clickElement(tab);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javawait();
-		//	clickElement(tab);
 			javascript(obsoleteinitiation);
-			javawait();
 			clickElement(status);
 			clickElement(approved);
 			for (int i = 1; i < 2; i++) {
 				clickElement(search);
+				Thread.sleep(2000);
 				search.sendKeys(excelutils.getCellData(i, 14));
 				clickElement(createdrecord);
 		}
@@ -173,6 +173,10 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 			javawait();
 			clickElement(obsolete);
 		}
+		public void bmrobsolete() throws InterruptedException {
+			javawait();
+			clickElement(bmrobsolete);
+		}
 		public void resubmit() throws InterruptedException {
 			javawait();
 			clickElement(resubmit);
@@ -181,6 +185,16 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 
 			clickElement(No);
 			clickElement(obsolete);
+			clickElement(Yes);
+			javawait();
+			textbox(password, pass);
+			clickElement(submit2);
+			javawait();
+		}
+		public void bmrobsoleteactivity(String pass) throws InterruptedException {
+
+			clickElement(No);
+			clickElement(bmrobsolete);
 			clickElement(Yes);
 			javawait();
 			textbox(password, pass);

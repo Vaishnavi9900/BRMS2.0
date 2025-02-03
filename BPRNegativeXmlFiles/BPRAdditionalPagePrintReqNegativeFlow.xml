@@ -80,7 +80,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="bpradditionalPageRejection" enabled="false" >
+   <test name="bpradditionalPageRejection" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -90,7 +90,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="bpradditionalPageApproval">
+   <test name="bpradditionalPageApproval"  enabled="false">
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -100,7 +100,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="additionalPageIssue" >
+  <test name="additionalPageIssue"  enabled="false" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -110,7 +110,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="additionalPagePrint" >
+   <test name="additionalPagePrint"  enabled="false">
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

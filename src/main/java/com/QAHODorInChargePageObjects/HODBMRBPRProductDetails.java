@@ -87,7 +87,6 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 		javascript(productdetails);
 		javawait();
 		clickElement(bprdetails);
-		javawait();
 		clickElement(bprsearch);
 		for (int i = 1; i < 2; i++) {
 			bprsearch.sendKeys(excelUtils.getCellData(i, 14));
@@ -99,12 +98,10 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 		javascript(productdetails);
 		javawait();
 		clickElement(bprdetails);
-		javawait();
 		clickElement(bprsearch);
 		for (int i = 1; i < 2; i++) {
 			bprsearch.sendKeys(excelUtils.getCellData(i, 14));
 			clickElement(bprcreatedrecord);
-			javawait();
 			clickElement(submit);
 			softassert.assertEquals(commalert.getText(), "Comments is required");
 		}
@@ -113,7 +110,6 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	public void HODReturn(String comm) throws InterruptedException, IOException {
 
 		clickElement(commentstab);
-		javawait();
 		clickElement(productdetailstab);
 		clickElement(returnbutton);
 		textbox(comments, " ");
@@ -126,7 +122,6 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	}
 	public void bprHODReturn(String comm) throws InterruptedException, IOException {
 		clickElement(commentstab);
-		javawait();
 		clickElement(productdetailstab);
 		clickElement(comments);
 		comments.sendKeys(comm);
@@ -136,10 +131,8 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	
 	public void bprHODApproval(String comm) throws InterruptedException, IOException {
 		clickElement(commentstab);
-		javawait();
 		clickElement(productdetailstab);
 		clickElement(comments);
-		javawait();
 		comments.sendKeys(comm);
 		clickElement(submit);
 

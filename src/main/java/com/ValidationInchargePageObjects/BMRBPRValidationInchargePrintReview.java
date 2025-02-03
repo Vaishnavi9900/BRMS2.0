@@ -32,7 +32,7 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 	WebElement createdrecord;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Reviewed']")
 	WebElement reviewed;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Returned']")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
 	WebElement returned;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Return']")
 	WebElement returnbutton;
@@ -82,7 +82,7 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 	public void printreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -93,12 +93,10 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 	public void bprprintreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
-		javawait();
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
-			javawait();
 			search.sendKeys(excelutils.getCellData(i, 14));
 			clickElement(createdrecord);
 			
@@ -107,16 +105,19 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 
 	public void commentsbatchtype(String comm) throws InterruptedException {
 		softassert.assertEquals("Please Enter Comments", commalert.getText());
-		textbox(comments, comm);
+		clickElement(comments);
+		comments.sendKeys(comm);
+		javawait();
 	    softassert.assertEquals("Please Select Batch Type", batchtypealert.getText());
-	    clickElement(batchtype);
+	    javascript(batchtype);
 		clickElement(commercial);
 	}
-	public void REcommentsbatchtype(String comm) throws InterruptedException {
+	public void Recommentsbatchtype(String comm) throws InterruptedException {
 		softassert.assertEquals("Please Enter Comments", commalert.getText());
 		clickElement(comments);
 		comments.sendKeys(comm);
-	    clickElement(batchtyp1);
+		javawait();
+	    javascript(batchtyp1);
 		clickElement(exhibit);
 	}
 	
@@ -135,10 +136,12 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 	public void reReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(printreqreview);
+		Thread.sleep(2000);
 		clickElement(returned);
 		for (int i = 1; i < 2; i++) {
+			Thread.sleep(2000);
 			search.sendKeys(excelutils.getCellData(i, 14));
 			clickElement(createdrecord);			
 		}
@@ -146,7 +149,7 @@ public class BMRBPRValidationInchargePrintReview extends BRMSCommonMethods{
 	public void bprreReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqreview);
 		clickElement(returned);

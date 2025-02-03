@@ -54,7 +54,7 @@ public class BMRBPRQADoccellMasterEffective extends BRMSCommonMethods {
 	public void mastereffectivetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(mastereffectivetab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -64,7 +64,7 @@ public class BMRBPRQADoccellMasterEffective extends BRMSCommonMethods {
 	public void bprmastereffectivetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(mastereffectivetab);
 		for (int i = 1; i < 2; i++) {

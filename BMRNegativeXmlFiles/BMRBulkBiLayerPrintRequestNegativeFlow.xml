@@ -106,7 +106,7 @@
     <classes>
       <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
       <methods>
-      <include name ="printReview"></include>
+      <include name ="printReReview"></include>
       </methods>
     </classes>
   </test> <!-- Test -->

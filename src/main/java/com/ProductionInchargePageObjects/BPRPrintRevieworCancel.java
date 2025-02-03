@@ -76,7 +76,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	WebElement cancelYes;
 	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]")
 	WebElement cancelNo;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Returned']")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[4]")
 	WebElement returned;
 	@FindBy(how = How.XPATH, using = "//a[text()=' Status']")
 	WebElement status;
@@ -92,7 +92,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	public void bprprintreqreviewtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
@@ -123,7 +123,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	public void reReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-//		clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printreqreview);
 		clickElement(returned);
@@ -202,32 +202,29 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	public void cancelprintinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printcancelinitiation);
-		javawait();
+		Thread.sleep(2000);
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
-			javawait();
 			clickElement(get);
-			javawait();
 			clickElement(createdrecord);
 		}
 	}
 	public void cancelprintReinitiationtab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printcancelinitiation);
-		javawait();
+		Thread.sleep(2000);
 		clickElement(status);
-		javawait();
+		clickElement(returned);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
-			javawait();
 			clickElement(createdrecord);
 		}
 	}

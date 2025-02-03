@@ -54,10 +54,9 @@ public BPRUnusedqtyApprovalorRejection(WebDriver driver) {
 	
 	public void unusedqtyApproval() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(unusedqtyapproval);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
@@ -83,14 +82,13 @@ public BPRUnusedqtyApprovalorRejection(WebDriver driver) {
 	}
 	 public void rejectactivity(String pass) throws InterruptedException {
 	 		
-	 		clickElement(No);
-	 		javawait();
+		     		
+		    clickElement(No);
+		    Thread.sleep(2000);	
 	 		clickElement(reject);
-	 		javawait();
 	 		clickElement(Yes);
 	 		javawait();
 	 		textbox(password, pass);
-	 		javawait();
 	 		clickElement(submit2);
 	 		javawait();
 	 	}
@@ -98,13 +96,10 @@ public BPRUnusedqtyApprovalorRejection(WebDriver driver) {
 	  public void submitactivity(String pass) throws InterruptedException {
 	 		
 	 		clickElement(No);
-	 		javawait();
 	 		clickElement(submit);
-	 		javawait();
 	 		clickElement(Yes);
 	 		javawait();
 	 		textbox(password, pass);
-	 		javawait();
 	 		clickElement(submit2);
 	 		javawait();
 	 	}

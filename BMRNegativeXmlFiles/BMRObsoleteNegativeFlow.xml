@@ -4,7 +4,7 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.QADocCellTestRunner.BMRBPRObsoleteInitiation"/>
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation"/>
       <methods>
       <include name = "obsoleteInitiation"/>
       </methods>
@@ -14,7 +14,7 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.ProductionInchargeTestRunner.ObsoleteReview"/>
+      <class name="com.ProductionInchargeTestRunner.BMRObsoleteReview"/>
       <methods>
       <include name = "obsoleteReturn"/>
       </methods>
@@ -24,7 +24,7 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.QADocCellTestRunner.BMRBPRObsoleteInitiation"/>
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation"/>
       <methods>
       <include name = "obsoleteReInitiation"/>
       </methods>
@@ -34,19 +34,39 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.ProductionInchargeTestRunner.ObsoleteReview"/>
+      <class name="com.ProductionInchargeTestRunner.BMRObsoleteReview"/>
       <methods>
       <include name = "obsoleteReview"/>
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="obsoleteReturn">
+   <test name="obsoleteReturn1">
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject"/>
       <methods>
       <include name = "obsoleteReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="obsoleteReInitiation1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation"/>
+      <methods>
+      <include name = "obsoleteReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="obsoleteReview1">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.ProductionInchargeTestRunner.BMRObsoleteReview"/>
+      <methods>
+      <include name = "obsoleteReview"/>
       </methods>
     </classes>
   </test> <!-- Test -->
@@ -64,7 +84,7 @@
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
-      <class name="com.QADocCellTestRunner.BMRBPRObsoleteInitiation"/>
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation"/>
       <methods>
       <include name = "finalobsolete"/>
       </methods>

@@ -3,18 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ProductionExecutiveTestRunner.BPRPrintRequestInitiation">
+      <class name="NewTest">
         <methods>
-          <include name="generateExtentReports"/>
-          <include name="setup"/>
-          <include name="checkstatus"/>
-          <include name="teardown"/>
-          <include name="bprprintRequestReInitiation"/>
-          <include name="bprprintRequestInitiation"/>
-          <include name="initiatlizeExtentReports"/>
-          <include name="bprprintRecievedAcknowledgment"/>
+          <include name="test2"/>
+          <include name="test1"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.ProductionExecutiveTestRunner.BPRPrintRequestInitiation -->
+      </class> <!-- NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

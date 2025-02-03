@@ -49,9 +49,9 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	WebElement commalert;
 	@FindBy(how = How.XPATH, using = "//span[text()='Comments is required']")
 	WebElement addcommalert;
-	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
 	WebElement Yes;
-	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[5]")
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[3]")
 	WebElement No;
 	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
 	WebElement ackYes;
@@ -110,30 +110,24 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	
 	public void bprprintreqinitiationtab() throws InterruptedException, IOException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
-		javawait();
 		javascript(printinitiation);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
-		javawait();
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			mprno.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
 		}
 		clickElement(get);
-		javawait();
 	    clickElement(createdrecord);
 		
 	}
 	public void bprprintreqReinitiation() throws InterruptedException, IOException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(printinitiation);
-		javawait();
 		clickElement(status);
-		javawait();
 		clickElement(returned);
 //		excelutils.setExcelFile(excelFilePath, "productdetails");
 //		javawait();
@@ -141,7 +135,6 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 //		for (int i = 1; i <2; i++) {
 //			search.sendKeys(excelutils.getCellData(i, 1));
 //		}
-		javawait();
 //		List<WebElement> allElement=driver.findElements(By.xpath("//span[@class='cBlue font-w-600']"));
 //	    int count=allElement.size();
 //        allElement.get(count-1).click();
@@ -149,8 +142,9 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
         
 	}
 	
-	public void batchsize() {
+	public void batchsize() throws InterruptedException {
 		javascript(batchsize);
+		Thread.sleep(1000);
 		batchsize.clear();
 		batchsize.sendKeys("10");
 	}
@@ -169,20 +163,18 @@ public void resubmitactivity(String pass) throws InterruptedException {
  		javawait();
  	}
 	
-	public void batchnumberdateformats(String format, String mandate, String expd, String batchno) throws InterruptedException, IOException {
+	public void batchnumberdateformats(String format, String mandate,String batchno) throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(dateformat);
 		dateformat.sendKeys(format, Keys.ENTER);
-		javawait();
 		clickElement(manufacturedate);
 		manufacturedate.sendKeys(mandate);
-		javawait();
-		clickElement(expdate);
-		expdate.sendKeys(expd);
-		javawait();
+	//	javawait();
+//		clickElement(expdate);
+//		expdate.sendKeys(expd);
 		clickElement(mprnumber);
 		for (int i = 1; i < 2; i++) {
-			mprnumber.sendKeys(excelutils.getCellData(i, 14));
+			mprnumber.sendKeys(excelutils.getCellData(i, 15));
 		}
 		javawait();
 		clickElement(batchnumber);
@@ -200,6 +192,7 @@ public void resubmitactivity(String pass) throws InterruptedException {
 	}
       public void submitactivity(String pass) throws InterruptedException {
  		
+    	Thread.sleep(2000);
  		clickElement(No);
  		clickElement(submit);
  		clickElement(Yes);
@@ -210,18 +203,16 @@ public void resubmitactivity(String pass) throws InterruptedException {
  	}
 public void printreceivedtab() throws InterruptedException, IOException {
 	javawait();
-//	clickElement(tab);
+	clickElement(tab);
 	clickElement(bpr);
 	 javascript(printinitiation);
 	excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 	clickElement(status);
-	javawait();
 	clickElement(issued);
 	clickElement(search);
 	for (int i = 1; i < 2; i++) {
 		search.sendKeys(excelutils.getCellData(i, 14));
 	}
-	javawait();
 //	List<WebElement> allElement=driver.findElements(By.xpath("//span[@class='cBlue font-w-600']"));
 //   int count=allElement.size();
 //   allElement.get(count-1).click();
@@ -229,7 +220,7 @@ public void printreceivedtab() throws InterruptedException, IOException {
 }
 public void additioanlpageprintreceivedtab() throws InterruptedException, IOException {
 	javawait();
-//	clickElement(tab);
+	clickElement(tab);
 	javascript(additionalpageprintinitiation);
 	javawait();
 	excelutils.setExcelFile(excelFilePath, "productdetails");

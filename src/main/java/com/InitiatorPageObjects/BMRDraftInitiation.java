@@ -95,7 +95,7 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void bmrmasterdraftinitiationtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(masterdrfatinitiationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -105,9 +105,8 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void bprmasterdraftinitiationtab() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+	    clickElement(tab);
 		clickElement(bpr);
-		javawait();
 		javascript(masterdrfatinitiationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -117,9 +116,8 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void draftReinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(masterdrfatinitiationtab);
-		javawait();
 		clickElement(status);
 		clickElement(returned);
 		clickElement(search);
@@ -132,13 +130,10 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void bprdraftReinitiation() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
-		javawait();
 		javascript(masterdrfatinitiationtab);
-		javawait();
 		clickElement(status);
-		javawait();
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -184,7 +179,6 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 	public void comments(String comm) throws InterruptedException {
 		
 		clickElement(comments);
-		javawait();
 		comments.sendKeys(comm);
 	}
 	public void finalapproval() {
@@ -220,20 +214,16 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 
 		} else {
 			textbox(department, dept);
-			javawait();
 			textbox(role, rol);
-			javawait();
 			clickElement(addcft);
 			javawait();
 			clickElement(remove);
 			textbox(department, dept);
 			textbox(role, rol);
 			clickElement(addcft);
-			javawait();
 			textbox(department,dept1);
 			textbox(role, rol2);
 			clickElement(addcft);
-			javawait();
 			clickElement(comments);
 			comments.sendKeys(comm);
 			javawait();
@@ -261,16 +251,12 @@ public class BMRDraftInitiation extends BRMSCommonMethods {
 
 		} else {
 			textbox(department, dept);
-			javawait();
 			textbox(role, rol);
-			javawait();
 			clickElement(addcft);
-			javawait();
 			clickElement(remove);
 			textbox(department, dept);
 			textbox(role, rol);
 			clickElement(addcft);
-			javawait();
 			textbox(comments, comm);
 			javawait();
 			clickElement(submit);

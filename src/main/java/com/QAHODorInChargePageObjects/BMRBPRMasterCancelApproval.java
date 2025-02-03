@@ -66,9 +66,8 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 
 	public void mastercancelapprovaltab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(mastercancelapprovaltab);
-		javawait();
 		clickElement(search);
 		excelUtils.setExcelFile(excelFilePath, "productdetails");
 		for (int i = 1; i < 2; i++) {
@@ -78,10 +77,9 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 	}
 	public void bprmastercancelapprovaltab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(mastercancelapprovaltab);
-		javawait();
 		clickElement(search);
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		for (int i = 1; i < 2; i++) {

@@ -36,13 +36,13 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	WebElement comments;
 	@FindBy(how = How.XPATH, using = "//p[text()='Comments is required']")
 	WebElement commalert;
-	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
 	WebElement Yes;
-	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[5]")
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[3]")
 	WebElement No;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//button[text()=' Reject ']")
 	WebElement reject;
@@ -57,9 +57,8 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	public void obsoleteApproval() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(obsoleteapproval);
-		javawait();
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -68,11 +67,10 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	}
 	public void bprobsoleteApproval() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(obsoleteapproval);
-		javawait();
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));

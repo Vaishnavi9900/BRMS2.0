@@ -53,7 +53,7 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 	WebElement No;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
@@ -70,13 +70,14 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 	public void repcakingqtyinitiation() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(repackingreqinitiation);
 //		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
 			//mprno.sendKeys(excelutils.getCellData(i, 2));
 			clickElement(get);
+			Thread.sleep(2000);
 			search.sendKeys(excelutils.getCellData(i, 14));
 			clickElement(createdrecord);
 		}
@@ -84,7 +85,7 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 	public void repcakingqtyReinitiation() throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(repackingreqinitiation);
 		clickElement(status);

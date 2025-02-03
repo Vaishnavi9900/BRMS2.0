@@ -113,9 +113,8 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 
 	public void additionalprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(additionalpagetab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -126,10 +125,9 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	}
 	public void bpradditionalprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(additionalpagetab);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -140,9 +138,8 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	}
 	public void additionalprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		javascript(additionalpagetab);
-		javawait();
 		clickElement(status);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(search);
@@ -153,10 +150,9 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	}
 	public void bpradditionalprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(additionalpagetab);
-		javawait();
 		clickElement(status);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(search);
@@ -198,7 +194,7 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 		clickElement(add1);
 		softassert.assertEquals(lesspagealert.getText(),"Page number must be greater than zero.");
 		javawait();
-		textboxc(pagenumber1, "6");
+		textboxc(pagenumber1, "9");
 		clickElement(add1);
 		softassert.assertEquals(morepagealert.getText(),"Page number must be equal or less than document pages");
 		textboxc(pagenumber1, "1");

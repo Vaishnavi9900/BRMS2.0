@@ -109,9 +109,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 
 	public void reprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		//clickElement(tab);
 		javascript(reprintreqinitiation);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -122,10 +121,9 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	}
 	public void bprreprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -136,9 +134,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	}
 	public void reprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		javascript(reprintreqinitiation);
-		javawait();
 		clickElement(status);
 		clickElement(returned);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -150,10 +147,9 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	}
 	public void bprreprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
-	//	clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
-		javawait();
 		clickElement(status);
 		clickElement(returned);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

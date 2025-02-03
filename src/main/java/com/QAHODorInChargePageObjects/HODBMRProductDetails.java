@@ -42,12 +42,6 @@ public class HODBMRProductDetails extends BRMSCommonMethods {
     public void commentsvalidate() throws IOException {
     	excelUtils.setExcelFile(excelFilePath,"Productdetails");
     	javascript(productdetails);
-    	try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
         clickElement(search);
 		for (int i = 1; i <2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 1));
@@ -59,32 +53,24 @@ public class HODBMRProductDetails extends BRMSCommonMethods {
     public void HODReturn(String comm) throws InterruptedException, IOException {
  
     	clickElement(commentstab);
-    	javawait();
     	clickElement(productdetailstab);
-    	javawait();
     	clickElement(returnbutton);
-    	javawait();
     	textbox(comments, " ");
     	clickElement(returnbutton);
     	softassert.assertEquals(commalert.getText(), "Comments is required");
     	textbox(comments, comm);
-    	javawait();
     	clickElement(returnbutton);
 
     }
     public void HODSubmit(String comm) throws InterruptedException, IOException {
     	
     	clickElement(commentstab);
-    	javawait();
     	clickElement(productdetailstab);
-    	javawait();
     	clickElement(submit);
-    	javawait();
     	textbox(comments, " ");
     	clickElement(submit);
     	softassert.assertEquals(commalert.getText(), "Comments is required");
     	textbox(comments, comm);
-    	javawait();
     	clickElement(submit);
 	
     }
@@ -96,22 +82,14 @@ public class HODBMRProductDetails extends BRMSCommonMethods {
 	
      public void reinitiation(String comm) {
     	 textbox(comments, comm);
-    	 try {
-			javawait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
     	 clickElement(submit);
      }
      public void submitactivity() throws InterruptedException {
  		
  		clickElement(No);
- 		javawait();
  		clickElement(submit);
  		javawait();
  		clickElement(Yes);
- 		javawait();
  		clickElement(ok);
  	}
      public void submitactivity2() throws InterruptedException {

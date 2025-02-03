@@ -84,13 +84,13 @@ public class BMRObsoleteInitiation extends ConfigurationReader {
 		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
 		obs.finalobsolete();
 		LoggerUtil.logInfo("clicked on Obsolete Initiation tab and opened the record");
-		obs.obsolete();
+		obs.bmrobsolete();
 		LoggerUtil.logInfo("clicked on obsolete");
 		obs.comments(getapprovalcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
-		obs.obsolete();
+		obs.bmrobsolete();
 		LoggerUtil.logInfo("clicked on osbolete");
-		obs.obsoleteactivity(getpassword());
+		obs.bmrobsoleteactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and obsolete the record");
 		}
 		catch (AssertionError e) {

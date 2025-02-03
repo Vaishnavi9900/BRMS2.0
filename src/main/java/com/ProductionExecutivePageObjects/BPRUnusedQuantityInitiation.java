@@ -60,10 +60,9 @@ public class BPRUnusedQuantityInitiation extends BRMSCommonMethods{
 	
 	public void unusedqtyInitiation() throws InterruptedException, IOException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
 		clickElement(bpr);
 		javascript(unusedqtyinitiation);
-		javawait();
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
