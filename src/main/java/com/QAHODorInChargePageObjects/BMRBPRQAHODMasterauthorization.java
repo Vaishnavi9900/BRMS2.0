@@ -24,6 +24,8 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 	WebElement masterauthorizationtab;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -57,6 +59,7 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(masterauthorizationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -68,6 +71,7 @@ public class BMRBPRQAHODMasterauthorization extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(masterauthorizationtab);
 		for (int i = 1; i < 2; i++) {

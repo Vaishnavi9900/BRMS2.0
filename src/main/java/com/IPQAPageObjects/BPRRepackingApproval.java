@@ -24,6 +24,8 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re-Packing Request Approval']")
 	WebElement repackingreqapproval;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
@@ -38,7 +40,7 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 	WebElement createdrecord;
 	@FindBy(how = How.XPATH, using = "//button[@class='btn successBtn btn-block mt-0 ng-star-inserted']")
 	WebElement submit;
-	@FindBy(how = How.XPATH, using = "//button[@class='btn successBtn btn-block mt-0 ng-star-inserted']")
+	@FindBy(how = How.XPATH, using = "//button[@class='btn outLineBtn btn-block mt-0 mr-3 ng-star-inserted']")
 	WebElement returnbutton;
 	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments here..']")
 	WebElement comments;
@@ -72,6 +74,7 @@ public class BPRRepackingApproval extends BRMSCommonMethods{
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(repackingreqapproval);
 		clickElement(search);

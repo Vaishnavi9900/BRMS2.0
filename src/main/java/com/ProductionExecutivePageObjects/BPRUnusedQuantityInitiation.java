@@ -24,6 +24,8 @@ public class BPRUnusedQuantityInitiation extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Unused Quantity Initiation']")
 	WebElement unusedqtyinitiation;
 	@FindBy(how =How.XPATH, using ="(//input[@type='text'])[1]")
@@ -61,6 +63,7 @@ public class BPRUnusedQuantityInitiation extends BRMSCommonMethods{
 	public void unusedqtyInitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(unusedqtyinitiation);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

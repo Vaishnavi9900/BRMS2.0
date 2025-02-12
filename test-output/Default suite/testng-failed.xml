@@ -5,9 +5,7 @@
     <classes>
       <class name="NewTest">
         <methods>
-          <include name="test2"/>
-          <include name="test1"/>
-          <include name="test"/>
+          <include name="verifyLink"/>
         </methods>
       </class> <!-- NewTest -->
     </classes>

@@ -21,6 +21,10 @@ public class HODBMRProductDetails extends BRMSCommonMethods {
 	    //using the Constants class values for excel file path 
 	    static String excelFilePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMSdata.xlsx";
 
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//a[text()=' Product Details ']") WebElement productdetails;
 	@FindBy(how = How.XPATH, using = "//a[@id='Comments-tab']") WebElement commentstab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Product-tab']") WebElement productdetailstab;

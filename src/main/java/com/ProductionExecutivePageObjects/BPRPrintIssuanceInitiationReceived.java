@@ -2,6 +2,7 @@ package com.ProductionExecutivePageObjects;
 
 import java.io.IOException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +26,8 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Initiation']")
 	WebElement printinitiation;
 	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Initiation']")
@@ -111,6 +114,7 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	public void bprprintreqinitiationtab() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(printinitiation);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -125,16 +129,17 @@ public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
 	public void bprprintreqReinitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(printinitiation);
 		clickElement(status);
 		clickElement(returned);
-//		excelutils.setExcelFile(excelFilePath, "productdetails");
-//		javawait();
-//		clickElement(search);
-//		for (int i = 1; i <2; i++) {
-//			search.sendKeys(excelutils.getCellData(i, 1));
-//		}
+		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+		clickElement(search);
+		for (int i = 1; i <2; i++) {
+			search.sendKeys(excelutils.getCellData(i, 14));
+		}
 //		List<WebElement> allElement=driver.findElements(By.xpath("//span[@class='cBlue font-w-600']"));
 //	    int count=allElement.size();
 //        allElement.get(count-1).click();
@@ -165,6 +170,8 @@ public void resubmitactivity(String pass) throws InterruptedException {
 	
 	public void batchnumberdateformats(String format, String mandate,String batchno) throws InterruptedException, IOException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		JavascriptExecutor js = ((JavascriptExecutor) driver);
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
 		clickElement(dateformat);
 		dateformat.sendKeys(format, Keys.ENTER);
 		clickElement(manufacturedate);
@@ -195,6 +202,7 @@ public void resubmitactivity(String pass) throws InterruptedException {
     	Thread.sleep(2000);
  		clickElement(No);
  		clickElement(submit);
+ 		Thread.sleep(2000);
  		clickElement(Yes);
  		javawait();
  		textbox(password, pass);
@@ -204,10 +212,13 @@ public void resubmitactivity(String pass) throws InterruptedException {
 public void printreceivedtab() throws InterruptedException, IOException {
 	javawait();
 	clickElement(tab);
+	//clickElement(tab2);
 	clickElement(bpr);
+	Thread.sleep(2000);
 	 javascript(printinitiation);
 	excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 	clickElement(status);
+	Thread.sleep(2000);
 	clickElement(issued);
 	clickElement(search);
 	for (int i = 1; i < 2; i++) {
@@ -221,6 +232,7 @@ public void printreceivedtab() throws InterruptedException, IOException {
 public void additioanlpageprintreceivedtab() throws InterruptedException, IOException {
 	javawait();
 	clickElement(tab);
+	//clickElement(tab2);
 	javascript(additionalpageprintinitiation);
 	javawait();
 	excelutils.setExcelFile(excelFilePath, "productdetails");

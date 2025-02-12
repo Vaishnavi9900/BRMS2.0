@@ -26,6 +26,8 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Initiation']")
 	WebElement additionalpagetab;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -114,6 +116,7 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	public void additionalprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(additionalpagetab);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
@@ -126,6 +129,7 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	public void bpradditionalprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(additionalpagetab);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -139,6 +143,7 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	public void additionalprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(additionalpagetab);
 		clickElement(status);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -151,6 +156,7 @@ public class BMRBPRAdditionalPageprintreqInitiation extends BRMSCommonMethods{
 	public void bpradditionalprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(additionalpagetab);
 		clickElement(status);

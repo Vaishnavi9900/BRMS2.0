@@ -19,11 +19,14 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	static ExcelUtils excelutils = new ExcelUtils();
 
 	static String excelFilePath = file;
+	public static String batchno = null;
 
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Issuance']")
 	WebElement printissuance;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Issuance']")
 	WebElement addtionalpageissuance;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re Print Request Initiation']")
@@ -76,6 +79,8 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	WebElement approved;
 	@FindBy(how =How.XPATH, using ="(//button[text()=' Issued '])[1]")
 	WebElement issued;
+	@FindBy(how =How.XPATH, using ="//h6[@class='mb-1 submit-text']")
+	WebElement batchumber;
 
 	public BMRQAOfficerIssuanceandPrint(WebDriver driver) {
 		PageFactory.initElements(driver, this);	
@@ -85,17 +90,18 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(printissuance);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
-			clickElement(createdrecord);
-			
+			clickElement(createdrecord);	
 		}
 	}
 	public void additionalpageprintissuancetab() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(addtionalpageissuance);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -107,6 +113,7 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(reprintreqinitiation);
 		clickElement(status);
 		clickElement(issued);
@@ -121,6 +128,7 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(reprintreqinitiation);
 		clickElement(status);
 		clickElement(approved);
@@ -132,22 +140,28 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	}
 	}
 	
+	public void batchnumber() throws IOException {
+		batchno = batchumber.getText();
+		excelutils.writecellvalue3(excelFilePath,"Productdetails", batchno);
+	}
+	
 	
 	public void printcopydetails() throws InterruptedException {
-		textbox(formatnumber, "Blend-01-00");
-		javawait();
+		Thread.sleep(2000);
 		textbox(formattitle, "Blend Format");
-		javawait();
-		textbox(version, "00");
+		Thread.sleep(2000);
+		textbox(formatnumber, "Blend-01-00");
+//		javawait();
+//		textbox(version, "00");
 		javawait();
 		textbox(noofcopies, "2");
 	}
 	public void bulkprintcopydetails() throws InterruptedException {
-		textbox(formatnumber, "Bulk-001-00");
-		javawait();
 		textbox(formattitle, "bulk Format");
 		javawait();
-		textbox(version, "00");
+		textbox(formatnumber, "Bulk-001-00");
+//		javawait();
+	//	textbox(version, "00");
 		javawait();
 		textbox(noofcopies, "2");
 	}
@@ -227,7 +241,7 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 	}
 
 
-	public void issueactivity2(String pass) throws InterruptedException {
+	public void issueactivity2(String pass) throws InterruptedException, IOException {
 
 		clickElement(No);
 		clickElement(issue);
@@ -235,6 +249,8 @@ public class BMRQAOfficerIssuanceandPrint extends BRMSCommonMethods {
 		javawait();
 		textbox(password, pass);
 		clickElement(submit2);
+		javawait();
+		batchnumber();
 		javawait();
 	}
 	public void rejectactivity(String pass) throws InterruptedException {

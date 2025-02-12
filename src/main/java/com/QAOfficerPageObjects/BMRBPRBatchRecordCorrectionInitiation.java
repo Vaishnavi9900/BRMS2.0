@@ -30,6 +30,8 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Executed Document Correction Initiation']")
 	WebElement executebatchcorrectiontab;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -78,6 +80,7 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	public void batchCorrectionInitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(executebatchcorrectiontab);
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(mprno);
@@ -91,6 +94,7 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	public void batchCorrectionReInitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(executebatchcorrectiontab);
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(status);
@@ -104,6 +108,7 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	public void bprbatchCorrectionInitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -118,6 +123,7 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
 	public void bprbatchCorrectionReInitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -152,6 +158,23 @@ public class BMRBPRBatchRecordCorrectionInitiation extends BRMSCommonMethods {
          uploadfile.click();
 		Thread.sleep(10000);
 		 String filePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMS v2.0 flow 4.pdf";
+		 // Press 'Ctrl' + 'V' to paste the file path
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        
+        // Press 'Enter' to confirm the file selection
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public void fileupload2() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
+		clickElement(removefile);
+		Thread.sleep(2000);
+        uploadfile.click();
+		Thread.sleep(6000);
+		String filePath = "C:\\Users\\vaishnavi.t\\eclipse-workspace\\BRMS2.0\\Resources\\BRMS v2.0 flow 4.pdf";
 		 // Press 'Ctrl' + 'V' to paste the file path
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);

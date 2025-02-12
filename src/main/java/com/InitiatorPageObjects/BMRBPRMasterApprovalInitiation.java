@@ -26,6 +26,8 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 	WebElement masterinitiationtab;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -73,6 +75,7 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 	public void masterinitiationtab() throws IOException {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(masterinitiationtab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -83,6 +86,7 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(masterinitiationtab);
 		for (int i = 1; i < 2; i++) {
@@ -95,6 +99,7 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 	    clickElement(tab);
+	  //clickElement(tab2);
 		javascript(masterinitiationtab);
 		clickElement(status);
 		clickElement(returned);
@@ -107,6 +112,7 @@ public class BMRBPRMasterApprovalInitiation extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 	    clickElement(tab);
+	  //clickElement(tab2);
 		clickElement(bpr);
 		javascript(masterinitiationtab);
 		clickElement(status);

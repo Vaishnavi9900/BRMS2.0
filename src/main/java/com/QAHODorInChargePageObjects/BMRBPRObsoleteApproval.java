@@ -24,6 +24,8 @@ public class BMRBPRObsoleteApproval extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Obsolete Approval']")
 	WebElement obsoleteapproval;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")

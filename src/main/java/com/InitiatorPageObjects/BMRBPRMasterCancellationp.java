@@ -25,6 +25,8 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	WebElement mastercancelinitiationtab;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Cancel Initiation']")
 	WebElement bprmastercancelinitiationtab;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
@@ -68,6 +70,7 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	public void mastercancellationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(mastercancelinitiationtab);
 		excelUtils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
@@ -80,6 +83,7 @@ public class BMRBPRMasterCancellationp extends BRMSCommonMethods {
 	public void bprmastercancellationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(bprmastercancelinitiationtab);
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");

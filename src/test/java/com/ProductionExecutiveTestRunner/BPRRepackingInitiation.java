@@ -59,15 +59,15 @@ public class BPRRepackingInitiation extends ConfigurationReader{
 		repack.repcakingqtyReinitiation();
 		LoggerUtil.logInfo("clicked on Repacking Qty Initiation tab");
 		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
-		repack.submit();
-		LoggerUtil.logInfo("clicked on submit");
-		repack.repackingdetails();
-		LoggerUtil.logInfo("entered the repacking details");
+		repack.resubmit();
+		LoggerUtil.logInfo("clicked on resubmit");
+		repack.repackingdetails1();
+		LoggerUtil.logInfo("modified the repacking details");
 		repack.comments(getinitiatorcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
-		repack.submit();
-		LoggerUtil.logInfo("clicked on submit");
-		repack.submitactivity(getpassword());
+		repack.resubmit();
+		LoggerUtil.logInfo("clicked on resubmit");
+		repack.resubmitactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
 		}
 		catch (AssertionError e) {

@@ -25,6 +25,8 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	WebElement printreqreview;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
 	WebElement search;
 	@FindBy(how = How.XPATH, using = "(//tr[@class='ng-star-inserted odd'])[1]")
@@ -49,9 +51,9 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	WebElement mprno;
 	@FindBy(how =How.XPATH, using ="//button[text()=' Get ']")
 	WebElement get;
-	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments here..']")
+	@FindBy(how = How.XPATH, using = "//textarea[@formcontrolname='comments']")
 	WebElement comments;
-	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments hereassets']")
+	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments here..']")
 	WebElement printcomments;
 	@FindBy(how = How.XPATH, using = "//div[text()=' Please Enter Comments ']")
 	WebElement commalert;
@@ -96,6 +98,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -106,8 +109,8 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 	public void comments(String comm) throws IOException, InterruptedException {
 		javawait();
 		softassert.assertEquals("Please Enter Comments", commalert.getText());
-		clickElement(printcomments);
-		printcomments.sendKeys(comm);
+		clickElement(comments);
+		comments.sendKeys(comm);
 	}
 	public void reinitiationcomments(String comm) throws IOException, InterruptedException {
 		javawait();
@@ -115,17 +118,24 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 		clickElement(comments);
 		comments.sendKeys(comm);
 	}
+	public void cancelcomments(String comm) throws IOException, InterruptedException {
+		javawait();
+		softassert.assertEquals("Comments are required", commalert1.getText());
+		clickElement(printcomments);
+		printcomments.sendKeys(comm);
+	}
 	public void cancelreinitiationcomments(String comm) throws IOException, InterruptedException {
 		javawait();
 		softassert.assertEquals("Comments is required", commalert2.getText());
-		clickElement(comments);
-		comments.sendKeys(comm);
+		clickElement(printcomments);
+		printcomments.sendKeys(comm);
 	}
 	
 	public void reReview() throws IOException, InterruptedException {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(printreqreview);
 		Thread.sleep(2000);
 		clickElement(printreturned);
@@ -216,6 +226,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(printcancelinitiation);
 		Thread.sleep(2000);
 		clickElement(mprno);
@@ -232,6 +243,7 @@ public class BMRProductionInchargePrintReviewOrCancel extends BRMSCommonMethods 
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(printcancelinitiation);
 		clickElement(status);
 		clickElement(returned);

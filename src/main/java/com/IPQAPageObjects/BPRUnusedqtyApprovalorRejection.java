@@ -24,6 +24,8 @@ public class BPRUnusedqtyApprovalorRejection extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Unused Quality Approval']")
 	WebElement unusedqtyapproval;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -55,6 +57,7 @@ public BPRUnusedqtyApprovalorRejection(WebDriver driver) {
 	public void unusedqtyApproval() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(unusedqtyapproval);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

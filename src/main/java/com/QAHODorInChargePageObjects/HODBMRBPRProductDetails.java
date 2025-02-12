@@ -28,6 +28,8 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	WebElement productdetails;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//a[@id='Comments-tab']")
 	WebElement commentstab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Product-tab']")
@@ -71,8 +73,11 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
+		//clickElement(tab2);
+		Thread.sleep(2000);
 		javascript(productdetails);
+		Thread.sleep(2000);
 		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelUtils.getCellData(i, 14));
@@ -84,9 +89,13 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	
 	public void bprcomments() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		Thread.sleep(2000);
+		clickElement(tab);
+		Thread.sleep(2000);
 		javascript(productdetails);
 		javawait();
 		clickElement(bprdetails);
+		Thread.sleep(2000);
 		clickElement(bprsearch);
 		for (int i = 1; i < 2; i++) {
 			bprsearch.sendKeys(excelUtils.getCellData(i, 14));
@@ -95,9 +104,13 @@ public class HODBMRBPRProductDetails extends BRMSCommonMethods {
 	}
 	public void bprcommentsvalidate() throws IOException, InterruptedException {
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
+		Thread.sleep(2000);
+		clickElement(tab);
+		Thread.sleep(2000);
 		javascript(productdetails);
 		javawait();
 		clickElement(bprdetails);
+		Thread.sleep(2000);
 		clickElement(bprsearch);
 		for (int i = 1; i < 2; i++) {
 			bprsearch.sendKeys(excelUtils.getCellData(i, 14));

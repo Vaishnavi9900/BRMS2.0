@@ -24,6 +24,8 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Approval']")
 	WebElement additionalpageprintreqapproval;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -56,6 +58,7 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	public void additionalPageReturn() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(additionalpageprintreqapproval);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(search);
@@ -67,6 +70,7 @@ public class BMRBPRAdditionalPagePrintApproval extends BRMSCommonMethods{
 	public void bpradditionalPageReturn() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(additionalpageprintreqapproval);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

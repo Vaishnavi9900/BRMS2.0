@@ -26,6 +26,8 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Review']")
 	WebElement printreqreview;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -50,9 +52,9 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	WebElement get;
 	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments here..']")
 	WebElement comments;
-	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments hereassets']")
+	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments here']")
 	WebElement printcomments;
-	@FindBy(how = How.XPATH, using = "//div[text()=' Please Enter Comments ']")
+	@FindBy(how = How.XPATH, using = "(//div[@class='ng-star-inserted'])[4]")
 	WebElement commalert;
 	@FindBy(how = How.XPATH, using = "//span[text()='Comments are required']")
 	WebElement commalert1;
@@ -76,7 +78,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 	WebElement cancelYes;
 	@FindBy(how = How.XPATH, using = "(//button[text()=' No '])[2]")
 	WebElement cancelNo;
-	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[4]")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[3]")
 	WebElement returned;
 	@FindBy(how = How.XPATH, using = "//a[text()=' Status']")
 	WebElement status;
@@ -93,6 +95,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(printreqreview);
 		for (int i = 1; i < 2; i++) {
@@ -124,8 +127,11 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
+		Thread.sleep(2000);
 		javascript(printreqreview);
+		Thread.sleep(2000);
 		clickElement(returned);
 		javawait();
 		for (int i = 1; i < 2; i++) {
@@ -203,6 +209,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(printcancelinitiation);
 		Thread.sleep(2000);
@@ -217,6 +224,7 @@ public class BPRPrintRevieworCancel extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(printcancelinitiation);
 		Thread.sleep(2000);

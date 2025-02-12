@@ -24,6 +24,8 @@ public class BMRBPRClosureApproval extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Batch Closure Approval']")
 	WebElement batchclosureinitiation;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")

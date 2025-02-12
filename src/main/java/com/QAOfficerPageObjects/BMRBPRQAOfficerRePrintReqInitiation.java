@@ -25,6 +25,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re Print Request Initiation']")
 	WebElement reprintreqinitiation;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -109,7 +111,8 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 
 	public void reprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
-		//clickElement(tab);
+		clickElement(tab);
+		//clickElement(tab2);
 		javascript(reprintreqinitiation);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
@@ -122,6 +125,7 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	public void bprreprintreqinitiationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -135,6 +139,7 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	public void reprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(reprintreqinitiation);
 		clickElement(status);
 		clickElement(returned);
@@ -148,6 +153,7 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 	public void bprreprintreqReinitiationtab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		clickElement(status);
@@ -204,7 +210,7 @@ public class BMRBPRQAOfficerRePrintReqInitiation extends BRMSCommonMethods {
 		clickElement(add1);
 		softassert.assertEquals(lesspagealert.getText(),"Page number must be greater than zero.");
 		javawait();
-		textboxc(pagenumber1, "6");
+		textboxc(pagenumber1, "10");
 		clickElement(add1);
 		softassert.assertEquals(morepagealert.getText(),"Page number must be equal or less than document pages");
 		textboxc(pagenumber1, "1");

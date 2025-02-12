@@ -24,6 +24,8 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Approval']")
 	WebElement printreqapproval;
 	@FindBy(how = How.XPATH, using = "//span[text()='Before Print Receive Cancel Approval']")
@@ -80,7 +82,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 	WebElement No1;
 	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
 	WebElement password;
-	@FindBy(how = How.XPATH, using = "(//button[text()=' Submit '])[2]")
+	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
@@ -95,6 +97,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(printreqapproval);
 		for (int i = 1; i < 2; i++) {
@@ -107,6 +110,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(beforeprintcancelapproval);
 		for (int i = 1; i < 2; i++) {
@@ -119,6 +123,7 @@ public class BPRPrintApprovalorReject extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(afterprintcancelapproval);
 		for (int i = 1; i < 2; i++) {

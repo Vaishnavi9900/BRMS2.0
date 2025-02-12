@@ -65,7 +65,6 @@ public class ExcelUtils extends BRMSCommonMethods {
     	for(int i=1; i<2; i++){
     	XSSFRow row = sheet1.getRow(i);
     	XSSFCell cell = row.createCell(14);
-
     	cell.setCellValue(value);
     	}
     	FileOutputStream fos = new FileOutputStream(excelFilepath);
@@ -85,7 +84,22 @@ public class ExcelUtils extends BRMSCommonMethods {
         	cell.setCellValue(value);
 
         	}
+    	FileOutputStream fos = new FileOutputStream(excelFilepath);
+    	wb.write(fos);
+    	fos.close();
+    	}
+    	public void writecellvalue3(String excelFilepath, String sheet, String value) throws IOException {
+        	FileInputStream fs = new FileInputStream(excelFilepath);
+        	XSSFWorkbook wb = new XSSFWorkbook(fs);
+        	XSSFSheet sheet1 = wb.getSheet(sheet);
+        	int lastRow = sheet1.getLastRowNum();
+        	for(int i=3; i<4; i++){
+        	XSSFRow row = sheet1.getRow(i);
+        	XSSFCell cell = row.createCell(17);
 
+        	cell.setCellValue(value);
+
+        	}
     	FileOutputStream fos = new FileOutputStream(excelFilepath);
     	wb.write(fos);
     	fos.close();

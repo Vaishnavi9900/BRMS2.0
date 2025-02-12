@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <test thread-count="5" name="bilayerbulkprintRequestInitiation(failed)">
-    <parameter name="author" value="Vaishnavi"/>
+  <test thread-count="5" name="bprBatchCorrectionInitiation(failed)">
+    <parameter name="author" value="vaishnavi"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation">
+      <class name="com.QAOfficerTestRunner.BPRBatchCorrectionInitiation">
         <methods>
-          <include name="generateExtentReports"/>
-          <include name="setup"/>
-          <include name="checkstatus"/>
-          <include name="teardown"/>
-          <include name="bilayerbulkprintRequestInitiation"/>
-          <include name="initiatlizeExtentReports"/>
-        </methods>
-      </class> <!-- com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation -->
-    </classes>
-  </test> <!-- bilayerbulkprintRequestInitiation(failed) -->
-  <test thread-count="5" name="BMRPrintReceivedAcknowledgment(failed)">
-    <parameter name="author" value="Vaishnavi"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation">
-        <methods>
-          <include name="printRecievedAcknowledgment"/>
           <include name="generateExtentReports"/>
           <include name="setup"/>
           <include name="teardown"/>
           <include name="checkstatus"/>
+          <include name="bprBatchCorrectionInitiation"/>
           <include name="initiatlizeExtentReports"/>
         </methods>
-      </class> <!-- com.ProductionExecutiveTestRunner.BMRPrintRequestInitiation -->
+      </class> <!-- com.QAOfficerTestRunner.BPRBatchCorrectionInitiation -->
     </classes>
-  </test> <!-- BMRPrintReceivedAcknowledgment(failed) -->
+  </test> <!-- bprBatchCorrectionInitiation(failed) -->
+  <test thread-count="5" name="bprBatchCorrectionReturn(failed)">
+    <parameter name="author" value="vaishnavi"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BPRBatchRecordCorrectionApproval">
+        <methods>
+          <include name="bprBatchCorrectionReturn"/>
+          <include name="generateExtentReports"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="checkstatus"/>
+          <include name="initiatlizeExtentReports"/>
+        </methods>
+      </class> <!-- com.QAHODorInchargeTestRunner.BPRBatchRecordCorrectionApproval -->
+    </classes>
+  </test> <!-- bprBatchCorrectionReturn(failed) -->
 </suite> <!-- Failed suite [Suite] -->

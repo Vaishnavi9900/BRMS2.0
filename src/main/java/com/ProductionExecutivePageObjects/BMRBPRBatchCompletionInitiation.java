@@ -25,6 +25,8 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Batch Completion Initiation']")
 	WebElement batchcompletiontab;
 	@FindBy(how =How.XPATH, using ="(//input[@type='text'])[1]")
@@ -76,6 +78,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	public void batchcompletiontab() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(batchcompletiontab);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
@@ -89,6 +92,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	public void bprbatchcompletiontab() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(batchcompletiontab);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -109,6 +113,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(batchcompletiontab);
 		clickElement(status);
 		for (int i = 1; i < 2; i++) {
@@ -119,6 +124,7 @@ public class BMRBPRBatchCompletionInitiation extends BRMSCommonMethods {
 	public void bprreinitiation() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletiontab);

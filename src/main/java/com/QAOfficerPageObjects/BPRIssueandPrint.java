@@ -24,6 +24,8 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Issuance']")
 	WebElement printissuance;
 	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Issuance']")
@@ -84,6 +86,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(printissuance);
 		for (int i = 1; i < 2; i++) {
@@ -95,6 +98,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	public void additionalpageprintissuancetab() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(addtionalpageissuance);
@@ -108,6 +112,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		clickElement(status);
@@ -122,6 +127,7 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(reprintreqinitiation);
 		clickElement(status);
@@ -135,9 +141,11 @@ public class BPRIssueandPrint extends BRMSCommonMethods{
 	
 	
 	public void printcopydetails() throws InterruptedException {
-		textbox(formatnumber, "Blister-890-09-00");
-		textbox(formattitle, "Blister Packing");
-		textbox(version, "09");
+		Thread.sleep(2000);
+		textbox(formattitle, "Form1");
+		Thread.sleep(2000);
+		textbox(formatnumber, "0001");
+		//textbox(version, "09");
 		textbox(noofcopies, "2");
 	}
 

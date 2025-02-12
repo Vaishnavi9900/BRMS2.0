@@ -28,6 +28,8 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Batch Closure Initiation']")
 	WebElement batchclosureinitiation;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
@@ -80,6 +82,7 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	public void batchclosureinitiation() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(batchclosureinitiation);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		//clickElement(mprno);
@@ -94,6 +97,7 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	public void bprbatchclosureinitiation() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(batchclosureinitiation);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -107,6 +111,7 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	public void batchclosureReinitiation() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(batchclosureinitiation);
 		clickElement(status);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -119,6 +124,7 @@ public class BMRBatchClosureInitiation extends BRMSCommonMethods {
 	public void bprbatchclosureReinitiation() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(batchclosureinitiation);
 		clickElement(status);

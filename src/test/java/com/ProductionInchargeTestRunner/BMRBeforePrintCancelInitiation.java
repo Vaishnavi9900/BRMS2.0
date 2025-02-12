@@ -29,7 +29,7 @@ public class BMRBeforePrintCancelInitiation extends ConfigurationReader {
 		LoggerUtil.logInfo("clicked on Before Print Cancel Initiation tab and opened the record");
 		cancel.cancelsubmit();
 		LoggerUtil.logInfo("clicked on submit");
-		cancel.reinitiationcomments(getinitiatorcomments());
+		cancel.cancelcomments(getinitiatorcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
 		cancel.cancelsubmit();
 		LoggerUtil.logInfo("clicked on submit");

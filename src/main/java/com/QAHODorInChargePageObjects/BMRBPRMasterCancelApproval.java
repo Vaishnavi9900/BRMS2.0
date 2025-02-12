@@ -24,6 +24,8 @@ public class BMRBPRMasterCancelApproval extends BRMSCommonMethods{
 	WebElement mastercancelapprovaltab;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")

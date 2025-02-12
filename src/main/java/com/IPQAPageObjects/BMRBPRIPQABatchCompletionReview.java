@@ -24,6 +24,8 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Batch Completion Review']")
 	WebElement batchcompletionreview;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
@@ -64,6 +66,7 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(batchcompletionreview);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -74,6 +77,7 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	public void bprbatchcompletionreviewtab() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionreview);
@@ -87,6 +91,7 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 	public void bprbatchcompletionRereview() throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javascript(batchcompletionreview);
@@ -101,6 +106,7 @@ public class BMRBPRIPQABatchCompletionReview extends BRMSCommonMethods {
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(batchcompletionreview);
 		clickElement(returntab);
 		Thread.sleep(2000);

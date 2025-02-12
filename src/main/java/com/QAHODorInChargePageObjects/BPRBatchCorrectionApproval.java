@@ -25,6 +25,8 @@ public class BPRBatchCorrectionApproval extends BRMSCommonMethods {
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Executed Document Correction Approval']")
 	WebElement executebatchcorrectiontab;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -55,6 +57,7 @@ public class BPRBatchCorrectionApproval extends BRMSCommonMethods {
 	public void bprbatchCorrectionApproval() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(executebatchcorrectiontab);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -67,6 +70,7 @@ public class BPRBatchCorrectionApproval extends BRMSCommonMethods {
 	public void batchCorrectionApproval() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(executebatchcorrectiontab);
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(search);

@@ -25,6 +25,8 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Re-Packing Request Initiation']")
 	WebElement repackingreqinitiation;
 	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
@@ -57,10 +59,14 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 	WebElement submit2;
 	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
 	WebElement ok;
-	@FindBy(how = How.XPATH, using = "//a[text()='Return']")
+	@FindBy(how = How.XPATH, using = "(//button[@type='button'])[4]")
 	WebElement returntab;
 	@FindBy(how = How.XPATH, using = "//a[text()=' Status']")
 	WebElement status;
+	@FindBy(how = How.XPATH, using = "//button[@data-toggle='modal']")
+	WebElement resubmit;
+	@FindBy(how = How.XPATH, using = "(//button[@type='submit'])[2]")
+	WebElement resubmit2;
 	
 
 	public BPRRePackingReqInitiation(WebDriver driver) {
@@ -71,6 +77,7 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(repackingreqinitiation);
 //		clickElement(mprno);
@@ -86,13 +93,16 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
+		Thread.sleep(2000);
 		javascript(repackingreqinitiation);
 		clickElement(status);
-//		clickElement(mprno);
+		Thread.sleep(2000);
+		clickElement(returntab);
+		clickElement(search);
 		for (int i = 1; i < 2; i++) {
 			//mprno.sendKeys(excelutils.getCellData(i, 2));
-			clickElement(get);
 			search.sendKeys(excelutils.getCellData(i, 14));
 			clickElement(createdrecord);
 		}
@@ -103,15 +113,24 @@ public class BPRRePackingReqInitiation extends BRMSCommonMethods{
 		clickElement(repackingqty);
 		repackingqty.sendKeys("5");
 	}
+	public void repackingdetails1() {
+		clickElement(repackingqty);
+		repackingqty.clear();
+		repackingqty.sendKeys("2");
+	}
 	
 	public void submit() throws InterruptedException {
 		javawait();
 		clickElement(submit);
 	}
+	public void resubmit() throws InterruptedException {
+		javawait();
+		clickElement(resubmit);
+	}
 	
-public void comments(String comm) throws IOException {
+ public void comments(String comm) throws IOException {
 		
-		softassert.assertEquals("Please Enter Comments", commalert.getText());
+		softassert.assertEquals("Comments are required", commalert.getText());
 		clickElement(comments);
 		comments.sendKeys(comm);
 	}
@@ -124,6 +143,17 @@ public void comments(String comm) throws IOException {
 		javawait();
 		textbox(password, pass);
 		clickElement(submit2);
+		javawait();
+
+	}
+	public void resubmitactivity(String pass) throws InterruptedException {
+
+		clickElement(No);
+		clickElement(resubmit);
+		javascript(Yes);
+		javawait();
+		textbox(password, pass);
+		clickElement(resubmit2);
 		javawait();
 
 	}

@@ -22,8 +22,10 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	    //using the Constants class values for excel file path 
 	    static String excelFilePath = file;
 	
-	    @FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
-		WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Preparation Request Approval']") WebElement masterprepapprovaltab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Comments1-tab']") WebElement commentstab;
 	@FindBy(how = How.XPATH, using = "//a[@id='Product1-tab']") WebElement productdetailstab;
@@ -62,6 +64,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		masterprepapprovaltab();
 		 clickElement(search);
 		 for (int i = 2; i < 3; i++) {
@@ -82,6 +85,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		masterprepapprovaltab();
 		clickElement(masterprepapprovaltab);
 		 clickElement(search);
@@ -103,6 +107,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		masterprepapprovaltab();
 		 clickElement(search);
 		 for (int i = 1; i < 2; i++) {
@@ -121,6 +126,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	public void bprmasterprerejection(String comm) throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		clickElement(masterprereqapprovaltab);
 		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
@@ -142,6 +148,7 @@ public class BMRMasterPreparationapprovals extends BRMSCommonMethods {
 	public void bprmasterpreapproval(String comm) throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		clickElement(masterprereqapprovaltab);
 		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");

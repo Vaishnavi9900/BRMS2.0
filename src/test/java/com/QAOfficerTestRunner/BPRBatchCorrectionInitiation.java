@@ -1,5 +1,6 @@
 package com.QAOfficerTestRunner;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -16,7 +17,7 @@ public class BPRBatchCorrectionInitiation extends ConfigurationReader{
 	public BMRBPRBatchRecordCorrectionInitiation batch;
 	
 	@Test
-	public void bprBatchCorrectionInitiation() throws InterruptedException, IOException {
+	public void bprBatchCorrectionInitiation() throws InterruptedException, IOException, AWTException {
 		as = new Assignmenu(driver);
 		batch = new BMRBPRBatchRecordCorrectionInitiation(driver);
 		
@@ -27,7 +28,7 @@ public class BPRBatchCorrectionInitiation extends ConfigurationReader{
 		LoggerUtil.logInfo("clicked on Batch Correction Initiation tab and opened the record");
 		batch.submit();
 		LoggerUtil.logInfo("clicked on submit");
-		//batch.fileupload();
+		batch.fileupload();
 		batch.comments();
 		LoggerUtil.logInfo("validated comments and entered comments");
 		batch.submit();
@@ -46,7 +47,7 @@ public class BPRBatchCorrectionInitiation extends ConfigurationReader{
 			
 	}
 	@Test
-	public void bprBatchCorrectionReInitiation() throws InterruptedException, IOException {
+	public void bprBatchCorrectionReInitiation() throws InterruptedException, IOException, AWTException {
 		as = new Assignmenu(driver);
 		batch = new BMRBPRBatchRecordCorrectionInitiation(driver);
 		
@@ -58,6 +59,8 @@ public class BPRBatchCorrectionInitiation extends ConfigurationReader{
 		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
 		batch.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		batch.fileupload2();
+		LoggerUtil.logInfo("Removed the file and modified the file");
 		batch.comments();
 		LoggerUtil.logInfo("validated comments and entered comments");
 		batch.submit();

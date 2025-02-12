@@ -30,6 +30,8 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 	WebElement masterprepreq;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//textarea[@trim='blur']")
 	WebElement comments;
 	@FindBy(how = How.XPATH, using = "//p[text()='Comments is required']")
@@ -97,6 +99,7 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(masterprepreq);
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
@@ -123,6 +126,7 @@ public class BMRMasterPreparation extends BRMSCommonMethods {
 
 		excelUtils.setExcelFile(excelFilePath, "Productdetails");
 		clickElement(tab);
+		//clickElement(tab2);
 		javawait();
 		clickElement(masterprepreq);
 		clickElement(mprno);

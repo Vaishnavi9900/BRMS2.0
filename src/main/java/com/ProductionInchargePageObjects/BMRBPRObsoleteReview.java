@@ -23,6 +23,8 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 		WebElement bpr;
 		@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 		WebElement tab;
+		@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+		WebElement tab2;
 		@FindBy(how = How.XPATH, using = "//span[text()='Master Obsolete Review']")
 		WebElement obsoletereview;
 		@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -57,6 +59,7 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			javascript(obsoletereview);
 			clickElement(search);
 			for (int i = 1; i < 2; i++) {
@@ -67,6 +70,7 @@ public class BMRBPRObsoleteReview extends BRMSCommonMethods{
 		public void bprobsoleteReview() throws IOException, InterruptedException {
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javascript(obsoletereview);

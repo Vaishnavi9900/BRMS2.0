@@ -28,6 +28,10 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	static String mpr1=null;
 	// Product Details: Blend
 
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//a[text()=' Product Details ']")
 	WebElement productdetails;
 	@FindBy(how = How.XPATH, using = "//a[text()='Blend']")
@@ -92,7 +96,7 @@ public class BMRProductDetails extends BRMSCommonMethods {
 	WebElement blocksel2;
 	@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[2]")
 	WebElement location;
-	@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[7]")
+	@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[12]")
 	WebElement locsel;
 	@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[8]")
 	WebElement locsel2;
@@ -452,11 +456,12 @@ public class BMRProductDetails extends BRMSCommonMethods {
 		shelflifeuom.sendKeys(uom);
 	}
 
-	public void batchsize(String size, String uom) {
+	public void batchsize(String size, String uom) throws InterruptedException {
 		clickElement(batchsize);
 		batchsize.sendKeys(size);
+		Thread.sleep(2000);
 		clickElement(batchsizeuom);
-		batchsizeuom.sendKeys(uom);
+		batchsizeuom.sendKeys(uom, Keys.ENTER);
 	}
 
 	public void block() {

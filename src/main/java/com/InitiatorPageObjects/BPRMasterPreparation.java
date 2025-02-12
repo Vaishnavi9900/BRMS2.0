@@ -21,14 +21,20 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 	// using the Constants class values for excel file path
 	static String excelFilePath = file;
 
+
+	
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Preparation Request Initiation']")
 	WebElement masterpreparation;
-	@FindBy(how = How.XPATH, using = "//select[@formcontrolname='mprNumber']")
+	@FindBy(how = How.XPATH, using = "(//div[@class='ng-select-container'])[1]")
 	WebElement mprno;
+	@FindBy(how = How.XPATH, using = "(//input[@type='text'])[1]")
+	WebElement mprnosel;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']") WebElement search;
 	@FindBy(how = How.XPATH, using = "//textarea[@trim='blur']")
 	WebElement comments;
@@ -63,11 +69,14 @@ public class BPRMasterPreparation extends BRMSCommonMethods{
 		excelUtils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		clickElement(masterpreparation);
+		Thread.sleep(2000);
 		clickElement(mprno);
 		for (int i = 1; i < 2; i++) {
-			mprno.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
+			Thread.sleep(2000);
+			mprnosel.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 		clickElement(Get);
 		search.sendKeys(excelUtils.getCellData(i, 14), Keys.ENTER);
 		clickElement(createdrecord);

@@ -24,6 +24,8 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		WebElement bpr;
 		@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 		WebElement tab;
+		@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+		WebElement tab2;
 		@FindBy(how = How.XPATH, using = "//span[text()='Master Obsolete Initiation']")
 		WebElement obsoleteinitiation;
 		@FindBy(how = How.XPATH, using = "(//div[@class='ng-input'])[1]")
@@ -72,6 +74,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			javascript(obsoleteinitiation);
 			//clickElement(mprno);
 			for (int i = 1; i < 2; i++) {
@@ -86,6 +89,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void bprobsoleteInitiation() throws IOException, InterruptedException {
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javascript(obsoleteinitiation);
@@ -103,6 +107,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			javascript(obsoleteinitiation);
 			clickElement(status);
 			clickElement(returned);
@@ -115,6 +120,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void bprobsoleteReInitiation() throws IOException, InterruptedException {
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javascript(obsoleteinitiation);
@@ -132,6 +138,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 			excelutils.setExcelFile(excelFilePath, "Productdetails");
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			javascript(obsoleteinitiation);
 			clickElement(status);
 			clickElement(approved);
@@ -145,6 +152,7 @@ public class BMRBPRObsoleteInitiation extends BRMSCommonMethods{
 		public void bprfinalobsolete() throws IOException, InterruptedException {
 			javawait();
 			clickElement(tab);
+			//clickElement(tab2);
 			clickElement(bpr);
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			javawait();

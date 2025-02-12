@@ -10,7 +10,7 @@
        </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="DosageFormcreation"  enabled="false">
+  <test name="DosageFormcreation">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -40,7 +40,7 @@
        </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="DosageFormUpdate"  enabled="false">
+   <test name="DosageFormUpdate">
   <parameter name ="browser" value = "chrome"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

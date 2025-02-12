@@ -28,7 +28,10 @@ public class BPRProductDetails extends BRMSCommonMethods{
 	static String excelFilePath =file;
 	static String mpr1=null;
 	
-
+    	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	    WebElement tab;
+    	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	    WebElement tab2;
 		@FindBy(how = How.XPATH, using = "//a[text()=' Product Details ']")
 		WebElement productdetails;
 		@FindBy(how = How.XPATH, using = "//a[text()=' BPR Product Details']")
@@ -109,7 +112,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement blocksel;
 		@FindBy(how = How.XPATH, using = "(//span[@class='dropdown-btn'])[2]")
 		WebElement location;
-		@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[7]")
+		@FindBy(how = How.XPATH, using = "(//li[@class='multiselect-item-checkbox ng-star-inserted'])[12]")
 		WebElement locsel;
 		@FindBy(how = How.XPATH, using = "//select[@formcontrolname='customerBatchId']")
 		WebElement customerbatch;
@@ -127,7 +130,7 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		WebElement get;
 		@FindBy(how = How.XPATH, using = "//input[@type='search']")
 		WebElement search;
-		@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[6]")
+		@FindBy(how = How.XPATH, using = "(//input[@type='checkbox'])[11]")
 		WebElement checkbox;
 		@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Enter your comments']")
 		WebElement comments;
@@ -159,8 +162,12 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		public void validatealerts() throws InterruptedException, IOException {
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			for (int i = 1; i < 2; i++) {
+			Thread.sleep(2000);
+			clickElement(tab);
 			javascript(productdetails);
+			Thread.sleep(2000);			
 			clickElement(bprdetails);
+			Thread.sleep(2000);	
 			clickElement(create);
 			javawait();
 			scrolldown(productmapping);
@@ -203,6 +210,8 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		public void validatealerts1() throws InterruptedException, IOException {
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			for (int i = 1; i < 2; i++) {
+			Thread.sleep(2000);
+			clickElement(tab);
 			javascript(productdetails);
 			javawait();
 			clickElement(bprdetails);
@@ -252,6 +261,8 @@ public class BPRProductDetails extends BRMSCommonMethods{
 		public void validatealerts2() throws InterruptedException, IOException {
 			excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 			for (int i = 1; i < 2; i++) {
+			Thread.sleep(2000);
+			clickElement(tab);
 			javascript(productdetails);
 			javawait();
 			clickElement(bprdetails);

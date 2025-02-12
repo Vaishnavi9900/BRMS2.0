@@ -25,6 +25,8 @@ public class BMRBPRAfterPrintCancelInitiation extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='After Print Receive Cancel Initiation']")
 	WebElement afterprintcanceltab;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -67,6 +69,7 @@ public class BMRBPRAfterPrintCancelInitiation extends BRMSCommonMethods{
 	public void afterPrintcanelinitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(afterprintcanceltab);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(mprno);
@@ -79,6 +82,7 @@ public class BMRBPRAfterPrintCancelInitiation extends BRMSCommonMethods{
 	public void bprafterPrintcanelinitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(afterprintcanceltab);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
@@ -92,6 +96,7 @@ public class BMRBPRAfterPrintCancelInitiation extends BRMSCommonMethods{
 	public void afterPrintcanelReinitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(afterprintcanceltab);
 		clickElement(status);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
@@ -104,6 +109,7 @@ public class BMRBPRAfterPrintCancelInitiation extends BRMSCommonMethods{
 	public void bprafterPrintcanelReinitiation() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(afterprintcanceltab);
 		clickElement(status);

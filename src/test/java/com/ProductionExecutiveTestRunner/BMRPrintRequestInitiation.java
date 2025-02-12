@@ -123,7 +123,7 @@ public class BMRPrintRequestInitiation extends ConfigurationReader{
 			issuance.printreqinitiationtab();
 			LoggerUtil.logInfo("clicked on print request initiation tab and opened the record");
 			//issuance.bulkbilayerbatchnumber("FD", "FD");
-			issuance.bulkbilayerbatchnumbersize("FD", "FD");
+			issuance.bulkbilayerbatchnumbersize("FE250020", "FE250005");
 			LoggerUtil.logInfo("Selectd the blend batchnumbers");
 			issuance.submit();
 			LoggerUtil.logInfo("clicked on submit");

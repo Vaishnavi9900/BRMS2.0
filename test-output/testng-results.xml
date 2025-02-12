@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-01T17:33:19 IST" name="Suite" finished-at="2025-02-01T17:36:30 IST" duration-ms="191563">
+  <suite started-at="2025-02-07T16:26:51 IST" name="Suite" finished-at="2025-02-07T16:32:50 IST" duration-ms="358824">
     <groups>
     </groups>
-    <test started-at="2025-02-01T17:33:19 IST" name="BMRBatchCorrectionInitiation" finished-at="2025-02-01T17:34:21 IST" duration-ms="62442">
-      <class name="com.QAOfficerTestRunner.BMRBatchCorrectionInitiation">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@482bce4f]" started-at="2025-02-01T17:33:19 IST" name="setup" finished-at="2025-02-01T17:33:23 IST" duration-ms="4139" status="PASS">
+    <test started-at="2025-02-07T16:26:51 IST" name="obsoleteInitiation" finished-at="2025-02-07T16:27:35 IST" duration-ms="43836">
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@62e7f11d]" started-at="2025-02-07T16:26:51 IST" name="setup" finished-at="2025-02-07T16:26:56 IST" duration-ms="4222" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@13ee97af]]>
+                <![CDATA[org.testng.TestRunner@7a364e1c]]>
               </value>
             </param>
             <param index="1">
@@ -23,39 +23,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="BatchCorrectionInitiation()[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@482bce4f]" started-at="2025-02-01T17:33:23 IST" name="BatchCorrectionInitiation" finished-at="2025-02-01T17:34:20 IST" duration-ms="56919" status="PASS">
+        <test-method signature="obsoleteInitiation()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@62e7f11d]" started-at="2025-02-07T16:26:56 IST" name="obsoleteInitiation" finished-at="2025-02-07T16:27:34 IST" duration-ms="37796" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BatchCorrectionInitiation -->
-        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@482bce4f]" started-at="2025-02-01T17:34:20 IST" name="checkstatus" finished-at="2025-02-01T17:34:20 IST" duration-ms="14" status="PASS">
+        </test-method> <!-- obsoleteInitiation -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@62e7f11d]" started-at="2025-02-07T16:27:34 IST" name="checkstatus" finished-at="2025-02-07T16:27:34 IST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.QAOfficerTestRunner.BMRBatchCorrectionInitiation.BatchCorrectionInitiation() throws java.lang.InterruptedException,java.io.IOException,java.awt.AWTException]]>
+                <![CDATA[public void com.QADocCellTestRunner.BMRObsoleteInitiation.obsoleteInitiation() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=BatchCorrectionInitiation status=SUCCESS method=BMRBatchCorrectionInitiation.BatchCorrectionInitiation()[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@482bce4f] output={null}]]]>
+                <![CDATA[[TestResult name=obsoleteInitiation status=SUCCESS method=BMRObsoleteInitiation.obsoleteInitiation()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@62e7f11d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkstatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@482bce4f]" started-at="2025-02-01T17:34:20 IST" name="teardown" finished-at="2025-02-01T17:34:21 IST" duration-ms="1326" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@62e7f11d]" started-at="2025-02-07T16:27:34 IST" name="teardown" finished-at="2025-02-07T16:27:35 IST" duration-ms="1735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.QAOfficerTestRunner.BMRBatchCorrectionInitiation -->
-    </test> <!-- BMRBatchCorrectionInitiation -->
-    <test started-at="2025-02-01T17:34:21 IST" name="BatchCorrectionReturn" finished-at="2025-02-01T17:35:00 IST" duration-ms="39085">
-      <class name="com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@31e5415e]" started-at="2025-02-01T17:34:21 IST" name="setup" finished-at="2025-02-01T17:34:24 IST" duration-ms="3258" status="PASS">
+      </class> <!-- com.QADocCellTestRunner.BMRObsoleteInitiation -->
+    </test> <!-- obsoleteInitiation -->
+    <test started-at="2025-02-07T16:27:35 IST" name="obsoleteReturn" finished-at="2025-02-07T16:28:15 IST" duration-ms="39282">
+      <class name="com.ProductionInchargeTestRunner.BMRObsoleteReview">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@22e357dc]" started-at="2025-02-07T16:27:35 IST" name="setup" finished-at="2025-02-07T16:27:38 IST" duration-ms="3017" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@67e11bda]]>
+                <![CDATA[org.testng.TestRunner@29a50a11]]>
               </value>
             </param>
             <param index="1">
@@ -67,39 +67,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="BatchCorrectionReturn()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@31e5415e]" started-at="2025-02-01T17:34:24 IST" name="BatchCorrectionReturn" finished-at="2025-02-01T17:34:59 IST" duration-ms="34383" status="PASS">
+        <test-method signature="obsoleteReturn()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@22e357dc]" started-at="2025-02-07T16:27:38 IST" name="obsoleteReturn" finished-at="2025-02-07T16:28:13 IST" duration-ms="34735" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BatchCorrectionReturn -->
-        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@31e5415e]" started-at="2025-02-01T17:34:59 IST" name="checkstatus" finished-at="2025-02-01T17:34:59 IST" duration-ms="7" status="PASS">
+        </test-method> <!-- obsoleteReturn -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@22e357dc]" started-at="2025-02-07T16:28:13 IST" name="checkstatus" finished-at="2025-02-07T16:28:13 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval.BatchCorrectionReturn() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void com.ProductionInchargeTestRunner.BMRObsoleteReview.obsoleteReturn() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=BatchCorrectionReturn status=SUCCESS method=BMRBatchCorrectionApproval.BatchCorrectionReturn()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@31e5415e] output={null}]]]>
+                <![CDATA[[TestResult name=obsoleteReturn status=SUCCESS method=BMRObsoleteReview.obsoleteReturn()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@22e357dc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkstatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@31e5415e]" started-at="2025-02-01T17:34:59 IST" name="teardown" finished-at="2025-02-01T17:35:00 IST" duration-ms="1437" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@22e357dc]" started-at="2025-02-07T16:28:13 IST" name="teardown" finished-at="2025-02-07T16:28:15 IST" duration-ms="1523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval -->
-    </test> <!-- BatchCorrectionReturn -->
-    <test started-at="2025-02-01T17:35:00 IST" name="BatchCorrectionReInitiation" finished-at="2025-02-01T17:35:51 IST" duration-ms="50500">
-      <class name="com.QAOfficerTestRunner.BMRBatchCorrectionInitiation">
-        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@1cbb87f3]" started-at="2025-02-01T17:35:00 IST" name="setup" finished-at="2025-02-01T17:35:04 IST" duration-ms="3828" status="PASS">
+      </class> <!-- com.ProductionInchargeTestRunner.BMRObsoleteReview -->
+    </test> <!-- obsoleteReturn -->
+    <test started-at="2025-02-07T16:28:15 IST" name="obsoleteReInitiation" finished-at="2025-02-07T16:28:54 IST" duration-ms="39500">
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@10163d6]" started-at="2025-02-07T16:28:15 IST" name="setup" finished-at="2025-02-07T16:28:18 IST" duration-ms="3438" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@341ccfd1]]>
+                <![CDATA[org.testng.TestRunner@74cff17c]]>
               </value>
             </param>
             <param index="1">
@@ -111,43 +111,263 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="BatchCorrectionReInitiation()[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@1cbb87f3]" started-at="2025-02-01T17:35:04 IST" name="BatchCorrectionReInitiation" finished-at="2025-02-01T17:35:49 IST" duration-ms="45334" status="PASS">
+        <test-method signature="obsoleteReInitiation()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@10163d6]" started-at="2025-02-07T16:28:18 IST" name="obsoleteReInitiation" finished-at="2025-02-07T16:28:53 IST" duration-ms="34479" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BatchCorrectionReInitiation -->
-        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@1cbb87f3]" started-at="2025-02-01T17:35:49 IST" name="checkstatus" finished-at="2025-02-01T17:35:49 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- obsoleteReInitiation -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@10163d6]" started-at="2025-02-07T16:28:53 IST" name="checkstatus" finished-at="2025-02-07T16:28:53 IST" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.QAOfficerTestRunner.BMRBatchCorrectionInitiation.BatchCorrectionReInitiation() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void com.QADocCellTestRunner.BMRObsoleteInitiation.obsoleteReInitiation() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=BatchCorrectionReInitiation status=SUCCESS method=BMRBatchCorrectionInitiation.BatchCorrectionReInitiation()[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@1cbb87f3] output={null}]]]>
+                <![CDATA[[TestResult name=obsoleteReInitiation status=SUCCESS method=BMRObsoleteInitiation.obsoleteReInitiation()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@10163d6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkstatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAOfficerTestRunner.BMRBatchCorrectionInitiation@1cbb87f3]" started-at="2025-02-01T17:35:49 IST" name="teardown" finished-at="2025-02-01T17:35:51 IST" duration-ms="1301" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@10163d6]" started-at="2025-02-07T16:28:53 IST" name="teardown" finished-at="2025-02-07T16:28:54 IST" duration-ms="1573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.QAOfficerTestRunner.BMRBatchCorrectionInitiation -->
-    </test> <!-- BatchCorrectionReInitiation -->
-    <test started-at="2025-02-01T17:35:51 IST" name="BatchCorrectionApproval" finished-at="2025-02-01T17:36:30 IST" duration-ms="39419">
-      <class name="com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval">
-        <test-method is-config="true" signature="initiatlizeExtentReports()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@702b8b12]" started-at="2025-02-01T17:33:18 IST" name="initiatlizeExtentReports" finished-at="2025-02-01T17:33:19 IST" duration-ms="303" status="PASS">
+      </class> <!-- com.QADocCellTestRunner.BMRObsoleteInitiation -->
+    </test> <!-- obsoleteReInitiation -->
+    <test started-at="2025-02-07T16:28:54 IST" name="obsoleteReview" finished-at="2025-02-07T16:29:33 IST" duration-ms="39038">
+      <class name="com.ProductionInchargeTestRunner.BMRObsoleteReview">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@5f9b2141]" started-at="2025-02-07T16:28:54 IST" name="setup" finished-at="2025-02-07T16:28:57 IST" duration-ms="3188" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7a053795]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="obsoleteReview()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@5f9b2141]" started-at="2025-02-07T16:28:57 IST" name="obsoleteReview" finished-at="2025-02-07T16:29:32 IST" duration-ms="34152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- obsoleteReview -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@5f9b2141]" started-at="2025-02-07T16:29:32 IST" name="checkstatus" finished-at="2025-02-07T16:29:32 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.ProductionInchargeTestRunner.BMRObsoleteReview.obsoleteReview() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=obsoleteReview status=SUCCESS method=BMRObsoleteReview.obsoleteReview()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@5f9b2141] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkstatus -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@5f9b2141]" started-at="2025-02-07T16:29:32 IST" name="teardown" finished-at="2025-02-07T16:29:33 IST" duration-ms="1685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ProductionInchargeTestRunner.BMRObsoleteReview -->
+    </test> <!-- obsoleteReview -->
+    <test started-at="2025-02-07T16:29:33 IST" name="obsoleteReturn1" finished-at="2025-02-07T16:30:12 IST" duration-ms="38808">
+      <class name="com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@6d3a388c]" started-at="2025-02-07T16:29:33 IST" name="setup" finished-at="2025-02-07T16:29:37 IST" duration-ms="3358" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@328bc067]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="obsoleteReturn()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@6d3a388c]" started-at="2025-02-07T16:29:37 IST" name="obsoleteReturn" finished-at="2025-02-07T16:30:11 IST" duration-ms="33939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- obsoleteReturn -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@6d3a388c]" started-at="2025-02-07T16:30:11 IST" name="checkstatus" finished-at="2025-02-07T16:30:11 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject.obsoleteReturn() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=obsoleteReturn status=SUCCESS method=BMRObsoleteApprovalNdReject.obsoleteReturn()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@6d3a388c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkstatus -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@6d3a388c]" started-at="2025-02-07T16:30:11 IST" name="teardown" finished-at="2025-02-07T16:30:12 IST" duration-ms="1476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject -->
+    </test> <!-- obsoleteReturn1 -->
+    <test started-at="2025-02-07T16:30:12 IST" name="obsoleteReInitiation1" finished-at="2025-02-07T16:30:51 IST" duration-ms="38827">
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@6bedbc4d]" started-at="2025-02-07T16:30:12 IST" name="setup" finished-at="2025-02-07T16:30:15 IST" duration-ms="3047" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@337fb1a5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="obsoleteReInitiation()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@6bedbc4d]" started-at="2025-02-07T16:30:15 IST" name="obsoleteReInitiation" finished-at="2025-02-07T16:30:49 IST" duration-ms="34242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- obsoleteReInitiation -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@6bedbc4d]" started-at="2025-02-07T16:30:49 IST" name="checkstatus" finished-at="2025-02-07T16:30:49 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.QADocCellTestRunner.BMRObsoleteInitiation.obsoleteReInitiation() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=obsoleteReInitiation status=SUCCESS method=BMRObsoleteInitiation.obsoleteReInitiation()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@6bedbc4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkstatus -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@6bedbc4d]" started-at="2025-02-07T16:30:49 IST" name="teardown" finished-at="2025-02-07T16:30:51 IST" duration-ms="1529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.QADocCellTestRunner.BMRObsoleteInitiation -->
+    </test> <!-- obsoleteReInitiation1 -->
+    <test started-at="2025-02-07T16:30:51 IST" name="obsoleteReview1" finished-at="2025-02-07T16:31:30 IST" duration-ms="38965">
+      <class name="com.ProductionInchargeTestRunner.BMRObsoleteReview">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@29d89d5d]" started-at="2025-02-07T16:30:51 IST" name="setup" finished-at="2025-02-07T16:30:54 IST" duration-ms="3173" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@38b0e2a7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="obsoleteReview()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@29d89d5d]" started-at="2025-02-07T16:30:54 IST" name="obsoleteReview" finished-at="2025-02-07T16:31:29 IST" duration-ms="34365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- obsoleteReview -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@29d89d5d]" started-at="2025-02-07T16:31:29 IST" name="checkstatus" finished-at="2025-02-07T16:31:29 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.ProductionInchargeTestRunner.BMRObsoleteReview.obsoleteReview() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=obsoleteReview status=SUCCESS method=BMRObsoleteReview.obsoleteReview()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@29d89d5d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkstatus -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ProductionInchargeTestRunner.BMRObsoleteReview@29d89d5d]" started-at="2025-02-07T16:31:29 IST" name="teardown" finished-at="2025-02-07T16:31:30 IST" duration-ms="1409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ProductionInchargeTestRunner.BMRObsoleteReview -->
+    </test> <!-- obsoleteReview1 -->
+    <test started-at="2025-02-07T16:31:30 IST" name="obsoleteApproval" finished-at="2025-02-07T16:32:10 IST" duration-ms="39649">
+      <class name="com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@69997e9d]" started-at="2025-02-07T16:31:30 IST" name="setup" finished-at="2025-02-07T16:31:33 IST" duration-ms="3437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6bdad3bb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="obsoleteApproval()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@69997e9d]" started-at="2025-02-07T16:31:33 IST" name="obsoleteApproval" finished-at="2025-02-07T16:32:08 IST" duration-ms="34844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- obsoleteApproval -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@69997e9d]" started-at="2025-02-07T16:32:08 IST" name="checkstatus" finished-at="2025-02-07T16:32:08 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject.obsoleteApproval() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=obsoleteApproval status=SUCCESS method=BMRObsoleteApprovalNdReject.obsoleteApproval()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@69997e9d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkstatus -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject@69997e9d]" started-at="2025-02-07T16:32:08 IST" name="teardown" finished-at="2025-02-07T16:32:10 IST" duration-ms="1355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.QAHODorInchargeTestRunner.BMRObsoleteApprovalNdReject -->
+    </test> <!-- obsoleteApproval -->
+    <test started-at="2025-02-07T16:32:10 IST" name="finalobsolete" finished-at="2025-02-07T16:32:50 IST" duration-ms="40607">
+      <class name="com.QADocCellTestRunner.BMRObsoleteInitiation">
+        <test-method is-config="true" signature="initiatlizeExtentReports()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@15aab8c6]" started-at="2025-02-07T16:26:51 IST" name="initiatlizeExtentReports" finished-at="2025-02-07T16:26:51 IST" duration-ms="286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiatlizeExtentReports -->
-        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@702b8b12]" started-at="2025-02-01T17:35:51 IST" name="setup" finished-at="2025-02-01T17:35:54 IST" duration-ms="3168" status="PASS">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext,java.lang.String)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@15aab8c6]" started-at="2025-02-07T16:32:10 IST" name="setup" finished-at="2025-02-07T16:32:13 IST" duration-ms="3001" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5bde6148]]>
+                <![CDATA[org.testng.TestRunner@73eae5f]]>
               </value>
             </param>
             <param index="1">
@@ -159,35 +379,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="BatchCorrectionApproval()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@702b8b12]" started-at="2025-02-01T17:35:54 IST" name="BatchCorrectionApproval" finished-at="2025-02-01T17:36:29 IST" duration-ms="34783" status="PASS">
+        <test-method signature="finalobsolete()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@15aab8c6]" started-at="2025-02-07T16:32:13 IST" name="finalobsolete" finished-at="2025-02-07T16:32:49 IST" duration-ms="36534" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BatchCorrectionApproval -->
-        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@702b8b12]" started-at="2025-02-01T17:36:29 IST" name="checkstatus" finished-at="2025-02-01T17:36:29 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- finalobsolete -->
+        <test-method is-config="true" signature="checkstatus(java.lang.reflect.Method,org.testng.ITestResult)[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@15aab8c6]" started-at="2025-02-07T16:32:49 IST" name="checkstatus" finished-at="2025-02-07T16:32:49 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval.BatchCorrectionApproval() throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void com.QADocCellTestRunner.BMRObsoleteInitiation.finalobsolete() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=BatchCorrectionApproval status=SUCCESS method=BMRBatchCorrectionApproval.BatchCorrectionApproval()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@702b8b12] output={null}]]]>
+                <![CDATA[[TestResult name=finalobsolete status=SUCCESS method=BMRObsoleteInitiation.finalobsolete()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@15aab8c6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkstatus -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@702b8b12]" started-at="2025-02-01T17:36:29 IST" name="teardown" finished-at="2025-02-01T17:36:30 IST" duration-ms="1440" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@15aab8c6]" started-at="2025-02-07T16:32:49 IST" name="teardown" finished-at="2025-02-07T16:32:50 IST" duration-ms="1067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="generateExtentReports()[pri:0, instance:com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval@702b8b12]" started-at="2025-02-01T17:36:30 IST" name="generateExtentReports" finished-at="2025-02-01T17:36:33 IST" duration-ms="2284" status="PASS">
+        <test-method is-config="true" signature="generateExtentReports()[pri:0, instance:com.QADocCellTestRunner.BMRObsoleteInitiation@15aab8c6]" started-at="2025-02-07T16:32:50 IST" name="generateExtentReports" finished-at="2025-02-07T16:32:51 IST" duration-ms="989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateExtentReports -->
-      </class> <!-- com.QAHODorInchargeTestRunner.BMRBatchCorrectionApproval -->
-    </test> <!-- BatchCorrectionApproval -->
+      </class> <!-- com.QADocCellTestRunner.BMRObsoleteInitiation -->
+    </test> <!-- finalobsolete -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -15,7 +15,7 @@ public class BPRMasterApproval extends ConfigurationReader{
 	public Assignmenu as;
 	public BMRBPRMasterApprovalInitiation app;
 	
-	@Test
+    @Test
 	public void bprmasterApprovalInitiation() throws InterruptedException, IOException {
 		
 		as = new Assignmenu(driver);

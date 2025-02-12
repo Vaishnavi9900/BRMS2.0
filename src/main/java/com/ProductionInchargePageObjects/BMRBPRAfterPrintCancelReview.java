@@ -24,6 +24,8 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//span[text()='After Print Receive Cancel Review']")
 	WebElement afterprintcancelreview;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -56,6 +58,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	public void afterPrintcanelReviewtab() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(afterprintcancelreview);
 		excelutils.setExcelFile(excelFilePath, "productdetails");
 		clickElement(search);
@@ -67,6 +70,7 @@ public class BMRBPRAfterPrintCancelReview  extends BRMSCommonMethods{
 	public void bprafterPrintcanelReviewtab() throws InterruptedException, IOException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(afterprintcancelreview);
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");

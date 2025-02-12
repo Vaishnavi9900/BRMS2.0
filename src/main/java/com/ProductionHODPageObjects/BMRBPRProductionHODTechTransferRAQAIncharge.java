@@ -24,6 +24,8 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 	WebElement masterapprovaltab;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
 	WebElement bpr;
 	@FindBy(how = How.XPATH, using = "//input[@type='search']")
@@ -56,6 +58,7 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 		excelutils.setExcelFile(excelFilePath, "Productdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(masterapprovaltab);
 		for (int i = 1; i < 2; i++) {
 			search.sendKeys(excelutils.getCellData(i, 14));
@@ -66,6 +69,7 @@ public class BMRBPRProductionHODTechTransferRAQAIncharge extends BRMSCommonMetho
 		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(masterapprovaltab);
 		for (int i = 1; i < 2; i++) {

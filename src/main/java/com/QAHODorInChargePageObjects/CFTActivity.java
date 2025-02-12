@@ -23,6 +23,8 @@ public class CFTActivity extends BRMSCommonMethods {
 	@FindBy(how = How.XPATH, using = "//span[text()='Master Draft Review']") WebElement masterdraftrevtab;
 	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
 	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div[2]/div/div[1]/div[1]/span/img") WebElement templateprep;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"myModal\"]/div/div/div[2]/div/div/div[2]/div/div[1]/div[2]/span/img") WebElement changehostorytemplate;
 	@FindBy(how = How.XPATH, using = "//textarea[@trim='blur']") WebElement comments;
@@ -50,6 +52,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	public void CFTreview(String comm) throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
@@ -75,6 +78,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	public void bprCFTreview(String comm) throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
@@ -104,6 +108,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	public void CFTreturn(String comm) throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"Productdetails");
 		clickElement(search);
@@ -128,6 +133,7 @@ public class CFTActivity extends BRMSCommonMethods {
 	public void bprCFTreturn(String comm) throws IOException, InterruptedException {
 		javawait();
 		clickElement(tab);
+		//clickElement(tab2);
 		clickElement(bpr);
 		javascript(masterdraftrevtab);
 		excelUtils.setExcelFile(excelFilePath,"BPRproductdetails");
