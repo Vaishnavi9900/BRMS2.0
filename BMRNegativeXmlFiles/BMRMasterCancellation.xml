@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRMasterCancelApproval"  enabled="false">
+   <test name="BMRMasterCancelApproval" >
    <parameter name ="browser" value = "chrome"/>
      <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRMasterCancelRejection">
+   <test name="BMRMasterCancelRejection" enabled="false">
    <parameter name ="browser" value = "chrome"/>
      <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

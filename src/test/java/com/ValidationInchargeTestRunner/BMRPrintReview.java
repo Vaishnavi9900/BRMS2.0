@@ -9,6 +9,7 @@ import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.ValidationInchargePageObjects.BMRBPRValidationInchargePrintReview;
+import com.aventstack.extentreports.Status;
 
 public class BMRPrintReview extends ConfigurationReader{
 	
@@ -23,6 +24,7 @@ public class BMRPrintReview extends ConfigurationReader{
 		try {
 		as.userlogin(getvalidationincharge(), getpassword());
 		LoggerUtil.logInfo("Login to the application with Validation Incharge id and password");
+		extenttest.log(Status.PASS, "Login to the application with Validation Incharge id" +getvalidationincharge()+" and password as "+getpassword()+ " ");
 		val.printreqreviewtab();
 		LoggerUtil.logInfo("Clicked on Print Request Review tab and opened the record");
 		val.returnbutton();
@@ -34,6 +36,10 @@ public class BMRPrintReview extends ConfigurationReader{
 		LoggerUtil.logInfo("selected return as Production executive");
 		val.returntoexeactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Request Return by Validation Incharge Test is failed", e);
@@ -54,17 +60,27 @@ public class BMRPrintReview extends ConfigurationReader{
 		try {
 		as.userlogin(getvalidationincharge(), getpassword());
 		LoggerUtil.logInfo("Login to the application with Validation incharge id and password");
+		extenttest.log(Status.PASS, "Login to the application with Validation Incharge id" +getvalidationincharge()+" and password as "+getpassword()+ " ");
 		val.printreqreviewtab();
 		LoggerUtil.logInfo("Clicked on Print Request Review tab and opened the record");
+		extenttest.log(Status.PASS, "Clicked on Print Request Review tab and opened the record");
 		val.returnbutton();
 		LoggerUtil.logInfo("clicked on return");
+		extenttest.log(Status.PASS, "clicked on return");
 		val.comments(getreturncomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		val.returnbutton();
 		LoggerUtil.logInfo("clicked on return");
+		extenttest.log(Status.PASS, "clicked on return");
 		val.returntoinchargeactivity(getpassword());
 		LoggerUtil.logInfo("selected return as Production Incharge");
+		extenttest.log(Status.PASS, "selected return as Production Incharge");
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Request Return by Validation Incharge Test is failed", e);
@@ -85,16 +101,25 @@ public class BMRPrintReview extends ConfigurationReader{
 		try {
 		as.userlogin(getvalidationincharge(), getpassword());
 		LoggerUtil.logInfo("Login to the application with Validation incharge id and password");
+		extenttest.log(Status.PASS, "Login to the application with Validation Incharge id" +getvalidationincharge()+" and password as "+getpassword()+ " ");
 		val.printreqreviewtab();
 		LoggerUtil.logInfo("Clicked on Print Request Review tab and opened the record");
+		extenttest.log(Status.PASS, "Clicked on Print Request Review tab and opened the record");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		val.commentsbatchtype(getapprovalcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		val.submitactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Request Review by Validation Incharge Test is failed", e);
@@ -116,15 +141,24 @@ public class BMRPrintReview extends ConfigurationReader{
 		LoggerUtil.logInfo("Login to the application with Validation incharge id and password");
 		val.reReview();
 		LoggerUtil.logInfo("Clicked on Print Request Review tab");
+		extenttest.log(Status.PASS, "Clicked on Print Request Review tab");
 		LoggerUtil.logInfo("Clicked on Returned status tab and opened the record");
+		extenttest.log(Status.PASS, "Clicked on Returned status tab and opened the record");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		val.Recommentsbatchtype(getapprovalcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		val.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		val.submitactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Print Request Re Review by Validation Incharge Test is failed", e);

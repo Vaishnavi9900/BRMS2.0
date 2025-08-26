@@ -10,6 +10,7 @@ import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.QAOfficerPageObjects.BMRBatchClosureInitiation;
+import com.aventstack.extentreports.Status;
 
 public class BMRBatchClosureInitiationbyQAOfficer extends ConfigurationReader {
 	
@@ -25,19 +26,29 @@ public class BMRBatchClosureInitiationbyQAOfficer extends ConfigurationReader {
 		try {
 		as.userlogin(getQAOfficer(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA Officer id" +getQAOfficer()+" and password as "+getpassword()+ " ");
 		closure.batchclosureinitiation();
 		LoggerUtil.logInfo("clicked on Batch Closure Initiation tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Batch Closure Initiation tab and opened the record");
 		closure.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		closure.bmrexefileupload();
 		LoggerUtil.logInfo("BMR Executed file uploads");
+		extenttest.log(Status.PASS, "BMR Executed file uploads");
 		closure.comments();
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		closure.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		//closure.close();
 		closure.submitactivity2(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Batch Closure Initiation Test is failed", e);
@@ -58,18 +69,27 @@ public class BMRBatchClosureInitiationbyQAOfficer extends ConfigurationReader {
 		try {
 		as.userlogin(getQAOfficer(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA Officer id" +getQAOfficer()+" and password as "+getpassword()+ " ");
 		closure.batchclosureReinitiation();
 		LoggerUtil.logInfo("clicked on Batch Closure Initiation tab");
+		extenttest.log(Status.PASS, "clicked on Batch Closure Initiation tab");
 		LoggerUtil.logInfo("clicked on Returned status tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Returned status tab and opened the record");
 		//closure.submit();
 		//closure.bmrexefileupload();
 		closure.comments();
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		closure.resubmit();
 		LoggerUtil.logInfo("clicked on resubmit");
+		extenttest.log(Status.PASS, "clicked on resubmit");
 		//closure.close();
 		closure.submitactivity2(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Batch Closure ReInitiation Test is failed", e);

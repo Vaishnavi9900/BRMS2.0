@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-  <test name="bprprintRequestInitiation">
+  <test name="bprprintRequestInitiation" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  ]<test name="printReturnbyincharge">
+  ]<test name="printReturnbyincharge" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="bprprintRequestReInitiation">
+  <test name="bprprintRequestReInitiation" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -30,7 +30,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="printReviewbyincharge">
+  <test name="printReviewbyincharge" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -50,7 +50,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="printReturntoInchargebyvalidationincharge">
+   <test name="printReturntoInchargebyvalidationincharge" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -60,7 +60,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="printReReviewbyIncharge">
+   <test name="printReReviewbyIncharge" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -70,7 +70,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="printReviewbyvalidationincharge">
+   <test name="printReviewbyvalidationincharge" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>

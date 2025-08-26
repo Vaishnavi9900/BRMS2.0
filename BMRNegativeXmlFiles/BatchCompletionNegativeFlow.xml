@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-   <test name="batchinitiation" >
+   <test name="batchinitiation" enabled="false" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="batchCompletionReturn" >
+   <test name="batchCompletionReturn" enabled="false"  >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="batchReinitiation">
+   <test name="batchReinitiation" enabled="false" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -30,7 +30,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="batchCompletionReviewbyipqa">
+  <test name="batchCompletionReviewbyipqa" enabled="false" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

@@ -10,6 +10,7 @@ import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.ProductionInchargePageObjects.BMRBPRProductionInchargeReview;
 import com.QADocCellPageObjects.BMRBPRQADoccellMasterEffective;
+import com.aventstack.extentreports.Status;
 
 public class BPRMasterEffective extends ConfigurationReader{
 	
@@ -29,16 +30,25 @@ public class BPRMasterEffective extends ConfigurationReader{
 		try {
 		as.userlogin(getQADoccell(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA Doccell id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA Doccell id" +getQADoccell()+" and password as "+getpassword()+ " ");
 		ef.bprmastereffectivetab();
 		LoggerUtil.logInfo("clicked on Master Effective tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Master Effective tab and opened the record");
 		ef.effective();
 		LoggerUtil.logInfo("clicked on effective");
+		extenttest.log(Status.PASS, "clicked on effective");
 		review.comments(getapprovalcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		ef.effective();
 		LoggerUtil.logInfo("clicked on effective");
+		extenttest.log(Status.PASS, "clicked on effective");
 		ef.effectiveactivity2(getpassword());
 		LoggerUtil.logInfo("Entered password and effective the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and effective the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval Effective Test is failed", e);

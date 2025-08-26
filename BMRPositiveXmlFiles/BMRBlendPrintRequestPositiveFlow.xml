@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-  <test name="BMRPrintRequestInitiation">
+ <test name="BMRPrintRequestInitiation">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="printReview">
+  <test name="printReview" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRPrintApprovalByValidationIncharge">
+   <test name="BMRPrintApprovalByValidationIncharge" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -30,7 +30,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRPrintApprovalbyQAHOD">
+   <test name="BMRPrintApprovalbyQAHOD" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -40,17 +40,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="BMRPrintRejectedyQAHOD" enabled="false">
-  <parameter name ="browser" value ="chrome"></parameter>
-  <parameter name ="author" value ="Vaishnavi"></parameter>
-    <classes>
-      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
-      <methods>
-      <include name ="printReject"></include>
-      </methods>
-    </classes>
-  </test> <!-- Test -->
-   <test name="BMRIssuebyQAOfficer">
+   <test name="BMRIssuebyQAOfficer" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -60,7 +50,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-    <test name="BMRPrintbyQAOfficer">
+    <test name="BMRPrintbyQAOfficer" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -70,7 +60,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-    <test name="BMRPrintReceivedAcknowledgment">
+    <test name="BMRPrintReceivedAcknowledgment" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>

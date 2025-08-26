@@ -9,6 +9,7 @@ import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.QAOfficerPageObjects.BPRIssueandPrint;
+import com.aventstack.extentreports.Status;
 
 
 public class BPRAdditionalPagePrintIssuanceandPrint extends ConfigurationReader{
@@ -24,17 +25,31 @@ public class BPRAdditionalPagePrintIssuanceandPrint extends ConfigurationReader{
 		try {
 		as.userlogin(getQAOfficer(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA Officer id" +getQAOfficer()+" and password as "+getpassword()+ " ");
 		issue.additionalpageprintissuancetab();
 		LoggerUtil.logInfo("clicked on Additional Page Print Issuance tab");
+		extenttest.log(Status.PASS, "clicked on Additional Page Print Issuance tab");
 		LoggerUtil.logInfo("clicked on Issued status tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Issued status tab and opened the record");
 		issue.additionalprint();
 		LoggerUtil.logInfo("clicked on print");
+		extenttest.log(Status.PASS, "clicked on print");
 		issue.additionalcomments(getprintcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		issue.additionalprint();
-		LoggerUtil.logInfo("clicked on print");
+		issue.reprinter();
+		LoggerUtil.logInfo("clicked on Print and selected the printer");
+		extenttest.log(Status.PASS, "clicked on Print and selected the printer");
+		issue.submit();
+		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		issue.additionalprintactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print approval Test is failed", e);
@@ -55,17 +70,27 @@ public class BPRAdditionalPagePrintIssuanceandPrint extends ConfigurationReader{
 		try {
 		as.userlogin(getQAOfficer(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA Officer id" +getQAOfficer()+" and password as "+getpassword()+ " ");
 		issue.additionalpageprintissuancetab();
 		LoggerUtil.logInfo("clicked on Additional Page Print Issuance tab");
+		extenttest.log(Status.PASS, "clicked on Additional Page Print Issuance tab");
 		LoggerUtil.logInfo("clicked on Approved status tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Approved status tab and opened the record");
 		issue.additionalissue();
 		LoggerUtil.logInfo("clicked on issue");
+		extenttest.log(Status.PASS, "clicked on issue");
 		issue.additionalcomments(getissuedcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		issue.additionalissue();
 		LoggerUtil.logInfo("clicked on issue");
+		extenttest.log(Status.PASS, "clicked on issue");
 		issue.additionalissueactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Issue Test is failed", e);
@@ -85,14 +110,22 @@ public class BPRAdditionalPagePrintIssuanceandPrint extends ConfigurationReader{
 		try {
 		as.userlogin(getQAOfficer(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA Officer id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA Officer id" +getQAOfficer()+" and password as "+getpassword()+ " ");
 		issue.additionalpageprintissuancetab();
 		LoggerUtil.logInfo("clicked on Additional Page Print Issuance tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Additional Page Print Issuance tab and opened the record");
 		issue.additionalcomments(getrejectedcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		issue.reject();
 		LoggerUtil.logInfo("clicked on reject");
+		extenttest.log(Status.PASS, "clicked on reject");
 		issue.rejectactivity(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BMR Additional Page Print Reject Test is failed", e);

@@ -30,7 +30,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRBeforePrintCancelApproval" enabled ="false">
+   <test name="BMRBeforePrintCancelApproval">
   <parameter name ="browser" value ="chrome"/>
   <parameter name ="author" value ="Vaishnavi"/>
     <classes>
@@ -40,7 +40,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-    <test name="BMRBeforePrintCancelRejection">
+    <test name="BMRBeforePrintCancelRejection" enabled ="false">
   <parameter name ="browser" value ="chrome"/>
   <parameter name ="author" value ="Vaishnavi"/>
     <classes>

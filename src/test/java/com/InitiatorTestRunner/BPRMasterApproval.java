@@ -9,6 +9,7 @@ import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.InitiatorPageObjects.BMRBPRMasterApprovalInitiation;
+import com.aventstack.extentreports.Status;
 
 public class BPRMasterApproval extends ConfigurationReader{
 	
@@ -24,16 +25,26 @@ public class BPRMasterApproval extends ConfigurationReader{
 		try {
 		as.userlogin(getinitiator(), getpassword());
 		LoggerUtil.logInfo("Login to the application with initiatior id and password");
+		extenttest.log(Status.PASS, "Login to the application with initiator id" +getinitiator()+" and password as "+getpassword()+ " ");
 		app.bprmasterinitiationtab();
 		LoggerUtil.logInfo("Clicked on BPR Master Initiation tab and opened the record");
+		extenttest.log(Status.PASS, "Clicked on BPR Master Initiation tab and opened the record");
+		app.documents();
 		app.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		app.comments();
 		LoggerUtil.logInfo("validated the comments and entered the comments");
+		extenttest.log(Status.PASS, "validated the comments and entered the comments");
 		app.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		app.submitactivity2(getpassword());
 		LoggerUtil.logInfo("Entered the password and submitted the record");
+		extenttest.log(Status.PASS, "Entered the password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval initiation without CFT Test is failed", e);
@@ -54,15 +65,23 @@ public class BPRMasterApproval extends ConfigurationReader{
 		try {
 		as.userlogin(getinitiator(), getpassword());
 		LoggerUtil.logInfo("Login to the application with initiatior id and password");
+		extenttest.log(Status.PASS, "Login to the application with initiator id" +getinitiator()+" and password as "+getpassword()+ " ");
 		app.bprmasterreinitiation();
 //		app.resubmit();
 		LoggerUtil.logInfo("Clicked on BPR Master Initiation tab, returned status record and opened the record");
+		extenttest.log(Status.PASS, "Clicked on BPR Master Initiation tab, returned status record and opened the record");
 		app.reinitiationcomments();
 		LoggerUtil.logInfo("validated the comments and entered the comments");
+		extenttest.log(Status.PASS, "validated the comments and entered the comments");
 		app.resubmit();
 		LoggerUtil.logInfo("clicked on resubmit");
+		extenttest.log(Status.PASS, "clicked on resubmit");
 		app.resubmitactivity2(getpassword());
 		LoggerUtil.logInfo("Entered the password and resubmitted the record");
+		extenttest.log(Status.PASS, "Entered the password: "+getpassword()+" and resubmitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval ReInitiation Test is failed", e);

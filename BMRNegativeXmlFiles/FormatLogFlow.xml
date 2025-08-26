@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+<test name="formatLogInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.FormatLogInitiationTestRunner"/>
+      <methods>
+      <include name = "formatLogInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="formatLogReturn">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.FormatLogApprovalTestRunner"/>
+      <methods>
+      <include name = "formatLogReturn"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="formatLogReInitiation">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAOfficerTestRunner.FormatLogInitiationTestRunner"/>
+      <methods>
+      <include name = "formatLogReInitiation"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="formatLogApproval">
+  <parameter name ="browser" value = "chrome"/>
+  <parameter name ="author" value = "vaishnavi"></parameter>
+    <classes>
+     <class name="com.QAHODorInchargeTestRunner.FormatLogApprovalTestRunner"/>
+      <methods>
+      <include name = "formatLogApproval"/>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

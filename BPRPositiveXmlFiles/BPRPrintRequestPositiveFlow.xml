@@ -1,43 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="Suite" >
-  <test name="bprprintRequestInitiation">
+<suite parallel="classes" name="suite" thread-count="10">
+
+ <test name="bprprintRequestInitiation" enabled="false">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="author" value="Vaishnavi"/>
+  <classes>
+    <class name="com.ProductionExecutiveTestRunner.BPRPrintRequestInitiation">
+      <methods>
+        <include name="bprprintRequestInitiation"/>
+      </methods>
+    </class>
+  </classes>
+</test>
+  <test name="printReviewbyincharge" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
-      <class name="com.ProductionExecutiveTestRunner.BPRPrintRequestInitiation"/>
+      <class name="com.ProductionInchargeTestRunner.BPRPrintReview">
       <methods>
-      <include name ="bprprintRequestInitiation"></include>
+      <include name ="printReview" invocation-count="2"></include>
       </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
-  <test name="printReviewbyincharge">
+   <test name="printReviewbyvalidationincharge" enabled="false" >
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
-      <class name="com.ProductionInchargeTestRunner.BPRPrintReview"/>
+      <class name="com.ValidationInchargeTestRunner.BPRPrintReview">
       <methods>
-      <include name ="printReview"></include>
+      <include name ="printReview" invocation-count="2"></include>
       </methods>
-    </classes>
-  </test> <!-- Test -->
-   <test name="printReviewbyvalidationincharge">
-  <parameter name ="browser" value ="chrome"></parameter>
-  <parameter name ="author" value ="Vaishnavi"></parameter>
-    <classes>
-      <class name="com.ValidationInchargeTestRunner.BPRPrintReview"/>
-      <methods>
-      <include name ="printReview"></include>
-      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
    <test name="printApproval">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
-      <class name="com.QAHODorInchargeTestRunner.BPRPrintReqApproval"/>
+      <class name="com.QAHODorInchargeTestRunner.BPRPrintReqApproval">
       <methods>
-      <include name ="printApproval"></include>
+      <include name ="printApproval" invocation-count="2"></include>
       </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
    <test name="issue">

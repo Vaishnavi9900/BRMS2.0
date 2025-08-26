@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
     <test name="BlendInitiationwithoutPellets">
-  <parameter name ="browser" value = "chrome"></parameter>
+  <parameter name ="browser" value = "edge"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.InitiatorTestRunner.BMRProductDetailsInitiation"/>
@@ -11,7 +11,7 @@
     </classes>
   </test> <!-- Test -->
    <test name="ProductDetailsApproval2">
-  <parameter name ="browser" value = "chrome"></parameter>
+  <parameter name ="browser" value = "edge"></parameter>
    <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
       <class name="com.QAHODorInchargeTestRunner.BMRProductDetailsApprovalorReturn"/>

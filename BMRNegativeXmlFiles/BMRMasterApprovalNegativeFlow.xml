@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="MasterApprovalReturn">
+  <test name="MasterApprovalReturn" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="MasterApprovalReInitiation">
+  <test name="MasterApprovalReInitiation" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -40,7 +40,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="MasterApprovalReturnbyProductionHOD">
+   <test name="MasterApprovalReturnbyProductionHOD" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -50,7 +50,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="MasterApprovalReInitiation1">
+   <test name="MasterApprovalReInitiation1"  >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>
@@ -60,7 +60,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="MasterApprovalbyProductionIncharge1">
+   <test name="MasterApprovalbyProductionIncharge1" >
   <parameter name ="browser" value = "chrome"/>
   <parameter name ="author" value = "vaishnavi"></parameter>
     <classes>

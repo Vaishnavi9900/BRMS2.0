@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="printRequestReInitiation">
+   <test name="printRequestReInitiation" >
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -40,7 +40,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="printReturntoIncharge">
+  <test name="printReturntoIncharge" >
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -70,6 +70,46 @@
       </methods>
     </classes>
   </test> <!-- Test -->
+  <test name="printReturntoExebyHOD" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printReturntoExe"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+   <test name="printReturntoinchargebyHOD" enabled="false">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printReturntoProductionIncharge"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+  <test name="printReturntovalidationinchargebyHOD">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+      <class name="com.QAHODorInchargeTestRunner.BMRPrintreqApproval"/>
+      <methods>
+      <include name ="printReturntoValidationIncharge"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
+    <test name="printReReviewbyvalidationincharge">
+  <parameter name ="browser" value ="chrome"></parameter>
+  <parameter name ="author" value ="Vaishnavi"></parameter>
+    <classes>
+       <class name="com.ValidationInchargeTestRunner.BMRPrintReview"/>
+      <methods>
+      <include name ="printReReview"></include>
+      </methods>
+    </classes>
+  </test> <!-- Test -->
    <test name="BMRPrintApprovalbyQAHOD">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
@@ -90,7 +130,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="BMRIssuebyQAOfficer">
+   <test name="BMRIssuebyQAOfficer" >
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>

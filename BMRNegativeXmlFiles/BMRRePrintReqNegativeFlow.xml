@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-   <test name="rePrintInitiation">
+   <test name="rePrintInitiation" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -10,7 +10,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-   <test name="rePrintReturn">
+   <test name="rePrintReturn" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -20,7 +20,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="rePrintReInitiation">
+  <test name="rePrintReInitiation" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>
@@ -50,7 +50,7 @@
       </methods>
     </classes>
   </test> <!-- Test -->
-  <test name="ReprintIssue">
+  <test name="ReprintIssue" enabled="false">
   <parameter name ="browser" value ="chrome"></parameter>
   <parameter name ="author" value ="Vaishnavi"></parameter>
     <classes>

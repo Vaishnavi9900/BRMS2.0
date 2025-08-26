@@ -10,6 +10,7 @@ import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.ProductionInchargePageObjects.BMRBPRProductionInchargeReview;
 import com.QAHODorInChargePageObjects.BMRBPRQAHODMasterauthorization;
+import com.aventstack.extentreports.Status;
 
 public class BPRMasterApprovalbyQAHOD extends ConfigurationReader{
 	
@@ -27,16 +28,25 @@ public class BPRMasterApprovalbyQAHOD extends ConfigurationReader{
 		try {
 		as.userlogin(getQAHOD(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA HOD id" +getQAHOD()+" and password as "+getpassword()+ " ");
 		auth.bprmasterauthorizationtab();
 		LoggerUtil.logInfo("clicked on Master Authorization tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Master Authorization tab and opened the record");
 		review.returnbutton();
 		LoggerUtil.logInfo("clicked on return");
+		extenttest.log(Status.PASS, "clicked on return");
 		review.comments(getreturncomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		review.returnbutton();
 		LoggerUtil.logInfo("clicked on return");
+		extenttest.log(Status.PASS, "clicked on return");
 		review.returnactivity2(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval Return by QAHOD Test is failed", e);
@@ -58,16 +68,25 @@ public class BPRMasterApprovalbyQAHOD extends ConfigurationReader{
 		try {
 		as.userlogin(getQAHOD(), getpassword());
 		LoggerUtil.logInfo("Login to the application with QA HOD id and password");
+		extenttest.log(Status.PASS, "Login to the application with QA HOD id" +getQAHOD()+" and password as "+getpassword()+ " ");
 		auth.bprmasterauthorizationtab();
 		LoggerUtil.logInfo("clicked on Master Authorization tab and opened the record");
+		extenttest.log(Status.PASS, "clicked on Master Authorization tab and opened the record");
 		auth.authorize();
 		LoggerUtil.logInfo("clicked on authorize");
+		extenttest.log(Status.PASS, "\"clicked on authorize\"");
 		review.comments(getapprovalcomments());
 		LoggerUtil.logInfo("validated comments and entered comments");
+		extenttest.log(Status.PASS, "validated comments and entered comments");
 		auth.authorize();
 		LoggerUtil.logInfo("clicked on authorize");
+		extenttest.log(Status.PASS, "\"clicked on authorize\"");
 		auth.authorizationactivity2(getpassword());
 		LoggerUtil.logInfo("Entered password and submitted the record");
+		extenttest.log(Status.PASS, "Entered password: "+getpassword()+" and submitted the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Master Approval by QAHOD Test is failed", e);

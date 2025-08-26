@@ -9,6 +9,7 @@ import com.AdminPageObjects.Assignmenu;
 import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.IPQAPageObjects.BMRBPRIPQABatchCompletionReview;
+import com.aventstack.extentreports.Status;
 
 public class BPRBatchClosureReview extends ConfigurationReader{
 	
@@ -24,16 +25,25 @@ public class BPRBatchClosureReview extends ConfigurationReader{
 		try {
 		as.userlogin(getIPQA(), getpassword());
 		LoggerUtil.logInfo("Login to the application with IPQA id and password");
+		extenttest.log(Status.PASS, "Login to the application with IPQA id" +getIPQA()+" and password as "+getpassword()+ " ");
 		review.bprbatchcompletionreviewtab();
 		LoggerUtil.logInfo("Clicked on BPR Batch completion Review tab and opened the record");
+		extenttest.log(Status.PASS, "Clicked on BPR Batch completion Review tab and opened the record");
 		review.returnbutton();
 		LoggerUtil.logInfo("clicked on return");
+		extenttest.log(Status.PASS, "clicked on return");
 		review.comments(getreturncomments());
 		LoggerUtil.logInfo("Validated the comments and entered the comments");
+		extenttest.log(Status.PASS, "Validated the comments and entered the comments");
 		review.returnbutton();
 		LoggerUtil.logInfo("clicked on return");
+		extenttest.log(Status.PASS, "clicked on return");
 		review.returnactivity(getpassword());
-		LoggerUtil.logInfo("Entered the passowrd and returned the record");
+		LoggerUtil.logInfo("Entered the password and returned the record");
+		extenttest.log(Status.PASS, "Entered the password: "+getpassword()+" and returned the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion Return by IPQA Test is failed", e);
@@ -52,16 +62,25 @@ public class BPRBatchClosureReview extends ConfigurationReader{
 		try {
 		as.userlogin(getIPQA(), getpassword());
 		LoggerUtil.logInfo("Login to the application with IPQA id and password");
+		extenttest.log(Status.PASS, "Login to the application with IPQA id" +getIPQA()+" and password as "+getpassword()+ " ");
 		review.bprbatchcompletionreviewtab();
 		LoggerUtil.logInfo("Clicked on BPR Batch completion Review tab and opened the record");
+		extenttest.log(Status.PASS, "Clicked on BPR Batch completion Review tab and opened the record");
 		review.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		review.comments(getapprovalcomments());
 		LoggerUtil.logInfo("Validated the comments and entered the comments");
+		extenttest.log(Status.PASS, "Validated the comments and entered the comments");
 		review.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		review.submitactivity(getpassword());
-		LoggerUtil.logInfo("Entered the passowrd and returned the record");
+		LoggerUtil.logInfo("Entered the password and returned the record");
+		extenttest.log(Status.PASS, "Entered the password: "+getpassword()+" and returned the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion Review by IPQA Test is failed", e);
@@ -81,16 +100,25 @@ public class BPRBatchClosureReview extends ConfigurationReader{
 		try {
 		as.userlogin(getIPQA(), getpassword());
 		LoggerUtil.logInfo("Login to the application with IPQA id and password");
+		extenttest.log(Status.PASS, "Login to the application with IPQA id" +getIPQA()+" and password as "+getpassword()+ " ");
 		review.bprbatchcompletionRereview();
 		LoggerUtil.logInfo("Clicked on BPR Batch completion Review tab and opened the record");
+		extenttest.log(Status.PASS, "Clicked on BPR Batch completion Review tab and opened the record");
 		review.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		review.comments(getapprovalcomments());
 		LoggerUtil.logInfo("Validated the comments and entered the comments");
+		extenttest.log(Status.PASS, "Validated the comments and entered the comments");
 		review.submit();
 		LoggerUtil.logInfo("clicked on submit");
+		extenttest.log(Status.PASS, "clicked on submit");
 		review.submitactivity(getpassword());
-		LoggerUtil.logInfo("Entered the passowrd and returned the record");
+		LoggerUtil.logInfo("Entered the password and returned the record");
+		extenttest.log(Status.PASS, "Entered the password: "+getpassword()+" and returned the record");
+		as.logout();
+		LoggerUtil.logInfo("Clicked on profile,No and again clicked on Profile and Yes. Showing login page.");
+		extenttest.log(Status.PASS, "Logout from the application");
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("BPR Batch Completion Re Review by IPQA Test is failed", e);

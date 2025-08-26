@@ -1,0 +1,295 @@
+package com.ProductionExecutivePageObjects;
+
+import java.io.IOException;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
+
+import com.BasicData.BRMSCommonMethods;
+import com.BasicData.ExcelUtils;
+
+public class BPRPrintIssuanceInitiationReceived extends BRMSCommonMethods{
+	
+	SoftAssert softassert = new SoftAssert();
+
+	static ExcelUtils excelutils = new ExcelUtils();
+	
+	static String excelFilePath = file;
+	
+	@FindBy(how = How.XPATH, using = "//a[text()='BPR']")
+	WebElement bpr;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[1]")
+	WebElement tab;
+	@FindBy(how = How.XPATH, using = "(//a[@class='flex-item ng-star-inserted'])[2]")
+	WebElement tab2;
+	@FindBy(how = How.XPATH, using = "//span[text()='Print Request Initiation']")
+	WebElement printinitiation;
+	@FindBy(how = How.XPATH, using = "//span[text()='Additional Page Print Request Initiation']")
+	WebElement additionalpageprintinitiation;
+	@FindBy(how =How.XPATH, using ="(//input[@type='text'])[1]")
+	WebElement mprno;
+	@FindBy(how =How.XPATH, using ="//button[text()=' Get ']")
+	WebElement get;
+	@FindBy(how = How.XPATH, using = "//input[@type='search']")
+	WebElement search;
+	@FindBy(how = How.XPATH, using = "(//span[@class='cBlue font-w-600'])[1]")
+	WebElement createdrecord;
+	@FindBy(how = How.XPATH, using = "(//tr[@class='ng-star-inserted'])[1]")
+	WebElement createdrecord1;
+	@FindBy(how = How.XPATH, using = "//button[text()='Submit']")
+	WebElement submit;
+	@FindBy(how = How.XPATH, using = "//textarea[@formcontrolname='comments']")
+	WebElement comments;
+	@FindBy(how = How.XPATH, using = "//textarea[@placeholder='Add your comments here..']")
+	WebElement addcomments;
+	@FindBy(how = How.XPATH, using = "//div[text()=' Please Enter Comments ']")
+	WebElement commalert;
+	@FindBy(how = How.XPATH, using = "//span[text()='Comments is required']")
+	WebElement addcommalert;
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[5]")
+	WebElement Yes;
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
+	WebElement No;
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[4]")
+	WebElement ackYes;
+	@FindBy(how = How.XPATH, using = "(//button[@data-dismiss='modal'])[3]")
+	WebElement ackNo;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]")
+	WebElement password;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
+	WebElement submit2;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
+	WebElement submit22;
+	@FindBy(how = How.XPATH, using = "//button[text()='Ok']")
+	WebElement ok;
+	@FindBy(how = How.XPATH, using = "//img[@class='close']")
+	WebElement close;
+	@FindBy(how = How.XPATH, using = "//a[text()='Status ']")
+	WebElement status;
+	@FindBy(how = How.XPATH, using = "//a[text()=' Status']")
+	WebElement additionalstatus;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Returned']")
+	WebElement returned;
+	@FindBy(how = How.XPATH, using = "(//button[text()=' Printed '])[1]")
+	WebElement additionalprinted;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Issued']")
+	WebElement issued;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"DataTables_Table_2\"]/tbody/tr[1]/td[1]")
+	WebElement issuedrecord;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Print Received']")
+	WebElement printreceived;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Print Received ']")
+	WebElement additionalprintreceived;
+	@FindBy(how = How.XPATH, using = "//button[text()=' Submit ']")
+	WebElement printreceivedsubmit;
+	@FindBy(how =How.XPATH, using ="//button[text()='Re-Submit']")
+	WebElement resubmit;
+	@FindBy(how =How.XPATH, using ="//button[text()=' Submit ']")
+	WebElement additionalsubmit;
+	@FindBy(how =How.XPATH, using ="//select[@formcontrolname='batchNumber']")
+	WebElement batchnumber;
+	@FindBy(how =How.XPATH, using ="//select[@formcontrolname='dateFormat']")
+	WebElement dateformat;
+	@FindBy(how =How.XPATH, using ="//input[@formcontrolname='manufacturingDate']")
+	WebElement manufacturedate;
+	@FindBy(how =How.XPATH, using ="//input[@formcontrolname='expiryDate']")
+	WebElement expdate;
+	@FindBy(how =How.XPATH, using ="//select[@formcontrolname='mprNumber']")
+	WebElement mprnumber;
+	@FindBy(how =How.XPATH, using ="//input[@formcontrolname='requriedBatchSize']")
+	WebElement batchsize;
+	@FindBy(how =How.XPATH, using ="//input[@formcontrolname='noOfPages']")
+	WebElement noofpages;
+
+	
+	
+	public BPRPrintIssuanceInitiationReceived(WebDriver driver) {
+		PageFactory.initElements(driver, this);	
+	}
+	
+	public void bprprintreqinitiationtab() throws InterruptedException, IOException {
+		javawait();
+	//	clickElement(tab);
+		//clickElement(tab2);
+		clickElement(bpr);
+		Thread.sleep(15000);
+		javascript(printinitiation);
+		
+	}
+	public void mprselection() throws IOException {
+		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		clickElement(mprno);
+		for (int i = 1; i < 2; i++) {
+			mprno.sendKeys(excelutils.getCellData(i, 14), Keys.ENTER);
+		}
+		clickElement(get);
+	    clickElement(createdrecord);
+	}
+		
+	public void bprprintreqReinitiation() throws InterruptedException, IOException {
+		javawait();
+	//	clickElement(tab);
+		//clickElement(tab2);
+		clickElement(bpr);
+		javascript(printinitiation);
+		clickElement(status);
+		clickElement(returned);
+		excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+		javawait();
+		clickElement(search);
+		for (int i = 1; i <2; i++) {
+			search.sendKeys(excelutils.getCellData(i, 14));
+		}
+//		List<WebElement> allElement=driver.findElements(By.xpath("//span[@class='cBlue font-w-600']"));
+//	    int count=allElement.size();
+//        allElement.get(count-1).click();
+		clickElement(createdrecord);
+        
+	}
+	
+	public void batchsize() throws InterruptedException {
+		javascript(batchsize);
+		Thread.sleep(1000);
+		batchsize.clear();
+		batchsize.sendKeys("5");
+	}
+	public void noofpages() throws InterruptedException {
+		javascript(noofpages);
+		Thread.sleep(1000);
+		noofpages.clear();
+		noofpages.sendKeys("2");
+	}
+	public void resubmit() throws InterruptedException {
+		javawait();
+		javascript(resubmit);
+	}
+public void resubmitactivity(String pass) throws InterruptedException {
+ 		
+ 		clickElement(No);
+ 		clickElement(resubmit);
+ 		clickElement(Yes);
+ 		javawait();
+ 		textbox(password, pass);
+ 		clickElement(submit22);
+ 		javawait();
+ 		refresh();
+ 	}
+	
+	public void batchnumberdateformats(String format, String mandate,String batchno) throws InterruptedException, IOException {
+		excelutils.setExcelFile(excelFilePath, "Productdetails");
+		JavascriptExecutor js = ((JavascriptExecutor) driver);
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
+		clickElement(dateformat);
+		dateformat.sendKeys(format, Keys.ENTER);
+		clickElement(manufacturedate);
+		manufacturedate.sendKeys(mandate);
+	//	javawait();
+//		clickElement(expdate);
+//		expdate.sendKeys(expd);
+		clickElement(mprnumber);
+		for (int i = 1; i < 2; i++) {
+			mprnumber.sendKeys(excelutils.getCellData(i, 15));
+		}
+		javawait();
+		clickElement(batchnumber);
+		batchnumber.sendKeys(batchno, Keys.ENTER);
+	}
+	
+	public void submit() throws InterruptedException {
+		javawait();
+		clickElement(submit);
+	}
+	public void comments(String comm) throws IOException {
+		softassert.assertEquals("Please Enter Comments", commalert.getText());
+		clickElement(comments);
+			comments.sendKeys(comm);
+	}
+      public void submitactivity(String pass) throws InterruptedException {
+ 		
+    	Thread.sleep(2000);
+ 		clickElement(No);
+ 		clickElement(submit);
+ 		Thread.sleep(2000);
+ 		clickElement(Yes);
+ 		javawait();
+ 		textbox(password, pass);
+ 		clickElement(submit2);
+ 		javawait();
+ 		refresh();
+ 	}
+public void printreceivedtab() throws InterruptedException, IOException {
+	javawait();
+	//clickElement(tab);
+	//clickElement(tab2);
+	clickElement(bpr);
+	Thread.sleep(2000);
+	 javascript(printinitiation);
+	excelutils.setExcelFile(excelFilePath, "BPRproductdetails");
+	clickElement(status);
+	Thread.sleep(2000);
+	clickElement(issued);
+	clickElement(search);
+	for (int i = 1; i < 2; i++) {
+		search.sendKeys(excelutils.getCellData(i, 14));
+	}
+//	List<WebElement> allElement=driver.findElements(By.xpath("//span[@class='cBlue font-w-600']"));
+//   int count=allElement.size();
+//   allElement.get(count-1).click();
+   clickElement(createdrecord);
+}
+public void additioanlpageprintreceivedtab() throws InterruptedException, IOException {
+	javawait();
+	//clickElement(tab2);
+//	clickElement(tab);
+	javascript(additionalpageprintinitiation);
+	javawait();
+	excelutils.setExcelFile(excelFilePath, "productdetails");
+	clickElement(additionalstatus);
+	clickElement(search);
+	for (int i = 1; i < 2; i++) {
+		search.sendKeys(excelutils.getCellData(i, 14));
+	}
+	clickElement(additionalprinted);
+	javawait();
+//	List<WebElement> allElement=driver.findElements(By.xpath("//span[@class='cBlue font-w-600']"));
+//   int count=allElement.size();
+//   allElement.get(count-1).click();
+   clickElement(createdrecord);
+}
+
+public void additionalprintreceived() throws InterruptedException {
+	 javawait();
+	 clickElement(additionalprintreceived);
+}
+
+public void printreceived() throws InterruptedException {
+	 javawait();
+	 clickElement(printreceived);
+}
+public void additionalprintreceivedsubmit(String pass) throws InterruptedException {
+	clickElement(No);
+		clickElement(additionalprintreceived);
+		clickElement(Yes);
+		javawait();
+		textbox(password, pass);
+		clickElement(additionalsubmit);
+		javawait();
+		refresh();
+ }
+
+public void printreceivedsubmit(String pass) throws InterruptedException {
+	    clickElement(ackNo);
+		clickElement(printreceived);
+		clickElement(ackYes);
+		javawait();
+		textbox(password, pass);
+		clickElement(printreceivedsubmit);
+		javawait();
+}
+}

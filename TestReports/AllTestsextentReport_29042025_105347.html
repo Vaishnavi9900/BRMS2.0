@@ -1,0 +1,2415 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">BRMS2.0 Formulations Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Apr 29, 2025 10:53:47 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('device-view')">
+<a id="nav-device" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tablet"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">vaishnavi</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tablet"></i></a>
+<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">chrome</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalInitiation</p>
+            <p class="text-sm">
+              <span>10:53:53 am</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalInitiation</h5>
+<span class='badge badge-success'>04.29.2025 10:53:53 am</span>
+<span class='badge badge-danger'>04.29.2025 10:53:53 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">masterApprovalInitiation</p>
+            <p class="text-sm">
+              <span>10:53:53 am</span> / <span>00:00:00:005</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">masterApprovalInitiation</h5>
+<span class='badge badge-success'>04.29.2025 10:53:53 am</span>
+<span class='badge badge-danger'>04.29.2025 10:53:53 am</span>
+<span class='badge badge-default'>00:00:00:005</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:53:53 am</td>
+        <td>
+          masterApprovalInitiation is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReturn</p>
+            <p class="text-sm">
+              <span>10:53:58 am</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReturn</h5>
+<span class='badge badge-success'>04.29.2025 10:53:58 am</span>
+<span class='badge badge-danger'>04.29.2025 10:53:58 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div>          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">masterApprovalReturn</p>
+            <p class="text-sm">
+              <span>10:53:58 am</span> / <span>00:00:00:000</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">masterApprovalReturn</h5>
+<span class='badge badge-success'>04.29.2025 10:53:58 am</span>
+<span class='badge badge-danger'>04.29.2025 10:53:58 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:53:58 am</td>
+        <td>
+          masterApprovalReturn is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReInitiation</p>
+            <p class="text-sm">
+              <span>10:54:03 am</span> / <span>00:00:40:539</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReInitiation</h5>
+<span class='badge badge-success'>04.29.2025 10:54:03 am</span>
+<span class='badge badge-danger'>04.29.2025 10:54:44 am</span>
+<span class='badge badge-default'>00:00:40:539</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:54:44 am</td>
+        <td>
+          masterApprovalReInitiation is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionIncharge</p>
+            <p class="text-sm">
+              <span>10:54:50 am</span> / <span>00:00:35:469</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionIncharge</h5>
+<span class='badge badge-success'>04.29.2025 10:54:50 am</span>
+<span class='badge badge-danger'>04.29.2025 10:55:26 am</span>
+<span class='badge badge-default'>00:00:35:469</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:55:26 am</td>
+        <td>
+          masterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReturnbyProductionHOD</p>
+            <p class="text-sm">
+              <span>10:55:32 am</span> / <span>00:00:34:197</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReturnbyProductionHOD</h5>
+<span class='badge badge-success'>04.29.2025 10:55:32 am</span>
+<span class='badge badge-danger'>04.29.2025 10:56:06 am</span>
+<span class='badge badge-default'>00:00:34:197</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:06 am</td>
+        <td>
+          productionhodreturn is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReInitiation1</p>
+            <p class="text-sm">
+              <span>10:56:13 am</span> / <span>00:00:37:512</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReInitiation1</h5>
+<span class='badge badge-success'>04.29.2025 10:56:13 am</span>
+<span class='badge badge-danger'>04.29.2025 10:56:51 am</span>
+<span class='badge badge-default'>00:00:37:512</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:56:51 am</td>
+        <td>
+          masterApprovalReInitiation is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionIncharge1</p>
+            <p class="text-sm">
+              <span>10:56:56 am</span> / <span>00:00:35:240</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionIncharge1</h5>
+<span class='badge badge-success'>04.29.2025 10:56:56 am</span>
+<span class='badge badge-danger'>04.29.2025 10:57:31 am</span>
+<span class='badge badge-default'>00:00:35:240</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:57:31 am</td>
+        <td>
+          masterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionHOD</p>
+            <p class="text-sm">
+              <span>10:57:37 am</span> / <span>00:00:34:331</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionHOD</h5>
+<span class='badge badge-success'>04.29.2025 10:57:37 am</span>
+<span class='badge badge-danger'>04.29.2025 10:58:12 am</span>
+<span class='badge badge-default'>00:00:34:331</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:58:12 am</td>
+        <td>
+          productionhodapproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReturnbyTechTransfer</p>
+            <p class="text-sm">
+              <span>10:58:18 am</span> / <span>00:00:34:421</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReturnbyTechTransfer</h5>
+<span class='badge badge-success'>04.29.2025 10:58:18 am</span>
+<span class='badge badge-danger'>04.29.2025 10:58:52 am</span>
+<span class='badge badge-default'>00:00:34:421</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:58:52 am</td>
+        <td>
+          masterApprovalReturnbyTechtransfer is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReInitiation2</p>
+            <p class="text-sm">
+              <span>10:58:58 am</span> / <span>00:00:37:533</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReInitiation2</h5>
+<span class='badge badge-success'>04.29.2025 10:58:58 am</span>
+<span class='badge badge-danger'>04.29.2025 10:59:36 am</span>
+<span class='badge badge-default'>00:00:37:533</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:59:36 am</td>
+        <td>
+          masterApprovalReInitiation is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionIncharge2</p>
+            <p class="text-sm">
+              <span>10:59:41 am</span> / <span>00:00:35:206</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionIncharge2</h5>
+<span class='badge badge-success'>04.29.2025 10:59:41 am</span>
+<span class='badge badge-danger'>04.29.2025 11:00:17 am</span>
+<span class='badge badge-default'>00:00:35:206</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:00:17 am</td>
+        <td>
+          masterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionHOD2</p>
+            <p class="text-sm">
+              <span>11:00:23 am</span> / <span>00:00:34:270</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionHOD2</h5>
+<span class='badge badge-success'>04.29.2025 11:00:23 am</span>
+<span class='badge badge-danger'>04.29.2025 11:00:57 am</span>
+<span class='badge badge-default'>00:00:34:270</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:00:57 am</td>
+        <td>
+          productionhodapproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyTechTransfer</p>
+            <p class="text-sm">
+              <span>11:01:04 am</span> / <span>00:00:33:772</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyTechTransfer</h5>
+<span class='badge badge-success'>04.29.2025 11:01:04 am</span>
+<span class='badge badge-danger'>04.29.2025 11:01:37 am</span>
+<span class='badge badge-default'>00:00:33:772</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:01:37 am</td>
+        <td>
+          masterApprovalnbyTechtransferOrRandD is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReturnbyRA</p>
+            <p class="text-sm">
+              <span>11:01:43 am</span> / <span>00:00:34:486</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReturnbyRA</h5>
+<span class='badge badge-success'>04.29.2025 11:01:43 am</span>
+<span class='badge badge-danger'>04.29.2025 11:02:18 am</span>
+<span class='badge badge-default'>00:00:34:486</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:02:18 am</td>
+        <td>
+          masterApprovalReturnbyRA is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReInitiation3</p>
+            <p class="text-sm">
+              <span>11:02:23 am</span> / <span>00:00:37:397</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReInitiation3</h5>
+<span class='badge badge-success'>04.29.2025 11:02:23 am</span>
+<span class='badge badge-danger'>04.29.2025 11:03:01 am</span>
+<span class='badge badge-default'>00:00:37:397</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:03:01 am</td>
+        <td>
+          masterApprovalReInitiation is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionIncharge3</p>
+            <p class="text-sm">
+              <span>11:03:07 am</span> / <span>00:00:34:942</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionIncharge3</h5>
+<span class='badge badge-success'>04.29.2025 11:03:07 am</span>
+<span class='badge badge-danger'>04.29.2025 11:03:42 am</span>
+<span class='badge badge-default'>00:00:34:942</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:03:42 am</td>
+        <td>
+          masterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionHOD3</p>
+            <p class="text-sm">
+              <span>11:03:48 am</span> / <span>00:00:33:728</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionHOD3</h5>
+<span class='badge badge-success'>04.29.2025 11:03:48 am</span>
+<span class='badge badge-danger'>04.29.2025 11:04:22 am</span>
+<span class='badge badge-default'>00:00:33:728</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:04:22 am</td>
+        <td>
+          productionhodapproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyTechTransfer3</p>
+            <p class="text-sm">
+              <span>11:04:28 am</span> / <span>00:00:34:158</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyTechTransfer3</h5>
+<span class='badge badge-success'>04.29.2025 11:04:28 am</span>
+<span class='badge badge-danger'>04.29.2025 11:05:02 am</span>
+<span class='badge badge-default'>00:00:34:158</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:05:02 am</td>
+        <td>
+          masterApprovalnbyTechtransferOrRandD is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyRA</p>
+            <p class="text-sm">
+              <span>11:05:08 am</span> / <span>00:00:33:662</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyRA</h5>
+<span class='badge badge-success'>04.29.2025 11:05:08 am</span>
+<span class='badge badge-danger'>04.29.2025 11:05:42 am</span>
+<span class='badge badge-default'>00:00:33:662</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:05:42 am</td>
+        <td>
+          rAMasterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReturnbyQAIncharge</p>
+            <p class="text-sm">
+              <span>11:05:48 am</span> / <span>00:00:34:723</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReturnbyQAIncharge</h5>
+<span class='badge badge-success'>04.29.2025 11:05:48 am</span>
+<span class='badge badge-danger'>04.29.2025 11:06:23 am</span>
+<span class='badge badge-default'>00:00:34:723</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:06:23 am</td>
+        <td>
+          masterApprovalReturnbyQAIncharge is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReInitiation4</p>
+            <p class="text-sm">
+              <span>11:06:29 am</span> / <span>00:00:37:659</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReInitiation4</h5>
+<span class='badge badge-success'>04.29.2025 11:06:29 am</span>
+<span class='badge badge-danger'>04.29.2025 11:07:06 am</span>
+<span class='badge badge-default'>00:00:37:659</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:07:06 am</td>
+        <td>
+          masterApprovalReInitiation is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="24"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionIncharge4</p>
+            <p class="text-sm">
+              <span>11:07:12 am</span> / <span>00:00:34:786</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionIncharge4</h5>
+<span class='badge badge-success'>04.29.2025 11:07:12 am</span>
+<span class='badge badge-danger'>04.29.2025 11:07:47 am</span>
+<span class='badge badge-default'>00:00:34:786</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:07:47 am</td>
+        <td>
+          masterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionHOD4</p>
+            <p class="text-sm">
+              <span>11:07:53 am</span> / <span>00:00:33:687</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionHOD4</h5>
+<span class='badge badge-success'>04.29.2025 11:07:53 am</span>
+<span class='badge badge-danger'>04.29.2025 11:08:26 am</span>
+<span class='badge badge-default'>00:00:33:687</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:08:26 am</td>
+        <td>
+          productionhodapproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyTechTransfer4</p>
+            <p class="text-sm">
+              <span>11:08:33 am</span> / <span>00:00:34:184</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyTechTransfer4</h5>
+<span class='badge badge-success'>04.29.2025 11:08:33 am</span>
+<span class='badge badge-danger'>04.29.2025 11:09:07 am</span>
+<span class='badge badge-default'>00:00:34:184</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:07 am</td>
+        <td>
+          masterApprovalnbyTechtransferOrRandD is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyRA4</p>
+            <p class="text-sm">
+              <span>11:09:13 am</span> / <span>00:00:34:119</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyRA4</h5>
+<span class='badge badge-success'>04.29.2025 11:09:13 am</span>
+<span class='badge badge-danger'>04.29.2025 11:09:47 am</span>
+<span class='badge badge-default'>00:00:34:119</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:09:47 am</td>
+        <td>
+          rAMasterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyQAIncharge</p>
+            <p class="text-sm">
+              <span>11:09:55 am</span> / <span>00:00:34:416</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyQAIncharge</h5>
+<span class='badge badge-success'>04.29.2025 11:09:55 am</span>
+<span class='badge badge-danger'>04.29.2025 11:10:29 am</span>
+<span class='badge badge-default'>00:00:34:416</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:10:29 am</td>
+        <td>
+          qaInchargeMasterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReturnbyQAHOD</p>
+            <p class="text-sm">
+              <span>11:10:35 am</span> / <span>00:00:34:891</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReturnbyQAHOD</h5>
+<span class='badge badge-success'>04.29.2025 11:10:35 am</span>
+<span class='badge badge-danger'>04.29.2025 11:11:10 am</span>
+<span class='badge badge-default'>00:00:34:891</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:10 am</td>
+        <td>
+          masterApprovalReturnbyQAHOD is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalReInitiation5</p>
+            <p class="text-sm">
+              <span>11:11:16 am</span> / <span>00:00:37:533</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalReInitiation5</h5>
+<span class='badge badge-success'>04.29.2025 11:11:16 am</span>
+<span class='badge badge-danger'>04.29.2025 11:11:53 am</span>
+<span class='badge badge-default'>00:00:37:533</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:53 am</td>
+        <td>
+          masterApprovalReInitiation is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="31"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionIncharge5</p>
+            <p class="text-sm">
+              <span>11:12:00 am</span> / <span>00:00:35:309</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionIncharge5</h5>
+<span class='badge badge-success'>04.29.2025 11:12:00 am</span>
+<span class='badge badge-danger'>04.29.2025 11:12:35 am</span>
+<span class='badge badge-default'>00:00:35:309</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:12:35 am</td>
+        <td>
+          masterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyProductionHOD5</p>
+            <p class="text-sm">
+              <span>11:12:41 am</span> / <span>00:00:34:439</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyProductionHOD5</h5>
+<span class='badge badge-success'>04.29.2025 11:12:41 am</span>
+<span class='badge badge-danger'>04.29.2025 11:13:15 am</span>
+<span class='badge badge-default'>00:00:34:439</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:15 am</td>
+        <td>
+          productionhodapproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyTechTransfer5</p>
+            <p class="text-sm">
+              <span>11:13:21 am</span> / <span>00:00:33:690</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyTechTransfer5</h5>
+<span class='badge badge-success'>04.29.2025 11:13:21 am</span>
+<span class='badge badge-danger'>04.29.2025 11:13:54 am</span>
+<span class='badge badge-default'>00:00:33:690</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:13:54 am</td>
+        <td>
+          masterApprovalnbyTechtransferOrRandD is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="34"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">rAMasterApproval</p>
+            <p class="text-sm">
+              <span>11:14:00 am</span> / <span>00:00:33:949</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">rAMasterApproval</h5>
+<span class='badge badge-success'>04.29.2025 11:14:00 am</span>
+<span class='badge badge-danger'>04.29.2025 11:14:34 am</span>
+<span class='badge badge-default'>00:00:33:949</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:14:34 am</td>
+        <td>
+          rAMasterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="35"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyQAIncharge5</p>
+            <p class="text-sm">
+              <span>11:14:40 am</span> / <span>00:00:34:903</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyQAIncharge5</h5>
+<span class='badge badge-success'>04.29.2025 11:14:40 am</span>
+<span class='badge badge-danger'>04.29.2025 11:15:15 am</span>
+<span class='badge badge-default'>00:00:34:903</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:15:15 am</td>
+        <td>
+          qaInchargeMasterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="36"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalbyQAHOD</p>
+            <p class="text-sm">
+              <span>11:15:21 am</span> / <span>00:00:34:651</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalbyQAHOD</h5>
+<span class='badge badge-success'>04.29.2025 11:15:21 am</span>
+<span class='badge badge-danger'>04.29.2025 11:15:56 am</span>
+<span class='badge badge-default'>00:00:34:651</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:15:56 am</td>
+        <td>
+          qaHODMasterApproval is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="37"
+          author="vaishnavi"
+          tag=""
+          device="chrome">
+          <div class="test-detail">
+            <p class="name">MasterApprovalEffectiveByDocCell</p>
+            <p class="text-sm">
+              <span>11:16:01 am</span> / <span>00:00:34:554</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">MasterApprovalEffectiveByDocCell</h5>
+<span class='badge badge-success'>04.29.2025 11:16:01 am</span>
+<span class='badge badge-danger'>04.29.2025 11:16:36 am</span>
+<span class='badge badge-default'>00:00:34:554</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">vaishnavi</span>
+<span class="badge badge-pill badge-default">chrome</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:36 am</td>
+        <td>
+          masterApprovalEffectivebyQADocCell is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view device-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>35</span>
+</span>
+<p class="name">chrome</p>
+<p class="duration text-sm">35 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>chrome</h4>
+<span status="pass" class='badge log pass-bg'>35 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:53:53 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>MasterApprovalInitiation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:53:58 am</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>MasterApprovalReturn</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:54:03 am</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>MasterApprovalReInitiation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:54:50 am</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>MasterApprovalbyProductionIncharge</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:55:32 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>MasterApprovalReturnbyProductionHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:56:13 am</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>MasterApprovalReInitiation1</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:56:56 am</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>MasterApprovalbyProductionIncharge1</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:57:37 am</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>MasterApprovalbyProductionHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:58:18 am</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>MasterApprovalReturnbyTechTransfer</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:58:58 am</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>MasterApprovalReInitiation2</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:59:41 am</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>MasterApprovalbyProductionIncharge2</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:00:23 am</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>MasterApprovalbyProductionHOD2</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:01:04 am</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>MasterApprovalbyTechTransfer</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:01:43 am</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>MasterApprovalReturnbyRA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:02:23 am</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>MasterApprovalReInitiation3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:03:07 am</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>MasterApprovalbyProductionIncharge3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:03:48 am</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>MasterApprovalbyProductionHOD3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:04:28 am</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>MasterApprovalbyTechTransfer3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:05:08 am</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>MasterApprovalbyRA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:05:48 am</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>MasterApprovalReturnbyQAIncharge</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:06:29 am</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>MasterApprovalReInitiation4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:12 am</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>MasterApprovalbyProductionIncharge4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:53 am</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>MasterApprovalbyProductionHOD4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:08:33 am</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>MasterApprovalbyTechTransfer4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:09:13 am</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>MasterApprovalbyRA4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:09:55 am</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>MasterApprovalbyQAIncharge</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:10:35 am</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>MasterApprovalReturnbyQAHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:11:16 am</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>MasterApprovalReInitiation5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:12:00 am</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>MasterApprovalbyProductionIncharge5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:12:41 am</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>MasterApprovalbyProductionHOD5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:13:21 am</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>MasterApprovalbyTechTransfer5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:14:00 am</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>rAMasterApproval</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:14:40 am</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>MasterApprovalbyQAIncharge5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:15:21 am</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>MasterApprovalbyQAHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:16:01 am</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>MasterApprovalEffectiveByDocCell</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>35</span>
+</span>
+<p class="name">vaishnavi</p>
+<p class="duration text-sm">35 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>vaishnavi</h4>
+<span status="pass" class='badge log pass-bg'>35 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:53:53 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>MasterApprovalInitiation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:53:58 am</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>MasterApprovalReturn</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:54:03 am</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>MasterApprovalReInitiation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:54:50 am</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>MasterApprovalbyProductionIncharge</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:55:32 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>MasterApprovalReturnbyProductionHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:56:13 am</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>MasterApprovalReInitiation1</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:56:56 am</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>MasterApprovalbyProductionIncharge1</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:57:37 am</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>MasterApprovalbyProductionHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:58:18 am</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>MasterApprovalReturnbyTechTransfer</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:58:58 am</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>MasterApprovalReInitiation2</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:59:41 am</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>MasterApprovalbyProductionIncharge2</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:00:23 am</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>MasterApprovalbyProductionHOD2</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:01:04 am</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>MasterApprovalbyTechTransfer</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:01:43 am</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>MasterApprovalReturnbyRA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:02:23 am</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>MasterApprovalReInitiation3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:03:07 am</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>MasterApprovalbyProductionIncharge3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:03:48 am</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>MasterApprovalbyProductionHOD3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:04:28 am</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>MasterApprovalbyTechTransfer3</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:05:08 am</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>MasterApprovalbyRA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:05:48 am</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>MasterApprovalReturnbyQAIncharge</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:06:29 am</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>MasterApprovalReInitiation4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:12 am</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>MasterApprovalbyProductionIncharge4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:53 am</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>MasterApprovalbyProductionHOD4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:08:33 am</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>MasterApprovalbyTechTransfer4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:09:13 am</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>MasterApprovalbyRA4</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:09:55 am</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>MasterApprovalbyQAIncharge</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:10:35 am</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>MasterApprovalReturnbyQAHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:11:16 am</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>MasterApprovalReInitiation5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:12:00 am</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>MasterApprovalbyProductionIncharge5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:12:41 am</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>MasterApprovalbyProductionHOD5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:13:21 am</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>MasterApprovalbyTechTransfer5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:14:00 am</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>rAMasterApproval</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:14:40 am</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>MasterApprovalbyQAIncharge5</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:15:21 am</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>MasterApprovalbyQAHOD</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:16:01 am</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>MasterApprovalEffectiveByDocCell</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Apr 29, 2025 10:53:47 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Apr 29, 2025 11:16:38 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>35</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='94%'>
+<b>35</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='5%'><b>2</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='94%'><b>33</b> events passed</small></div>
+<div>
+<small data-tooltip='5%'><b>2</b> events failed,
+<b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"MasterApprovalInitiation":0,"masterApprovalInitiation":0.005,"MasterApprovalReturn":0,"masterApprovalReturn":0,"MasterApprovalReInitiation":40.539,"MasterApprovalbyProductionIncharge":35.469,"MasterApprovalReturnbyProductionHOD":34.197,"MasterApprovalReInitiation1":37.512,"MasterApprovalbyProductionIncharge1":35.24,"MasterApprovalbyProductionHOD":34.331,"MasterApprovalReturnbyTechTransfer":34.421,"MasterApprovalReInitiation2":37.533,"MasterApprovalbyProductionIncharge2":35.206,"MasterApprovalbyProductionHOD2":34.27,"MasterApprovalbyTechTransfer":33.772,"MasterApprovalReturnbyRA":34.486,"MasterApprovalReInitiation3":37.397,"MasterApprovalbyProductionIncharge3":34.942,"MasterApprovalbyProductionHOD3":33.728,"MasterApprovalbyTechTransfer3":34.158,"MasterApprovalbyRA":33.662,"MasterApprovalReturnbyQAIncharge":34.723,"MasterApprovalReInitiation4":37.659,"MasterApprovalbyProductionIncharge4":34.786,"MasterApprovalbyProductionHOD4":33.687,"MasterApprovalbyTechTransfer4":34.184,"MasterApprovalbyRA4":34.119,"MasterApprovalbyQAIncharge":34.416,"MasterApprovalReturnbyQAHOD":34.891,"MasterApprovalReInitiation5":37.533,"MasterApprovalbyProductionIncharge5":35.309,"MasterApprovalbyProductionHOD5":34.439,"MasterApprovalbyTechTransfer5":33.69,"rAMasterApproval":33.949,"MasterApprovalbyQAIncharge5":34.903,"MasterApprovalbyQAHOD":34.651,"MasterApprovalEffectiveByDocCell":34.554
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>vaishnavi</td>
+<td>35</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 device-container">
+<div class="card">
+<div class="card-header"><p>Device</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>chrome</td>
+<td>35</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>23.0.1</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 35,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 33,
+failEvents: 2,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

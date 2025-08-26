@@ -1,8 +1,10 @@
 package com.MastersTestRunner;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.AdminPageObjects.Assignmenu;
@@ -10,10 +12,12 @@ import com.BasicData.ConfigurationReader;
 import com.BasicData.LoggerUtil;
 import com.MasterPageObjects.Market;
 
-public class MarketTestRunner extends ConfigurationReader {
+
+public class MarketTestRunner extends ConfigurationReader{
 	
 	public  Assignmenu as;
 	public Market mt;
+	
 	
 	@Test
 	public void marketcreatewithspace() throws InterruptedException {
@@ -50,6 +54,32 @@ public class MarketTestRunner extends ConfigurationReader {
 		mt.marketcreate();
 		LoggerUtil.logInfo("enter password and create the market");
 		mt.createactivity(getpassword());
+		}
+		catch (AssertionError e) {
+			LoggerUtil.logError("Test failed", e);
+			logger.debug("debug the errors");
+            // Log the failure to ExtentReports
+            extenttest.fail("Test failed: " + e.getMessage());
+            // Optionally, you can log the stack trace if needed
+            extenttest.fail(e);
+            throw e;
+		}
+			
+	}
+	
+	@Test
+	public void marketfileupload() throws InterruptedException, IOException, AWTException {
+		as = new Assignmenu(driver);
+		mt = new Market(driver);
+		
+		try {
+		LoggerUtil.logInfo("Login to the application with Initiator id and password");
+		as.userlogin(getinitiator(), getpassword());
+		LoggerUtil.logInfo("enter the required inputs");
+		mt.fileupload();
+		LoggerUtil.logInfo("Required data saved in the excel");
+		LoggerUtil.logInfo("Uploaded the file");
+		mt.createactivity2(getpassword());
 		}
 		catch (AssertionError e) {
 			LoggerUtil.logError("Test failed", e);
